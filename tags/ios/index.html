@@ -1,11 +1,529 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."><title>ios</title><link rel=stylesheet href=/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css integrity="sha256-kf2H+faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media=screen><link rel=alternate type=application/rss+xml title="RSS Feed" href=/feed.xml><link rel=alternate hreflang=de href=/de/tags/ios/></head><body class="bg-dark font-body text-gray-900"><nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow"><div class="flex justify-between items-stretch w-full"><a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href=/><img src=/img/logo.svg class=h-8 alt=Logo>
-<span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span></a>
-<template><i class="hidden hover:border-primary hover:border-white"></i></template><ul class="hidden md:flex items-stretch list-none m-0"><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/downloads/>Downloads</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/coop/>Cooperations</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/faq/>FAQ</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/donate/>Donate</a></li><li class="flex items-center mx-5 my-3 border-l border-primary"></li><li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent"><button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
-<span>EN</span>
-<i class="fas fa-chevron-down text-xs"></i></button><div class=relative><div x-show=isLangDropdownOpen @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md"><a href=/de/tags/ios/ lang=de class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a></div></div></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw" aria-label=Twitter></i></a></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw" aria-label=Facebook></i></a></li></ul><button @click="isNavOpen = !isNavOpen" type=button class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
-<i x-show=isNavOpen class="fas fa-times fa-fw"></i><i x-show=!isNavOpen class="fas fa-bars fa-fw"></i></button></div><div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class=md:hidden><a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/downloads/>Downloads</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/coop/>Cooperations</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/faq/>FAQ</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/donate/>Donate</a><hr class="border-primary my-2"><div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2"><i class="fas fa-globe fa-fw"></i>EN</div><div class=mt-1><a href=/de/tags/ios/ lang=de class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a></div><hr class="border-primary my-2"><a class="block p-2 hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw"></i><span>Cryptomator on Twitter</span></a>
-<a class="block p-2 hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw"></i><span>Cryptomator on Facebook</span></a></div></nav><div class="bg-gray-100 min-vh-80"><div class="container py-12"><header class=mb-6><h1>Posts</h1></header><article><h2>Cryptomator Roadmap Mid 2019</h2><p>We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&rsquo;re also going to have a look at the roadmaps of our mobile apps.</p><h2 id=desktop>Desktop</h2><p>In the desktop area, we are currently pursuing two different branches: On the one hand we are striving for feature completion of 1.4.x, with 1.4.12 already available as a release candidate. It will finally allow Linux users to store their password in the system and include the much desired &ldquo;Custom Mount Flags&rdquo; feature.</p><ul><li><strong>Save password in system (Linux):</strong> For a long time, you could only store your vault&rsquo;s password in the system under macOS and Windows. Through a community contribution, this is now finally also possible under (some) Linux systems. 😄 The existence of GNOME Keyring or another keychain via Secret Service API is required. Many thanks to Ralph Plawetzki (purejava on GitHub) and Sebastian Wiesendahl (swiesend on GitHub) for the implementation!</li><li><strong>Custom Mount Flags:</strong> Cryptomator uses default options to mount a drive (both for Dokany and FUSE) that we chose for security or performance reasons. However, this leads to limited functionality in some cases and users who want to set their own options can now change them. Be aware: <em>Use at your own risk!</em></li></ul><p>On the other hand the implementation of 1.5.0 has already started. For 1.5.0, as announced, we want to fully concentrate on the redesign of the user interface and improve the internal processing of Cryptomator, because like many open-source projects it has grown organically over time and therefore needs a good refactoring. 😉</p><h2 id=ios>iOS</h2><p>After the release of Cryptomator 1.4.0 for iOS with built-in cache functionality, which on the one hand avoids repeated downloading of files and on the other hand allows (limited) offline access, the work on Cryptomator 1.5.0 for iOS has started.</p><p>The main focus will be the integration into the Files app of iOS. The first step will be the expansion of our <a href=https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html target=_blank rel=noopener>Document Provider</a> which is going to be extended by the methods &ldquo;Open&rdquo; and &ldquo;Move&rdquo;. This will make a direct access to files within a Cryptomator vault from other apps possible without having to copy them back and forth.</p><h2 id=android>Android</h2><p>Cryptomator 1.4.0 for Android is currently being finalized with the following features, which can already be tested in a beta version:</p><ul><li><strong>Automatic photo upload:</strong> After activation, all images created on the smartphone will be uploaded the next time the selected vault is unlocked.</li><li><strong>Make files writable by third-party apps:</strong> Files that are opened can be edited in third-party apps. When you finish the editing process by saving and returning to the Cryptomator app, the changes are transferred to the cloud.</li></ul><p>We are considering these features for future versions:</p><ul><li><strong>LRU Cache:</strong> To save network traffic, certain server responses are cached to avoid repeated downloading, for example of unmodified images from the cloud.</li><li><strong>Support for Google Team Drives:</strong> Access to vaults located in Google Team Drive should be made possible.</li><li><strong>Distribution of the app outside of Google Play:</strong> Cryptomator for Android should also be available from alternative sources. We are thinking about setting up a licensing system, through which a license could be purchased directly.</li><li><strong>Unlocking with system password:</strong> You should be able to use the system password of the smartphone to open vaults. (Similar to unlocking with a fingerprint.)</li><li><strong>Access to files via DocumentProvider:</strong> Access to a Cryptomator vault inside other apps should be made possible via a DocumentProvider. For example, a file explorer would then be able to access the vault in this way.</li><li><strong>Upload of directories (recursive):</strong> The download of whole folders already works, the upload including all subfolders is not possible yet.</li></ul></article><article><h2>Cryptomator 1.3.0 Release</h2><p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href=https://github.com/cryptomator/cryptolib target=_blank rel=noopener>CryptoLib</a>, <a href=https://github.com/cryptomator/cryptofs target=_blank rel=noopener>CryptoFS</a>, and <a href=https://github.com/cryptomator/webdav-nio-adapter target=_blank rel=noopener>WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target=_blank rel=noopener>here</a>.</p><h3 id=improvements>Improvements</h3><ul><li>Auto-Unlock!!! 🎉 (<a href=https://github.com/cryptomator/cryptomator/issues/40 target=_blank rel=noopener>#40</a>) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions</li><li>New vault format 6 (<a href=https://github.com/cryptomator/cryptomator/issues/521 target=_blank rel=noopener>#521</a>)</li><li>Added new options to &ldquo;unlocked&rdquo; screen: Mount/unmount without locking/unlocking (<a href=https://github.com/cryptomator/cryptomator/issues/452 target=_blank rel=noopener>#452</a>)</li><li>Network access now filtered by the socket instead of the application (<a href=https://github.com/cryptomator/cryptomator/issues/431 target=_blank rel=noopener>#431</a>)</li><li>You can now change the socket port without restarting Cryptomator</li><li>New log system with log file rotation and exposed, user-adjustable configuration</li></ul><h4 id=windows>Windows</h4><ul><li>Removed IPv6 flag, Windows will now always mount <code>cryptomator-vault</code> which is mapped to <code>127.0.0.1</code> (<a href=https://github.com/cryptomator/cryptomator/issues/512 target=_blank rel=noopener>#512</a>, <a href=https://github.com/cryptomator/cryptomator/issues/529 target=_blank rel=noopener>#529</a>)</li></ul><h4 id=macos>macOS</h4><ul><li>Improved macOS Sierra integration, unlocking doesn&rsquo;t ask for username/password for <code>localhost</code> anymore (<a href=https://github.com/cryptomator/cryptomator/issues/170 target=_blank rel=noopener>#170</a>)</li><li>Improved iCloud Drive compatibility (<a href=https://github.com/cryptomator/cryptomator/issues/364 target=_blank rel=noopener>#364</a>)</li><li>Fixed slow startup on some systems</li><li>Added <code>CMD+,</code> shortcut for preferences</li></ul><h3 id=misc>Misc</h3><ul><li>Changed license to GPLv3</li><li>Dropped SHA-1 signatures in Windows Authenticode code signing</li><li>Dropped official Windows Vista support</li><li>Dropped official Ubuntu Vivid and Wily support</li></ul><h3 id=technical-details-on-windows-mounting>Technical Details on Windows Mounting</h3><p>After we have fixed <a href=https://github.com/cryptomator/cryptomator/issues/431 target=_blank rel=noopener>#431</a>, we noticed various issues on Windows. We tried hosting the virtual drive via <code>localhost</code>, <code>127.0.0.1</code>, and <code>::1</code> but every host has its own issue: Sometimes access to the virtual drive was extremely slow, sometimes Windows showed unnecessary security warnings (<a href=https://github.com/cryptomator/cryptomator/issues/529 target=_blank rel=noopener>#529</a>), and sometimes Office didn&rsquo;t properly work (<a href=https://github.com/cryptomator/cryptomator/issues/512 target=_blank rel=noopener>#512</a>). That&rsquo;s why the Windows installer for Cryptomator now writes the new host <code>cryptomator-vault</code> (which is mapped to <code>127.0.0.1</code>) into the <code>hosts</code> file. Weirdly enough, with that new host, all problems seem to be gone. Even though we don&rsquo;t quite understand why binding an IP has such a big impact, we just hope that we finally found a good solution!</p><h3 id=under-the-hood-improvements>Under-The-Hood Improvements</h3><p>We&rsquo;d like to highlight some improvements that we were able to make under-the-hood: Faster build times, high test coverage for our crypto libraries, and more!</p><h4 id=ci-build-times>CI Build Times</h4><p>(<a href=https://travis-ci.org/cryptomator/cryptomator/builds target=_blank rel=noopener>Travis CI build numbers are in parentheses</a>)</p><table class="table-fixed w-full"><thead><tr class=border-t><th class="w-1/3 px-4 py-2">Branch</th><th class="w-1/3 px-4 py-2">1.3.0</th><th class="w-1/3 px-4 py-2">1.2.4</th></tr></thead><tbody><tr class=border-t><th class="px-4 py-2">Master (Release)</th><td class="px-4 py-2">3min (809, 819, 835, 842, 845)</td><td class="px-4 py-2">5min (699, 704, 714, 727, 828)</td></tr><tr class=border-t><th class="px-4 py-2">Develop</th><td class="px-4 py-2">1.6min (830, 831, 837, 839, 841)</td><td class="px-4 py-2">3min (710, 711, 715, 724, 725)</td></tr></tbody></table><h4 id=lines-of-code>Lines of Code</h4><p>(determined via <code>cloc --exclude-dir=test --include-lang=Java</code>)</p><table class="table-fixed w-full"><thead><tr class=border-t><th class="w-1/3 px-4 py-2">Project</th><th class="w-1/3 px-4 py-2">1.3.0</th><th class="w-1/3 px-4 py-2">1.2.4</th></tr></thead><tbody><tr class=border-t><th class="px-4 py-2">Cryptomator-Desktop</th><td class="px-4 py-2">7,249</td><td class="px-4 py-2">16,624</td></tr><tr class=border-t><th class="px-4 py-2">CryptoLib</th><td class="px-4 py-2">1,447</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">CryptoFS</th><td class="px-4 py-2">6,829</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">WebDAV-NIO-Adapter</th><td class="px-4 py-2">3,979</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">SIV-Mode</th><td class="px-4 py-2">1,238</td><td class="px-4 py-2">1,238</td></tr><tr class=border-t><th class="px-4 py-2">Sum</th><td class="px-4 py-2">20,742</td><td class="px-4 py-2">17,862</td></tr></tbody></table><h4 id=test-coverage>Test Coverage</h4><p>(determined via JaCoCo)</p><table class="table-fixed w-full"><thead><tr class=border-t><th class="w-1/3 px-4 py-2">Project</th><th class="w-1/3 px-4 py-2">1.3.0</th><th class="w-1/3 px-4 py-2">1.2.4</th></tr></thead><tbody><tr class=border-t><th class="px-4 py-2">Cryptomator-Desktop</th><td class="px-4 py-2">14%</td><td class="px-4 py-2">66%</td></tr><tr class=border-t><th class="px-4 py-2">CryptoLib</th><td class="px-4 py-2">93%</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">CryptoFS</th><td class="px-4 py-2">97%</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">WebDAV-NIO-Adapter</th><td class="px-4 py-2">26%</td><td class="px-4 py-2">-</td></tr><tr class=border-t><th class="px-4 py-2">SIV-Mode</th><td class="px-4 py-2">96%</td><td class="px-4 py-2">96%</td></tr></tbody></table><p>* passes <a href=http://www.webdav.org/neon/litmus/ target=_blank rel=noopener>litmus (WebDAV server test suite)</a></p><h4 id=file-size>File Size</h4><table class="table-fixed w-full"><thead><tr class=border-t><th class="w-1/3 px-4 py-2">File</th><th class="w-1/3 px-4 py-2">1.3.0</th><th class="w-1/3 px-4 py-2">1.2.4</th></tr></thead><tbody><tr class=border-t><th class="px-4 py-2">Cryptomator.jar</th><td class="px-4 py-2">9.18 MB</td><td class="px-4 py-2">12.1 MB</td></tr></tbody></table><h3 id=evolution-of-cryptomator>Evolution of Cryptomator</h3><p>(made with Gource)</p><div class="relative aspect-16x9"><iframe class="absolute w-full h-full" src=https://gfycat.com/ifr/UnlawfulAdmirableAmericanindianhorse frameborder=0 scrolling=no allowfullscreen></iframe></div><hr><h2 id=cryptomator-124-for-ios>Cryptomator 1.2.4 for iOS</h2><ul><li>Added compatibility to vault version 6</li><li>Fixed auto-lock bug, which occurred when you opened up the Touch ID settings (<a href=https://github.com/cryptomator/cryptomator-ios/issues/89 target=_blank rel=noopener>#89</a>)</li><li>Improved filename blacklist, you can now see files and folders that start with a period &ldquo;.&rdquo;</li></ul><p>We weren&rsquo;t able to finish <a href=https://github.com/cryptomator/cryptomator-ios/milestone/11 target=_blank rel=noopener>Cryptomator 1.3.0 for iOS</a> in time. Some great features are planned for this version. Stay tuned!</p><hr><h2 id=cryptomator-060-for-android>Cryptomator 0.6.0 for Android</h2><ul><li>Added compatibility to vault version 6</li><li>Added external storage support (<a href=https://github.com/cryptomator/cryptomator-android/issues/50 target=_blank rel=noopener>#50</a>)</li><li>Added fingerprint support (<a href=https://github.com/cryptomator/cryptomator-android/issues/14 target=_blank rel=noopener>#14</a>)</li><li>Added multiple selection for file upload (<a href=https://github.com/cryptomator/cryptomator-android/issues/30 target=_blank rel=noopener>#30</a>)</li><li>Added creation and editing of text files</li><li>Added sharing of texts</li><li>Added logout of cloud storage services in settings</li><li>Improved filename blacklist, you can now see files and folders that start with a period &ldquo;.&rdquo; (<a href=https://github.com/cryptomator/cryptomator-android/issues/60 target=_blank rel=noopener>#60</a>)</li><li>Fixed inaccessible vaults in OneDrive (<a href=https://github.com/cryptomator/cryptomator-android/issues/55 target=_blank rel=noopener>#55</a>)</li><li>Further crash/bug fixes and design improvements</li></ul><p>This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!</p></article><article><h2>Cryptomator 1.2.0 Release</h2><p>Cryptomator 1.2.0 for Windows, Mac, and Linux is out now!</p><h3 id=new-features>New Features</h3><ul><li>On Windows and Mac you can now optionally save your password. This is a preparation for auto-unlock (GitHub Issue <a href=https://github.com/cryptomator/cryptomator/issues/40 target=_blank rel=noopener>40</a>), one of the most wanted features we&rsquo;re planning for the next minor release. Linux support will follow, as soon as we figured out a standard way to protect saved credentials across most distributions.</li><li>New migration screen preventing accidental migration.</li><li>Cryptomator for Mac will now appear in Dock + Application Switcher, when not minimized to the menu bar icon.</li></ul><h3 id=fixes-and-improvements>Fixes and Improvements</h3><ul><li>Improved speed of directory listing by using a deterministic cleartext size calculation.</li><li>A full list of fixed issues can be found <a href="https://github.com/cryptomator/cryptomator/milestone/22?closed=1" target=_blank rel=noopener>here</a>.</li></ul><h3 id=the-downside>The Downside</h3><p>Sadly, we had to drop file size obfuscation support. From this version onwards, there is a bijective function for calculating the cleartext size from the ciphertext size and vice versa.</p><p>We always strive to offer the best of both, security and usability. But sometimes we need to find a compromise in order to implement all the features, we&rsquo;re planning for future releases. In the past, we needed to access the first few bytes of a file in order to determine the cleartext file size, which led to <code>O(n)</code> I/O activities with <code>n</code> being the number of files per directories. In this case, we decided in favor of <code>O(1)</code> directory listings, which is especially useful for large directory listings, file size determination via mobile devices, or slow internet connections.</p><p>File size obfuscation has never been a cryptographically effective protection against adversaries getting to know the approximate cleartext size. Anything the size of a movie remained the size of a movie and was most likely not mistaken for a text document. Nevertheless, we will miss you. R.I.P.</p><hr><h2 id=cryptomator-120-for-ios>Cryptomator 1.2.0 for iOS</h2><ul><li>Added compatibility to vaults created with desktop version 1.2.0</li><li>Added file sizes to directory listing (only available for newly-created or migrated vaults)</li><li>Added &ldquo;sort by date&rdquo; in directory listing</li><li>Added filter capability in directory listing</li><li>Added favorite folders to file upload</li><li>Added sticker pack with Cryptobot for Messages (available for iOS 10)</li><li>Improved clean up of temporary files</li><li>Fixed upload of large files in iCloud Drive, Dropbox, and OneDrive</li><li>Fixed access of shared folders in OneDrive</li><li>Fixed directory listing that limited the number of files shown in Google Drive and OneDrive</li><li>Fixed last modified date in Google Drive</li><li>Fixed reauthentication of some cloud storage services</li></ul><hr><h2 id=cryptomator-for-android>Cryptomator for Android</h2><p>We are confident that we can inform you about a beta release in the next weeks. Stay tuned and thank you for your patience!</p></article><article><h2>In-Depth: Export Compliance for French iOS App Store</h2><p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href=https://itunes.apple.com/fr/app/cryptomator/id953086535 target=_blank rel=noopener>French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p><p>Just to be clear, you also need the U.S. Encryption Registration (ERN) approval from the U.S. Bureau of Industry (BIS). But this has already been covered by many sites, just google for <code>export compliance ern ios app store</code>.</p><p>However, there is little information on how to get the French encryption declaration approval from the Agence nationale de la sécurité des systèmes d&rsquo;information (ANSSI). This information could be useful for fellow developers that are e.g. using third-party libraries for cryptographic operations in their iOS app. I&rsquo;m not sure if this is also needed for the Google Play Store (or other Android app stores). We&rsquo;ll see soon enough.</p><h3 id=when-do-you-need-french-approval>When do you need French approval?</h3><p>Let&rsquo;s take a look on how we&rsquo;ve filled out our export compliance documentation in iTunes Connect, which is needed for apps containing encryption.</p><table class=table-auto><tr class=border-t><th class="px-4 py-2">ID</th><th class="px-4 py-2">Question</th><th class="px-4 py-2">Answer</th></tr><tr class=border-t><td class="px-4 py-2">1</td><td class="px-4 py-2">Is your app designed to use cryptography or does it contain or incorporate cryptography? (Select Yes even if your app is only utilizing the encryption available in iOS or OS X.)</td><td class="px-4 py-2">Yes</td></tr><tr class=border-t><td class="px-4 py-2">2</td><td class="px-4 py-2">Does your app qualify for any of the exemptions provided in Category 5, Part 2 of the U.S. Export Administration Regulations?</td><td class="px-4 py-2">No</td></tr><tr class=border-t><td class="px-4 py-2">3</td><td class="px-4 py-2">Does your app implement one or more encryption algorithms that are proprietary or yet to be accepted as standard by international standard bodies (such as, the IEEE, IETF, ITU, and so on)?</td><td class="px-4 py-2">No</td></tr><tr class=border-t><td class="px-4 py-2">4</td><td class="px-4 py-2">Does your app implement one or more encryption algorithms instead of, or in addition to, accessing or using the encryption in iOS and OS X?</td><td class="px-4 py-2">Yes</td></tr><tr class=border-t><td class="px-4 py-2">5</td><td class="px-4 py-2">Is your app going to be available on the French App Store?</td><td class="px-4 py-2">Yes</td></tr></table><p>Our answer to question 4 is probably less common among typical apps using encryption. Additionally to Apple&rsquo;s CommonCrypto, we&rsquo;re making use of OpenSSL and scrypt, which aren&rsquo;t bundled with the standard library of iOS. Only then you&rsquo;re going to be asked question 5 and only then you have to submit a copy of the French encryption declaration approval from the ANSSI.</p><h3 id=how-do-i-submit-an-application-to-the-anssi>How do I submit an application to the ANSSI?</h3><p>Thought you&rsquo;d never ask. Thankfully, there is an English website for this: <a href=http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/ target=_blank rel=noopener>http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/</a></p><p>But the fun stops there. From now on, everything is in French. Yup. That&rsquo;s right. Everything. Even the responses you receive are in French. And you have to submit your request via mail (yes, not email).</p><p>What&rsquo;s our advice on this? Best case you know someone who can read/write French, but in our case we just used Google Translate extensively. We&rsquo;ve filled out the approval form in English, because we hoped for common sense that they&rsquo;re at least able to read our request in English. And it worked!</p><h3 id=how-long-does-it-take-until-my-request-has-been-processedapproved>How long does it take until my request has been processed/approved?</h3><p>The official statement is:</p><blockquote><p>Declaration requests are processed within one month from receipt of the complete request file and authorisation requests within four months from the same date.</p></blockquote><p>We&rsquo;ve submitted our declaration request in the beginning of April 2016 and received a first response in the beginning of May. It was just to inform us that they&rsquo;ve received our request and it&rsquo;ll take another two months to finish the process. In the end, we&rsquo;ve received the approval two months after our submission.</p><p>I don&rsquo;t remember exactly how long it took to get the ERN approval, but it was just a matter of days and completely processed online.</p><h3 id=summary>Summary</h3><p>I hope you learned something from our experience and if you&rsquo;re an app developer struggling with the same issue, you hopefully received some insight in this process. Obviously, this information may change in the future, so do some additional research. 😉</p><p>Funny story: In the approval form are checkboxes, which you can enable if you&rsquo;re sending a CD or USB flash drive with information of your product (like commercial brochure, user manual, technical details). I couldn&rsquo;t believe what they were asking for, so I didn&rsquo;t send anything besides the approval form. They kindly sent me an email, if I could provide a commercial or technical brochure for Cryptomator so that they can process my request. So I did that via email and everything was fine. 😄</p></article><article><h2>Cryptomator 1.1 Release</h2><p>Cryptomator 1.1 for Windows, OS X, and Linux is out now! We&rsquo;ve added a password strength indicator and sync conflicts are now being detected.</p><figure class="text-center my-8"><img class=inline-block src=/img/blog/cryptomator-1-1.png srcset="/img/blog/cryptomator-1-1.png 1x, /img/blog/cryptomator-1-1@2x.png 2x" alt="Cryptomator 1.1 für Windows, OS X und Linux"></figure><h3 id=whats-new>What&rsquo;s New:</h3><ul><li>Password Strength Indicator: Based on Dropbox&rsquo;s <a href=https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/ target=_blank rel=noopener>zxcvbn</a>. Kudos to Jean-Noël Charon (jncharon on GitHub) for implementing this feature.</li><li>Sync Conflict Resolution: When editing a file on multiple devices simultaneously, version conflicts are inevitable. Dropbox, Google Drive, etc. can detect these conflicts and will provide all versions of the affected file. From now on Cryptomator will transparently pass detected conflicts right to the decrypted drive to ensure no version gets lost.</li><li>Several small tweaks and fixes.</li></ul><hr><p>We&rsquo;ve also released Cryptomator 1.1 for iOS recently. WebDAV support is finally here! Encrypt your files in cloud storage services like ownCloud, HiDrive, MagentaCLOUD, STACK, blaucloud, and many more.</p><figure class="text-center my-8"><img class=inline-block src=/img/blog/cryptomator-ios-1-1.png srcset="/img/blog/cryptomator-ios-1-1.png 1x, /img/blog/cryptomator-ios-1-1@2x.png 2x" alt="Cryptomator 1.1 für iOS"></figure><h3 id=whats-new-1>What&rsquo;s New:</h3><ul><li>Added WebDAV support.</li><li>Downloads and uploads continue while the app is in the background.</li><li>Improved Google Drive integration, using their newest APIs.</li><li>Fixed missing fullscreen button when viewing videos on iPad.</li><li>Several bug fixes and UI optimizations.</li></ul><hr><h2 id=what-about-android>What about Android?</h2><p>We started implementing a prototype of the Android app and will keep you updated shortly! Stay tuned. 😄</p></article></div></div><footer class="border-t-2 border-secondary pt-8 pb-16"><section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5"><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/blog/>Blog</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://cryptomator.redbubble.com/ target=_blank rel=noopener>Merchandise</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/presskit/>Press Kit</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Contribute</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://github.com/cryptomator/cryptomator target=_blank rel=noopener>GitHub</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/donate/>Donate</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://translate.cryptomator.org/ target=_blank rel=noopener>Translate</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://community.cryptomator.org/ target=_blank rel=noopener>Community</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/contact/>Contact</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Follow Us</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener>Twitter</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener>Facebook</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/feed.xml rel=alternate type=application/rss+xml>RSS Feed</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Legal</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/impressum/>Impressum</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/privacy/>Privacy Policy</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/terms/>Terms & Conditions</a></li></ul></div></section></footer><script type=text/javascript src=/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script><script type=text/javascript src=/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script><script type=text/javascript src=/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."/>
+    <title>ios</title>
+    
+      
+      <link rel="stylesheet" href="/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css" integrity="sha256-kf2H&#43;faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media="screen">
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+    
+    <link rel="alternate" hreflang="de" href="/de/tags/ios/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+    
+    <template>
+      
+      <i class="hidden hover:border-primary hover:border-white"></i>
+    </template>
+    
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/coop/">Cooperations</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/faq/">FAQ</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>EN</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            
+            <a href="/de/tags/ios/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Cooperations</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/faq/">FAQ</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+    
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> EN
+    </div>
+    <div class="mt-1">
+      
+      <a href="/de/tags/ios/" lang="de" class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container py-12">
+    <header class="mb-6">
+      <h1>Posts</h1>
+    </header>
+    
+      <article>
+        <h2>Cryptomator Roadmap Mid 2019</h2>
+        <p>We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&rsquo;re also going to have a look at the roadmaps of our mobile apps.</p>
+<h2 id="desktop">Desktop</h2>
+<p>In the desktop area, we are currently pursuing two different branches: On the one hand we are striving for feature completion of 1.4.x, with 1.4.12 already available as a release candidate. It will finally allow Linux users to store their password in the system and include the much desired &ldquo;Custom Mount Flags&rdquo; feature.</p>
+<ul>
+<li><strong>Save password in system (Linux):</strong> For a long time, you could only store your vault&rsquo;s password in the system under macOS and Windows. Through a community contribution, this is now finally also possible under (some) Linux systems. 😄 The existence of GNOME Keyring or another keychain via Secret Service API is required. Many thanks to Ralph Plawetzki (purejava on GitHub) and Sebastian Wiesendahl (swiesend on GitHub) for the implementation!</li>
+<li><strong>Custom Mount Flags:</strong> Cryptomator uses default options to mount a drive (both for Dokany and FUSE) that we chose for security or performance reasons. However, this leads to limited functionality in some cases and users who want to set their own options can now change them. Be aware: <em>Use at your own risk!</em></li>
+</ul>
+<p>On the other hand the implementation of 1.5.0 has already started. For 1.5.0, as announced, we want to fully concentrate on the redesign of the user interface and improve the internal processing of Cryptomator, because like many open-source projects it has grown organically over time and therefore needs a good refactoring. 😉</p>
+<h2 id="ios">iOS</h2>
+<p>After the release of Cryptomator 1.4.0 for iOS with built-in cache functionality, which on the one hand avoids repeated downloading of files and on the other hand allows (limited) offline access, the work on Cryptomator 1.5.0 for iOS has started.</p>
+<p>The main focus will be the integration into the Files app of iOS. The first step will be the expansion of our <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html" target="_blank" rel="noopener">Document Provider</a> which is going to be extended by the methods &ldquo;Open&rdquo; and &ldquo;Move&rdquo;. This will make a direct access to files within a Cryptomator vault from other apps possible without having to copy them back and forth.</p>
+<h2 id="android">Android</h2>
+<p>Cryptomator 1.4.0 for Android is currently being finalized with the following features, which can already be tested in a beta version:</p>
+<ul>
+<li><strong>Automatic photo upload:</strong> After activation, all images created on the smartphone will be uploaded the next time the selected vault is unlocked.</li>
+<li><strong>Make files writable by third-party apps:</strong> Files that are opened can be edited in third-party apps. When you finish the editing process by saving and returning to the Cryptomator app, the changes are transferred to the cloud.</li>
+</ul>
+<p>We are considering these features for future versions:</p>
+<ul>
+<li><strong>LRU Cache:</strong> To save network traffic, certain server responses are cached to avoid repeated downloading, for example of unmodified images from the cloud.</li>
+<li><strong>Support for Google Team Drives:</strong> Access to vaults located in Google Team Drive should be made possible.</li>
+<li><strong>Distribution of the app outside of Google Play:</strong> Cryptomator for Android should also be available from alternative sources. We are thinking about setting up a licensing system, through which a license could be purchased directly.</li>
+<li><strong>Unlocking with system password:</strong> You should be able to use the system password of the smartphone to open vaults. (Similar to unlocking with a fingerprint.)</li>
+<li><strong>Access to files via DocumentProvider:</strong> Access to a Cryptomator vault inside other apps should be made possible via a DocumentProvider. For example, a file explorer would then be able to access the vault in this way.</li>
+<li><strong>Upload of directories (recursive):</strong> The download of whole folders already works, the upload including all subfolders is not possible yet.</li>
+</ul>
+
+      </article>
+    
+      <article>
+        <h2>Cryptomator 1.3.0 Release</h2>
+        <p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>, <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a>, and <a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="improvements">Improvements</h3>
+<ul>
+<li>Auto-Unlock!!! 🎉 (<a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">#40</a>) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions</li>
+<li>New vault format 6 (<a href="https://github.com/cryptomator/cryptomator/issues/521" target="_blank" rel="noopener">#521</a>)</li>
+<li>Added new options to &ldquo;unlocked&rdquo; screen: Mount/unmount without locking/unlocking (<a href="https://github.com/cryptomator/cryptomator/issues/452" target="_blank" rel="noopener">#452</a>)</li>
+<li>Network access now filtered by the socket instead of the application (<a href="https://github.com/cryptomator/cryptomator/issues/431" target="_blank" rel="noopener">#431</a>)</li>
+<li>You can now change the socket port without restarting Cryptomator</li>
+<li>New log system with log file rotation and exposed, user-adjustable configuration</li>
+</ul>
+<h4 id="windows">Windows</h4>
+<ul>
+<li>Removed IPv6 flag, Windows will now always mount <code>cryptomator-vault</code> which is mapped to <code>127.0.0.1</code> (<a href="https://github.com/cryptomator/cryptomator/issues/512" target="_blank" rel="noopener">#512</a>, <a href="https://github.com/cryptomator/cryptomator/issues/529" target="_blank" rel="noopener">#529</a>)</li>
+</ul>
+<h4 id="macos">macOS</h4>
+<ul>
+<li>Improved macOS Sierra integration, unlocking doesn&rsquo;t ask for username/password for <code>localhost</code> anymore (<a href="https://github.com/cryptomator/cryptomator/issues/170" target="_blank" rel="noopener">#170</a>)</li>
+<li>Improved iCloud Drive compatibility (<a href="https://github.com/cryptomator/cryptomator/issues/364" target="_blank" rel="noopener">#364</a>)</li>
+<li>Fixed slow startup on some systems</li>
+<li>Added <code>CMD+,</code> shortcut for preferences</li>
+</ul>
+<h3 id="misc">Misc</h3>
+<ul>
+<li>Changed license to GPLv3</li>
+<li>Dropped SHA-1 signatures in Windows Authenticode code signing</li>
+<li>Dropped official Windows Vista support</li>
+<li>Dropped official Ubuntu Vivid and Wily support</li>
+</ul>
+<h3 id="technical-details-on-windows-mounting">Technical Details on Windows Mounting</h3>
+<p>After we have fixed <a href="https://github.com/cryptomator/cryptomator/issues/431" target="_blank" rel="noopener">#431</a>, we noticed various issues on Windows. We tried hosting the virtual drive via <code>localhost</code>, <code>127.0.0.1</code>, and <code>::1</code> but every host has its own issue: Sometimes access to the virtual drive was extremely slow, sometimes Windows showed unnecessary security warnings (<a href="https://github.com/cryptomator/cryptomator/issues/529" target="_blank" rel="noopener">#529</a>), and sometimes Office didn&rsquo;t properly work (<a href="https://github.com/cryptomator/cryptomator/issues/512" target="_blank" rel="noopener">#512</a>). That&rsquo;s why the Windows installer for Cryptomator now writes the new host <code>cryptomator-vault</code> (which is mapped to <code>127.0.0.1</code>) into the <code>hosts</code> file. Weirdly enough, with that new host, all problems seem to be gone. Even though we don&rsquo;t quite understand why binding an IP has such a big impact, we just hope that we finally found a good solution!</p>
+<h3 id="under-the-hood-improvements">Under-The-Hood Improvements</h3>
+<p>We&rsquo;d like to highlight some improvements that we were able to make under-the-hood: Faster build times, high test coverage for our crypto libraries, and more!</p>
+<h4 id="ci-build-times">CI Build Times</h4>
+<p>(<a href="https://travis-ci.org/cryptomator/cryptomator/builds" target="_blank" rel="noopener">Travis CI build numbers are in parentheses</a>)</p>
+<table class="table-fixed w-full">
+  <thead>
+    <tr class="border-t">
+      <th class="w-1/3 px-4 py-2">Branch</th>
+      <th class="w-1/3 px-4 py-2">1.3.0</th>
+      <th class="w-1/3 px-4 py-2">1.2.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="border-t">
+      <th class="px-4 py-2">Master (Release)</th>
+      <td class="px-4 py-2">3min (809, 819, 835, 842, 845)</td>
+      <td class="px-4 py-2">5min (699, 704, 714, 727, 828)</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">Develop</th>
+      <td class="px-4 py-2">1.6min (830, 831, 837, 839, 841)</td>
+      <td class="px-4 py-2">3min (710, 711, 715, 724, 725)</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="lines-of-code">Lines of Code</h4>
+<p>(determined via <code>cloc --exclude-dir=test --include-lang=Java</code>)</p>
+<table class="table-fixed w-full">
+  <thead>
+    <tr class="border-t">
+      <th class="w-1/3 px-4 py-2">Project</th>
+      <th class="w-1/3 px-4 py-2">1.3.0</th>
+      <th class="w-1/3 px-4 py-2">1.2.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="border-t">
+      <th class="px-4 py-2">Cryptomator-Desktop</th>
+      <td class="px-4 py-2">7,249</td>
+      <td class="px-4 py-2">16,624</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">CryptoLib</th>
+      <td class="px-4 py-2">1,447</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">CryptoFS</th>
+      <td class="px-4 py-2">6,829</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">WebDAV-NIO-Adapter</th>
+      <td class="px-4 py-2">3,979</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">SIV-Mode</th>
+      <td class="px-4 py-2">1,238</td>
+      <td class="px-4 py-2">1,238</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">Sum</th>
+      <td class="px-4 py-2">20,742</td>
+      <td class="px-4 py-2">17,862</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="test-coverage">Test Coverage</h4>
+<p>(determined via JaCoCo)</p>
+<table class="table-fixed w-full">
+  <thead>
+    <tr class="border-t">
+      <th class="w-1/3 px-4 py-2">Project</th>
+      <th class="w-1/3 px-4 py-2">1.3.0</th>
+      <th class="w-1/3 px-4 py-2">1.2.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="border-t">
+      <th class="px-4 py-2">Cryptomator-Desktop</th>
+      <td class="px-4 py-2">14%</td>
+      <td class="px-4 py-2">66%</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">CryptoLib</th>
+      <td class="px-4 py-2">93%</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">CryptoFS</th>
+      <td class="px-4 py-2">97%</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">WebDAV-NIO-Adapter</th>
+      <td class="px-4 py-2">26%</td>
+      <td class="px-4 py-2">-</td>
+    </tr>
+    <tr class="border-t">
+      <th class="px-4 py-2">SIV-Mode</th>
+      <td class="px-4 py-2">96%</td>
+      <td class="px-4 py-2">96%</td>
+    </tr>
+  </tbody>
+</table>
+<p>* passes <a href="http://www.webdav.org/neon/litmus/" target="_blank" rel="noopener">litmus (WebDAV server test suite)</a></p>
+<h4 id="file-size">File Size</h4>
+<table class="table-fixed w-full">
+  <thead>
+    <tr class="border-t">
+      <th class="w-1/3 px-4 py-2">File</th>
+      <th class="w-1/3 px-4 py-2">1.3.0</th>
+      <th class="w-1/3 px-4 py-2">1.2.4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="border-t">
+      <th class="px-4 py-2">Cryptomator.jar</th>
+      <td class="px-4 py-2">9.18 MB</td>
+      <td class="px-4 py-2">12.1 MB</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="evolution-of-cryptomator">Evolution of Cryptomator</h3>
+<p>(made with Gource)</p>
+<div class="relative aspect-16x9">
+  <iframe class="absolute w-full h-full" src="https://gfycat.com/ifr/UnlawfulAdmirableAmericanindianhorse" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
+<hr>
+<h2 id="cryptomator-124-for-ios">Cryptomator 1.2.4 for iOS</h2>
+<ul>
+<li>Added compatibility to vault version 6</li>
+<li>Fixed auto-lock bug, which occurred when you opened up the Touch ID settings (<a href="https://github.com/cryptomator/cryptomator-ios/issues/89" target="_blank" rel="noopener">#89</a>)</li>
+<li>Improved filename blacklist, you can now see files and folders that start with a period &ldquo;.&rdquo;</li>
+</ul>
+<p>We weren&rsquo;t able to finish <a href="https://github.com/cryptomator/cryptomator-ios/milestone/11" target="_blank" rel="noopener">Cryptomator 1.3.0 for iOS</a> in time. Some great features are planned for this version. Stay tuned!</p>
+<hr>
+<h2 id="cryptomator-060-for-android">Cryptomator 0.6.0 for Android</h2>
+<ul>
+<li>Added compatibility to vault version 6</li>
+<li>Added external storage support (<a href="https://github.com/cryptomator/cryptomator-android/issues/50" target="_blank" rel="noopener">#50</a>)</li>
+<li>Added fingerprint support (<a href="https://github.com/cryptomator/cryptomator-android/issues/14" target="_blank" rel="noopener">#14</a>)</li>
+<li>Added multiple selection for file upload (<a href="https://github.com/cryptomator/cryptomator-android/issues/30" target="_blank" rel="noopener">#30</a>)</li>
+<li>Added creation and editing of text files</li>
+<li>Added sharing of texts</li>
+<li>Added logout of cloud storage services in settings</li>
+<li>Improved filename blacklist, you can now see files and folders that start with a period &ldquo;.&rdquo; (<a href="https://github.com/cryptomator/cryptomator-android/issues/60" target="_blank" rel="noopener">#60</a>)</li>
+<li>Fixed inaccessible vaults in OneDrive (<a href="https://github.com/cryptomator/cryptomator-android/issues/55" target="_blank" rel="noopener">#55</a>)</li>
+<li>Further crash/bug fixes and design improvements</li>
+</ul>
+<p>This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!</p>
+
+      </article>
+    
+      <article>
+        <h2>Cryptomator 1.2.0 Release</h2>
+        <p>Cryptomator 1.2.0 for Windows, Mac, and Linux is out now!</p>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li>On Windows and Mac you can now optionally save your password. This is a preparation for auto-unlock (GitHub Issue <a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">40</a>), one of the most wanted features we&rsquo;re planning for the next minor release. Linux support will follow, as soon as we figured out a standard way to protect saved credentials across most distributions.</li>
+<li>New migration screen preventing accidental migration.</li>
+<li>Cryptomator for Mac will now appear in Dock + Application Switcher, when not minimized to the menu bar icon.</li>
+</ul>
+<h3 id="fixes-and-improvements">Fixes and Improvements</h3>
+<ul>
+<li>Improved speed of directory listing by using a deterministic cleartext size calculation.</li>
+<li>A full list of fixed issues can be found <a href="https://github.com/cryptomator/cryptomator/milestone/22?closed=1" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+<h3 id="the-downside">The Downside</h3>
+<p>Sadly, we had to drop file size obfuscation support. From this version onwards, there is a bijective function for calculating the cleartext size from the ciphertext size and vice versa.</p>
+<p>We always strive to offer the best of both, security and usability. But sometimes we need to find a compromise in order to implement all the features, we&rsquo;re planning for future releases. In the past, we needed to access the first few bytes of a file in order to determine the cleartext file size, which led to <code>O(n)</code> I/O activities with <code>n</code> being the number of files per directories. In this case, we decided in favor of <code>O(1)</code> directory listings, which is especially useful for large directory listings, file size determination via mobile devices, or slow internet connections.</p>
+<p>File size obfuscation has never been a cryptographically effective protection against adversaries getting to know the approximate cleartext size. Anything the size of a movie remained the size of a movie and was most likely not mistaken for a text document. Nevertheless, we will miss you. R.I.P.</p>
+<hr>
+<h2 id="cryptomator-120-for-ios">Cryptomator 1.2.0 for iOS</h2>
+<ul>
+<li>Added compatibility to vaults created with desktop version 1.2.0</li>
+<li>Added file sizes to directory listing (only available for newly-created or migrated vaults)</li>
+<li>Added &ldquo;sort by date&rdquo; in directory listing</li>
+<li>Added filter capability in directory listing</li>
+<li>Added favorite folders to file upload</li>
+<li>Added sticker pack with Cryptobot for Messages (available for iOS 10)</li>
+<li>Improved clean up of temporary files</li>
+<li>Fixed upload of large files in iCloud Drive, Dropbox, and OneDrive</li>
+<li>Fixed access of shared folders in OneDrive</li>
+<li>Fixed directory listing that limited the number of files shown in Google Drive and OneDrive</li>
+<li>Fixed last modified date in Google Drive</li>
+<li>Fixed reauthentication of some cloud storage services</li>
+</ul>
+<hr>
+<h2 id="cryptomator-for-android">Cryptomator for Android</h2>
+<p>We are confident that we can inform you about a beta release in the next weeks. Stay tuned and thank you for your patience!</p>
+
+      </article>
+    
+      <article>
+        <h2>In-Depth: Export Compliance for French iOS App Store</h2>
+        <p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href="https://itunes.apple.com/fr/app/cryptomator/id953086535" target="_blank" rel="noopener">French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p>
+<p>Just to be clear, you also need the U.S. Encryption Registration (ERN) approval from the U.S. Bureau of Industry (BIS). But this has already been covered by many sites, just google for <code>export compliance ern ios app store</code>.</p>
+<p>However, there is little information on how to get the French encryption declaration approval from the Agence nationale de la sécurité des systèmes d&rsquo;information (ANSSI). This information could be useful for fellow developers that are e.g. using third-party libraries for cryptographic operations in their iOS app. I&rsquo;m not sure if this is also needed for the Google Play Store (or other Android app stores). We&rsquo;ll see soon enough.</p>
+<h3 id="when-do-you-need-french-approval">When do you need French approval?</h3>
+<p>Let&rsquo;s take a look on how we&rsquo;ve filled out our export compliance documentation in iTunes Connect, which is needed for apps containing encryption.</p>
+<table class="table-auto">
+  <tr class="border-t">
+    <th class="px-4 py-2">ID</th>
+    <th class="px-4 py-2">Question</th>
+    <th class="px-4 py-2">Answer</th>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">1</td>
+    <td class="px-4 py-2">Is your app designed to use cryptography or does it contain or incorporate cryptography? (Select Yes even if your app is only utilizing the encryption available in iOS or OS X.)</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">2</td>
+    <td class="px-4 py-2">Does your app qualify for any of the exemptions provided in Category 5, Part 2 of the U.S. Export Administration Regulations?</td>
+    <td class="px-4 py-2">No</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">3</td>
+    <td class="px-4 py-2">Does your app implement one or more encryption algorithms that are proprietary or yet to be accepted as standard by international standard bodies (such as, the IEEE, IETF, ITU, and so on)?</td>
+    <td class="px-4 py-2">No</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">4</td>
+    <td class="px-4 py-2">Does your app implement one or more encryption algorithms instead of, or in addition to, accessing or using the encryption in iOS and OS X?</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">5</td>
+    <td class="px-4 py-2">Is your app going to be available on the French App Store?</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+</table>
+<p>Our answer to question 4 is probably less common among typical apps using encryption. Additionally to Apple&rsquo;s CommonCrypto, we&rsquo;re making use of OpenSSL and scrypt, which aren&rsquo;t bundled with the standard library of iOS. Only then you&rsquo;re going to be asked question 5 and only then you have to submit a copy of the French encryption declaration approval from the ANSSI.</p>
+<h3 id="how-do-i-submit-an-application-to-the-anssi">How do I submit an application to the ANSSI?</h3>
+<p>Thought you&rsquo;d never ask. Thankfully, there is an English website for this: <a href="http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/" target="_blank" rel="noopener">http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/</a></p>
+<p>But the fun stops there. From now on, everything is in French. Yup. That&rsquo;s right. Everything. Even the responses you receive are in French. And you have to submit your request via mail (yes, not email).</p>
+<p>What&rsquo;s our advice on this? Best case you know someone who can read/write French, but in our case we just used Google Translate extensively. We&rsquo;ve filled out the approval form in English, because we hoped for common sense that they&rsquo;re at least able to read our request in English. And it worked!</p>
+<h3 id="how-long-does-it-take-until-my-request-has-been-processedapproved">How long does it take until my request has been processed/approved?</h3>
+<p>The official statement is:</p>
+<blockquote>
+<p>Declaration requests are processed within one month from receipt of the complete request file and authorisation requests within four months from the same date.</p>
+</blockquote>
+<p>We&rsquo;ve submitted our declaration request in the beginning of April 2016 and received a first response in the beginning of May. It was just to inform us that they&rsquo;ve received our request and it&rsquo;ll take another two months to finish the process. In the end, we&rsquo;ve received the approval two months after our submission.</p>
+<p>I don&rsquo;t remember exactly how long it took to get the ERN approval, but it was just a matter of days and completely processed online.</p>
+<h3 id="summary">Summary</h3>
+<p>I hope you learned something from our experience and if you&rsquo;re an app developer struggling with the same issue, you hopefully received some insight in this process. Obviously, this information may change in the future, so do some additional research. 😉</p>
+<p>Funny story: In the approval form are checkboxes, which you can enable if you&rsquo;re sending a CD or USB flash drive with information of your product (like commercial brochure, user manual, technical details). I couldn&rsquo;t believe what they were asking for, so I didn&rsquo;t send anything besides the approval form. They kindly sent me an email, if I could provide a commercial or technical brochure for Cryptomator so that they can process my request. So I did that via email and everything was fine. 😄</p>
+
+      </article>
+    
+      <article>
+        <h2>Cryptomator 1.1 Release</h2>
+        <p>Cryptomator 1.1 for Windows, OS X, and Linux is out now! We&rsquo;ve added a password strength indicator and sync conflicts are now being detected.</p>
+<figure class="text-center my-8">
+  <img class="inline-block" src="/img/blog/cryptomator-1-1.png" srcset="/img/blog/cryptomator-1-1.png 1x, /img/blog/cryptomator-1-1@2x.png 2x" alt="Cryptomator 1.1 für Windows, OS X und Linux" />
+</figure>
+<h3 id="whats-new">What&rsquo;s New:</h3>
+<ul>
+<li>Password Strength Indicator: Based on Dropbox&rsquo;s <a href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/" target="_blank" rel="noopener">zxcvbn</a>. Kudos to Jean-Noël Charon (jncharon on GitHub) for implementing this feature.</li>
+<li>Sync Conflict Resolution: When editing a file on multiple devices simultaneously, version conflicts are inevitable. Dropbox, Google Drive, etc. can detect these conflicts and will provide all versions of the affected file. From now on Cryptomator will transparently pass detected conflicts right to the decrypted drive to ensure no version gets lost.</li>
+<li>Several small tweaks and fixes.</li>
+</ul>
+<hr>
+<p>We&rsquo;ve also released Cryptomator 1.1 for iOS recently. WebDAV support is finally here! Encrypt your files in cloud storage services like ownCloud, HiDrive, MagentaCLOUD, STACK, blaucloud, and many more.</p>
+<figure class="text-center my-8">
+  <img class="inline-block" src="/img/blog/cryptomator-ios-1-1.png" srcset="/img/blog/cryptomator-ios-1-1.png 1x, /img/blog/cryptomator-ios-1-1@2x.png 2x" alt="Cryptomator 1.1 für iOS" />
+</figure>
+<h3 id="whats-new-1">What&rsquo;s New:</h3>
+<ul>
+<li>Added WebDAV support.</li>
+<li>Downloads and uploads continue while the app is in the background.</li>
+<li>Improved Google Drive integration, using their newest APIs.</li>
+<li>Fixed missing fullscreen button when viewing videos on iPad.</li>
+<li>Several bug fixes and UI optimizations.</li>
+</ul>
+<hr>
+<h2 id="what-about-android">What about Android?</h2>
+<p>We started implementing a prototype of the Android app and will keep you updated shortly! Stay tuned. 😄</p>
+
+      </article>
+    
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/presskit/">Press Kit</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Contribute</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/donate/">Donate</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Translate</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Follow Us</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Legal</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/privacy/">Privacy Policy</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/terms/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js" integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script>
+  </body>
+</html>

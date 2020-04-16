@@ -1,11 +1,230 @@
-<!doctype html><html lang=de><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."><title>Cryptomator Roadmap Early 2020</title><link rel=stylesheet href=/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css integrity="sha256-kf2H+faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media=screen><link rel=alternate type=application/rss+xml title="RSS Feed" href=/de/feed.xml><link rel=alternate hreflang=en href=/blog/2020/02/12/roadmap/></head><body class="bg-dark font-body text-gray-900"><nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow"><div class="flex justify-between items-stretch w-full"><a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href=/de/><img src=/img/logo.svg class=h-8 alt=Logo>
-<span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span></a>
-<template><i class="hidden hover:border-primary hover:border-white"></i></template><ul class="hidden md:flex items-stretch list-none m-0"><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/de/downloads/>Downloads</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/de/coop/>Kooperationen</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/de/faq/>FAQ</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/de/donate/>Spenden</a></li><li class="flex items-center mx-5 my-3 border-l border-primary"></li><li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent"><button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
-<span>DE</span>
-<i class="fas fa-chevron-down text-xs"></i></button><div class=relative><div x-show=isLangDropdownOpen @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md"><a href=/blog/2020/02/12/roadmap/ lang=en class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a></div></div></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw" aria-label=Twitter></i></a></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw" aria-label=Facebook></i></a></li></ul><button @click="isNavOpen = !isNavOpen" type=button class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
-<i x-show=isNavOpen class="fas fa-times fa-fw"></i><i x-show=!isNavOpen class="fas fa-bars fa-fw"></i></button></div><div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class=md:hidden><a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/de/downloads/>Downloads</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/de/coop/>Kooperationen</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/de/faq/>FAQ</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/de/donate/>Spenden</a><hr class="border-primary my-2"><div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2"><i class="fas fa-globe fa-fw"></i>DE</div><div class=mt-1><a href=/blog/2020/02/12/roadmap/ lang=en class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a></div><hr class="border-primary my-2"><a class="block p-2 hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw"></i><span>Cryptomator on Twitter</span></a>
-<a class="block p-2 hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw"></i><span>Cryptomator on Facebook</span></a></div></nav><div class="bg-gray-100 min-vh-80"><div class="container py-12"><article class=mb-12><header class=mb-6><h1 class=mt-0><a href=/de/blog/>Blog</a> / Cryptomator Roadmap Early 2020</a></h1><div class="flex items-center mb-4"><span><a href=/de/blog/2020/02/12/roadmap/>2020-02-12</a></span></div></header><hr class=my-8><section><p>Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.</p><h2 id=status-der-desktop-anwendung>Status der Desktop-Anwendung</h2><p>Wir planen noch in Q1 2020 Version 1.5.0 zu releasen. Während der derzeit noch laufenden Beta-Phase (an dieser Stelle nochmal Danke an all unsere fleißigen Tester) haben wir bereits viele Problemchen behoben und sind überzeugt eine hervorragende Qualität abliefern zu können.</p><p>Über die <a href="https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter">anstehenden Änderungen</a> an unserem sog. <em>Tresorformat</em> (d.h. der verschlüsselten Ordnerstruktur) haben wir bereits informiert. Ziel ist es zum einen die Kompatibilität mit einigen Cloud-Anbietern zu erhöhen, zum anderen die Komplexität für viele I/O-Operationen zu reduzieren. Aber eine viel offensichtlichere Änderung in 1.5.0 wird die Programmoberfläche (GUI) betreffen:</p><p>Diese haben wir nämlich nicht einfach nur <em>umgestaltet</em>, wir haben sie komplette neu geschrieben. Nahezu jede einzelne Zeile Code aus Cryptomator 1.4.x ist der Löschen-Taste zum Opfer gefallen. Warum sollte man so etwas tun? Nun, Programmcode <em>wächst</em> um Laufe der Zeit. Und im Falle von Cryptomator wächst er seit inzwischen über sechs Jahren, als viele moderne Möglichkeiten uns noch nicht zur Verfügung standen und wir andere Annahmen über die Zukunft der Software getroffen haben. Durch die Neuentwicklung der Programmoberfläche konnten wir eine komplett neue Codestruktur planen, welche die Wartung, zukünftige Erweiterungen sowie die Einarbeitung neuer Entwickler in bestimmte Programm-Abschnitte einfacher macht.</p><p>Eins der vielen Ziele des Redesigns betraf die Neugestaltung des Tresor-Erstellungs-Prozesses, der für neue Nutzer so leicht verständlich wie möglich gestaltet werden sollte. Hierzu besuchten (und organisierten) wir mehrere Usability-Testessen in unserer Nähe und beobachteten Nutzer bei ihrem ersten Kontakt mit besagtem Prozess. Dies half uns insbesondere dabei, Fehlannahmen im Umgang mit bestimmten Funktionen nachzuvollziehen und unsere Workflows entsprechend anzupassen.</p><h2 id=status-der-android-app>Status der Android-App</h2><p>Selbstverständlich wird die Android-App in Version 1.5.0 ebenfalls das neue Tresorformat 7 unterstützen. Darüber hinaus haben wir neben den üblichen Bugfixes einige neue Features vorbereitet:</p><ul><li>Bereits geladene Dateien werden auf dem Smartphone gecached. Wenn man eine Datei erneut öffnet (und sie nicht zwischenzeitlich auf einem anderen Gerät geändert wurde), wird sie vom lokalen Dateisystem geladen, was nicht nur Zeit sondern auch Datenvolumen spart.</li><li>Der Auto-Upload für Fotos wurde deutlich verbessert. Hier wurden unter anderem auch Probleme nach dem Reboot von Android 10 behoben.</li><li>Man hat jetzt die Möglichkeit, einen Tresor sofort beim Verlassen der App zu sperren.</li><li>Last but not least: Viel unserer Nutzer vermeiden Google-Anwendungen und wünschen sich eine Möglichkeit die Android-App ohne den Google Play Store zu installieren. Wir haben viel Arbeit in einen alternativen Lizenz-Store gesteckt und hoffen die App bald auch direkt vertreiben zu können.</li></ul><h2 id=status-der-ios-app>Status der iOS-App</h2><p>Die iOS-App erhält natürlich ebenfalls ein Update, um das neue Tresor-Format zu unterstützen. Darüber hinaus gibt es viele kleinere Verbesserungen unter der Haube, allerdings keine großen neuen Features. Caching gibt es allerdings hier schon und auch um den Google Play Store kommt man herum. 😉</p><h2 id=was-muss-vor-dem-finalen-150-release-noch-getan-werden>Was muss vor dem finalen 1.5.0-Release noch getan werden?</h2><p>Stand heute fehlen nur noch wenige Features (etwa die Nutzung des Wiederherstellungs-Schlüsses) und der letzte Feinschliff. Aber wir wollen sicher gehen, dass alle Mobil-Apps und auch Drittanbieter-Tools wie Cyberduck mit dem neuen Tresorformat kompatibel sind und befinden uns daher derzeit in einer etwas gedehnte Testphase mit bereits sehr ausgereiften Beta-Versionen. Für einige Bugfixes (etwa <a href=https://github.com/cryptomator/cryptomator/issues/986>diesen</a>), warten wir derzeit noch auf einen Upstream-Fix.</p><p>Gleichzeitig bereiten wir unsere Dokumentation für 1.5.0 vor, gestalten eine neue FAQ-Sektion für unsere Website und integrieren die <a href="https://community.cryptomator.org/t/localization-of-cryptomator-1-5-0/4269?u=overheadhunter">neuen Übersetzungen</a>, die von unserer phantastischen Community regelmäßig beigetragen werden.</p><h2 id=was-steht-danach-an>Was steht danach an?</h2><p>Direkt nach 1.5.0 wird der Wechsel von Java 11 auf Java 14 höchste Priorität haben. Letzteres bringt ein Packaging-Tool mit, auf das wir schon lange gewartet haben und für das wir derzeit ein Workaround nutzen, welches ein Upgrade der gebundelten JRE verhindert. Da dies hoffentlich nur eine sehr kleine Änderung ist, wird sie vermutlich schon mit 1.5.1 nachgeschoben. Dennoch wagen wir es nicht, kurz vor 1.5.0 noch neue Fässer aufzumachen und entschieden diesen Technologiewechsel auf 1.5.1 zu verschieben.</p><p>Anschließend wollen wir uns auf Flatpak konzentrieren. Der Distribution von <code>.deb</code> und <code>.rpm</code>-Dateien haben wir schon lange abgeschworen und sie durch die universellen AppImages ersetzt. Gleichzeitig finden wir es toll, wie viel Momentum das Flatpak-Ökosystem derzeit gewinnt und wie dieses Format von einer stetig zunehmenden Anzahl an Distributionen nativ unterstützt wird. Bisher haben wir Cryptoamtor aufgrund der Komplexität beim Einbinden von Laufwerken <a href=https://github.com/cryptomator/cryptomator/issues/729>zwar noch nicht zum Laufen bekommen</a>, aber sobald wir 1.5.0 über die Bühne gebracht haben, hoffen wir diesem Problem mehr Aufmerksamkeit widmen und Cryptomator bald auch als Flatpak anbieten zu können.</p><p>Bei der Android-App steht als nächstes großes Feature an, anderen Apps Dateien per DocumentProvider bereistellen zu können. Zum Beispiel würde ein Dateibrowser dadurch in die Lage versetzt, auf Tresorinhalte zuzugreifen. Darüber hinaus sind auch kleinere Features wie rekursive Uploads von Ordnern geplant.</p></section></article><div id=discourse-comments></div></div><script type=text/javascript x-url=https://cryptomator.org/blog/2020/02/12/roadmap_en.html>var url=document.currentScript.getAttribute('x-url');DiscourseEmbed={discourseUrl:'https://community.cryptomator.org/',discourseEmbedUrl:url};(function(){var d=document.createElement('script');d.type='text/javascript';d.async=true;d.src=DiscourseEmbed.discourseUrl+'javascripts/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(d);})();</script></div><footer class="border-t-2 border-secondary pt-8 pb-16"><section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5"><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/blog/>Blog</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://cryptomator.redbubble.com/ target=_blank rel=noopener>Merchandise</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/presskit/>Pressemappe</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://github.com/cryptomator/cryptomator target=_blank rel=noopener>GitHub</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/donate/>Spenden</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://translate.cryptomator.org/ target=_blank rel=noopener>Übersetzen</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://community.cryptomator.org/ target=_blank rel=noopener>Community</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/contact/>Kontakt</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener>Twitter</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener>Facebook</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/feed.xml rel=alternate type=application/rss+xml>RSS-Feed</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/impressum/>Impressum</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/privacy/>Datenschutzerklärung</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/de/terms/>AGB</a></li></ul></div></section></footer><script type=text/javascript src=/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script><script type=text/javascript src=/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script><script type=text/javascript src=/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script></body></html>
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."/>
+    <title>Cryptomator Roadmap Early 2020</title>
+    
+      
+      <link rel="stylesheet" href="/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css" integrity="sha256-kf2H&#43;faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media="screen">
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml">
+    
+    <link rel="alternate" hreflang="en" href="/blog/2020/02/12/roadmap/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+    
+    <template>
+      
+      <i class="hidden hover:border-primary hover:border-white"></i>
+    </template>
+    
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/coop/">Kooperationen</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/faq/">FAQ</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/donate/">Spenden</a>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            
+            <a href="/blog/2020/02/12/roadmap/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Kooperationen</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/faq/">FAQ</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+    
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/blog/2020/02/12/roadmap/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container py-12">
+    <article class="mb-12">
+      <header class="mb-6">
+        <h1 class="mt-0"><a href="/de/blog/">Blog</a> / Cryptomator Roadmap Early 2020</a></h1>
+        <div class="flex items-center mb-4">
+          
+          <span><a href="/de/blog/2020/02/12/roadmap/">2020-02-12</a></span>
+        </div>
+        
+      </header>
+
+      <hr class="my-8"/>
+
+      <section>
+        <p>Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.</p>
+<h2 id="status-der-desktop-anwendung">Status der Desktop-Anwendung</h2>
+<p>Wir planen noch in Q1 2020 Version 1.5.0 zu releasen. Während der derzeit noch laufenden Beta-Phase (an dieser Stelle nochmal Danke an all unsere fleißigen Tester) haben wir bereits viele Problemchen behoben und sind überzeugt eine hervorragende Qualität abliefern zu können.</p>
+<p>Über die <a href="https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter">anstehenden Änderungen</a> an unserem sog. <em>Tresorformat</em> (d.h. der verschlüsselten Ordnerstruktur) haben wir bereits informiert. Ziel ist es zum einen die Kompatibilität mit einigen Cloud-Anbietern zu erhöhen, zum anderen die Komplexität für viele I/O-Operationen zu reduzieren. Aber eine viel offensichtlichere Änderung in 1.5.0 wird die Programmoberfläche (GUI) betreffen:</p>
+<p>Diese haben wir nämlich nicht einfach nur <em>umgestaltet</em>, wir haben sie komplette neu geschrieben. Nahezu jede einzelne Zeile Code aus Cryptomator 1.4.x ist der Löschen-Taste zum Opfer gefallen. Warum sollte man so etwas tun? Nun, Programmcode <em>wächst</em> um Laufe der Zeit. Und im Falle von Cryptomator wächst er seit inzwischen über sechs Jahren, als viele moderne Möglichkeiten uns noch nicht zur Verfügung standen und wir andere Annahmen über die Zukunft der Software getroffen haben. Durch die Neuentwicklung der Programmoberfläche konnten wir eine komplett neue Codestruktur planen, welche die Wartung, zukünftige Erweiterungen sowie die Einarbeitung neuer Entwickler in bestimmte Programm-Abschnitte einfacher macht.</p>
+<p>Eins der vielen Ziele des Redesigns betraf die Neugestaltung des Tresor-Erstellungs-Prozesses, der für neue Nutzer so leicht verständlich wie möglich gestaltet werden sollte. Hierzu besuchten (und organisierten) wir mehrere Usability-Testessen in unserer Nähe und beobachteten Nutzer bei ihrem ersten Kontakt mit besagtem Prozess. Dies half uns insbesondere dabei, Fehlannahmen im Umgang mit bestimmten Funktionen nachzuvollziehen und unsere Workflows entsprechend anzupassen.</p>
+<h2 id="status-der-android-app">Status der Android-App</h2>
+<p>Selbstverständlich wird die Android-App in Version 1.5.0 ebenfalls das neue Tresorformat 7 unterstützen. Darüber hinaus haben wir neben den üblichen Bugfixes einige neue Features vorbereitet:</p>
+<ul>
+<li>Bereits geladene Dateien werden auf dem Smartphone gecached. Wenn man eine Datei erneut öffnet (und sie nicht zwischenzeitlich auf einem anderen Gerät geändert wurde), wird sie vom lokalen Dateisystem geladen, was nicht nur Zeit sondern auch Datenvolumen spart.</li>
+<li>Der Auto-Upload für Fotos wurde deutlich verbessert. Hier wurden unter anderem auch Probleme nach dem Reboot von Android 10 behoben.</li>
+<li>Man hat jetzt die Möglichkeit, einen Tresor sofort beim Verlassen der App zu sperren.</li>
+<li>Last but not least: Viel unserer Nutzer vermeiden Google-Anwendungen und wünschen sich eine Möglichkeit die Android-App ohne den Google Play Store zu installieren. Wir haben viel Arbeit in einen alternativen Lizenz-Store gesteckt und hoffen die App bald auch direkt vertreiben zu können.</li>
+</ul>
+<h2 id="status-der-ios-app">Status der iOS-App</h2>
+<p>Die iOS-App erhält natürlich ebenfalls ein Update, um das neue Tresor-Format zu unterstützen. Darüber hinaus gibt es viele kleinere Verbesserungen unter der Haube, allerdings keine großen neuen Features. Caching gibt es allerdings hier schon und auch um den Google Play Store kommt man herum. 😉</p>
+<h2 id="was-muss-vor-dem-finalen-150-release-noch-getan-werden">Was muss vor dem finalen 1.5.0-Release noch getan werden?</h2>
+<p>Stand heute fehlen nur noch wenige Features (etwa die Nutzung des Wiederherstellungs-Schlüsses) und der letzte Feinschliff. Aber wir wollen sicher gehen, dass alle Mobil-Apps und auch Drittanbieter-Tools wie Cyberduck mit dem neuen Tresorformat kompatibel sind und befinden uns daher derzeit in einer etwas gedehnte Testphase mit bereits sehr ausgereiften Beta-Versionen. Für einige Bugfixes (etwa <a href="https://github.com/cryptomator/cryptomator/issues/986">diesen</a>), warten wir derzeit noch auf einen Upstream-Fix.</p>
+<p>Gleichzeitig bereiten wir unsere Dokumentation für 1.5.0 vor, gestalten eine neue FAQ-Sektion für unsere Website und integrieren die <a href="https://community.cryptomator.org/t/localization-of-cryptomator-1-5-0/4269?u=overheadhunter">neuen Übersetzungen</a>, die von unserer phantastischen Community regelmäßig beigetragen werden.</p>
+<h2 id="was-steht-danach-an">Was steht danach an?</h2>
+<p>Direkt nach 1.5.0 wird der Wechsel von Java 11 auf Java 14 höchste Priorität haben. Letzteres bringt ein Packaging-Tool mit, auf das wir schon lange gewartet haben und für das wir derzeit ein Workaround nutzen, welches ein Upgrade der gebundelten JRE verhindert. Da dies hoffentlich nur eine sehr kleine Änderung ist, wird sie vermutlich schon mit 1.5.1 nachgeschoben. Dennoch wagen wir es nicht, kurz vor 1.5.0 noch neue Fässer aufzumachen und entschieden diesen Technologiewechsel auf 1.5.1 zu verschieben.</p>
+<p>Anschließend wollen wir uns auf Flatpak konzentrieren. Der Distribution von <code>.deb</code> und <code>.rpm</code>-Dateien haben wir schon lange abgeschworen und sie durch die universellen AppImages ersetzt. Gleichzeitig finden wir es toll, wie viel Momentum das Flatpak-Ökosystem derzeit gewinnt und wie dieses Format von einer stetig zunehmenden Anzahl an Distributionen nativ unterstützt wird. Bisher haben wir Cryptoamtor aufgrund der Komplexität beim Einbinden von Laufwerken <a href="https://github.com/cryptomator/cryptomator/issues/729">zwar noch nicht zum Laufen bekommen</a>, aber sobald wir 1.5.0 über die Bühne gebracht haben, hoffen wir diesem Problem mehr Aufmerksamkeit widmen und Cryptomator bald auch als Flatpak anbieten zu können.</p>
+<p>Bei der Android-App steht als nächstes großes Feature an, anderen Apps Dateien per DocumentProvider bereistellen zu können. Zum Beispiel würde ein Dateibrowser dadurch in die Lage versetzt, auf Tresorinhalte zuzugreifen. Darüber hinaus sind auch kleinere Features wie rekursive Uploads von Ordnern geplant.</p>
+
+      </section>
+    </article>
+
+    <div id="discourse-comments"></div>
+  </div>
+
+  <script type="text/javascript" x-url="https://cryptomator.org/blog/2020/02/12/roadmap_en.html">
+    var url = document.currentScript.getAttribute('x-url');
+    DiscourseEmbed = { discourseUrl: 'https://community.cryptomator.org/', discourseEmbedUrl: url };
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js" integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script>
+  </body>
+</html>

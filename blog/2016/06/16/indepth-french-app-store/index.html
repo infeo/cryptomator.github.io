@@ -1,15 +1,276 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."><title>In-Depth: Export Compliance for French iOS App Store</title><link rel=stylesheet href=/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css integrity="sha256-kf2H+faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media=screen><link rel=alternate type=application/rss+xml title="RSS Feed" href=/feed.xml><link rel=alternate hreflang=de href=/de/blog/2016/06/16/indepth-french-app-store/></head><body class="bg-dark font-body text-gray-900"><nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow"><div class="flex justify-between items-stretch w-full"><a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href=/><img src=/img/logo.svg class=h-8 alt=Logo>
-<span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span></a>
-<template><i class="hidden hover:border-primary hover:border-white"></i></template><ul class="hidden md:flex items-stretch list-none m-0"><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/downloads/>Downloads</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/coop/>Cooperations</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/faq/>FAQ</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary"><a class="p-2 hover:no-underline" href=/donate/>Donate</a></li><li class="flex items-center mx-5 my-3 border-l border-primary"></li><li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent"><button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
-<span>EN</span>
-<i class="fas fa-chevron-down text-xs"></i></button><div class=relative><div x-show=isLangDropdownOpen @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md"><a href=/de/blog/2016/06/16/indepth-french-app-store/ lang=de class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a></div></div></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw" aria-label=Twitter></i></a></li><li class="flex items-center border-b-2 border-transparent"><a class="p-2 hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw" aria-label=Facebook></i></a></li></ul><button @click="isNavOpen = !isNavOpen" type=button class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
-<i x-show=isNavOpen class="fas fa-times fa-fw"></i><i x-show=!isNavOpen class="fas fa-bars fa-fw"></i></button></div><div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class=md:hidden><a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/downloads/>Downloads</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/coop/>Cooperations</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/faq/>FAQ</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a>
-<a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href=/donate/>Donate</a><hr class="border-primary my-2"><div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2"><i class="fas fa-globe fa-fw"></i>EN</div><div class=mt-1><a href=/de/blog/2016/06/16/indepth-french-app-store/ lang=de class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a></div><hr class="border-primary my-2"><a class="block p-2 hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener><i class="fab fa-twitter fa-fw"></i><span>Cryptomator on Twitter</span></a>
-<a class="block p-2 hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener><i class="fab fa-facebook-f fa-fw"></i><span>Cryptomator on Facebook</span></a></div></nav><div class="bg-gray-100 min-vh-80"><div class="container py-12"><article class=mb-12><header class=mb-6><h1 class=mt-0><a href=/blog/>Blog</a> / In-Depth: Export Compliance for French iOS App Store</a></h1><div class="flex items-center mb-4"><a href=https://github.com/tobihagemann target=_blank rel=noopener><img src="https://avatars.githubusercontent.com/u/2924160?s=96" class="w-12 rounded-full mr-2"></a>
-<span class=mr-1>by
-<a href=https://github.com/tobihagemann target=_blank rel=noopener>Tobias Hagemann</a></span>
-<span class=mr-1>•</span class="mr-2">
-<span><a href=/blog/2016/06/16/indepth-french-app-store/>2016-06-16</a></span></div></header><hr class=my-8><section><p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href=https://itunes.apple.com/fr/app/cryptomator/id953086535 target=_blank rel=noopener>French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p><p>Just to be clear, you also need the U.S. Encryption Registration (ERN) approval from the U.S. Bureau of Industry (BIS). But this has already been covered by many sites, just google for <code>export compliance ern ios app store</code>.</p><p>However, there is little information on how to get the French encryption declaration approval from the Agence nationale de la sécurité des systèmes d&rsquo;information (ANSSI). This information could be useful for fellow developers that are e.g. using third-party libraries for cryptographic operations in their iOS app. I&rsquo;m not sure if this is also needed for the Google Play Store (or other Android app stores). We&rsquo;ll see soon enough.</p><h3 id=when-do-you-need-french-approval>When do you need French approval?</h3><p>Let&rsquo;s take a look on how we&rsquo;ve filled out our export compliance documentation in iTunes Connect, which is needed for apps containing encryption.</p><table class=table-auto><tr class=border-t><th class="px-4 py-2">ID</th><th class="px-4 py-2">Question</th><th class="px-4 py-2">Answer</th></tr><tr class=border-t><td class="px-4 py-2">1</td><td class="px-4 py-2">Is your app designed to use cryptography or does it contain or incorporate cryptography? (Select Yes even if your app is only utilizing the encryption available in iOS or OS X.)</td><td class="px-4 py-2">Yes</td></tr><tr class=border-t><td class="px-4 py-2">2</td><td class="px-4 py-2">Does your app qualify for any of the exemptions provided in Category 5, Part 2 of the U.S. Export Administration Regulations?</td><td class="px-4 py-2">No</td></tr><tr class=border-t><td class="px-4 py-2">3</td><td class="px-4 py-2">Does your app implement one or more encryption algorithms that are proprietary or yet to be accepted as standard by international standard bodies (such as, the IEEE, IETF, ITU, and so on)?</td><td class="px-4 py-2">No</td></tr><tr class=border-t><td class="px-4 py-2">4</td><td class="px-4 py-2">Does your app implement one or more encryption algorithms instead of, or in addition to, accessing or using the encryption in iOS and OS X?</td><td class="px-4 py-2">Yes</td></tr><tr class=border-t><td class="px-4 py-2">5</td><td class="px-4 py-2">Is your app going to be available on the French App Store?</td><td class="px-4 py-2">Yes</td></tr></table><p>Our answer to question 4 is probably less common among typical apps using encryption. Additionally to Apple&rsquo;s CommonCrypto, we&rsquo;re making use of OpenSSL and scrypt, which aren&rsquo;t bundled with the standard library of iOS. Only then you&rsquo;re going to be asked question 5 and only then you have to submit a copy of the French encryption declaration approval from the ANSSI.</p><h3 id=how-do-i-submit-an-application-to-the-anssi>How do I submit an application to the ANSSI?</h3><p>Thought you&rsquo;d never ask. Thankfully, there is an English website for this: <a href=http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/ target=_blank rel=noopener>http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/</a></p><p>But the fun stops there. From now on, everything is in French. Yup. That&rsquo;s right. Everything. Even the responses you receive are in French. And you have to submit your request via mail (yes, not email).</p><p>What&rsquo;s our advice on this? Best case you know someone who can read/write French, but in our case we just used Google Translate extensively. We&rsquo;ve filled out the approval form in English, because we hoped for common sense that they&rsquo;re at least able to read our request in English. And it worked!</p><h3 id=how-long-does-it-take-until-my-request-has-been-processedapproved>How long does it take until my request has been processed/approved?</h3><p>The official statement is:</p><blockquote><p>Declaration requests are processed within one month from receipt of the complete request file and authorisation requests within four months from the same date.</p></blockquote><p>We&rsquo;ve submitted our declaration request in the beginning of April 2016 and received a first response in the beginning of May. It was just to inform us that they&rsquo;ve received our request and it&rsquo;ll take another two months to finish the process. In the end, we&rsquo;ve received the approval two months after our submission.</p><p>I don&rsquo;t remember exactly how long it took to get the ERN approval, but it was just a matter of days and completely processed online.</p><h3 id=summary>Summary</h3><p>I hope you learned something from our experience and if you&rsquo;re an app developer struggling with the same issue, you hopefully received some insight in this process. Obviously, this information may change in the future, so do some additional research. 😉</p><p>Funny story: In the approval form are checkboxes, which you can enable if you&rsquo;re sending a CD or USB flash drive with information of your product (like commercial brochure, user manual, technical details). I couldn&rsquo;t believe what they were asking for, so I didn&rsquo;t send anything besides the approval form. They kindly sent me an email, if I could provide a commercial or technical brochure for Cryptomator so that they can process my request. So I did that via email and everything was fine. 😄</p></section></article><div id=discourse-comments></div></div><script type=text/javascript x-url=https://cryptomator.org/blog/2016/06/16/indepth-french-app-store_en.html>var url=document.currentScript.getAttribute('x-url');DiscourseEmbed={discourseUrl:'https://community.cryptomator.org/',discourseEmbedUrl:url};(function(){var d=document.createElement('script');d.type='text/javascript';d.async=true;d.src=DiscourseEmbed.discourseUrl+'javascripts/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(d);})();</script></div><footer class="border-t-2 border-secondary pt-8 pb-16"><section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5"><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/blog/>Blog</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://cryptomator.redbubble.com/ target=_blank rel=noopener>Merchandise</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/presskit/>Press Kit</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Contribute</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://github.com/cryptomator/cryptomator target=_blank rel=noopener>GitHub</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/donate/>Donate</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://translate.cryptomator.org/ target=_blank rel=noopener>Translate</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://docs.cryptomator.org/ target=_blank rel=noopener>Docs</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://community.cryptomator.org/ target=_blank rel=noopener>Community</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/contact/>Contact</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Follow Us</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=https://twitter.com/Cryptomator target=_blank rel=noopener>Twitter</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=https://facebook.com/Cryptomator target=_blank rel=noopener>Facebook</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/feed.xml rel=alternate type=application/rss+xml>RSS Feed</a></li></ul></div><div><h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Legal</h4><ul class="list-none m-0"><li><a class="text-white hover:text-secondary hover:no-underline" href=/impressum/>Impressum</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/privacy/>Privacy Policy</a></li><li><a class="text-white hover:text-secondary hover:no-underline" href=/terms/>Terms & Conditions</a></li></ul></div></section></footer><script type=text/javascript src=/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script><script type=text/javascript src=/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script><script type=text/javascript src=/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."/>
+    <title>In-Depth: Export Compliance for French iOS App Store</title>
+    
+      
+      <link rel="stylesheet" href="/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css" integrity="sha256-kf2H&#43;faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media="screen">
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+    
+    <link rel="alternate" hreflang="de" href="/de/blog/2016/06/16/indepth-french-app-store/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+    
+    <template>
+      
+      <i class="hidden hover:border-primary hover:border-white"></i>
+    </template>
+    
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/coop/">Cooperations</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/faq/">FAQ</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>EN</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            
+            <a href="/de/blog/2016/06/16/indepth-french-app-store/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Cooperations</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/faq/">FAQ</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+    
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> EN
+    </div>
+    <div class="mt-1">
+      
+      <a href="/de/blog/2016/06/16/indepth-french-app-store/" lang="de" class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container py-12">
+    <article class="mb-12">
+      <header class="mb-6">
+        <h1 class="mt-0"><a href="/blog/">Blog</a> / In-Depth: Export Compliance for French iOS App Store</a></h1>
+        <div class="flex items-center mb-4">
+          
+            
+              
+                <a href="https://github.com/tobihagemann" target="_blank" rel="noopener">
+              
+              <img src="https://avatars.githubusercontent.com/u/2924160?s=96" class="w-12 rounded-full mr-2"/>
+              
+                </a>
+              
+            
+            <span class="mr-1">
+              by
+              
+                <a href="https://github.com/tobihagemann" target="_blank" rel="noopener">Tobias Hagemann</a>
+              
+            </span>
+            <span class="mr-1">•</span class="mr-2">
+          
+          <span><a href="/blog/2016/06/16/indepth-french-app-store/">2016-06-16</a></span>
+        </div>
+        
+      </header>
+
+      <hr class="my-8"/>
+
+      <section>
+        <p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href="https://itunes.apple.com/fr/app/cryptomator/id953086535" target="_blank" rel="noopener">French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p>
+<p>Just to be clear, you also need the U.S. Encryption Registration (ERN) approval from the U.S. Bureau of Industry (BIS). But this has already been covered by many sites, just google for <code>export compliance ern ios app store</code>.</p>
+<p>However, there is little information on how to get the French encryption declaration approval from the Agence nationale de la sécurité des systèmes d&rsquo;information (ANSSI). This information could be useful for fellow developers that are e.g. using third-party libraries for cryptographic operations in their iOS app. I&rsquo;m not sure if this is also needed for the Google Play Store (or other Android app stores). We&rsquo;ll see soon enough.</p>
+<h3 id="when-do-you-need-french-approval">When do you need French approval?</h3>
+<p>Let&rsquo;s take a look on how we&rsquo;ve filled out our export compliance documentation in iTunes Connect, which is needed for apps containing encryption.</p>
+<table class="table-auto">
+  <tr class="border-t">
+    <th class="px-4 py-2">ID</th>
+    <th class="px-4 py-2">Question</th>
+    <th class="px-4 py-2">Answer</th>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">1</td>
+    <td class="px-4 py-2">Is your app designed to use cryptography or does it contain or incorporate cryptography? (Select Yes even if your app is only utilizing the encryption available in iOS or OS X.)</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">2</td>
+    <td class="px-4 py-2">Does your app qualify for any of the exemptions provided in Category 5, Part 2 of the U.S. Export Administration Regulations?</td>
+    <td class="px-4 py-2">No</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">3</td>
+    <td class="px-4 py-2">Does your app implement one or more encryption algorithms that are proprietary or yet to be accepted as standard by international standard bodies (such as, the IEEE, IETF, ITU, and so on)?</td>
+    <td class="px-4 py-2">No</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">4</td>
+    <td class="px-4 py-2">Does your app implement one or more encryption algorithms instead of, or in addition to, accessing or using the encryption in iOS and OS X?</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+  <tr class="border-t">
+    <td class="px-4 py-2">5</td>
+    <td class="px-4 py-2">Is your app going to be available on the French App Store?</td>
+    <td class="px-4 py-2">Yes</td>
+  </tr>
+</table>
+<p>Our answer to question 4 is probably less common among typical apps using encryption. Additionally to Apple&rsquo;s CommonCrypto, we&rsquo;re making use of OpenSSL and scrypt, which aren&rsquo;t bundled with the standard library of iOS. Only then you&rsquo;re going to be asked question 5 and only then you have to submit a copy of the French encryption declaration approval from the ANSSI.</p>
+<h3 id="how-do-i-submit-an-application-to-the-anssi">How do I submit an application to the ANSSI?</h3>
+<p>Thought you&rsquo;d never ask. Thankfully, there is an English website for this: <a href="http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/" target="_blank" rel="noopener">http://www.ssi.gouv.fr/en/regulation/cryptology/how-to-submit-an-application/</a></p>
+<p>But the fun stops there. From now on, everything is in French. Yup. That&rsquo;s right. Everything. Even the responses you receive are in French. And you have to submit your request via mail (yes, not email).</p>
+<p>What&rsquo;s our advice on this? Best case you know someone who can read/write French, but in our case we just used Google Translate extensively. We&rsquo;ve filled out the approval form in English, because we hoped for common sense that they&rsquo;re at least able to read our request in English. And it worked!</p>
+<h3 id="how-long-does-it-take-until-my-request-has-been-processedapproved">How long does it take until my request has been processed/approved?</h3>
+<p>The official statement is:</p>
+<blockquote>
+<p>Declaration requests are processed within one month from receipt of the complete request file and authorisation requests within four months from the same date.</p>
+</blockquote>
+<p>We&rsquo;ve submitted our declaration request in the beginning of April 2016 and received a first response in the beginning of May. It was just to inform us that they&rsquo;ve received our request and it&rsquo;ll take another two months to finish the process. In the end, we&rsquo;ve received the approval two months after our submission.</p>
+<p>I don&rsquo;t remember exactly how long it took to get the ERN approval, but it was just a matter of days and completely processed online.</p>
+<h3 id="summary">Summary</h3>
+<p>I hope you learned something from our experience and if you&rsquo;re an app developer struggling with the same issue, you hopefully received some insight in this process. Obviously, this information may change in the future, so do some additional research. 😉</p>
+<p>Funny story: In the approval form are checkboxes, which you can enable if you&rsquo;re sending a CD or USB flash drive with information of your product (like commercial brochure, user manual, technical details). I couldn&rsquo;t believe what they were asking for, so I didn&rsquo;t send anything besides the approval form. They kindly sent me an email, if I could provide a commercial or technical brochure for Cryptomator so that they can process my request. So I did that via email and everything was fine. 😄</p>
+
+      </section>
+    </article>
+
+    <div id="discourse-comments"></div>
+  </div>
+
+  <script type="text/javascript" x-url="https://cryptomator.org/blog/2016/06/16/indepth-french-app-store_en.html">
+    var url = document.currentScript.getAttribute('x-url');
+    DiscourseEmbed = { discourseUrl: 'https://community.cryptomator.org/', discourseEmbedUrl: url };
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 col-gap-6 row-gap-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/presskit/">Press Kit</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Contribute</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/donate/">Donate</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Translate</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Follow Us</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Legal</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/privacy/">Privacy Policy</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/terms/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.ae7579d2c51d87714f91fe77266bb7d68fdab1502f62d19c8d22a5ef82ae9845.js" integrity="sha256-rnV50sUdh3FPkf53Jmu31o/asVAvYtGcjSKl74KumEU="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE="></script>
+  </body>
+</html>
