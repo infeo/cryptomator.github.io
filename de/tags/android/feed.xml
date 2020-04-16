@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cryptomator Blog</title><description>Recent Blog Posts on cryptomator.org</description><link>https://cryptomator.org/de/tags/android/</link><language>de</language><atom:link href="https://cryptomator.org/de/blog/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://cryptomator.org/img/logo.png</url><title>Cryptomator Blog</title><link>https://cryptomator.org/de/tags/android/</link></image><lastBuildDate>Thu, 16 Apr 2020 21:37:11 +0000</lastBuildDate><generator>Hugo</generator><item><title>Cryptomator Roadmap Early 2020</title><description>&lt;p>Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.&lt;/p>
+&lt;h2 id="status-der-desktop-anwendung">Status der Desktop-Anwendung&lt;/h2>
+&lt;p>Wir planen noch in Q1 2020 Version 1.5.0 zu releasen. Während der derzeit noch laufenden Beta-Phase (an dieser Stelle nochmal Danke an all unsere fleißigen Tester) haben wir bereits viele Problemchen behoben und sind überzeugt eine hervorragende Qualität abliefern zu können.&lt;/p>
+&lt;p>Über die &lt;a href="https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter">anstehenden Änderungen&lt;/a> an unserem sog. &lt;em>Tresorformat&lt;/em> (d.h. der verschlüsselten Ordnerstruktur) haben wir bereits informiert. Ziel ist es zum einen die Kompatibilität mit einigen Cloud-Anbietern zu erhöhen, zum anderen die Komplexität für viele I/O-Operationen zu reduzieren. Aber eine viel offensichtlichere Änderung in 1.5.0 wird die Programmoberfläche (GUI) betreffen:&lt;/p>
+&lt;p>Diese haben wir nämlich nicht einfach nur &lt;em>umgestaltet&lt;/em>, wir haben sie komplette neu geschrieben. Nahezu jede einzelne Zeile Code aus Cryptomator 1.4.x ist der Löschen-Taste zum Opfer gefallen. Warum sollte man so etwas tun? Nun, Programmcode &lt;em>wächst&lt;/em> um Laufe der Zeit. Und im Falle von Cryptomator wächst er seit inzwischen über sechs Jahren, als viele moderne Möglichkeiten uns noch nicht zur Verfügung standen und wir andere Annahmen über die Zukunft der Software getroffen haben. Durch die Neuentwicklung der Programmoberfläche konnten wir eine komplett neue Codestruktur planen, welche die Wartung, zukünftige Erweiterungen sowie die Einarbeitung neuer Entwickler in bestimmte Programm-Abschnitte einfacher macht.&lt;/p>
+&lt;p>Eins der vielen Ziele des Redesigns betraf die Neugestaltung des Tresor-Erstellungs-Prozesses, der für neue Nutzer so leicht verständlich wie möglich gestaltet werden sollte. Hierzu besuchten (und organisierten) wir mehrere Usability-Testessen in unserer Nähe und beobachteten Nutzer bei ihrem ersten Kontakt mit besagtem Prozess. Dies half uns insbesondere dabei, Fehlannahmen im Umgang mit bestimmten Funktionen nachzuvollziehen und unsere Workflows entsprechend anzupassen.&lt;/p>
+&lt;h2 id="status-der-android-app">Status der Android-App&lt;/h2>
+&lt;p>Selbstverständlich wird die Android-App in Version 1.5.0 ebenfalls das neue Tresorformat 7 unterstützen. Darüber hinaus haben wir neben den üblichen Bugfixes einige neue Features vorbereitet:&lt;/p>
+&lt;ul>
+&lt;li>Bereits geladene Dateien werden auf dem Smartphone gecached. Wenn man eine Datei erneut öffnet (und sie nicht zwischenzeitlich auf einem anderen Gerät geändert wurde), wird sie vom lokalen Dateisystem geladen, was nicht nur Zeit sondern auch Datenvolumen spart.&lt;/li>
+&lt;li>Der Auto-Upload für Fotos wurde deutlich verbessert. Hier wurden unter anderem auch Probleme nach dem Reboot von Android 10 behoben.&lt;/li>
+&lt;li>Man hat jetzt die Möglichkeit, einen Tresor sofort beim Verlassen der App zu sperren.&lt;/li>
+&lt;li>Last but not least: Viel unserer Nutzer vermeiden Google-Anwendungen und wünschen sich eine Möglichkeit die Android-App ohne den Google Play Store zu installieren. Wir haben viel Arbeit in einen alternativen Lizenz-Store gesteckt und hoffen die App bald auch direkt vertreiben zu können.&lt;/li>
+&lt;/ul>
+&lt;h2 id="status-der-ios-app">Status der iOS-App&lt;/h2>
+&lt;p>Die iOS-App erhält natürlich ebenfalls ein Update, um das neue Tresor-Format zu unterstützen. Darüber hinaus gibt es viele kleinere Verbesserungen unter der Haube, allerdings keine großen neuen Features. Caching gibt es allerdings hier schon und auch um den Google Play Store kommt man herum. 😉&lt;/p>
+&lt;h2 id="was-muss-vor-dem-finalen-150-release-noch-getan-werden">Was muss vor dem finalen 1.5.0-Release noch getan werden?&lt;/h2>
+&lt;p>Stand heute fehlen nur noch wenige Features (etwa die Nutzung des Wiederherstellungs-Schlüsses) und der letzte Feinschliff. Aber wir wollen sicher gehen, dass alle Mobil-Apps und auch Drittanbieter-Tools wie Cyberduck mit dem neuen Tresorformat kompatibel sind und befinden uns daher derzeit in einer etwas gedehnte Testphase mit bereits sehr ausgereiften Beta-Versionen. Für einige Bugfixes (etwa &lt;a href="https://github.com/cryptomator/cryptomator/issues/986">diesen&lt;/a>), warten wir derzeit noch auf einen Upstream-Fix.&lt;/p>
+&lt;p>Gleichzeitig bereiten wir unsere Dokumentation für 1.5.0 vor, gestalten eine neue FAQ-Sektion für unsere Website und integrieren die &lt;a href="https://community.cryptomator.org/t/localization-of-cryptomator-1-5-0/4269?u=overheadhunter">neuen Übersetzungen&lt;/a>, die von unserer phantastischen Community regelmäßig beigetragen werden.&lt;/p>
+&lt;h2 id="was-steht-danach-an">Was steht danach an?&lt;/h2>
+&lt;p>Direkt nach 1.5.0 wird der Wechsel von Java 11 auf Java 14 höchste Priorität haben. Letzteres bringt ein Packaging-Tool mit, auf das wir schon lange gewartet haben und für das wir derzeit ein Workaround nutzen, welches ein Upgrade der gebundelten JRE verhindert. Da dies hoffentlich nur eine sehr kleine Änderung ist, wird sie vermutlich schon mit 1.5.1 nachgeschoben. Dennoch wagen wir es nicht, kurz vor 1.5.0 noch neue Fässer aufzumachen und entschieden diesen Technologiewechsel auf 1.5.1 zu verschieben.&lt;/p>
+&lt;p>Anschließend wollen wir uns auf Flatpak konzentrieren. Der Distribution von &lt;code>.deb&lt;/code> und &lt;code>.rpm&lt;/code>-Dateien haben wir schon lange abgeschworen und sie durch die universellen AppImages ersetzt. Gleichzeitig finden wir es toll, wie viel Momentum das Flatpak-Ökosystem derzeit gewinnt und wie dieses Format von einer stetig zunehmenden Anzahl an Distributionen nativ unterstützt wird. Bisher haben wir Cryptoamtor aufgrund der Komplexität beim Einbinden von Laufwerken &lt;a href="https://github.com/cryptomator/cryptomator/issues/729">zwar noch nicht zum Laufen bekommen&lt;/a>, aber sobald wir 1.5.0 über die Bühne gebracht haben, hoffen wir diesem Problem mehr Aufmerksamkeit widmen und Cryptomator bald auch als Flatpak anbieten zu können.&lt;/p>
+&lt;p>Bei der Android-App steht als nächstes großes Feature an, anderen Apps Dateien per DocumentProvider bereistellen zu können. Zum Beispiel würde ein Dateibrowser dadurch in die Lage versetzt, auf Tresorinhalte zuzugreifen. Darüber hinaus sind auch kleinere Features wie rekursive Uploads von Ordnern geplant.&lt;/p></description><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2020/02/12/roadmap/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2020/02/12/roadmap/</guid><category>cryptomator</category><category>desktop</category><category>android</category></item><item><title>Cryptomator Roadmap Mid 2019</title><description>&lt;p>Wir möchten uns vornehmen, einen regelmäßigeren Blick auf unsere Roadmap zu geben, da wir vergangene, aktuelle und zukünftige Entwicklungen an Cryptomator öffentlich dokumentieren möchten. Anders als bisher möchten wir auch von den Roadmaps unserer mobilen Apps berichten.&lt;/p>
+&lt;h2 id="desktop">Desktop&lt;/h2>
+&lt;p>Im Desktop-Bereich verfolgen wir zurzeit zwei verschiedene Branches: Zum einen streben wir die Feature-Vervollständigung von 1.4.x an, wobei 1.4.12 bereits in den Startlöchern steht. Er wird für Linux-Nutzer endlich eine Möglichkeit der Speicherung ihres Passworts im System ermöglichen und das viel gewünschte Feature der &amp;ldquo;Custom Mount Flags&amp;rdquo; beinhalten.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Passwort im System speichern (Linux):&lt;/strong> Lange Zeit konnte man nur unter macOS und Windows sein Tresor-Passwort im System hinterlegen. Durch einen Community-Beitrag ist dies nun endlich auch unter (manchen) Linux-System möglich. 😄 Voraussetzung dafür ist die Existenz des GNOME-Keyrings oder anderer Schlüsselverwaltungen mit Secret Service API. Vielen Dank an Ralph Plawetzki (purejava auf GitHub) und Sebastian Wiesendahl (swiesend auf GitHub) für die Umsetzung!&lt;/li>
+&lt;li>&lt;strong>Custom Mount Flags:&lt;/strong> Zum Mounten eines Laufwerks nutzt Cryptomator Standardoptionen (sowohl für Dokany als auch FUSE), die wir aufgrund von Sicherheit oder Performance gewählt haben. Dadurch wurde jedoch die Funktionalität in einigen Fällen eingeschränkt und Nutzer, die eigene Optionen setzen möchten, können diese nun ändern. Jedoch gilt hier: &lt;em>Verwendung auf eigene Gefahr!&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Zum anderen hat bereits die Umsetzung von 1.5.0 begonnen. Wir wollen uns für 1.5.0, wie angekündigt, voll auf die Überarbeitung der Oberfläche konzentrieren und die interne Verarbeitung von Cryptomator etwas entknoten, da es wie viele Open-Source-Projekt über die Zeit organisch gewachsen ist und deshalb eine gutes Refactoring mal nötig hat. 😉&lt;/p>
+&lt;h2 id="ios">iOS&lt;/h2>
+&lt;p>Nach dem Release von Cryptomator 1.4.0 für iOS mit eingebauter Cache-Funktion, mit der einerseits das wiederholte Herunterladen von Dateien vermieden und andererseits ein (limitierter) Offine-Zugriff ermöglicht wird, haben die Arbeiten an Cryptomator 1.5.0 für iOS begonnen.&lt;/p>
+&lt;p>Das Hauptaugenmerk wird die Integration in die Dateien-App von iOS sein. Voraussichtlich wird hier erst der Ausbau unseres &lt;a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html" target="_blank" rel="noopener">Document Providers&lt;/a> erfolgen, welches um die Methoden “Open” und “Move” erweitert wird. Damit wird es dann möglich sein, aus anderen Apps heraus direkt auf Dateien innerhalb eines Cryptomator-Tresors zuzugreifen, ohne dass diese hin- und herkopiert werden müssen.&lt;/p>
+&lt;h2 id="android">Android&lt;/h2>
+&lt;p>Zurzeit wird Cryptomator 1.4.0 für Android mit folgenden Features finalisiert, die bereits als Beta getestet werden können:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Automatischer Fotoupload:&lt;/strong> Nach Aktivierung werden alle auf dem Smartphone erstellten Bilder beim nächsten Entsperren des ausgewählten Tresors hochgeladen.&lt;/li>
+&lt;li>&lt;strong>Dateien durch Drittanwendungen schreibbar:&lt;/strong> Dateien, die geöffnet werden, können in Drittanwendungen bearbeitet werden. Beendet man den Editier-Vorgang durch das Abspeichern und Zurückkehren in die Cryptomator-App, werden die Änderungen in die Cloud übertragen.&lt;/li>
+&lt;/ul>
+&lt;p>Diese Features ziehen wir für zukünftige Versionen in Erwägung:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>LRU-Cache:&lt;/strong> Um Netzverkehr zu sparen, werden bestimmte Server-Antworten zwischengespeichert, um das erneute Herunterladen von beispielsweise unveränderter Bilder aus der Cloud zu vermeiden.&lt;/li>
+&lt;li>&lt;strong>Unterstützung für Google Team Drives:&lt;/strong> Zugriff auf Tresore, die sich im Google Team Drive befinden, soll ermöglicht werden.&lt;/li>
+&lt;li>&lt;strong>Vertrieb der App außerhalb von Google Play:&lt;/strong> Cryptomator für Android soll auch über alternative Quellen bezogen werden können. Denkbar ist der Aufbau eines Lizenzsystems, über das direkt eine Lizenz erworben werden kann.&lt;/li>
+&lt;li>&lt;strong>Entsperren mit System-Passwort:&lt;/strong> Das System-Passwort des Smartphones soll dazu verwendet werden können, um Tresore zu öffnen. (Ähnlich dem Entsperren mit dem Fingerabdruck.)&lt;/li>
+&lt;li>&lt;strong>Zugriff auf Dateien mittels DocumentProvider:&lt;/strong> Zugriff anderer Apps auf den Cryptomator-Tresor mittels eines DocumentProviders soll ermöglicht werden. Beispielsweise mit einem entsprechenden Datei-Explorer kann so auf den Tresor zugegriffen werden.&lt;/li>
+&lt;li>&lt;strong>Upload von Verzeichnissen (rekursiv):&lt;/strong> Das Herunterladen von ganzen Ordnern funktioniert bereits, das Hochladen inklusive aller Unterordner steht aus.&lt;/li>
+&lt;/ul></description><pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2019/07/21/roadmap/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2019/07/21/roadmap/</guid><category>cryptomator</category><category>desktop</category><category>ios</category><category>android</category></item><item><title>Cryptomator Roadmap Early 2019</title><description>&lt;p>Hey, es ist ein neues Jahr, also kommt hier in alter Tradition unser &lt;del>viertel&lt;/del>jährlicher 🙈 Blick auf die Roadmap.&lt;/p>
+&lt;h3 id="openjdk-und-openjfx">OpenJDK und OpenJFX&lt;/h3>
+&lt;p>Bisher haben wir das Oracle JDK verwendet, da dies die GUI-Bibliothek beinhaltete, die wir für Cryptomator verwendet haben: JavaFX. Ab JDK 11 planen wir die Umstellung auf OpenJDK und OpenJFX. JavaFX wird ohnehin nicht mehr im Oracle JDK enthalten sein und OpenJFX verspricht kürzere Release-Zyklen und wird - wie der Name schon sagt - in einem offenen Prozess entwickelt.&lt;/p>
+&lt;p>Da wir nicht mehr auf &amp;ldquo;unfreie&amp;rdquo; Software angewiesen sind, könnte Cryptomator in Debian-Repos theoretisch von &amp;ldquo;contrib&amp;rdquo; auf &amp;ldquo;main&amp;rdquo; wechseln.&lt;/p>
+&lt;p>Wir hoffen auch, dass das Bauen von Cryptomators einfacher wird, da OpenJFX eine normale Abhängigkeit ist und das Oracle JDK mit enthaltenem JavaFX nicht mehr benötigt wird.&lt;/p>
+&lt;h3 id="symlinks">Symlinks&lt;/h3>
+&lt;p>Wir sind erfolgreich auf FUSE (Linux und macOS) und Dokany (Windows) umgestiegen. Jetzt ist es an der Zeit, die Dateisysteme zu verbessern. Eines der am häufigsten nachgefragten Features ist die Unterstützung von symbolischen Links. Keine Ahnung was das ist? Nicht weiter schlimm. 😉 Für alle, die darauf warten: Wir planen, Symlinks mit einem der kommenden 1.4.x Releases einzuführen.&lt;/p>
+&lt;h3 id="ui-redesign">UI Redesign&lt;/h3>
+&lt;p>Wir wollen die gesamte Benutzeroberfläche mit Cryptomator 1.5.0 von Grund auf neu gestalten. Um dies zu erreichen, freuen wir über Input aus der Community. Anregungen und Ideen dürfen gerne in unseren &lt;a href="https://community.cryptomator.org/t/ui-redesign-thread/2850">Redesign-Thread&lt;/a> einfließen.&lt;/p></description><pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2019/01/14/roadmap/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2019/01/14/roadmap/</guid><category>cryptomator</category><category>desktop</category></item><item><title>Cryptomator 1.4.0 Release</title><description>&lt;figure class="text-center my-8">
+&lt;img class="inline-block" src="https://cryptomator.org/img/blog/cryptomator-1-4-0.png" srcset="https://cryptomator.org/img/blog/cryptomator-1-4-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-4-0@2x.png 2x" alt="Cryptomator 1.4.0 has been released featuring Dokany and FUSE support" />
+&lt;/figure>
+&lt;h2 id="whats-new">What&amp;rsquo;s New&lt;/h2>
+&lt;p>Introducing Dokany (Windows) and FUSE (macOS, Linux) support. Vaults can now be mounted via Dokany and FUSE which is now the preferred way over WebDAV. Expect vastly improved integration into the system. A complete list of closed issues is available &lt;a href="https://github.com/cryptomator/cryptomator/milestone/27?closed=1" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;h2 id="dokany--fuse">Dokany / FUSE&lt;/h2>
+&lt;ul>
+&lt;li>Provide virtual drive using Dokany on Windows (&lt;a href="https://github.com/cryptomator/cryptomator/issues/207" target="_blank" rel="noopener">#207&lt;/a>)&lt;/li>
+&lt;li>Provide virtual drive using FUSE on macOS and Linux (&lt;a href="https://github.com/cryptomator/cryptomator/issues/252" target="_blank" rel="noopener">#252&lt;/a>)&lt;/li>
+&lt;li>Solves upstream bug with keeping modification date and other dates of original file (&lt;a href="https://github.com/cryptomator/cryptomator/issues/220" target="_blank" rel="noopener">#220&lt;/a>)&lt;/li>
+&lt;li>Solves upstream bug on Windows with files &amp;gt;4 GB (&lt;a href="https://github.com/cryptomator/cryptomator/issues/82" target="_blank" rel="noopener">#82&lt;/a>)&lt;/li>
+&lt;li>Solves upstream bug on Windows with Windows Explorer showing C: drive capacity for any vault (&lt;a href="https://github.com/cryptomator/cryptomator/issues/80" target="_blank" rel="noopener">#80&lt;/a>)&lt;/li>
+&lt;li>Solves upstream bug on macOS High Sierra with disappearing drives (&lt;a href="https://github.com/cryptomator/cryptomator/issues/579" target="_blank" rel="noopener">#579&lt;/a>)&lt;/li>
+&lt;li>Solves upstream bug on macOS Sierra with duplicate folders in /Volumes (&lt;a href="https://github.com/cryptomator/cryptomator/issues/464" target="_blank" rel="noopener">#464&lt;/a>)&lt;/li>
+&lt;li>Solves other WebDAV-related bugs (&lt;a href="https://github.com/cryptomator/cryptomator/issues/67" target="_blank" rel="noopener">#67&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/145" target="_blank" rel="noopener">#145&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/175" target="_blank" rel="noopener">#175&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/204" target="_blank" rel="noopener">#204&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/238" target="_blank" rel="noopener">#238&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/256" target="_blank" rel="noopener">#256&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/366" target="_blank" rel="noopener">#366&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/513" target="_blank" rel="noopener">#513&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/597" target="_blank" rel="noopener">#597&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/631" target="_blank" rel="noopener">#631&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/684" target="_blank" rel="noopener">#684&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;p>As usual, we have open-sourced the libraries &lt;a href="https://github.com/cryptomator/dokany-nio-adapter" target="_blank" rel="noopener">Dokany-NIO-Adapter&lt;/a> and &lt;a href="https://github.com/cryptomator/fuse-nio-adapter" target="_blank" rel="noopener">FUSE-NIO-Adapter&lt;/a> under AGPL.&lt;/p>
+&lt;h2 id="improvements">Improvements&lt;/h2>
+&lt;ul>
+&lt;li>Quitting Cryptomator is now also graceful, similar to locking vaults (&lt;a href="https://github.com/cryptomator/cryptomator/issues/230" target="_blank" rel="noopener">#230&lt;/a>), kudos to Jelle Dekker (jellemdekker on GitHub)&lt;/li>
+&lt;li>Added status indicator to tray icon (&lt;a href="https://github.com/cryptomator/cryptomator/issues/296" target="_blank" rel="noopener">#296&lt;/a>), kudos to Jelle Dekker (jellemdekker on GitHub)&lt;/li>
+&lt;li>Fixed apparently empty vault when ciphertext size of one file is invalid (&lt;a href="https://github.com/cryptomator/cryptomator/issues/673" target="_blank" rel="noopener">#673&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h3 id="windows">Windows&lt;/h3>
+&lt;ul>
+&lt;li>Fixed missing text in menu options of tray icon (&lt;a href="https://github.com/cryptomator/cryptomator/issues/612" target="_blank" rel="noopener">#612&lt;/a>)&lt;/li>
+&lt;li>Fixed violated code integrity policy by signing all DLLs (&lt;a href="https://github.com/cryptomator/cryptomator/issues/736" target="_blank" rel="noopener">#736&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h3 id="linux">Linux&lt;/h3>
+&lt;ul>
+&lt;li>Provide AppImage as a long-term replacement for other distribution methods (&lt;a href="https://github.com/cryptomator/cryptomator/issues/469" target="_blank" rel="noopener">#469&lt;/a>)&lt;/li>
+&lt;li>Fixed WebDAV support when having gvfs 1.37.2 or later (&lt;a href="https://github.com/cryptomator/cryptomator/issues/722" target="_blank" rel="noopener">#722&lt;/a>), kudos to Ralph Plawetzki (purejava on GitHub)&lt;/li>
+&lt;li>Fixed support for high resolution display (&lt;a href="https://github.com/cryptomator/cryptomator/issues/42" target="_blank" rel="noopener">#42&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h2 id="misc">Misc&lt;/h2>
+&lt;ul>
+&lt;li>Updated to JDK 10&lt;/li>
+&lt;li>Decreased file size of application and installer packages significantly&lt;/li>
+&lt;li>Dropped official Windows and Linux 32 bit support&lt;/li>
+&lt;/ul></description><pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2018/11/06/release-1.4.0/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2018/11/06/release-1.4.0/</guid><category>cryptomator</category><category>desktop</category></item><item><title>Werden Sie Cryptomator-Sponsor</title><description>&lt;p>Liebe Community,&lt;/p>
+&lt;p>wie Sie wissen, bieten wir Cryptomator als Pay-What-You-Want Software an und wir wollen es dabei belassen. Inzwischen sind wir zu einem kleinen Team herangewachsen, das Vollzeit an diesem Projekt arbeitet. Und wir alle müssen unsere Rechnungen bezahlen.&lt;/p>
+&lt;p>Dafür brauchen wir Ihre Hilfe! Wenn Sie Cryptomator in Ihrem Unternehmen einsetzen oder ein Unternehmen kennen, das Open-Source-Software einsetzt, fragen Sie bitte, ob es offizieller Sponsor von Cryptomator werden möchte. Alternativ können Sie Cryptomator durch &lt;a href="https://cryptomator.org/de/sponsors/#donate">regelmäßige Spenden&lt;/a> unterstützen.&lt;/p>
+&lt;p>Wir haben drei Sponsoring-Pakete mit unterschiedlichen Gegenleistungen für Sie vorbereitet. Besuchen Sie unsere &lt;a href="https://cryptomator.org/de/sponsors/">Sponsorenseite&lt;/a> für weitere Informationen.&lt;/p>
+&lt;p>Ihr Cryptomator-Team&lt;/p>
+&lt;figure class="my-8">
+&lt;img class="inline-block" src="https://cryptomator.org/img/blog/cryptobot-sponsor.png" srcset="https://cryptomator.org/img/blog/cryptobot-sponsor.png 1x, https://cryptomator.org/img/blog/cryptobot-sponsor@2x.png 2x" alt="Cryptobot Sponsor" />
+&lt;/figure></description><pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2018/06/18/sponsors/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2018/06/18/sponsors/</guid><category>cryptomator</category><category>sponsors</category></item><item><title>Cryptomator Roadmap Early 2018</title><description>&lt;p>Da verständlicherweise nicht alle unsere Nutzer alle Entwicklungsaktivitäten auf GitHub verfolgen können, möchte ich an dieser Stelle ein paar Absätze dazu schreiben, welche technischen Neuerungen 2018 bei Cryptomator anstehen und wie sie sich auf die Nutzung auswirken.&lt;/p>
+&lt;h3 id="fuse">FUSE&lt;/h3>
+&lt;p>Die größte anstehende Änderung ist die Implementierung von FUSE-basierten Laufwerken. Diese wird es &lt;em>zusätzlich&lt;/em> zu WebDAV geben und sie werden die neue Standardeinstellung werden. Die &lt;a href="https://github.com/cryptomator/fuse-nio-adapter" target="_blank" rel="noopener">notwendige Bibliothek&lt;/a> entwicklen wir gerade. Sie basiert auf &lt;a href="https://github.com/SerCeMan/jnr-fuse" target="_blank" rel="noopener">jnr-fuse&lt;/a>, was bedeutet, dass &lt;em>FUSE for macOS&lt;/em> bzw. unter Windows &lt;em>WinFsp&lt;/em> installiert sein muss. Der Linux-Kernel unterstützt FUSE out-of-the-box.&lt;/p>
+&lt;p>Eine große Baustelle ist derzeit noch, wie wir &lt;em>WinFsp&lt;/em> bzw. &lt;em>FUSE for macOS&lt;/em> im Installer mit einbinden. Erste Testversionen werden daher vmtl. die manuelle Installation genannter Bibliotheken erfordern.&lt;/p>
+&lt;p>Der Benefit vom Einsatz von FUSE liegt neben Performancesteigerungen (die im derzeitigen Entwicklungsstand für einige Datei-/Verzeichnis-Operationen schon deutlich messbar sind) vor allem in der zu erwartenden Steigerung der Kompatibilität mit Drittanbietersoftware. Probleme im Zusammenhang mit dem WebDAV-Laufwerk gibt es einige, wie sich in &lt;a href="https://github.com/cryptomator/cryptomator/issues?q=is%3Aopen&amp;#43;is%3Aissue&amp;#43;label%3Amisc%3Awebdav" target="_blank" rel="noopener">unserer Issue-Liste sehen lässt&lt;/a>.&lt;/p>
+&lt;h3 id="java-9">Java 9&lt;/h3>
+&lt;p>Über die Weihnachtstage habe ich sämtliche Bibliotheken sowie der Desktop-Anwendung kompatibel zu Java 9 gemacht. Unsere &lt;a href="https://travis-ci.org/cryptomator/" target="_blank" rel="noopener">CI-Builds&lt;/a> laufen jetzt einheitlich mit JDK 9 in Containern. Der Code wird aber weiterhin für ältere Java-Versionen kompiliert, nicht zuletzt weil unsere Android-App darauf angewiesen ist.&lt;/p>
+&lt;p>Was soll das bringen? Java 9 ist ein Riesenschritt in der Entwicklung der Java-Platform. Neben diversen Bugfixes, von denen Cryptomator-Nutzer direkt profitieren, z.B. der besseren Unterstützung von HiDPI-Displays unter Windows und Linux, gab es massive Refactorings, welche die Grundlage für ein neues Release-Modell der Java-Platform mit neuen &lt;a href="https://blogs.oracle.com/java-platform-group/faster-and-easier-use-and-redistribution-of-java-se" target="_blank" rel="noopener">Feature-Releases im Sechs-Monatstakt&lt;/a> bildet. Das bedeutet, dass wir zukünftig schneller von neuen Features profitieren können, ohne auf unstabile Testversionen setzen zu müssen.&lt;/p>
+&lt;p>Die Umstellung auf Java 9 mit Cryptomator 1.4.0 ist aber auch Grundlage für die Nutzung des Java Platform Module Systems ab Cryptomator 1.5.0, wodurch &lt;a href="http://openjdk.java.net/jeps/275" target="_blank" rel="noopener">deutlich kleinere Anwendungen&lt;/a> gebaut werden können. In einem ersten Test konnte die Größe der Cryptomator-Anwendung für macOS von über 200 MiB (im installierten Zustand) auf ca. 70 MiB reduziert werden.&lt;/p>
+&lt;h3 id="intellij">IntelliJ&lt;/h3>
+&lt;p>Unsere Build-Platform haben wir von Eclipse auf IntelliJ gewechselt, da die mit JDK 9 kompatiblen Versionen von Eclipse Änderungen am Compiler beinhalten, welche nicht mit dem &lt;a href="https://github.com/google/dagger/issues/949" target="_blank" rel="noopener">von Dagger generierten Code klar kamen&lt;/a>.&lt;/p>
+&lt;p>Des Weiteren sind unsere Android-Entwickler ohnehin IntelliJ gewohnt, so dass wir hier unsere Werkzeuge etwas harmonisieren können.&lt;/p>
+&lt;h3 id="64-bit">64 Bit&lt;/h3>
+&lt;p>Da sowohl WinFsp als auch JDK 9 64 Bit erfordern, wird Cryptomator ab Version 1.4.0 keine 32-Bit-Systeme mehr unterstützen. Dies ist zwar einerseits schade, beschleunigt aber auch den Entwicklungsprozess, da weniger Systeme getestet werden müssen.&lt;/p>
+&lt;p>Cryptomator 1.3.x wird 100% kompatibel zu 1.4.0 sein. Das heißt, dass Nutzer, die auf 32-Bit-Software angewiesen sind, auch weiterhin Cryptomator-Tresore nutzen können.&lt;/p>
+&lt;hr>
+&lt;p>Fanden Sie diesen Einblick interessant? Sollen wir künftig zu jedem größeren Meilenstein einen Ausblick geben? Gerne würden wir Ihre Meinung in den Kommentaren hören!&lt;/p></description><pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2018/01/07/roadmap/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2018/01/07/roadmap/</guid><category>cryptomator</category><category>desktop</category></item><item><title>Gastbeitrag: Why Easy Encryption Is Safe Encryption</title><description>&lt;p>Another day, another data breach. Two weeks ago, the &lt;a href="http://www.canberratimes.com.au/national/public-service/data-breach-sees-records-of-50000-australian-workers-exposed-20171102-gzdef3.html" target="_blank" rel="noopener">headline news&lt;/a> in Australia was that some 50,000 workers had their personal records exposed. And just as every summer now inevitably becomes the hottest on record, every data breach is always the largest in history. This is certainly the case here – such a scale of data loss is unprecedented in Australia, if not elsewhere.&lt;/p>
+&lt;p>The breach is also typical in another way: it was caused by human error. Several government agencies had been working with a &amp;ldquo;third party contractor&amp;rdquo;, and it was this company who were responsible for the leak. They remain unnamed, which is lucky for them, given the reputational damage that can be caused by breaches like this.&lt;/p>
+&lt;p>On a practical level, the leak was caused by … drum roll please … an incorrectly configured cloud storage service. Sounds familiar, right?&lt;/p>
+&lt;p>And whilst I don&amp;rsquo;t know precisely what &amp;ldquo;incorrectly configured&amp;rdquo; means in this particular context, I can make a good guess. My bet would be that the data in the cloud was not encrypted, or at least was not encrypted in transit to the cloud.&lt;/p>
+&lt;p>Further, I assume that whichever &amp;ldquo;third party contractor&amp;rdquo; we are dealing with here had policies that required employees to encrypt data before sending it anywhere. They were dealing with sensitive records, after all, and anything else would have been remiss.&lt;/p>
+&lt;h2 id="human-error">Human Error&lt;/h2>
+&lt;p>This might sound like idle speculation, but I raise it to make a serious point: &lt;a href="https://www.dataprivacymonitor.com/cybersecurity/deeper-dive-human-error-is-to-blame-for-most-breaches/" target="_blank" rel="noopener">the majority of data breaches are caused by human error&lt;/a>. Research by Data Privacy Monitor found that in 2015, 37% of &lt;a href="http://e.bakerlaw.com/s/916f16a49296140a9d10ee92cc567ebd16e76582" target="_blank" rel="noopener">data loss was the direct cause of human error&lt;/a>. And it gets worse – if you broaden the definition of &amp;ldquo;error&amp;rdquo; to include falling for phishing scams, fully 59% of all data breaches fall into this category.&lt;/p>
+&lt;p>In fact, it could be argued that almost all incidents of data breach are the result of human error. The other categories mentioned in the same research are (24%), external theft (17%), vendors (14%), internal theft (8%), and lost or improper disposal (6%). Barring internal theft, pretty much all of these categories rely on human error: external theft is made possible by employees leaving their laptops on trains, and by not having them encrypted, for instance.&lt;/p>
+&lt;p>Given this, it&amp;rsquo;s not surprising that analyses of the &lt;a href="https://www.venafi.com/blog/7-data-breaches-caused-human-error-did-encryption-play-role" target="_blank" rel="noopener">biggest data breaches in recent years&lt;/a> have pointed to the role of human error. In most cases, a phishing attack is used to gain access to protected data, but in a sizeable minority the problem is simply that once basic access to a system is achieved, an attacker has access to everything, because nothing is encrypted.&lt;/p>
+&lt;h2 id="human-ignorance">Human Ignorance&lt;/h2>
+&lt;p>I don&amp;rsquo;t mean to suggest that everybody is stupid, or that it is easy to spot a sophisticated phishing attack. Even many of Sony&amp;rsquo;s top executives &lt;a href="https://www.tripwire.com/state-of-security/latest-security-news/sony-hackers-used-phishing-emails-to-breach-company-networks/" target="_blank" rel="noopener">fell foul of such an attack&lt;/a>, of course, back in 2014.&lt;/p>
+&lt;p>Instead, the problem lies with the generally poor level of knowledge on security issues, and nowhere is this more apparent than when it comes to encryption. If you work in tech, it&amp;rsquo;s easy to forget that people don&amp;rsquo;t understand encryption, despite the innumerable and &lt;a href="https://thebestvpn.com/cryptography/" target="_blank" rel="noopener">excellent guides&lt;/a> available.&lt;/p>
+&lt;figure class="my-8">
+&lt;img class="inline-block rounded mb-1" src="https://imgs.xkcd.com/comics/pgp.png" srcset="https://imgs.xkcd.com/comics/pgp.png 1x, https://imgs.xkcd.com/comics/pgp_2x.png 2x" title="If you want to be extra safe, check that there's a big block of jumbled characters at the bottom." alt="PGP"/>
+&lt;figcaption>
+&lt;p class="text-sm text-gray-500 mb-0">Illustration by &lt;a href="https://xkcd.com/1181/" target="_blank" rel="noopener">Randall Munroe (xkcd)&lt;/a>&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>In my experience, the majority of employees (and perhaps people) fall into two categories. There are those that think that their because they need to enter a Gmail password (sometimes), all their emails are safe as long as they keep their password secret. Or maybe just share it with a few friends.&lt;/p>
+&lt;p>Then there are those, more nihilistic, who figure that the government / hackers / the illuminati / whoever can see everything that is happening anyway, so security is pointless in any case. I remember that several friends were amazed &lt;a href="https://www.macrumors.com/2017/10/23/fbi-unable-to-crack-6900-devices/" target="_blank" rel="noopener">when the FBI couldn&amp;#39;t get into encrypted iPhones&lt;/a> a few years ago – they had assumed that the government could &lt;em>always&lt;/em> get around &lt;em>every&lt;/em> security feature.&lt;/p>
+&lt;p>This type of person is more difficult to encourage into good security habits, but the approach for both types of people should be the same.&lt;/p>
+&lt;h2 id="make-encryption-simple">Make Encryption Simple&lt;/h2>
+&lt;p>I&amp;rsquo;ll let you into a little secret: I don&amp;rsquo;t encrypt all my emails. Some, sure. But if I&amp;rsquo;m just writing to my mother about Christmas, I don&amp;rsquo;t bother: call me lazy, but it&amp;rsquo;s just too much hassle.&lt;/p>
+&lt;p>My personal files are a different matter. I&amp;rsquo;m still amazed by people who say something along the lines of &amp;ldquo;I&amp;rsquo;ve got nothing to hide, so it doesn&amp;rsquo;t matter if someone hacks my computer&amp;rdquo;. You don&amp;rsquo;t have to be a dissident in an oppressive regime to be damaged by a data leak. Emails, purchasing history, even your contact list, can easily be used to impersonate you online, even if there is no incriminating data there.&lt;/p>
+&lt;p>There are endless guides about how to encourage employees, friends, your gran, to store and send data safely. Many point out that proper training and education can bring home to people the importance of encryption. This might be true, but to my mind the most factor in getting people to use encryption is to make it easy to do so.&lt;/p>
+&lt;p>Ideally, what you need is an encrypted local drive, and one that is easy to move files in and out of. There are plenty of services available that work just like Dropbox or similar storage services, but automatically encrypt files as they are uploaded. Using these, encryption becomes second nature, and if files are encrypted locally you don&amp;rsquo;t need to worry about sending them to cloud storage or anything else.&lt;/p>
+&lt;p>And best of all, you need &lt;em>zero&lt;/em> knowledge about how encryption works. I would recommend, of course, reading about what you are actually doing when you encrypt files, but for the non-techies out there, making encryption simple is by far the best way of making it ubiquitous.&lt;/p>
+&lt;hr>
+&lt;h2 id="about-the-author">About the Author&lt;/h2>
+&lt;p>Sam Bocetta is a defense contractor for the U.S. Navy, a defense analyst, and a freelance journalist. He specializes in finding radical – and often heretical – solutions to &amp;ldquo;impossible&amp;rdquo; ballistics problems. He now writes for &lt;a href="https://gunnewsdaily.com/" target="_blank" rel="noopener">Gun News Daily&lt;/a> about naval engineering, mechanical engineering, electrical engineering, marine ops, program management, defense contracting, export control, international commerce, patents, InfoSec, cryptography, cyberwarfare, and cyberdefense.&lt;/p></description><pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2017/11/18/why-easy-encryption-is-safe-encryption/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2017/11/18/why-easy-encryption-is-safe-encryption/</guid><category>other</category><category>guest</category></item><item><title>Cryptomator 1.0 für Android Release</title><description>&lt;p>Wir freuen uns über die heutige Veröffentlichung von Cryptomator 1.0 für Android. 🎉 Jetzt können Sie Ihre Cloud-Dateien auch mit Android-Geräten schützen. Die App ist zu den Desktop- und iOS-Versionen von Cryptomator natürlich kompatibel.&lt;/p>
+&lt;p>Wir haben die App im letzten Jahr kontinuierlich weiterentwickelt, um höchste Sicherheit und Benutzerfreundlichkeit zu gewährleisten. Dank dem Feedback von Ihnen und über 10.000 Beta-Testern hat die Android-App nun ein Stadium erreicht, das den hohen Anforderungen von Cryptomator gerecht wird.&lt;/p>
+&lt;p>Cryptomator für Android ist in der Version 1.0 mit Dropbox, Google Drive, OneDrive sowie WebDAV-basierten Anbietern kompatibel. Sie können auch Tresore in Androids lokalem Speicher anlegen, um diese bspw. auch über Drittanbieter-Apps mit Cloud-Diensten zu synchronisieren. Die App ist im Google Play Store erhältlich. Der Kaufpreis beträgt einmalig 4,99 EUR.&lt;/p>
+&lt;p>&lt;a href="https://cryptomator.org/de/android/">https://cryptomator.org/de/android/&lt;/a>&lt;/p>
+&lt;h2 id="änderungen-seit-070">Änderungen seit 0.7.0&lt;/h2>
+&lt;ul>
+&lt;li>Button zur Sperrung aller aktiven Tresore in der Notifikation hinzugefügt&lt;/li>
+&lt;li>Performance beim Cloud-Login-Prozess optimiert&lt;/li>
+&lt;li>Internetverbindung für die Verwendung von lokalem Speicher ist nicht mehr notwendig&lt;/li>
+&lt;li>Anzeigefehler beim OneDrive-Login behoben&lt;/li>
+&lt;li>Die App ist in Spanisch verfügbar&lt;/li>
+&lt;li>Die App erfordert nun mindestens Android 4.3&lt;/li>
+&lt;li>Zahlreiche kleinere Fehler und Probleme behoben&lt;/li>
+&lt;/ul></description><pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2017/10/17/android-1.0/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2017/10/17/android-1.0/</guid><category>cryptomator</category><category>android</category></item><item><title>Ein neues Zuhause für unsere Community</title><description>&lt;p>Unsere Online-Community hat endlich ein Zuhause gefunden. Hier erreichen Sie uns von nun an bei technischen Fragen und bekommen gleichzeitig die Möglichkeit, sich untereinander auszutauschen. Die Seite wurde ins Leben gerufen, um langfristig eine umfassende Knowledge Base zu errichten, die dabei helfen soll, Fragen schnell zu beantworten.&lt;/p>
+&lt;p>Wir freuen uns über jeden Besucher und sind jetzt schon gespannt auf Ihre Beiträge!&lt;/p>
+&lt;a href="https://community.cryptomator.org/" target="_blank" rel="noopener">https://community.cryptomator.org/&lt;/a></description><pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2017/09/13/community/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2017/09/13/community/</guid><category>cryptomator</category><category>community</category></item><item><title>Cryptomator 1.3.0 Release</title><description>&lt;p>We&amp;rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to &lt;a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS&lt;/a>, and &lt;a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter&lt;/a>. A complete list of closed issues is available &lt;a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;h3 id="improvements">Improvements&lt;/h3>
+&lt;ul>
+&lt;li>Auto-Unlock!!! 🎉 (&lt;a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">#40&lt;/a>) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions&lt;/li>
+&lt;li>New vault format 6 (&lt;a href="https://github.com/cryptomator/cryptomator/issues/521" target="_blank" rel="noopener">#521&lt;/a>)&lt;/li>
+&lt;li>Added new options to &amp;ldquo;unlocked&amp;rdquo; screen: Mount/unmount without locking/unlocking (&lt;a href="https://github.com/cryptomator/cryptomator/issues/452" target="_blank" rel="noopener">#452&lt;/a>)&lt;/li>
+&lt;li>Network access now filtered by the socket instead of the application (&lt;a href="https://github.com/cryptomator/cryptomator/issues/431" target="_blank" rel="noopener">#431&lt;/a>)&lt;/li>
+&lt;li>You can now change the socket port without restarting Cryptomator&lt;/li>
+&lt;li>New log system with log file rotation and exposed, user-adjustable configuration&lt;/li>
+&lt;/ul>
+&lt;h4 id="windows">Windows&lt;/h4>
+&lt;ul>
+&lt;li>Removed IPv6 flag, Windows will now always mount &lt;code>cryptomator-vault&lt;/code> which is mapped to &lt;code>127.0.0.1&lt;/code> (&lt;a href="https://github.com/cryptomator/cryptomator/issues/512" target="_blank" rel="noopener">#512&lt;/a>, &lt;a href="https://github.com/cryptomator/cryptomator/issues/529" target="_blank" rel="noopener">#529&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;h4 id="macos">macOS&lt;/h4>
+&lt;ul>
+&lt;li>Improved macOS Sierra integration, unlocking doesn&amp;rsquo;t ask for username/password for &lt;code>localhost&lt;/code> anymore (&lt;a href="https://github.com/cryptomator/cryptomator/issues/170" target="_blank" rel="noopener">#170&lt;/a>)&lt;/li>
+&lt;li>Improved iCloud Drive compatibility (&lt;a href="https://github.com/cryptomator/cryptomator/issues/364" target="_blank" rel="noopener">#364&lt;/a>)&lt;/li>
+&lt;li>Fixed slow startup on some systems&lt;/li>
+&lt;li>Added &lt;code>CMD+,&lt;/code> shortcut for preferences&lt;/li>
+&lt;/ul>
+&lt;h3 id="misc">Misc&lt;/h3>
+&lt;ul>
+&lt;li>Changed license to GPLv3&lt;/li>
+&lt;li>Dropped SHA-1 signatures in Windows Authenticode code signing&lt;/li>
+&lt;li>Dropped official Windows Vista support&lt;/li>
+&lt;li>Dropped official Ubuntu Vivid and Wily support&lt;/li>
+&lt;/ul>
+&lt;h3 id="technical-details-on-windows-mounting">Technical Details on Windows Mounting&lt;/h3>
+&lt;p>After we have fixed &lt;a href="https://github.com/cryptomator/cryptomator/issues/431" target="_blank" rel="noopener">#431&lt;/a>, we noticed various issues on Windows. We tried hosting the virtual drive via &lt;code>localhost&lt;/code>, &lt;code>127.0.0.1&lt;/code>, and &lt;code>::1&lt;/code> but every host has its own issue: Sometimes access to the virtual drive was extremely slow, sometimes Windows showed unnecessary security warnings (&lt;a href="https://github.com/cryptomator/cryptomator/issues/529" target="_blank" rel="noopener">#529&lt;/a>), and sometimes Office didn&amp;rsquo;t properly work (&lt;a href="https://github.com/cryptomator/cryptomator/issues/512" target="_blank" rel="noopener">#512&lt;/a>). That&amp;rsquo;s why the Windows installer for Cryptomator now writes the new host &lt;code>cryptomator-vault&lt;/code> (which is mapped to &lt;code>127.0.0.1&lt;/code>) into the &lt;code>hosts&lt;/code> file. Weirdly enough, with that new host, all problems seem to be gone. Even though we don&amp;rsquo;t quite understand why binding an IP has such a big impact, we just hope that we finally found a good solution!&lt;/p>
+&lt;h3 id="under-the-hood-improvements">Under-The-Hood Improvements&lt;/h3>
+&lt;p>We&amp;rsquo;d like to highlight some improvements that we were able to make under-the-hood: Faster build times, high test coverage for our crypto libraries, and more!&lt;/p>
+&lt;h4 id="ci-build-times">CI Build Times&lt;/h4>
+&lt;p>(&lt;a href="https://travis-ci.org/cryptomator/cryptomator/builds" target="_blank" rel="noopener">Travis CI build numbers are in parentheses&lt;/a>)&lt;/p>
+&lt;table class="table-fixed w-full">
+&lt;thead>
+&lt;tr class="border-t">
+&lt;th class="w-1/3 px-4 py-2">Branch&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.3.0&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.2.4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Master (Release)&lt;/th>
+&lt;td class="px-4 py-2">3min (809, 819, 835, 842, 845)&lt;/td>
+&lt;td class="px-4 py-2">5min (699, 704, 714, 727, 828)&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Develop&lt;/th>
+&lt;td class="px-4 py-2">1.6min (830, 831, 837, 839, 841)&lt;/td>
+&lt;td class="px-4 py-2">3min (710, 711, 715, 724, 725)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="lines-of-code">Lines of Code&lt;/h4>
+&lt;p>(determined via &lt;code>cloc --exclude-dir=test --include-lang=Java&lt;/code>)&lt;/p>
+&lt;table class="table-fixed w-full">
+&lt;thead>
+&lt;tr class="border-t">
+&lt;th class="w-1/3 px-4 py-2">Project&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.3.0&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.2.4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Cryptomator-Desktop&lt;/th>
+&lt;td class="px-4 py-2">7,249&lt;/td>
+&lt;td class="px-4 py-2">16,624&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">CryptoLib&lt;/th>
+&lt;td class="px-4 py-2">1,447&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">CryptoFS&lt;/th>
+&lt;td class="px-4 py-2">6,829&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">WebDAV-NIO-Adapter&lt;/th>
+&lt;td class="px-4 py-2">3,979&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">SIV-Mode&lt;/th>
+&lt;td class="px-4 py-2">1,238&lt;/td>
+&lt;td class="px-4 py-2">1,238&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Sum&lt;/th>
+&lt;td class="px-4 py-2">20,742&lt;/td>
+&lt;td class="px-4 py-2">17,862&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="test-coverage">Test Coverage&lt;/h4>
+&lt;p>(determined via JaCoCo)&lt;/p>
+&lt;table class="table-fixed w-full">
+&lt;thead>
+&lt;tr class="border-t">
+&lt;th class="w-1/3 px-4 py-2">Project&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.3.0&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.2.4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Cryptomator-Desktop&lt;/th>
+&lt;td class="px-4 py-2">14%&lt;/td>
+&lt;td class="px-4 py-2">66%&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">CryptoLib&lt;/th>
+&lt;td class="px-4 py-2">93%&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">CryptoFS&lt;/th>
+&lt;td class="px-4 py-2">97%&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">WebDAV-NIO-Adapter&lt;/th>
+&lt;td class="px-4 py-2">26%&lt;/td>
+&lt;td class="px-4 py-2">-&lt;/td>
+&lt;/tr>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">SIV-Mode&lt;/th>
+&lt;td class="px-4 py-2">96%&lt;/td>
+&lt;td class="px-4 py-2">96%&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>* passes &lt;a href="http://www.webdav.org/neon/litmus/" target="_blank" rel="noopener">litmus (WebDAV server test suite)&lt;/a>&lt;/p>
+&lt;h4 id="file-size">File Size&lt;/h4>
+&lt;table class="table-fixed w-full">
+&lt;thead>
+&lt;tr class="border-t">
+&lt;th class="w-1/3 px-4 py-2">File&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.3.0&lt;/th>
+&lt;th class="w-1/3 px-4 py-2">1.2.4&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="border-t">
+&lt;th class="px-4 py-2">Cryptomator.jar&lt;/th>
+&lt;td class="px-4 py-2">9.18 MB&lt;/td>
+&lt;td class="px-4 py-2">12.1 MB&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="evolution-of-cryptomator">Evolution of Cryptomator&lt;/h3>
+&lt;p>(made with Gource)&lt;/p>
+&lt;div class="relative aspect-16x9">
+&lt;iframe class="absolute w-full h-full" src="https://gfycat.com/ifr/UnlawfulAdmirableAmericanindianhorse" frameborder="0" scrolling="no" allowfullscreen>&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="cryptomator-124-for-ios">Cryptomator 1.2.4 for iOS&lt;/h2>
+&lt;ul>
+&lt;li>Added compatibility to vault version 6&lt;/li>
+&lt;li>Fixed auto-lock bug, which occurred when you opened up the Touch ID settings (&lt;a href="https://github.com/cryptomator/cryptomator-ios/issues/89" target="_blank" rel="noopener">#89&lt;/a>)&lt;/li>
+&lt;li>Improved filename blacklist, you can now see files and folders that start with a period &amp;ldquo;.&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;p>We weren&amp;rsquo;t able to finish &lt;a href="https://github.com/cryptomator/cryptomator-ios/milestone/11" target="_blank" rel="noopener">Cryptomator 1.3.0 for iOS&lt;/a> in time. Some great features are planned for this version. Stay tuned!&lt;/p>
+&lt;hr>
+&lt;h2 id="cryptomator-060-for-android">Cryptomator 0.6.0 for Android&lt;/h2>
+&lt;ul>
+&lt;li>Added compatibility to vault version 6&lt;/li>
+&lt;li>Added external storage support (&lt;a href="https://github.com/cryptomator/cryptomator-android/issues/50" target="_blank" rel="noopener">#50&lt;/a>)&lt;/li>
+&lt;li>Added fingerprint support (&lt;a href="https://github.com/cryptomator/cryptomator-android/issues/14" target="_blank" rel="noopener">#14&lt;/a>)&lt;/li>
+&lt;li>Added multiple selection for file upload (&lt;a href="https://github.com/cryptomator/cryptomator-android/issues/30" target="_blank" rel="noopener">#30&lt;/a>)&lt;/li>
+&lt;li>Added creation and editing of text files&lt;/li>
+&lt;li>Added sharing of texts&lt;/li>
+&lt;li>Added logout of cloud storage services in settings&lt;/li>
+&lt;li>Improved filename blacklist, you can now see files and folders that start with a period &amp;ldquo;.&amp;rdquo; (&lt;a href="https://github.com/cryptomator/cryptomator-android/issues/60" target="_blank" rel="noopener">#60&lt;/a>)&lt;/li>
+&lt;li>Fixed inaccessible vaults in OneDrive (&lt;a href="https://github.com/cryptomator/cryptomator-android/issues/55" target="_blank" rel="noopener">#55&lt;/a>)&lt;/li>
+&lt;li>Further crash/bug fixes and design improvements&lt;/li>
+&lt;/ul>
+&lt;p>This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!&lt;/p></description><pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate><link>https://cryptomator.org/de/blog/2017/07/01/release-1.3.0/</link><guid isPermaLink="true">https://cryptomator.org/de/blog/2017/07/01/release-1.3.0/</guid><category>cryptomator</category><category>desktop</category><category>ios</category><category>android</category></item></channel></rss>
