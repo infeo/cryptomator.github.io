@@ -7,7 +7,7 @@
     <title>Spenden</title>
     
       
-      <link rel="stylesheet" href="/css/main.min.91fd87f9f6836c8dbdacb6a606dc016bca7512731180e8fbb0dad8f3876c4fcc.css" integrity="sha256-kf2H&#43;faDbI29rLamBtwBa8p1EnMRgOj7sNrY84dsT8w=" media="screen">
+      <link rel="stylesheet" href="/css/main.min.1626c57c142ecf79f7e267cb4ad3a9e36bb082077dbdf7be48fc06b4d5086d91.css" integrity="sha256-FibFfBQuz3n34mfLStOp42uwggd9vfe&#43;SPwGtNUIbZE=" media="screen">
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml">
     
@@ -119,7 +119,57 @@
       <p class="text-lg leading-relaxed text-gray-700">Cryptomator wird als Open-Source-Projekt trotz des hohen Entwicklungs­aufwands kostenlos bereitgestellt und ist daher auf Spenden angewiesen. Wenn du auch an der Weiterentwicklung interessiert bist, kannst du uns mit dem Kauf eines Spendenschlüssels oder mit einer Spende beliebiger Höhe unterstützen.</p>
     </header>
 
-    <div class="flex flex-wrap flex-row-reverse">
+    <div class="flex flex-wrap">
+      <section class="w-full py-8 lg:w-1/2 lg:pr-3">
+        <h2 class="mb-4">Spendenschlüssel kaufen</h2>
+        <ul class="fa-ul mb-4">
+          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Software registrieren und Dark-Mode freischalten</li>
+          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Manche sagen, es wäre ein &#34;Awesome People&#34;-Zertifikat</li>
+          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Rechnung erhalten</li>
+        </ul>
+        <div x-data="{checkoutData: {amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}" class="rounded shadow bg-white px-4 py-8">
+  <form x-show="!checkoutData.success" x-ref="form">
+    <div class="w-full md:w-1/2 mb-4">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Betrag</label>
+      <div class="flex items-center rounded bg-gray-300 mb-1">
+        <div class="flex-shrink-0 px-3">€ / $</div>
+        <input type="number" min="15" step="1" x-model="checkoutData.amount" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 15" required/>
+        <div class="flex-shrink-0 px-3">,00</div>
+      </div>
+      <p class="text-xs text-gray-600">Währung wird im Zahlungsvorgang ermittelt.</p>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="checkoutData.email" type="email" class="appearance-none w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="mb-4">Zahlungen werden über Paddle abgewickelt.</p>
+      <p class="mb-4">
+<input class="mr-1" type="checkbox" id="id-342785691" x-model="acceptTerms" />
+<label for="id-342785691">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+</p>
+      <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
+        <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
+      </button>
+      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="checkoutData.success" x-cloak>
+    <h3 class="mb-4">👍 Deine Zahlung war erfolgreich!</h3>
+    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Spendenschlüssel</label>
+    <textarea x-model="checkoutData.licenseKey" class="appearance-none w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
+    <p>Dies ist dein Spendenschlüssel. Gib ihn in den Cryptomator-Einstellungen unter &#34;Spenden&#34; ein. Der Spendenschlüssel wurde auch an deine E-Mail-Adresse geschickt.</p>
+  </div>
+</div>
+
+
+  
+  <script type="text/javascript" src="/js/desktopkey.min.3f1ad0640938bee3d827f0bd0738591d3468204f6d0eaed06b10fdbdb4510837.js" integrity="sha256-PxrQZAk4vuPYJ/C9BzhZHTRoIE9tDq7QaxD9vbRRCDc=" defer></script>
+
+
+      </section>
+
       <section class="w-full py-8 lg:w-1/2 lg:pl-3">
         <h2 class="mb-4">Einfach spenden</h2>
         <ul class="fa-ul mb-4">
@@ -155,8 +205,8 @@
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value="NUQ7XQSWMQEGS" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-247593816" x-model="acceptTerms" />
-<label for="id-247593816">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-931628547" x-model="acceptTerms" />
+<label for="id-931628547">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu PayPal</button>
         </form>
@@ -210,8 +260,8 @@
               <p class="mb-4">Kreditkartenzahlungen werden über Stripe abgewickelt. Wir können dabei weder deine Kartennummer noch die Prüfziffer einsehen. In deiner Abrechnung wird <a href="https://support.stripe.com/questions/"unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">eine Buchung von Stripe</a> enthalten sein.</p>
 
               <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-961784235" x-model="acceptTerms" />
-<label for="id-961784235">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-459183672" x-model="acceptTerms" />
+<label for="id-459183672">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
 
               <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -231,8 +281,8 @@
           <div x-show="frequency === 'recurring'" class="text-center mt-4">
             <p>Wiederkehrende Kreditkartenzahlungen werden über unsere Stripe-Seite erstellt.</p>
             <p>
-<input class="mr-1" type="checkbox" id="id-573284961" x-model="acceptTerms" />
-<label for="id-573284961">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-495286317" x-model="acceptTerms" />
+<label for="id-495286317">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
             <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency)" x-bind:disabled="!acceptTerms">
               <i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu Stripe
@@ -276,8 +326,8 @@
           <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
           <input type="hidden" name="allow_extra" value="1" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-769518342" x-model="acceptTerms" />
-<label for="id-769518342">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-938714562" x-model="acceptTerms" />
+<label for="id-938714562">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu CoinPayments</button>
         </form>
@@ -285,56 +335,6 @@
       
     </div>
   </div>
-
-      </section>
-
-      <section class="w-full py-8 lg:w-1/2 lg:pr-3">
-        <h2 class="mb-4">Spendenschlüssel kaufen</h2>
-        <ul class="fa-ul mb-4">
-          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Software registrieren und Dark-Mode freischalten</li>
-          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Manche sagen, es wäre ein &#34;Awesome People&#34;-Zertifikat</li>
-          <li class="mb-1"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Rechnung erhalten</li>
-        </ul>
-        <div x-data="{checkoutData: {amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}" class="rounded shadow bg-white px-4 py-8">
-  <form x-show="!checkoutData.success" x-ref="form">
-    <div class="w-full md:w-1/2 mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Betrag</label>
-      <div class="flex items-center rounded bg-gray-300 mb-1">
-        <div class="flex-shrink-0 px-3">€ / $</div>
-        <input type="number" min="15" step="1" x-model="checkoutData.amount" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 15" required/>
-        <div class="flex-shrink-0 px-3">,00</div>
-      </div>
-      <p class="text-xs text-gray-600">Währung wird im Zahlungsvorgang ermittelt.</p>
-    </div>
-    <div class="mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">E-Mail</label>
-      <input x-model="checkoutData.email" type="email" class="appearance-none w-full" placeholder="E-Mail-Adresse" required/>
-    </div>
-    <div class="text-center mt-8">
-      <p class="mb-4">Zahlungen werden über Paddle abgewickelt.</p>
-      <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-896725134" x-model="acceptTerms" />
-<label for="id-896725134">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
-</p>
-      <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
-        <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
-      </button>
-      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
-    </div>
-  </form>
-
-  <div x-show="checkoutData.success" x-cloak>
-    <h3 class="mb-4">👍 Deine Zahlung war erfolgreich!</h3>
-    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Spendenschlüssel</label>
-    <textarea x-model="checkoutData.licenseKey" class="appearance-none w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
-    <p>Dies ist dein Spendenschlüssel. Gib ihn in den Cryptomator-Einstellungen unter &#34;Spenden&#34; ein. Der Spendenschlüssel wurde auch an deine E-Mail-Adresse geschickt.</p>
-  </div>
-</div>
-
-
-  
-  <script type="text/javascript" src="/js/desktopkey.min.3f1ad0640938bee3d827f0bd0738591d3468204f6d0eaed06b10fdbdb4510837.js" integrity="sha256-PxrQZAk4vuPYJ/C9BzhZHTRoIE9tDq7QaxD9vbRRCDc=" defer></script>
-
 
       </section>
     </div>
