@@ -159,8 +159,8 @@
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-734256819" x-model="acceptTerms" />
-<label for="id-734256819">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-358714926" x-model="acceptTerms" />
+<label for="id-358714926">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
         </form>
@@ -168,8 +168,7 @@
 
       
       <div x-show="tab === 'card'" x-cloak>
-        <p class="text-center"><i class="fas fa-exclamation-triangle"></i> Currently under maintenance!</p>
-        <div x-show="false" x-data="{amount: 15, currency: 'EUR', frequency: 'once', oneTimePayment: null, oneTimePaymentStatus: {validCardNum: false, captcha: null, errorMessage: '', inProgress: false, success: false}, recurringPayment: new RecurringPayment(), acceptTerms: false}" x-init="oneTimePayment = new OneTimePayment(oneTimePaymentStatus)">
+        <div x-data="{amount: 15, currency: 'EUR', frequency: 'once', oneTimePayment: null, oneTimePaymentStatus: {validCardNum: false, captcha: null, errorMessage: '', inProgress: false, success: false}, recurringPayment: new RecurringPayment(), acceptTerms: false}" x-init="oneTimePayment = new OneTimePayment(oneTimePaymentStatus)">
           <div class="flex flex-wrap md:flex-no-wrap">
             <div class="w-full mb-4 md:w-1/2 md:pr-3">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Amount</label>
@@ -203,7 +202,12 @@
             </div>
           </div>
           
-          <div x-show="frequency === 'once'">
+          <div x-show="frequency === 'once'" class="text-center">
+            <p class="mb-4"><i class="fas fa-exclamation-triangle"></i> Currently under maintenance!</p>
+            <p>Frequency "Monthly" is not affected.</p>
+          </div>
+
+          <div x-show="frequency === 'once' && false">
             <div class="mb-4">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Credit Card</label>
               <div> 
@@ -215,8 +219,8 @@
               <p class="mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a href="https://support.stripe.com/questions/"unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
               <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-367812549" x-model="acceptTerms" />
-<label for="id-367812549">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-429815763" x-model="acceptTerms" />
+<label for="id-429815763">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
 
               <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -233,11 +237,11 @@
             <p class="text-sm text-center text-red-600" x-text="oneTimePaymentStatus.errorMessage"></p>
           </div>
 
-          <div x-show="frequency === 'recurring'" class="text-center mt-4">
-            <p>Recurring credit card payments will be set up on our Stripe page.</p>
-            <p>
-<input class="mr-1" type="checkbox" id="id-157483296" x-model="acceptTerms" />
-<label for="id-157483296">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
+          <div x-show="frequency === 'recurring'" class="text-center">
+            <p class="mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
+            <p class="mb-4">
+<input class="mr-1" type="checkbox" id="id-145962783" x-model="acceptTerms" />
+<label for="id-145962783">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
             <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency)" x-bind:disabled="!acceptTerms">
               <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
@@ -281,8 +285,8 @@
           <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
           <input type="hidden" name="allow_extra" value="1" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-453821769" x-model="acceptTerms" />
-<label for="id-453821769">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-452816973" x-model="acceptTerms" />
+<label for="id-452816973">I accept the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
         </form>
@@ -323,8 +327,8 @@
     <div class="text-center mt-8">
       <p class="mb-4">Payments are securely handled by Paddle.</p>
       <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-741582693" x-model="acceptTerms" />
-<label for="id-741582693">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-247315689" x-model="acceptTerms" />
+<label for="id-247315689">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
