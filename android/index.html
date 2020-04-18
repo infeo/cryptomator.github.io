@@ -138,8 +138,8 @@
     <div class="text-center mt-8">
       <p class="mb-4">Payments are securely handled by Paddle.</p>
       <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-674258913" x-model="acceptTerms" />
-<label for="id-674258913">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-395647821" x-model="acceptTerms" />
+<label for="id-395647821">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -169,7 +169,7 @@
   <meta itemprop="name" content="Cryptomator"/>
   <meta itemprop="description" content="A free software to encrypt your cloud files."/>
   <meta itemprop="applicationCategory" content="Productivity"/>
-  <meta itemprop="softwareVersion" content="1.5.1"/>
+  <meta itemprop="softwareVersion" content="1.5.2"/>
   <meta itemprop="applicationSubCategory" content="Encryption"/>
   <meta itemprop="image" content="https://cryptomator.org/img/logo.png"/>
   <meta itemprop="operatingSystem" content="Android"/>
@@ -182,16 +182,16 @@
       <p class="mb-4">
         <img class="inline-block h-24" src="/img/logo.svg"/>
       </p>
-      <p class="mb-4">Version 1.5.1 • Minimum: Android 4.3</p>
+      <p class="mb-4">Version 1.5.2 • Minimum: Android 4.3</p>
       <p class="mb-2">
-        <a href="https://static.cryptomator.org/android/1.5.1/Cryptomator-1.5.1.apk" class="btn btn-primary w-full md:w-48" role="button">
+        <a href="https://static.cryptomator.org/android/1.5.2/Cryptomator-1.5.2.apk" class="btn btn-primary w-full md:w-48" role="button">
           <span class="fas fa-download" aria-hidden="true"></span> Download
         </a>
       </p>
       <p class="text-xs">
         <a href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> Show SHA256 Signature</a>
       </p>
-      <p x-show="showShaSignature" x-cloak class="text-sm mt-4"><code class="break-all">66507cbe9f8cc1b176582d2cefc5ca09aaa0c9b2f288aa15ab2b503897466e1f</code></p>
+      <p x-show="showShaSignature" x-cloak class="text-sm mt-4"><code class="break-all">834ec1410e4ed0769ebffdd0d8f352661d429de8696d51217d170729a089b0b7</code></p>
     </div>
   </div>
 </div>
