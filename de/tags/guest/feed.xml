@@ -11,8 +11,34 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/guest/</link>
     </image>
-    <lastBuildDate>Sun, 19 Apr 2020 07:52:33 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 08:10:02 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator 1.5.0 Release</title>
+        <description>&lt;figure class=&#34;text-center my-8&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-5-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&amp;rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.&lt;/p&gt;
+&lt;p&gt;To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/de/donate/&#34;&gt;buying a donation key&lt;/a&gt;, which unlocks the new dark mode. ❤️ &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Detailed release notes&lt;/a&gt; for the desktop app are available on GitHub.&lt;/p&gt;
+&lt;p&gt;As you might have noticed, this website is also shining in a completely new design. ✨&lt;/p&gt;
+&lt;h2 id=&#34;cryptomator-for-ios--android&#34;&gt;Cryptomator for iOS &amp;amp; Android&lt;/h2&gt;
+&lt;p&gt;New updates for iOS and Android have been released as well. To celebrate the release, our mobile apps are 40% off until April 23! 🤖&lt;/p&gt;
+&lt;p&gt;Cryptomator for Android is now also available as an APK version &lt;a href=&#34;https://cryptomator.org/de/android/&#34;&gt;through our own online store&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/04/20/release-1.5.0/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/04/20/release-1.5.0/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>ios</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator Roadmap Early 2020</title>
@@ -304,205 +330,6 @@
         <category>cryptomator</category>
         
         <category>community</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator 1.3.0 Release</title>
-        <description>&lt;p&gt;We&amp;rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to &lt;a href=&#34;https://github.com/cryptomator/cryptolib&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CryptoLib&lt;/a&gt;, &lt;a href=&#34;https://github.com/cryptomator/cryptofs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CryptoFS&lt;/a&gt;, and &lt;a href=&#34;https://github.com/cryptomator/webdav-nio-adapter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WebDAV-NIO-Adapter&lt;/a&gt;. A complete list of closed issues is available &lt;a href=&#34;https://github.com/cryptomator/cryptomator/milestone/26?closed=1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;improvements&#34;&gt;Improvements&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Auto-Unlock!!! 🎉 (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/40&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#40&lt;/a&gt;) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions&lt;/li&gt;
-&lt;li&gt;New vault format 6 (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/521&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#521&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Added new options to &amp;ldquo;unlocked&amp;rdquo; screen: Mount/unmount without locking/unlocking (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/452&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#452&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Network access now filtered by the socket instead of the application (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/431&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#431&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;You can now change the socket port without restarting Cryptomator&lt;/li&gt;
-&lt;li&gt;New log system with log file rotation and exposed, user-adjustable configuration&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;windows&#34;&gt;Windows&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Removed IPv6 flag, Windows will now always mount &lt;code&gt;cryptomator-vault&lt;/code&gt; which is mapped to &lt;code&gt;127.0.0.1&lt;/code&gt; (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/512&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#512&lt;/a&gt;, &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/529&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#529&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;macos&#34;&gt;macOS&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Improved macOS Sierra integration, unlocking doesn&amp;rsquo;t ask for username/password for &lt;code&gt;localhost&lt;/code&gt; anymore (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/170&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#170&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Improved iCloud Drive compatibility (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/364&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#364&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Fixed slow startup on some systems&lt;/li&gt;
-&lt;li&gt;Added &lt;code&gt;CMD+,&lt;/code&gt; shortcut for preferences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;misc&#34;&gt;Misc&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Changed license to GPLv3&lt;/li&gt;
-&lt;li&gt;Dropped SHA-1 signatures in Windows Authenticode code signing&lt;/li&gt;
-&lt;li&gt;Dropped official Windows Vista support&lt;/li&gt;
-&lt;li&gt;Dropped official Ubuntu Vivid and Wily support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;technical-details-on-windows-mounting&#34;&gt;Technical Details on Windows Mounting&lt;/h3&gt;
-&lt;p&gt;After we have fixed &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/431&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#431&lt;/a&gt;, we noticed various issues on Windows. We tried hosting the virtual drive via &lt;code&gt;localhost&lt;/code&gt;, &lt;code&gt;127.0.0.1&lt;/code&gt;, and &lt;code&gt;::1&lt;/code&gt; but every host has its own issue: Sometimes access to the virtual drive was extremely slow, sometimes Windows showed unnecessary security warnings (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/529&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#529&lt;/a&gt;), and sometimes Office didn&amp;rsquo;t properly work (&lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/512&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#512&lt;/a&gt;). That&amp;rsquo;s why the Windows installer for Cryptomator now writes the new host &lt;code&gt;cryptomator-vault&lt;/code&gt; (which is mapped to &lt;code&gt;127.0.0.1&lt;/code&gt;) into the &lt;code&gt;hosts&lt;/code&gt; file. Weirdly enough, with that new host, all problems seem to be gone. Even though we don&amp;rsquo;t quite understand why binding an IP has such a big impact, we just hope that we finally found a good solution!&lt;/p&gt;
-&lt;h3 id=&#34;under-the-hood-improvements&#34;&gt;Under-The-Hood Improvements&lt;/h3&gt;
-&lt;p&gt;We&amp;rsquo;d like to highlight some improvements that we were able to make under-the-hood: Faster build times, high test coverage for our crypto libraries, and more!&lt;/p&gt;
-&lt;h4 id=&#34;ci-build-times&#34;&gt;CI Build Times&lt;/h4&gt;
-&lt;p&gt;(&lt;a href=&#34;https://travis-ci.org/cryptomator/cryptomator/builds&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Travis CI build numbers are in parentheses&lt;/a&gt;)&lt;/p&gt;
-&lt;table class=&#34;table-fixed w-full&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;Branch&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.3.0&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.2.4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Master (Release)&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;3min (809, 819, 835, 842, 845)&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;5min (699, 704, 714, 727, 828)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Develop&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;1.6min (830, 831, 837, 839, 841)&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;3min (710, 711, 715, 724, 725)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&#34;lines-of-code&#34;&gt;Lines of Code&lt;/h4&gt;
-&lt;p&gt;(determined via &lt;code&gt;cloc --exclude-dir=test --include-lang=Java&lt;/code&gt;)&lt;/p&gt;
-&lt;table class=&#34;table-fixed w-full&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;Project&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.3.0&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.2.4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Cryptomator-Desktop&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;7,249&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;16,624&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;CryptoLib&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;1,447&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;CryptoFS&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;6,829&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;WebDAV-NIO-Adapter&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;3,979&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;SIV-Mode&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;1,238&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;1,238&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Sum&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;20,742&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;17,862&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&#34;test-coverage&#34;&gt;Test Coverage&lt;/h4&gt;
-&lt;p&gt;(determined via JaCoCo)&lt;/p&gt;
-&lt;table class=&#34;table-fixed w-full&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;Project&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.3.0&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.2.4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Cryptomator-Desktop&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;14%&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;66%&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;CryptoLib&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;93%&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;CryptoFS&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;97%&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;WebDAV-NIO-Adapter&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;26%&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;SIV-Mode&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;96%&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;96%&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;* passes &lt;a href=&#34;http://www.webdav.org/neon/litmus/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;litmus (WebDAV server test suite)&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;file-size&#34;&gt;File Size&lt;/h4&gt;
-&lt;table class=&#34;table-fixed w-full&#34;&gt;
-  &lt;thead&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;File&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.3.0&lt;/th&gt;
-      &lt;th class=&#34;w-1/3 px-4 py-2&#34;&gt;1.2.4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr class=&#34;border-t&#34;&gt;
-      &lt;th class=&#34;px-4 py-2&#34;&gt;Cryptomator.jar&lt;/th&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;9.18 MB&lt;/td&gt;
-      &lt;td class=&#34;px-4 py-2&#34;&gt;12.1 MB&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;evolution-of-cryptomator&#34;&gt;Evolution of Cryptomator&lt;/h3&gt;
-&lt;p&gt;(made with Gource)&lt;/p&gt;
-&lt;div class=&#34;relative aspect-16x9&#34;&gt;
-  &lt;iframe class=&#34;absolute w-full h-full&#34; src=&#34;https://gfycat.com/ifr/UnlawfulAdmirableAmericanindianhorse&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;cryptomator-124-for-ios&#34;&gt;Cryptomator 1.2.4 for iOS&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added compatibility to vault version 6&lt;/li&gt;
-&lt;li&gt;Fixed auto-lock bug, which occurred when you opened up the Touch ID settings (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-ios/issues/89&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#89&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Improved filename blacklist, you can now see files and folders that start with a period &amp;ldquo;.&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We weren&amp;rsquo;t able to finish &lt;a href=&#34;https://github.com/cryptomator/cryptomator-ios/milestone/11&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cryptomator 1.3.0 for iOS&lt;/a&gt; in time. Some great features are planned for this version. Stay tuned!&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;cryptomator-060-for-android&#34;&gt;Cryptomator 0.6.0 for Android&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added compatibility to vault version 6&lt;/li&gt;
-&lt;li&gt;Added external storage support (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-android/issues/50&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#50&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Added fingerprint support (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-android/issues/14&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#14&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Added multiple selection for file upload (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-android/issues/30&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#30&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Added creation and editing of text files&lt;/li&gt;
-&lt;li&gt;Added sharing of texts&lt;/li&gt;
-&lt;li&gt;Added logout of cloud storage services in settings&lt;/li&gt;
-&lt;li&gt;Improved filename blacklist, you can now see files and folders that start with a period &amp;ldquo;.&amp;rdquo; (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-android/issues/60&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#60&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Fixed inaccessible vaults in OneDrive (&lt;a href=&#34;https://github.com/cryptomator/cryptomator-android/issues/55&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#55&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Further crash/bug fixes and design improvements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2017/07/01/release-1.3.0/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2017/07/01/release-1.3.0/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
-        
-        <category>ios</category>
-        
-        <category>android</category>
         
       </item>
     
