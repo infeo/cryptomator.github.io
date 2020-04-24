@@ -7,7 +7,7 @@
     <title>Cryptomator for Android</title>
     
       
-      <link rel="stylesheet" href="/css/main.min.3427bbf4f0c6474d08e9691e9d4fab0ba24fc6689f28c329ee8a7e6e79db19cf.css" integrity="sha256-NCe79PDGR00I6WkenU&#43;rC6JPxmifKMMp7op&#43;bnnbGc8=" media="screen">
+      <link rel="stylesheet" href="/css/main.min.a80d5c70cb626240b44fc6f468ecf75f3a8fa624a4b22c29df2d6eb2ebcdfaba.css" integrity="sha256-qA1ccMtiYkC0T8b0aOz3XzqPpiSksiwp3y1usuvN&#43;ro=" media="screen">
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
     
@@ -138,8 +138,8 @@
     <div class="text-center mt-8">
       <p class="mb-4">Payments are securely handled by Paddle.</p>
       <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-476219853" x-model="acceptTerms" />
-<label for="id-476219853">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-148953276" x-model="acceptTerms" />
+<label for="id-148953276">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
