@@ -121,12 +121,12 @@
       </div>
       <div>
         <p class="font-bold mb-1">Your download starts automatically.</p>
-        <p class="text-sm">Didn&#39;t work? Click here to restart: <a href="https://dl.bintray.com/cryptomator/cryptomator/1.5.1/Cryptomator-1.5.1-x64.exe" download="Cryptomator-1.5.1-x64.exe" target="_self" x-data="{}" x-init="$el.click()">Cryptomator-1.5.1-x64.exe</a></p>
+        <p class="text-sm">Didn&#39;t work? Click here to restart: <a href="https://github.com/cryptomator/cryptomator/releases/download/1.5.1/Cryptomator-1.5.1-x64.exe" download="Cryptomator-1.5.1-x64.exe" target="_self" x-data="{}" x-init="$el.click()">Cryptomator-1.5.1-x64.exe</a></p>
       </div>
     </div>
     <p class="grid grid-cols-2 gap-2 text-center text-xs w-full md:w-2/3 lg:w-1/2 mx-auto">
       <a href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> Show SHA256 Signature</a>
-      <a href="https://dl.bintray.com/cryptomator/cryptomator/1.5.1/Cryptomator-1.5.1-x64.exe.asc" target="_blank" rel="noopener"><i class="fas fa-download fa-fw"></i> Download PGP Signature</a>
+      <a href="https://github.com/cryptomator/cryptomator/releases/download/1.5.1/Cryptomator-1.5.1-x64.exe.asc" target="_blank" rel="noopener"><i class="fas fa-download fa-fw"></i> Download PGP Signature</a>
     </p>
     <p x-show="showShaSignature" x-cloak class="text-sm text-center mt-4"><code class="break-all">ef7a11323b72c0576cf23d22057040faf63e459e7e13e76a7cf1d5a9e631386b</code></p>
   </div>
