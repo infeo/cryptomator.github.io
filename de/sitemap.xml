@@ -17,34 +17,6 @@
   </url>
   
   <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/faq/gdpr/gdpr-compliant/</loc>
     <xhtml:link
                 rel="alternate"
@@ -69,34 +41,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/faq/general/free/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -153,34 +97,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/faq/gdpr/dpa-cryptomator/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -255,34 +171,6 @@
   </url>
   
   <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/faq/gdpr/dpa-cloudprovider/</loc>
     <xhtml:link
                 rel="alternate"
@@ -293,34 +181,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/faq/gdpr/dpa-cloudprovider/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -353,34 +213,6 @@
   </url>
   
   <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/downloads/android/</loc>
     <xhtml:link
                 rel="alternate"
@@ -391,20 +223,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/downloads/android/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -433,90 +251,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/downloads/ios/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -1140,20 +874,6 @@
   </url>
   
   <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/faq/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1178,20 +898,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/coop/gmx/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
@@ -1262,20 +968,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/presskit/"
-                />
-  </url>
-  
-  <url>
-    <loc></loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href=""
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href=""
                 />
   </url>
   
