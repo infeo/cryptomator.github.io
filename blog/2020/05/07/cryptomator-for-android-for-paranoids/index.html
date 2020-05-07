@@ -3,17 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cryptomator for Android</title>
+    <title>Cryptomator for Android for Us Paranoids</title>
     
-      <meta name="description" content="Purchase Cryptomator for Android without going through Google Play."/>
-      <meta property="og:title" content="Cryptomator - Cryptomator for Android"/>
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://cryptomator.org/android/"/>
-      <meta property="og:site_name" content="Cryptomator"/>
-      <meta property="og:description" content="Purchase Cryptomator for Android without going through Google Play."/>
-      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="630"/>
+      <meta name="description" content="Use Cryptomator for Android and revoke the app&rsquo;s internet permissions to make backdoors almost impossible.">
+      <meta property="og:title" content="Cryptomator for Android for Us Paranoids">
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/">
+      <meta property="og:site_name" content="Cryptomator">
+      <meta property="og:description" content="Use Cryptomator for Android and revoke the app&rsquo;s internet permissions to make backdoors almost impossible.">
+      <meta property="article:author" content="Julian Raufelder" />
+      <meta property="article:published_time" content="2020-05-07" />
+      
+        <meta property="article:tag" content="cryptomator" />
+      
+        <meta property="article:tag" content="android" />
+      
     
     <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
     <meta property="og:image:width" content="256" />
@@ -24,7 +28,7 @@
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
-      <link rel="alternate" hreflang="de" href="/de/android/" />
+      <link rel="alternate" hreflang="de" href="/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/" />
     
     
       
@@ -71,7 +75,7 @@
         <div class="relative">
           <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
             
-            <a href="/de/android/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
+            <a href="/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
             
           </div>
         </div>
@@ -106,7 +110,7 @@
     </div>
     <div class="mt-1">
       
-      <a href="/de/android/" lang="de" class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a>
+      <a href="/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/" lang="de" class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a>
       
     </div>
     
@@ -127,90 +131,61 @@
     
     
   <div class="container py-12">
-    <header class="mb-6">
-      <h1 class="mb-4">Cryptomator for Android</h1>
-      <p class="text-lg leading-relaxed text-gray-700">Purchase Cryptomator for Android without going through Google Play.</p>
-    </header>
-    
-    <div class="flex flex-wrap">
-      <section class="w-full py-8 lg:w-1/2 lg:pr-3">
-        <div x-data="{checkoutData: {productId: 578277, price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
-  <div class="px-4 py-2 border-b border-primary text-center">
-    <h3>Buy a license key</h3>
-  </div>
+    <article class="mb-12">
+      <header class="mb-6">
+        <h1 class="mt-0"><a href="/blog/">Blog</a> / Cryptomator for Android for Us Paranoids</a></h1>
+        <div class="flex items-center mb-4">
+          
+            
+              
+                <a href="https://github.com/SailReal" target="_blank" rel="noopener">
+              
+              <img src="https://avatars0.githubusercontent.com/u/1786772?s=96" class="w-12 rounded-full mr-2"/>
+              
+                </a>
+              
+            
+            <span class="mr-1">
+              by
+              
+                <a href="https://github.com/SailReal" target="_blank" rel="noopener">Julian Raufelder</a>
+              
+            </span>
+            <span class="mr-1">•</span class="mr-2">
+          
+          <span><a href="/blog/2020/05/07/cryptomator-for-android-for-paranoids/">2020-05-07</a></span>
+        </div>
+        
+      </header>
 
-  <form x-show="!checkoutData.success" x-ref="form" class="px-4 py-8">
-    <div class="w-full md:w-1/2 mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Amount</label>
-      <input x-model="checkoutData.price" type="text" class="appearance-none w-full" placeholder="Loading…" readonly/>
-    </div>
-    <div class="mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Email</label>
-      <input x-model="checkoutData.email" type="email" class="appearance-none w-full" placeholder="Email address" required/>
-    </div>
-    <div class="text-center mt-8">
-      <p class="mb-4">Payments are securely handled by Paddle.</p>
-      <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-493528761" x-model="acceptTerms" />
-<label for="id-493528761">I accept the <a href="/terms/">Terms & Conditions</a> as well as the <a href="/privacy/">Privacy Policy</a>.</label>
-</p>
-      <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
-        <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
-      </button>
-      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
-    </div>
-  </form>
+      <hr class="my-8"/>
 
-  <div x-show="checkoutData.success" x-cloak class="px-4 py-8">
-    <h3 class="mb-4">👍 Your payment was successful!</h3>
-    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">License Key</label>
-    <textarea x-model="checkoutData.licenseKey" class="appearance-none w-full mb-2" rows="6" placeholder="Loading…" readonly></textarea>
-    <p>This is your license key. Enter it in the Cryptomator app. The license key has also been sent to your email address.</p>
-  </div>
-</div>
-
-
-  
-  <script type="text/javascript" src="/js/androidkey.min.fca7f7b1ccc978f41fbfe98ad394fa849e0b24736910aa82bf0f6b59382ec2de.js" integrity="sha256-/Kf3sczJePQfv&#43;mK05T6hJ4LJHNpEKqCvw9rWTguwt4=" defer></script>
-
+      <section>
+        <p>This blog post is aimed towards the paranoid Cryptomator power users among us and describes how to fully establish a relationship of trust with Cryptomator for Android.</p>
+<p>When it comes to our desktop application, we claim that you should in fact <em>not</em> trust us but you (or at least many developers) can instead <em>inspect</em> what Cryptomator is doing. For our mobile apps, this is only half the truth, frankly. While the encryption code is fully open-source, the UI and cloud access code isn&rsquo;t (yet 😉).<br>
+If you count yourself as one of the more paranoid users, who prefer to compile everything yourselves, you might ask the legitimate question: How can you check the current, open-core app for backdoors?</p>
+<p>A backdoor usually requires communication with an external server. If vaults are only opened from the device&rsquo;s file system, the Cryptomator app does not require an internet connection. Alternatively, the vault can be synchronized bidirectionally to the file system of the smartphone with a third-party application such as <a href="https://syncthing.net/" target="_blank" rel="noopener">Syncthing</a>.</p>
+<p>Using this setup, the Cryptomator app can have its internet access revoked using the Android operating system features, which prevents the app from sending or receiving any data to or from the internet.</p>
+<figure class="text-center my-8">
+  <img class="inline-block rounded" src="/img/blog/android-for-paranoids-permission.png" alt="Android revoke Cryptomator's internet permission" />
+</figure>
+<p>Thus, even if there ever was a backdoor in Cryptomator for Android, it would not be possible for the intercepted data to leave the smartphone. This is ensured by the operating system.</p>
 
       </section>
+    </article>
 
-      <section class="w-full py-8 lg:w-1/2 lg:pl-3">
-        <div class="text-center" itemscope itemtype="http://schema.org/SoftwareApplication">
-  <meta itemprop="name" content="Cryptomator"/>
-  <meta itemprop="description" content="A free software to encrypt your cloud files."/>
-  <meta itemprop="applicationCategory" content="Productivity"/>
-  <meta itemprop="softwareVersion" content="1.5.3"/>
-  <meta itemprop="applicationSubCategory" content="Encryption"/>
-  <meta itemprop="image" content="https://cryptomator.org/img/logo.png"/>
-  <meta itemprop="operatingSystem" content="Android"/>
-
-  <div class="rounded shadow bg-white">
-    <div class="px-4 py-2 border-b border-primary">
-      <h3>Download APK</h3>
-    </div>
-    <div class="px-4 py-8" x-data="{showShaSignature: false}">
-      <p class="mb-4">
-        <img class="inline-block h-24" src="/img/logo.svg"/>
-      </p>
-      <p class="mb-4">Version 1.5.3 • Minimum: Android 4.3</p>
-      <p class="mb-2">
-        <a href="https://static.cryptomator.org/android/1.5.3/Cryptomator-1.5.3.apk" class="btn btn-primary w-full md:w-48" role="button">
-          <span class="fas fa-download" aria-hidden="true"></span> Download
-        </a>
-      </p>
-      <p class="text-xs">
-        <a href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> Show SHA256 Signature</a>
-      </p>
-      <p x-show="showShaSignature" x-cloak class="text-sm mt-4"><code class="break-all">ee58c49546f9695d26d5d8e0b818fd815ca57752b36b61d3150c65271823525b</code></p>
-    </div>
+    <div id="discourse-comments"></div>
   </div>
-</div>
 
-      </section>
-    </div>
-  </div>
+  <script type="text/javascript" x-url="https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/">
+    var url = document.currentScript.getAttribute('x-url');
+    DiscourseEmbed = { discourseUrl: 'https://community.cryptomator.org/', discourseEmbedUrl: url };
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
 
     </div>
     <footer class="border-t-2 border-secondary pt-8 pb-16">

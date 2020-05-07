@@ -11,8 +11,30 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/ios/</link>
     </image>
-    <lastBuildDate>Thu, 07 May 2020 09:16:51 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 12:13:20 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator for Android for Us Paranoids</title>
+        <description>&lt;p&gt;This blog post is aimed towards the paranoid Cryptomator power users among us and describes how to fully establish a relationship of trust with Cryptomator for Android.&lt;/p&gt;
+&lt;p&gt;When it comes to our desktop application, we claim that you should in fact &lt;em&gt;not&lt;/em&gt; trust us but you (or at least many developers) can instead &lt;em&gt;inspect&lt;/em&gt; what Cryptomator is doing. For our mobile apps, this is only half the truth, frankly. While the encryption code is fully open-source, the UI and cloud access code isn&amp;rsquo;t (yet 😉).&lt;br&gt;
+If you count yourself as one of the more paranoid users, who prefer to compile everything yourselves, you might ask the legitimate question: How can you check the current, open-core app for backdoors?&lt;/p&gt;
+&lt;p&gt;A backdoor usually requires communication with an external server. If vaults are only opened from the device&amp;rsquo;s file system, the Cryptomator app does not require an internet connection. Alternatively, the vault can be synchronized bidirectionally to the file system of the smartphone with a third-party application such as &lt;a href=&#34;https://syncthing.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syncthing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using this setup, the Cryptomator app can have its internet access revoked using the Android operating system features, which prevents the app from sending or receiving any data to or from the internet.&lt;/p&gt;
+&lt;figure class=&#34;text-center my-8&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-for-paranoids-permission.png&#34; alt=&#34;Android revoke Cryptomator&#39;s internet permission&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Thus, even if there ever was a backdoor in Cryptomator for Android, it would not be possible for the intercepted data to leave the smartphone. This is ensured by the operating system.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator 1.5.0 Release</title>
@@ -314,22 +336,6 @@
         <category>cryptomator</category>
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>A New Home for Our Community</title>
-        <description>&lt;p&gt;Our online community has finally found a new home. From now on, you can reach us here for technical support and have discussions with other users. The site was created to build a comprehensive knowledge base in the long run to help answer questions quickly.&lt;/p&gt;
-&lt;p&gt;We welcome all visitors and are excited about your posts!&lt;/p&gt;
-&lt;a href=&#34;https://community.cryptomator.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://community.cryptomator.org/&lt;/a&gt;
-</description>
-        <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/blog/2017/09/13/community/</link>
-        <guid isPermaLink="true">https://cryptomator.org/blog/2017/09/13/community/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>community</category>
         
       </item>
     

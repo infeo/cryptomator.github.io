@@ -11,8 +11,30 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/cyberduck/</link>
     </image>
-    <lastBuildDate>Thu, 07 May 2020 09:16:51 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 12:13:20 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator Android-App für uns Paranoide</title>
+        <description>&lt;p&gt;Dieser Blogeintrag richtet sich an die Cryptomator-&amp;ldquo;Power-User&amp;rdquo; unter uns und beschreibt, wie man das Vertrauensverhältnis zur Cryptomator Android-App vollständig herstellen kann.&lt;/p&gt;
+&lt;p&gt;Wenn es um unsere Desktop-Anwendung geht, fordern wir, dass Sie uns nicht vertrauen müssen, aber Sie (oder zumindest viele Entwickler) stattdessen überprüfen können, was Cryptomator tut. Für unsere mobilen Anwendungen ist dies, offen gesagt, nur die halbe Wahrheit. Während der Verschlüsselungscode vollständig open-source ist, ist der UI- und Cloud-Zugriffscode (noch 😉) nicht.&lt;br&gt;
+Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles selbst zu kompilieren, könnten Sie die berechtigte Frage stellen: Wie können Sie die aktuelle, offene App auf Hintertüren überprüfen?&lt;/p&gt;
+&lt;p&gt;Eine Backdoor erfordert Kommunikation mit einem externen Server. Wenn Tresore nur aus dem Dateisystem des Gerätes geöffnet werden, benötigt die Cryptomator-App keine Internetverbindung. Alternativ kann der Tresor auch auf das Dateisystem des Smartphones mit einer Dritt-Applikation wie zum Beispiel &lt;a href=&#34;https://syncthing.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syncthing&lt;/a&gt; bidirektional synchronisiert werden.&lt;/p&gt;
+&lt;p&gt;Verwendet man dieses Setup, kann die Internet-Berechtigung der Cryptomator-App entzogen werden, wodurch die App anschließend keine Daten aus dem Internet empfangen oder senden kann.&lt;/p&gt;
+&lt;figure class=&#34;text-center my-8&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-for-paranoids-permission.png&#34; alt=&#34;Internet-Berechtigung für Cryptomator auf Android entziehen&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Selbst wenn es also jemals eine Hintertür in der Cryptomator Android-App gäbe, wäre es nicht möglich, dass die abgefangenen Daten das Smartphone verlassen. Dies wird durch das Betriebssystem sichergestellt.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator 1.5.0 Release</title>
@@ -314,22 +336,6 @@
         <category>cryptomator</category>
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Ein neues Zuhause für unsere Community</title>
-        <description>&lt;p&gt;Unsere Online-Community hat endlich ein Zuhause gefunden. Hier erreichen Sie uns von nun an bei technischen Fragen und bekommen gleichzeitig die Möglichkeit, sich untereinander auszutauschen. Die Seite wurde ins Leben gerufen, um langfristig eine umfassende Knowledge Base zu errichten, die dabei helfen soll, Fragen schnell zu beantworten.&lt;/p&gt;
-&lt;p&gt;Wir freuen uns über jeden Besucher und sind jetzt schon gespannt auf Ihre Beiträge!&lt;/p&gt;
-&lt;a href=&#34;https://community.cryptomator.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://community.cryptomator.org/&lt;/a&gt;
-</description>
-        <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2017/09/13/community/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2017/09/13/community/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>community</category>
         
       </item>
     
