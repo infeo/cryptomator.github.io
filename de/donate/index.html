@@ -167,8 +167,8 @@
           <input type="hidden" name="cmd" value="_s-xclick" />
           <input type="hidden" name="hosted_button_id" value="NUQ7XQSWMQEGS" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-356247981" x-model="acceptTerms" />
-<label for="id-356247981">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-486912735" x-model="acceptTerms" />
+<label for="id-486912735">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu PayPal</button>
         </form>
@@ -222,8 +222,8 @@
               <p class="mb-4">Kreditkartenzahlungen werden über Stripe abgewickelt. Wir können dabei weder deine Kartennummer noch die Prüfziffer einsehen. In deiner Abrechnung wird <a href="https://support.stripe.com/questions/"unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">eine Buchung von Stripe</a> enthalten sein.</p>
 
               <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-375486129" x-model="acceptTerms" />
-<label for="id-375486129">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-761328459" x-model="acceptTerms" />
+<label for="id-761328459">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
 
               <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -245,8 +245,8 @@
           <div x-show="frequency === 'recurring'" class="text-center">
             <p class="mb-4">Wiederkehrende Kreditkartenzahlungen werden über unsere Stripe-Seite erstellt.</p>
             <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-254391867" x-model="acceptTerms" />
-<label for="id-254391867">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-261538947" x-model="acceptTerms" />
+<label for="id-261538947">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
             <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'de')" x-bind:disabled="!acceptTerms">
               <i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu Stripe
@@ -256,7 +256,7 @@
 
         
           
-          <script type="text/javascript" src="/js/cardpayments.min.d6ef332ab30b04c3b11728bf3dbf3351c2256ba9ebde0e66ce983f0ad5e1afb2.js" integrity="sha256-1u8zKrMLBMOxFyi/Pb8zUcIla6nr3g5mzpg/CtXhr7I=" defer></script>
+          <script type="text/javascript" src="/js/cardpayments.min.c513b29e4b3c99627454d153b8a3ded75cbce855da5b6f5b89326e864007041b.js" integrity="sha256-xROynks8mWJ0VNFTuKPe11y86FXaW29biTJuhkAHBBs=" defer></script>
         
       </div>
 
@@ -290,8 +290,8 @@
           <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
           <input type="hidden" name="allow_extra" value="1" />
           <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-846317952" x-model="acceptTerms" />
-<label for="id-846317952">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-429537168" x-model="acceptTerms" />
+<label for="id-429537168">Ich akzeptiere die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu CoinPayments</button>
         </form>
@@ -338,8 +338,8 @@
     <div class="text-center mt-8">
       <p class="mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-647512389" x-model="acceptTerms" />
-<label for="id-647512389">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-942365178" x-model="acceptTerms" />
+<label for="id-942365178">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
