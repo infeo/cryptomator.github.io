@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -122,46 +122,46 @@
     
     
   <div class="container py-12">
-    <header class="mb-6">
-      <h1 class="mb-4">Cryptomator für Android</h1>
-      <p class="text-lg leading-relaxed text-gray-700">Kaufe Cryptomator für Android, ohne über Google Play zu gehen.</p>
+    <header class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
+      <h1>Cryptomator für Android</h1>
+      <p class="lead">Kaufe Cryptomator für Android, ohne über Google Play zu gehen.</p>
     </header>
     
     <div class="flex flex-wrap">
       <section class="w-full py-8 lg:w-1/2 lg:pr-3">
         <div x-data="{checkoutData: {productId: 578277, price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
-  <div class="px-4 py-2 border-b border-primary text-center">
+  <div class="prose prose-sm max-w-none md:max-w-none px-4 py-2 border-b border-primary text-center">
     <h3>Lizenzschlüssel kaufen</h3>
   </div>
 
   <form x-show="!checkoutData.success" x-ref="form" class="px-4 py-8">
     <div class="w-full md:w-1/2 mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Betrag</label>
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Betrag</label>
       <input x-model="checkoutData.price" type="text" class="appearance-none w-full" placeholder="Lädt…" readonly/>
     </div>
     <div class="mb-4">
-      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">E-Mail</label>
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
       <input x-model="checkoutData.email" type="email" class="appearance-none w-full" placeholder="E-Mail-Adresse" required/>
     </div>
     <div class="text-center mt-8">
-      <p class="mb-4">Zahlungen werden über Paddle abgewickelt.</p>
-      <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-641795238" x-model="acceptTerms" />
-<label for="id-641795238">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-812793645" x-model="acceptTerms" />
+<label for="id-812793645">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
-      <p class="text-sm w-full lg:w-4/5 mx-auto mt-4">🎉 Verwende den Gutscheincode <code class="text-xs">SUMMERSALE</code> beim Bezahlvorgang, um 40% Rabatt zu erhalten!</p>
+      <p class="text-sm leading-relaxed text-gray-700 w-full lg:w-4/5 mx-auto mt-4">🎉 Verwende den Gutscheincode <code class="font-bold">SUMMERSALE</code> beim Bezahlvorgang, um 40% Rabatt zu erhalten!</p>
     </div>
   </form>
 
   <div x-show="checkoutData.success" x-cloak class="px-4 py-8">
-    <h3 class="mb-4">👍 Deine Zahlung war erfolgreich!</h3>
-    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Lizenzschlüssel</label>
-    <textarea x-model="checkoutData.licenseKey" class="appearance-none w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
-    <p>Dies ist dein Lizenzschlüssel. Gib ihn in der Cryptomator-App ein. Der Lizenzschlüssel wurde auch an deine E-Mail-Adresse geschickt.</p>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Zahlung war erfolgreich!</h3>
+    <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Lizenzschlüssel</label>
+    <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Dies ist dein Lizenzschlüssel. Gib ihn in der Cryptomator-App ein. Der Lizenzschlüssel wurde auch an deine E-Mail-Adresse geschickt.</p>
   </div>
 </div>
 
@@ -183,23 +183,21 @@
   <meta itemprop="operatingSystem" content="Android"/>
 
   <div class="rounded shadow bg-white">
-    <div class="px-4 py-2 border-b border-primary">
+    <div class="prose prose-sm max-w-none md:max-w-none px-4 py-2 border-b border-primary">
       <h3>APK herunterladen</h3>
     </div>
     <div class="px-4 py-8" x-data="{showShaSignature: false}">
-      <p class="mb-4">
-        <img class="inline-block h-24" src="/img/logo.svg"/>
-      </p>
-      <p class="mb-4">Version 1.5.7 • Minimum: Android 4.3</p>
-      <p class="mb-2">
-        <a href="https://static.cryptomator.org/android/1.5.7/Cryptomator-1.5.7.apk" class="btn btn-primary w-full md:w-48" role="button">
-          <span class="fas fa-download" aria-hidden="true"></span> Download
-        </a>
-      </p>
+      <img class="inline-block h-24 mb-4" src="/img/logo.svg"/>
+      <div class="prose prose-sm max-w-none md:max-w-none mb-4">
+        <p>Version 1.5.7 • Minimum: Android 4.3</p>
+      </div>
+      <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.7/Cryptomator-1.5.7.apk" role="button">
+        <span class="fas fa-download" aria-hidden="true"></span> Download
+      </a>
       <p class="text-xs">
-        <a href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> SHA256-Signatur anzeigen</a>
+        <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> SHA256-Signatur anzeigen</a>
       </p>
-      <p x-show="showShaSignature" x-cloak class="text-sm mt-4"><code class="break-all">756618070c11e1a0810b564230beecd8198795948d5e01354f93f0c2b7ba1854</code></p>
+      <p x-show="showShaSignature" x-cloak class="text-sm mt-4"><code class="break-all text-sm bg-gray-300 rounded p-1">756618070c11e1a0810b564230beecd8198795948d5e01354f93f0c2b7ba1854</code></p>
     </div>
   </div>
 </div>
@@ -263,7 +261,7 @@
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>

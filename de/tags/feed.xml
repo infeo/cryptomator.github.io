@@ -11,7 +11,7 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/</link>
     </image>
-    <lastBuildDate>Mon, 27 Jul 2020 09:41:37 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 15:12:08 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
@@ -21,7 +21,7 @@
 Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles selbst zu kompilieren, könnten Sie die berechtigte Frage stellen: Wie können Sie die aktuelle, offene App auf Hintertüren überprüfen?&lt;/p&gt;
 &lt;p&gt;Eine Backdoor erfordert Kommunikation mit einem externen Server. Wenn Tresore nur aus dem Dateisystem des Gerätes geöffnet werden, benötigt die Cryptomator-App keine Internetverbindung. Alternativ kann der Tresor auch auf das Dateisystem des Smartphones mit einer Dritt-Applikation wie zum Beispiel &lt;a href=&#34;https://syncthing.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syncthing&lt;/a&gt; bidirektional synchronisiert werden.&lt;/p&gt;
 &lt;p&gt;Verwendet man dieses Setup, kann die Internet-Berechtigung der Cryptomator-App entzogen werden, wodurch die App anschließend keine Daten aus dem Internet empfangen oder senden kann.&lt;/p&gt;
-&lt;figure class=&#34;text-center my-8&#34;&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
   &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-for-paranoids-permission.png&#34; alt=&#34;Internet-Berechtigung für Cryptomator auf Android entziehen&#34; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Selbst wenn es also jemals eine Hintertür in der Cryptomator Android-App gäbe, wäre es nicht möglich, dass die abgefangenen Daten das Smartphone verlassen. Dies wird durch das Betriebssystem sichergestellt.&lt;/p&gt;
@@ -38,7 +38,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
     
       <item>
         <title>Cryptomator 1.5.0 Release</title>
-        <description>&lt;figure class=&#34;text-center my-8&#34;&gt;
+        <description>&lt;figure class=&#34;text-center&#34;&gt;
   &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-5-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format&#34; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&amp;rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.&lt;/p&gt;
@@ -167,7 +167,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
     
       <item>
         <title>Cryptomator 1.4.0 Release</title>
-        <description>&lt;figure class=&#34;text-center my-8&#34;&gt;
+        <description>&lt;figure class=&#34;text-center&#34;&gt;
   &lt;img class=&#34;inline-block&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-4-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-4-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-4-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.4.0 has been released featuring Dokany and FUSE support&#34; /&gt;
 &lt;/figure&gt;
 &lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s New&lt;/h2&gt;
@@ -225,7 +225,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 &lt;p&gt;Dafür brauchen wir Ihre Hilfe! Wenn Sie Cryptomator in Ihrem Unternehmen einsetzen oder ein Unternehmen kennen, das Open-Source-Software einsetzt, fragen Sie bitte, ob es offizieller Sponsor von Cryptomator werden möchte. Alternativ können Sie Cryptomator durch &lt;a href=&#34;https://cryptomator.org/de/sponsors/#donate&#34;&gt;regelmäßige Spenden&lt;/a&gt; unterstützen.&lt;/p&gt;
 &lt;p&gt;Wir haben drei Sponsoring-Pakete mit unterschiedlichen Gegenleistungen für Sie vorbereitet. Besuchen Sie unsere &lt;a href=&#34;https://cryptomator.org/de/sponsors/&#34;&gt;Sponsorenseite&lt;/a&gt; für weitere Informationen.&lt;/p&gt;
 &lt;p&gt;Ihr Cryptomator-Team&lt;/p&gt;
-&lt;figure class=&#34;my-8&#34;&gt;
+&lt;figure&gt;
   &lt;img class=&#34;inline-block&#34; src=&#34;https://cryptomator.org/img/blog/cryptobot-sponsor.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptobot-sponsor.png 1x, https://cryptomator.org/img/blog/cryptobot-sponsor@2x.png 2x&#34; alt=&#34;Cryptobot Sponsor&#34; /&gt;
 &lt;/figure&gt;
 </description>
@@ -283,11 +283,9 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 &lt;h2 id=&#34;human-ignorance&#34;&gt;Human Ignorance&lt;/h2&gt;
 &lt;p&gt;I don&amp;rsquo;t mean to suggest that everybody is stupid, or that it is easy to spot a sophisticated phishing attack. Even many of Sony&amp;rsquo;s top executives &lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/sony-hackers-used-phishing-emails-to-breach-company-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fell foul of such an attack&lt;/a&gt;, of course, back in 2014.&lt;/p&gt;
 &lt;p&gt;Instead, the problem lies with the generally poor level of knowledge on security issues, and nowhere is this more apparent than when it comes to encryption. If you work in tech, it&amp;rsquo;s easy to forget that people don&amp;rsquo;t understand encryption, despite the innumerable and &lt;a href=&#34;https://thebestvpn.com/cryptography/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;excellent guides&lt;/a&gt; available.&lt;/p&gt;
-&lt;figure class=&#34;my-8&#34;&gt;
-  &lt;img class=&#34;inline-block rounded mb-1&#34; src=&#34;https://imgs.xkcd.com/comics/pgp.png&#34; srcset=&#34;https://imgs.xkcd.com/comics/pgp.png 1x, https://imgs.xkcd.com/comics/pgp_2x.png 2x&#34; title=&#34;If you want to be extra safe, check that there&#39;s a big block of jumbled characters at the bottom.&#34; alt=&#34;PGP&#34;/&gt;
-  &lt;figcaption&gt;
-    &lt;p class=&#34;text-sm text-gray-500 mb-0&#34;&gt;Illustration by &lt;a href=&#34;https://xkcd.com/1181/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Randall Munroe (xkcd)&lt;/a&gt;&lt;/p&gt;
-  &lt;/figcaption&gt;
+&lt;figure&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://imgs.xkcd.com/comics/pgp.png&#34; srcset=&#34;https://imgs.xkcd.com/comics/pgp.png 1x, https://imgs.xkcd.com/comics/pgp_2x.png 2x&#34; title=&#34;If you want to be extra safe, check that there&#39;s a big block of jumbled characters at the bottom.&#34; alt=&#34;PGP&#34;/&gt;
+  &lt;figcaption&gt;Illustration by &lt;a href=&#34;https://xkcd.com/1181/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Randall Munroe (xkcd)&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;In my experience, the majority of employees (and perhaps people) fall into two categories. There are those that think that their because they need to enter a Gmail password (sometimes), all their emails are safe as long as they keep their password secret. Or maybe just share it with a few friends.&lt;/p&gt;
 &lt;p&gt;Then there are those, more nihilistic, who figure that the government / hackers / the illuminati / whoever can see everything that is happening anyway, so security is pointless in any case. I remember that several friends were amazed &lt;a href=&#34;https://www.macrumors.com/2017/10/23/fbi-unable-to-crack-6900-devices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;when the FBI couldn&amp;#39;t get into encrypted iPhones&lt;/a&gt; a few years ago – they had assumed that the government could &lt;em&gt;always&lt;/em&gt; get around &lt;em&gt;every&lt;/em&gt; security feature.&lt;/p&gt;

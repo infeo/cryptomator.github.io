@@ -24,7 +24,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -128,12 +128,14 @@
   <div class="container py-12">
     <article class="mb-12">
       <header class="mb-6">
-        <h1 class="mt-0"><a href="/de/blog/">Blog</a> / Cryptomator Android-App für uns Paranoide</a></h1>
+        <div class="prose prose-sm md:prose max-w-none md:max-w-none mb-4">
+          <h1><a href="/de/blog/">Blog</a> / Cryptomator Android-App für uns Paranoide</a></h1>
+        </div>
         <div class="flex items-center mb-4">
           
             
               
-                <a href="https://github.com/SailReal" target="_blank" rel="noopener">
+                <a class="text-primary no-underline hover:underline" href="https://github.com/SailReal" target="_blank" rel="noopener">
               
               <img src="https://avatars0.githubusercontent.com/u/1786772?s=96" class="w-12 rounded-full mr-2"/>
               
@@ -143,30 +145,30 @@
             <span class="mr-1">
               von
               
-                <a href="https://github.com/SailReal" target="_blank" rel="noopener">Julian Raufelder</a>
+                <a class="text-primary no-underline hover:underline" href="https://github.com/SailReal" target="_blank" rel="noopener">Julian Raufelder</a>
               
             </span>
             <span class="mr-1">•</span class="mr-2">
           
-          <span><a href="/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/">2020-05-07</a></span>
+          <span><a class="text-primary no-underline hover:underline" href="/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/">2020-05-07</a></span>
         </div>
         
       </header>
 
       <hr class="my-8"/>
 
-      <section>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none">
         <p>Dieser Blogeintrag richtet sich an die Cryptomator-&ldquo;Power-User&rdquo; unter uns und beschreibt, wie man das Vertrauensverhältnis zur Cryptomator Android-App vollständig herstellen kann.</p>
 <p>Wenn es um unsere Desktop-Anwendung geht, fordern wir, dass Sie uns nicht vertrauen müssen, aber Sie (oder zumindest viele Entwickler) stattdessen überprüfen können, was Cryptomator tut. Für unsere mobilen Anwendungen ist dies, offen gesagt, nur die halbe Wahrheit. Während der Verschlüsselungscode vollständig open-source ist, ist der UI- und Cloud-Zugriffscode (noch 😉) nicht.<br>
 Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles selbst zu kompilieren, könnten Sie die berechtigte Frage stellen: Wie können Sie die aktuelle, offene App auf Hintertüren überprüfen?</p>
 <p>Eine Backdoor erfordert Kommunikation mit einem externen Server. Wenn Tresore nur aus dem Dateisystem des Gerätes geöffnet werden, benötigt die Cryptomator-App keine Internetverbindung. Alternativ kann der Tresor auch auf das Dateisystem des Smartphones mit einer Dritt-Applikation wie zum Beispiel <a href="https://syncthing.net/" target="_blank" rel="noopener">Syncthing</a> bidirektional synchronisiert werden.</p>
 <p>Verwendet man dieses Setup, kann die Internet-Berechtigung der Cryptomator-App entzogen werden, wodurch die App anschließend keine Daten aus dem Internet empfangen oder senden kann.</p>
-<figure class="text-center my-8">
+<figure class="text-center">
   <img class="inline-block rounded" src="/img/blog/android-for-paranoids-permission.png" alt="Internet-Berechtigung für Cryptomator auf Android entziehen" />
 </figure>
 <p>Selbst wenn es also jemals eine Hintertür in der Cryptomator Android-App gäbe, wäre es nicht möglich, dass die abgefangenen Daten das Smartphone verlassen. Dies wird durch das Betriebssystem sichergestellt.</p>
 
-      </section>
+      </div>
     </article>
 
     <div id="discourse-comments"></div>
@@ -237,7 +239,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>

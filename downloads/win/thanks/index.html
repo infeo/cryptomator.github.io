@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -129,28 +129,30 @@
       </div>
       <div>
         <p class="font-bold mb-1">Your download starts automatically.</p>
-        <p class="text-sm">Didn&#39;t work? Click here to restart: <a href="https://dl.bintray.com/cryptomator/cryptomator/1.5.6/Cryptomator-1.5.6-x64.exe" download="Cryptomator-1.5.6-x64.exe" target="_self" x-data="{}" x-init="$el.click()">Cryptomator-1.5.6-x64.exe</a></p>
+        <p class="text-sm">Didn&#39;t work? Click here to restart: <a class="text-primary no-underline hover:underline" href="https://dl.bintray.com/cryptomator/cryptomator/1.5.6/Cryptomator-1.5.6-x64.exe" download="Cryptomator-1.5.6-x64.exe" target="_self" x-data="{}" x-init="$el.click()">Cryptomator-1.5.6-x64.exe</a></p>
       </div>
     </div>
     <p class="grid grid-cols-2 gap-2 text-center text-xs w-full md:w-2/3 lg:w-1/2 mx-auto">
-      <a href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> Show SHA256 Signature</a>
-      <a href="https://dl.bintray.com/cryptomator/cryptomator/1.5.6/Cryptomator-1.5.6-x64.exe.asc" target="_blank" rel="noopener"><i class="fas fa-download fa-fw"></i> Download PGP Signature</a>
+      <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> Show SHA256 Signature</a>
+      <a class="text-primary no-underline hover:underline" href="https://dl.bintray.com/cryptomator/cryptomator/1.5.6/Cryptomator-1.5.6-x64.exe.asc" target="_blank" rel="noopener"><i class="fas fa-download fa-fw"></i> Download PGP Signature</a>
     </p>
-    <p x-show="showShaSignature" x-cloak class="text-sm text-center mt-4"><code class="break-all">1eaaa64f81c11fa3c9ffa0a0de68f53a1d21231733bbe243ef500daea3e88d69</code></p>
+    <p x-show="showShaSignature" x-cloak class="text-sm text-center mt-4"><code class="break-all text-sm bg-gray-300 rounded p-1">1eaaa64f81c11fa3c9ffa0a0de68f53a1d21231733bbe243ef500daea3e88d69</code></p>
   </div>
 
-  <header class="container py-12 text-center">
-    <h1 class="text-3xl mb-4">Thanks for choosing Cryptomator!</h1>
-    <p>After downloading, simply double-click on <em>Cryptomator-1.5.6-x64.exe</em> to start the installation wizard.</p>
+  <div class="container text-center py-12">
+    <header class="prose prose-sm md:prose max-w-none md:max-w-none">
+      <h1>Thanks for choosing Cryptomator!</h1>
+      <p>After downloading, simply double-click on <em>Cryptomator-1.5.6-x64.exe</em> to start the installation wizard.</p>
 
-  </header>
+    </header>
+  </div>
 
   <section class="container grid grid-cols-1 md:grid-cols-2 gap-4 pt-12 pb-24">
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
         <h3><i class="fas fa-question-circle fa-fw text-primary"></i> Getting Started</h3>
       </div>
-      <div class="p-4">
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
         <p class="mb-4">If you are a first-time user, you might be interested to:</p>
         <ul>
           <li>Read our <a href="https://docs.cryptomator.org/" target="_blank" rel="noopener">documentation</a>, which should guide you in case you would like some instructions.</li>
@@ -160,10 +162,10 @@
     </div>
 
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
         <h3><i class="fas fa-donate fa-fw text-primary"></i> Support Cryptomator</h3>
       </div>
-      <div class="p-4">
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
         <p class="mb-4">Development of the desktop application would not be possible without the support of our users.</p>
         <ul>
           <li>Would you like to <a href="/donate/">donate</a> or <a href="/sponsors/">become a sponsor</a>?</li>
@@ -229,7 +231,7 @@
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>

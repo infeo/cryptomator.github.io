@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -122,27 +122,29 @@
     
     
   <div class="container py-12">
-    <header class="mb-6">
-      <h1>Posts</h1>
-    </header>
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+      <header class="mb-6">
+        <h1>Posts</h1>
+      </header>
     
-      <article>
-        <h2>Cryptomator for Android for Us Paranoids</h2>
-        <p>This blog post is aimed towards the paranoid Cryptomator power users among us and describes how to fully establish a relationship of trust with Cryptomator for Android.</p>
+      
+        <article>
+          <h2>Cryptomator for Android for Us Paranoids</h2>
+          <p>This blog post is aimed towards the paranoid Cryptomator power users among us and describes how to fully establish a relationship of trust with Cryptomator for Android.</p>
 <p>When it comes to our desktop application, we claim that you should in fact <em>not</em> trust us but you (or at least many developers) can instead <em>inspect</em> what Cryptomator is doing. For our mobile apps, this is only half the truth, frankly. While the encryption code is fully open-source, the UI and cloud access code isn&rsquo;t (yet 😉).<br>
 If you count yourself as one of the more paranoid users, who prefer to compile everything yourselves, you might ask the legitimate question: How can you check the current, open-core app for backdoors?</p>
 <p>A backdoor usually requires communication with an external server. If vaults are only opened from the device&rsquo;s file system, the Cryptomator app does not require an internet connection. Alternatively, the vault can be synchronized bidirectionally to the file system of the smartphone with a third-party application such as <a href="https://syncthing.net/" target="_blank" rel="noopener">Syncthing</a>.</p>
 <p>Using this setup, the Cryptomator app can have its internet access revoked using the Android operating system features, which prevents the app from sending or receiving any data to or from the internet.</p>
-<figure class="text-center my-8">
+<figure class="text-center">
   <img class="inline-block rounded" src="/img/blog/android-for-paranoids-permission.png" alt="Android revoke Cryptomator's internet permission" />
 </figure>
 <p>Thus, even if there ever was a backdoor in Cryptomator for Android, it would not be possible for the intercepted data to leave the smartphone. This is ensured by the operating system.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.5.0 Release</h2>
-        <figure class="text-center my-8">
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.5.0 Release</h2>
+          <figure class="text-center">
   <img class="inline-block rounded" src="/img/blog/cryptomator-1-5-0.png" srcset="/img/blog/cryptomator-1-5-0.png 1x, /img/blog/cryptomator-1-5-0@2x.png 2x" alt="Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format" />
 </figure>
 <p>Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.</p>
@@ -152,11 +154,11 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 <p>New updates for iOS and Android have been released as well. To celebrate the release, our mobile apps are 40% off until April 23! 🤖</p>
 <p>Cryptomator for Android is now also available as an APK version <a href="/android/">through our own online store</a>.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Early 2020</h2>
-        <p>Between all the work on Cryptomator, we need to remind ourselves to not forget about our regular updates post. While most of you have already noticed that we&rsquo;re approaching a new major release of Cryptomator, I think it is time to inform you where we&rsquo;re currently standing and what our roadmap looks like.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Early 2020</h2>
+          <p>Between all the work on Cryptomator, we need to remind ourselves to not forget about our regular updates post. While most of you have already noticed that we&rsquo;re approaching a new major release of Cryptomator, I think it is time to inform you where we&rsquo;re currently standing and what our roadmap looks like.</p>
 <h2 id="state-of-our-desktop-application">State of our Desktop Application</h2>
 <p>We plan to release 1.5.0 within Q1 2020. In our currently running beta (huge shout-outs to all the helpful test feedback), we have already sorted out several problems and feel confident to deliver outstanding quality.</p>
 <p>While we have already discussed <a href="https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter">upcoming changes</a> to what we call the <em>vault format</em> (i.e. the layout of the encrypted files and directory) to increase compatibility with some cloud services and at the same time reduce the complexity for certain I/O operations, the far more obvious change affects the GUI:</p>
@@ -180,11 +182,11 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 <p>Next, we want to focus on Flatpak. We ditched <code>.deb</code> and <code>.rpm</code> files some time ago and replaced them with AppImages. We also really like how the Flatpak ecosystem is gaining traction and is supported natively by a steadily increasing number of distributions. So far, <a href="https://github.com/cryptomator/cryptomator/issues/729">we didn&rsquo;t get Cryptomator working</a> due to the complexity behind the file system mounts. But after we&rsquo;ve finished 1.5.0, we hope to be able to put some more attention to this and solve this to ship Cryptomator as a Flatpak soon.</p>
 <p>In the Android app, the next big feature will be accessing files of a Cryptomator vault inside other apps using a DocumentProvider. For example, a file explorer will be able to access the content of the vault in this way. As well as smaller features like recursive upload of folders to the vault are planned.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Mid 2019</h2>
-        <p>We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&rsquo;re also going to have a look at the roadmaps of our mobile apps.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Mid 2019</h2>
+          <p>We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&rsquo;re also going to have a look at the roadmaps of our mobile apps.</p>
 <h2 id="desktop">Desktop</h2>
 <p>In the desktop area, we are currently pursuing two different branches: On the one hand we are striving for feature completion of 1.4.x, with 1.4.12 already available as a release candidate. It will finally allow Linux users to store their password in the system and include the much desired &ldquo;Custom Mount Flags&rdquo; feature.</p>
 <ul>
@@ -211,11 +213,11 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 <li><strong>Upload of directories (recursive):</strong> The download of whole folders already works, the upload including all subfolders is not possible yet.</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.0 for Android Release</h2>
-        <p>Today, we are glad to announce the release of Cryptomator 1.0 for Android. 🎉 Finally, you can protect your cloud files also on Android devices. The app is naturally fully compatible to the desktop and iOS versions of Cryptomator.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.0 for Android Release</h2>
+          <p>Today, we are glad to announce the release of Cryptomator 1.0 for Android. 🎉 Finally, you can protect your cloud files also on Android devices. The app is naturally fully compatible to the desktop and iOS versions of Cryptomator.</p>
 <p>We have worked extensively during the last year to ensure the app&rsquo;s security and usability. Thanks to your feedback and the experiences of more than 10,000 beta testers, the Android app has finally reached the level of maturity that fulfills Cryptomator&rsquo;s high standards.</p>
 <p>In version 1.0 for Android, the app is compatible with Dropbox, Google Drive, OneDrive, and WebDAV-based providers. You can also create vaults in Android&rsquo;s local storage and, e.g., sync them with third-party apps. The app is available for $4.99 in the Google Play Store.</p>
 <p><a href="/android/">https://cryptomator.org/android/</a></p>
@@ -230,11 +232,11 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 <li>Fixed several smaller bugs and problems</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.3.0 Release</h2>
-        <p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>, <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a>, and <a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here</a>.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.3.0 Release</h2>
+          <p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>, <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a>, and <a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here</a>.</p>
 <h3 id="improvements">Improvements</h3>
 <ul>
 <li>Auto-Unlock!!! 🎉 (<a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">#40</a>) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions</li>
@@ -417,11 +419,11 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 </ul>
 <p>This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator for Android 0.1 Beta</h2>
-        <p>We&rsquo;ve finally released the first beta version of Cryptomator for Android after almost 6 months of development. It&rsquo;s a completely new and native app. In this process, we outsourced the cryptographic code from our main project, which is now available as <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator for Android 0.1 Beta</h2>
+          <p>We&rsquo;ve finally released the first beta version of Cryptomator for Android after almost 6 months of development. It&rsquo;s a completely new and native app. In this process, we outsourced the cryptographic code from our main project, which is now available as <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>.</p>
 <p>You&rsquo;re welcome to test the beta version. Follow <a href="/android/" target="_blank" rel="noopener">this link</a> for more information. Version 0.1 is by far not feature-complete and has known issues, but we&rsquo;re of course open for feature requests, suggestions, and obviously bug reports.</p>
 <p>You can send us feedback on <a href="https://github.com/cryptomator/cryptomator-android" target="_blank" rel="noopener">GitHub</a>. We&rsquo;ve created a repository just for collecting Android issues. Please review and follow our <a href="https://github.com/cryptomator/cryptomator-android/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">contribution guidelines</a>.</p>
 <p>Thank you all for your patience! We know some of you have been already waiting for an Android app of Cryptomator for many months. We&rsquo;re looking forward to your feedback! 😄</p>
@@ -433,8 +435,9 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
 <li>Our goal is to add the functionality equal to the iOS app for the final version.</li>
 </ul>
 
-      </article>
-    
+        </article>
+      
+    </div>
   </div>
 
     </div>
@@ -492,7 +495,7 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>

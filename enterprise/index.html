@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -122,51 +122,53 @@
     
     
   <div class="container py-12">
-    <header class="mb-6">
-      <h1 class="mb-4">Enterprise</h1>
-      <p class="text-lg leading-relaxed text-gray-700">Customize Cryptomator and our technologies for your organization. We’re open to cooperations and offer a variety of B2B services, including white labeling.</p>
+    <header class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
+      <h1>Enterprise</h1>
+      <p class="lead">Customize Cryptomator and our technologies for your organization. We’re open to cooperations and offer a variety of B2B services, including white labeling.</p>
     </header>
     
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-12">
   <div class="rounded-b shadow bg-white">
-    <div class="px-4 py-2 border-b border-primary">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
       <h3><i class="fas fa-adjust fa-fw text-primary"></i> White Labeling</h3>
     </div>
-    <div class="p-4">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
       <p>End-to-end encryption with your branding: We develop individualized versions of the Cryptomator apps for you.</p>
     </div>
   </div>
 
   <div class="rounded-b shadow bg-white">
-    <div class="px-4 py-2 border-b border-primary">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
       <h3><i class="fas fa-book fa-fw text-primary"></i> Crypto Libraries</h3>
     </div>
-    <div class="p-4">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
       <p>Secure your server applications, synchronization clients, and other systems with Cryptomator technology: Our libraries can be integrated into many applications.</p>
     </div>
   </div>
 
   <div class="rounded-b shadow bg-white">
-    <div class="px-4 py-2 border-b border-primary">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
       <h3><i class="fas fa-edit fa-fw text-primary"></i> Custom Development</h3>
     </div>
-    <div class="p-4">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
       <p>Based on Cryptomator's encryption scheme, we develop custom applications and systems for you.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2 class="mb-4">Open-Source Libraries Under AGPLv3</h2>
-  <p class="text-lg leading-relaxed text-gray-700 mb-4">Cryptomator's libraries are dual-licensed under the AGPLv3 for FOSS projects as well as a commercial license derived from the LGPL for independent software vendors and resellers. If you want to use these libraries in applications that are not licensed under the AGPL, feel free to contact us.</p>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
+    <h2>Open-Source Libraries Under AGPLv3</h2>
+    <p>Cryptomator's libraries are dual-licensed under the AGPLv3 for FOSS projects as well as a commercial license derived from the LGPL for independent software vendors and resellers. If you want to use these libraries in applications that are not licensed under the AGPL, feel free to contact us.</p>
+  </div>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Use CryptoLib for encrypting and decrypting data according to <a href="https://docs.cryptomator.org/en/latest/security/architecture/" target="_blank" rel="noopener">Cryptomator's encryption scheme</a>.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Encrypt and decrypt Cryptomator vaults directly retrieved from the cloud</li>
           <li>Suitable for accessing the cloud directly without synchronization, e.g. in apps for Android</li>
           <li>High-level API functions for encryption and decryption</li>
@@ -176,12 +178,12 @@
     </div>
   
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Use CryptoFS for encrypting and decrypting data according to <a href="https://docs.cryptomator.org/en/latest/security/architecture/" target="_blank" rel="noopener">Cryptomator's encryption scheme</a>.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Encrypt and decrypt Cryptomator vaults that are present on the local filesystem</li>
           <li>Suitable for accessing data synchronized to a local directory</li>
           <li>Implements a <code class="text-xs">java.nio.file.spi.FileSystemProvider</code> according to JSR-203 using the CryptoLib library</li>
@@ -191,12 +193,12 @@
     </div>
   
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/webdav-nio-adapter-servlet" target="_blank" rel="noopener">WebDAV-NIO-Adapter-Servlet</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Add a WebDAV server to your Java application.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Make the contents of a local directory (any <code class="text-xs">java.nio.file.Path</code>) available via WebDAV</li>
           <li>Provides a JEE servlet</li>
           <li>Java 8+ compatible</li>
@@ -205,12 +207,12 @@
     </div>
 
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Launch and mount a WebDAV server from within your Java application.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Mounting support for Windows, macOS, and Linux</li>
           <li>Based on WebDAV-NIO-Adapter-Servlet</li>
           <li>Java 8+ compatible</li>
@@ -219,12 +221,12 @@
     </div>
   
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/fuse-nio-adapter" target="_blank" rel="noopener">FUSE-NIO-Adapter</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Provide a FUSE drive from within your Java application.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Make the contents of a local directory (any <code class="text-xs">java.nio.file.Path</code>) available via FUSE</li>
           <li>Mounting support for macOS and Linux</li>
           <li>Java 9+ compatible</li>
@@ -233,12 +235,12 @@
     </div>
   
     <div class="rounded-b shadow bg-white">
-      <div class="px-4 py-2 border-b border-primary">
+      <div class="prose prose-sm max-w-none px-4 py-2 border-b border-primary">
         <h3><a href="https://github.com/cryptomator/dokany-nio-adapter" target="_blank" rel="noopener">Dokany-NIO-Adapter</a></h3>
       </div>
-      <div class="p-4 text-sm">
+      <div class="prose prose-sm max-w-none p-4">
         <p>Provide a Dokany drive from within your java application.</p>
-        <ul class="ml-5">
+        <ul>
           <li>Make the contents of a local directory (any <code class="text-xs">java.nio.file.Path</code>) available via Dokany</li>
           <li>Mounting support for Windows</li>
           <li>Java 8+ compatible</li>
@@ -251,7 +253,7 @@
   </div>
 
   <section class="container text-center pt-12 pb-24">
-    <h3 class="text-2xl mb-4">Are you interested?</h3>
+    <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Are you interested?</h3>
     <a href="mailto:sales@cryptomator.org" role="button" class="btn btn-outline-primary px-8">
       <i class="fas fa-envelope"></i> Contact Us for an Offer
     </a>
@@ -312,7 +314,7 @@
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>

@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.5ec944d98761cd5874e417b7f34ba539b6002219054d1b17790f5dcaed010248.css" integrity="sha256-XslE2YdhzVh05Be380ulObYAIhkFTRsXeQ9dyu0BAkg=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -122,27 +122,29 @@
     
     
   <div class="container py-12">
-    <header class="mb-6">
-      <h1>Posts</h1>
-    </header>
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+      <header class="mb-6">
+        <h1>Posts</h1>
+      </header>
     
-      <article>
-        <h2>Cryptomator Android-App für uns Paranoide</h2>
-        <p>Dieser Blogeintrag richtet sich an die Cryptomator-&ldquo;Power-User&rdquo; unter uns und beschreibt, wie man das Vertrauensverhältnis zur Cryptomator Android-App vollständig herstellen kann.</p>
+      
+        <article>
+          <h2>Cryptomator Android-App für uns Paranoide</h2>
+          <p>Dieser Blogeintrag richtet sich an die Cryptomator-&ldquo;Power-User&rdquo; unter uns und beschreibt, wie man das Vertrauensverhältnis zur Cryptomator Android-App vollständig herstellen kann.</p>
 <p>Wenn es um unsere Desktop-Anwendung geht, fordern wir, dass Sie uns nicht vertrauen müssen, aber Sie (oder zumindest viele Entwickler) stattdessen überprüfen können, was Cryptomator tut. Für unsere mobilen Anwendungen ist dies, offen gesagt, nur die halbe Wahrheit. Während der Verschlüsselungscode vollständig open-source ist, ist der UI- und Cloud-Zugriffscode (noch 😉) nicht.<br>
 Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles selbst zu kompilieren, könnten Sie die berechtigte Frage stellen: Wie können Sie die aktuelle, offene App auf Hintertüren überprüfen?</p>
 <p>Eine Backdoor erfordert Kommunikation mit einem externen Server. Wenn Tresore nur aus dem Dateisystem des Gerätes geöffnet werden, benötigt die Cryptomator-App keine Internetverbindung. Alternativ kann der Tresor auch auf das Dateisystem des Smartphones mit einer Dritt-Applikation wie zum Beispiel <a href="https://syncthing.net/" target="_blank" rel="noopener">Syncthing</a> bidirektional synchronisiert werden.</p>
 <p>Verwendet man dieses Setup, kann die Internet-Berechtigung der Cryptomator-App entzogen werden, wodurch die App anschließend keine Daten aus dem Internet empfangen oder senden kann.</p>
-<figure class="text-center my-8">
+<figure class="text-center">
   <img class="inline-block rounded" src="/img/blog/android-for-paranoids-permission.png" alt="Internet-Berechtigung für Cryptomator auf Android entziehen" />
 </figure>
 <p>Selbst wenn es also jemals eine Hintertür in der Cryptomator Android-App gäbe, wäre es nicht möglich, dass die abgefangenen Daten das Smartphone verlassen. Dies wird durch das Betriebssystem sichergestellt.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.5.0 Release</h2>
-        <figure class="text-center my-8">
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.5.0 Release</h2>
+          <figure class="text-center">
   <img class="inline-block rounded" src="/img/blog/cryptomator-1-5-0.png" srcset="/img/blog/cryptomator-1-5-0.png 1x, /img/blog/cryptomator-1-5-0@2x.png 2x" alt="Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format" />
 </figure>
 <p>Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.</p>
@@ -152,11 +154,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <p>New updates for iOS and Android have been released as well. To celebrate the release, our mobile apps are 40% off until April 23! 🤖</p>
 <p>Cryptomator for Android is now also available as an APK version <a href="/de/android/">through our own online store</a>.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Early 2020</h2>
-        <p>Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Early 2020</h2>
+          <p>Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.</p>
 <h2 id="status-der-desktop-anwendung">Status der Desktop-Anwendung</h2>
 <p>Wir planen noch in Q1 2020 Version 1.5.0 zu releasen. Während der derzeit noch laufenden Beta-Phase (an dieser Stelle nochmal Danke an all unsere fleißigen Tester) haben wir bereits viele Problemchen behoben und sind überzeugt eine hervorragende Qualität abliefern zu können.</p>
 <p>Über die <a href="https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter">anstehenden Änderungen</a> an unserem sog. <em>Tresorformat</em> (d.h. der verschlüsselten Ordnerstruktur) haben wir bereits informiert. Ziel ist es zum einen die Kompatibilität mit einigen Cloud-Anbietern zu erhöhen, zum anderen die Komplexität für viele I/O-Operationen zu reduzieren. Aber eine viel offensichtlichere Änderung in 1.5.0 wird die Programmoberfläche (GUI) betreffen:</p>
@@ -180,11 +182,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <p>Anschließend wollen wir uns auf Flatpak konzentrieren. Der Distribution von <code>.deb</code> und <code>.rpm</code>-Dateien haben wir schon lange abgeschworen und sie durch die universellen AppImages ersetzt. Gleichzeitig finden wir es toll, wie viel Momentum das Flatpak-Ökosystem derzeit gewinnt und wie dieses Format von einer stetig zunehmenden Anzahl an Distributionen nativ unterstützt wird. Bisher haben wir Cryptoamtor aufgrund der Komplexität beim Einbinden von Laufwerken <a href="https://github.com/cryptomator/cryptomator/issues/729">zwar noch nicht zum Laufen bekommen</a>, aber sobald wir 1.5.0 über die Bühne gebracht haben, hoffen wir diesem Problem mehr Aufmerksamkeit widmen und Cryptomator bald auch als Flatpak anbieten zu können.</p>
 <p>Bei der Android-App steht als nächstes großes Feature an, anderen Apps Dateien per DocumentProvider bereistellen zu können. Zum Beispiel würde ein Dateibrowser dadurch in die Lage versetzt, auf Tresorinhalte zuzugreifen. Darüber hinaus sind auch kleinere Features wie rekursive Uploads von Ordnern geplant.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Mid 2019</h2>
-        <p>Wir möchten uns vornehmen, einen regelmäßigeren Blick auf unsere Roadmap zu geben, da wir vergangene, aktuelle und zukünftige Entwicklungen an Cryptomator öffentlich dokumentieren möchten. Anders als bisher möchten wir auch von den Roadmaps unserer mobilen Apps berichten.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Mid 2019</h2>
+          <p>Wir möchten uns vornehmen, einen regelmäßigeren Blick auf unsere Roadmap zu geben, da wir vergangene, aktuelle und zukünftige Entwicklungen an Cryptomator öffentlich dokumentieren möchten. Anders als bisher möchten wir auch von den Roadmaps unserer mobilen Apps berichten.</p>
 <h2 id="desktop">Desktop</h2>
 <p>Im Desktop-Bereich verfolgen wir zurzeit zwei verschiedene Branches: Zum einen streben wir die Feature-Vervollständigung von 1.4.x an, wobei 1.4.12 bereits in den Startlöchern steht. Er wird für Linux-Nutzer endlich eine Möglichkeit der Speicherung ihres Passworts im System ermöglichen und das viel gewünschte Feature der &ldquo;Custom Mount Flags&rdquo; beinhalten.</p>
 <ul>
@@ -211,11 +213,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <li><strong>Upload von Verzeichnissen (rekursiv):</strong> Das Herunterladen von ganzen Ordnern funktioniert bereits, das Hochladen inklusive aller Unterordner steht aus.</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Early 2019</h2>
-        <p>Hey, es ist ein neues Jahr, also kommt hier in alter Tradition unser <del>viertel</del>jährlicher 🙈 Blick auf die Roadmap.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Early 2019</h2>
+          <p>Hey, es ist ein neues Jahr, also kommt hier in alter Tradition unser <del>viertel</del>jährlicher 🙈 Blick auf die Roadmap.</p>
 <h3 id="openjdk-und-openjfx">OpenJDK und OpenJFX</h3>
 <p>Bisher haben wir das Oracle JDK verwendet, da dies die GUI-Bibliothek beinhaltete, die wir für Cryptomator verwendet haben: JavaFX. Ab JDK 11 planen wir die Umstellung auf OpenJDK und OpenJFX. JavaFX wird ohnehin nicht mehr im Oracle JDK enthalten sein und OpenJFX verspricht kürzere Release-Zyklen und wird - wie der Name schon sagt - in einem offenen Prozess entwickelt.</p>
 <p>Da wir nicht mehr auf &ldquo;unfreie&rdquo; Software angewiesen sind, könnte Cryptomator in Debian-Repos theoretisch von &ldquo;contrib&rdquo; auf &ldquo;main&rdquo; wechseln.</p>
@@ -225,11 +227,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <h3 id="ui-redesign">UI Redesign</h3>
 <p>Wir wollen die gesamte Benutzeroberfläche mit Cryptomator 1.5.0 von Grund auf neu gestalten. Um dies zu erreichen, freuen wir über Input aus der Community. Anregungen und Ideen dürfen gerne in unseren <a href="https://community.cryptomator.org/t/ui-redesign-thread/2850">Redesign-Thread</a> einfließen.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.4.0 Release</h2>
-        <figure class="text-center my-8">
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.4.0 Release</h2>
+          <figure class="text-center">
   <img class="inline-block" src="/img/blog/cryptomator-1-4-0.png" srcset="/img/blog/cryptomator-1-4-0.png 1x, /img/blog/cryptomator-1-4-0@2x.png 2x" alt="Cryptomator 1.4.0 has been released featuring Dokany and FUSE support" />
 </figure>
 <h2 id="whats-new">What&rsquo;s New</h2>
@@ -270,24 +272,24 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <li>Dropped official Windows and Linux 32 bit support</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Werden Sie Cryptomator-Sponsor</h2>
-        <p>Liebe Community,</p>
+        </article>
+      
+        <article>
+          <h2>Werden Sie Cryptomator-Sponsor</h2>
+          <p>Liebe Community,</p>
 <p>wie Sie wissen, bieten wir Cryptomator als Pay-What-You-Want Software an und wir wollen es dabei belassen. Inzwischen sind wir zu einem kleinen Team herangewachsen, das Vollzeit an diesem Projekt arbeitet. Und wir alle müssen unsere Rechnungen bezahlen.</p>
 <p>Dafür brauchen wir Ihre Hilfe! Wenn Sie Cryptomator in Ihrem Unternehmen einsetzen oder ein Unternehmen kennen, das Open-Source-Software einsetzt, fragen Sie bitte, ob es offizieller Sponsor von Cryptomator werden möchte. Alternativ können Sie Cryptomator durch <a href="https://cryptomator.org/de/sponsors/#donate">regelmäßige Spenden</a> unterstützen.</p>
 <p>Wir haben drei Sponsoring-Pakete mit unterschiedlichen Gegenleistungen für Sie vorbereitet. Besuchen Sie unsere <a href="https://cryptomator.org/de/sponsors/">Sponsorenseite</a> für weitere Informationen.</p>
 <p>Ihr Cryptomator-Team</p>
-<figure class="my-8">
+<figure>
   <img class="inline-block" src="/img/blog/cryptobot-sponsor.png" srcset="/img/blog/cryptobot-sponsor.png 1x, /img/blog/cryptobot-sponsor@2x.png 2x" alt="Cryptobot Sponsor" />
 </figure>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator Roadmap Early 2018</h2>
-        <p>Da verständlicherweise nicht alle unsere Nutzer alle Entwicklungsaktivitäten auf GitHub verfolgen können, möchte ich an dieser Stelle ein paar Absätze dazu schreiben, welche technischen Neuerungen 2018 bei Cryptomator anstehen und wie sie sich auf die Nutzung auswirken.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator Roadmap Early 2018</h2>
+          <p>Da verständlicherweise nicht alle unsere Nutzer alle Entwicklungsaktivitäten auf GitHub verfolgen können, möchte ich an dieser Stelle ein paar Absätze dazu schreiben, welche technischen Neuerungen 2018 bei Cryptomator anstehen und wie sie sich auf die Nutzung auswirken.</p>
 <h3 id="fuse">FUSE</h3>
 <p>Die größte anstehende Änderung ist die Implementierung von FUSE-basierten Laufwerken. Diese wird es <em>zusätzlich</em> zu WebDAV geben und sie werden die neue Standardeinstellung werden. Die <a href="https://github.com/cryptomator/fuse-nio-adapter" target="_blank" rel="noopener">notwendige Bibliothek</a> entwicklen wir gerade. Sie basiert auf <a href="https://github.com/SerCeMan/jnr-fuse" target="_blank" rel="noopener">jnr-fuse</a>, was bedeutet, dass <em>FUSE for macOS</em> bzw. unter Windows <em>WinFsp</em> installiert sein muss. Der Linux-Kernel unterstützt FUSE out-of-the-box.</p>
 <p>Eine große Baustelle ist derzeit noch, wie wir <em>WinFsp</em> bzw. <em>FUSE for macOS</em> im Installer mit einbinden. Erste Testversionen werden daher vmtl. die manuelle Installation genannter Bibliotheken erfordern.</p>
@@ -305,11 +307,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <hr>
 <p>Fanden Sie diesen Einblick interessant? Sollen wir künftig zu jedem größeren Meilenstein einen Ausblick geben? Gerne würden wir Ihre Meinung in den Kommentaren hören!</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.0 für Android Release</h2>
-        <p>Wir freuen uns über die heutige Veröffentlichung von Cryptomator 1.0 für Android. 🎉 Jetzt können Sie Ihre Cloud-Dateien auch mit Android-Geräten schützen. Die App ist zu den Desktop- und iOS-Versionen von Cryptomator natürlich kompatibel.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.0 für Android Release</h2>
+          <p>Wir freuen uns über die heutige Veröffentlichung von Cryptomator 1.0 für Android. 🎉 Jetzt können Sie Ihre Cloud-Dateien auch mit Android-Geräten schützen. Die App ist zu den Desktop- und iOS-Versionen von Cryptomator natürlich kompatibel.</p>
 <p>Wir haben die App im letzten Jahr kontinuierlich weiterentwickelt, um höchste Sicherheit und Benutzerfreundlichkeit zu gewährleisten. Dank dem Feedback von Ihnen und über 10.000 Beta-Testern hat die Android-App nun ein Stadium erreicht, das den hohen Anforderungen von Cryptomator gerecht wird.</p>
 <p>Cryptomator für Android ist in der Version 1.0 mit Dropbox, Google Drive, OneDrive sowie WebDAV-basierten Anbietern kompatibel. Sie können auch Tresore in Androids lokalem Speicher anlegen, um diese bspw. auch über Drittanbieter-Apps mit Cloud-Diensten zu synchronisieren. Die App ist im Google Play Store erhältlich. Der Kaufpreis beträgt einmalig 4,99 EUR.</p>
 <p><a href="/de/android/">https://cryptomator.org/de/android/</a></p>
@@ -324,19 +326,19 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <li>Zahlreiche kleinere Fehler und Probleme behoben</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Ein neues Zuhause für unsere Community</h2>
-        <p>Unsere Online-Community hat endlich ein Zuhause gefunden. Hier erreichen Sie uns von nun an bei technischen Fragen und bekommen gleichzeitig die Möglichkeit, sich untereinander auszutauschen. Die Seite wurde ins Leben gerufen, um langfristig eine umfassende Knowledge Base zu errichten, die dabei helfen soll, Fragen schnell zu beantworten.</p>
+        </article>
+      
+        <article>
+          <h2>Ein neues Zuhause für unsere Community</h2>
+          <p>Unsere Online-Community hat endlich ein Zuhause gefunden. Hier erreichen Sie uns von nun an bei technischen Fragen und bekommen gleichzeitig die Möglichkeit, sich untereinander auszutauschen. Die Seite wurde ins Leben gerufen, um langfristig eine umfassende Knowledge Base zu errichten, die dabei helfen soll, Fragen schnell zu beantworten.</p>
 <p>Wir freuen uns über jeden Besucher und sind jetzt schon gespannt auf Ihre Beiträge!</p>
 <a href="https://community.cryptomator.org/" target="_blank" rel="noopener">https://community.cryptomator.org/</a>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.3.0 Release</h2>
-        <p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>, <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a>, and <a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here</a>.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.3.0 Release</h2>
+          <p>We&rsquo;ve completely rewritten Cryptomator. Its core components are now modularized to <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a>, <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a>, and <a href="https://github.com/cryptomator/webdav-nio-adapter" target="_blank" rel="noopener">WebDAV-NIO-Adapter</a>. A complete list of closed issues is available <a href="https://github.com/cryptomator/cryptomator/milestone/26?closed=1" target="_blank" rel="noopener">here</a>.</p>
 <h3 id="improvements">Improvements</h3>
 <ul>
 <li>Auto-Unlock!!! 🎉 (<a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">#40</a>) We finally implemented the most-wished feature. Still experimental and will be completed by autostart (optionally hidden) in future versions</li>
@@ -519,25 +521,23 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 </ul>
 <p>This version will be released shortly and might be the last major beta version. We are now in preparations for releasing Cryptomator 1.0.0 for Android. Looking forward to a great first final release!</p>
 
-      </article>
-    
-      <article>
-        <h2>Cyberduck meets Cryptomator</h2>
-        <p>Cyberduck 6.0 mit der Unterstützung von Cryptomator-Tresoren ist seit heute erhältlich. Die neue Version ist unter <a href="https://cyberduck.io/" target="_blank" rel="noopener">cyberduck.io</a> herunterladbar. Cyberduck ist ein freier Remote-Dateibrowser für Mac und Windows und ist somit das perfekte Tool für alle, die ihre Cloud-Daten nicht lokal synchronisieren wollen.</p>
-<figure class="text-center my-8">
-  <img class="inline-block rounded mb-1" src="/img/coop/cyberduck-banner.jpg" srcset="/img/coop/cyberduck-banner.jpg 1x, /img/coop/cyberduck-banner@2x.jpg 2x" alt="Cyberduck meets Cryptomator"/>
-  <figcaption>
-    <p class="text-sm text-gray-500 mb-0">Illustration von <a href="https://ktoons.org" target="_blank" rel="noopener">Katharina Hagemann</a></p>
-  </figcaption>
+        </article>
+      
+        <article>
+          <h2>Cyberduck meets Cryptomator</h2>
+          <p>Cyberduck 6.0 mit der Unterstützung von Cryptomator-Tresoren ist seit heute erhältlich. Die neue Version ist unter <a href="https://cyberduck.io/" target="_blank" rel="noopener">cyberduck.io</a> herunterladbar. Cyberduck ist ein freier Remote-Dateibrowser für Mac und Windows und ist somit das perfekte Tool für alle, die ihre Cloud-Daten nicht lokal synchronisieren wollen.</p>
+<figure class="text-center">
+  <img class="inline-block rounded" src="/img/coop/cyberduck-banner.jpg" srcset="/img/coop/cyberduck-banner.jpg 1x, /img/coop/cyberduck-banner@2x.jpg 2x" alt="Cyberduck meets Cryptomator"/>
+  <figcaption>Illustration von <a href="https://ktoons.org" target="_blank" rel="noopener">Katharina Hagemann</a></figcaption>
 </figure>
 <p>Cyberduck erlaubt Ihnen den Zugriff auf Ihren Cloudspeicher ohne einen zusätzlichen Sync-Client. FTP, SFTP, WebDAV, Amazon S3, Backblaze B2, Microsoft Azure &amp; OneDrive und OpenStack Swift werden u.a. unterstützt. Alle Tresore, die mit Cyberduck oder Cryptomator angelegt wurden, können entsprechend mit der anderen geöffnet werden.</p>
 <p>Sie können mehr über unsere Kooperation mit Cyberduck <a href="https://cryptomator.org/coop/cyberduck_de.html" target="_blank" rel="noopener">auf unserer Koop-Seite</a> erfahren.</p>
 
-      </article>
-    
-      <article>
-        <h2>Mysteriösen Windows-Fehler behoben mit 1.2.3 Update</h2>
-        <p>Cryptomator 1.2.3 für Windows behebt einen mysteriösen Fehler, der als Systemfehler 53 oder 67 bekannt ist. Inzwischen ist dieser zwar nicht mehr so mysteriös, aber er hat uns von Anfang an Albträume bereitet! Cycor auf GitHub hat die Ursache für den Systemfehler 53/67 herausgefunden, nachdem er monatelang selbst dieses Problem hatte, und in <a href="https://github.com/cryptomator/cryptomator/issues/210#issuecomment-262034669" target="_blank" rel="noopener">GitHub Issue 210</a> darüber berichtet.</p>
+        </article>
+      
+        <article>
+          <h2>Mysteriösen Windows-Fehler behoben mit 1.2.3 Update</h2>
+          <p>Cryptomator 1.2.3 für Windows behebt einen mysteriösen Fehler, der als Systemfehler 53 oder 67 bekannt ist. Inzwischen ist dieser zwar nicht mehr so mysteriös, aber er hat uns von Anfang an Albträume bereitet! Cycor auf GitHub hat die Ursache für den Systemfehler 53/67 herausgefunden, nachdem er monatelang selbst dieses Problem hatte, und in <a href="https://github.com/cryptomator/cryptomator/issues/210#issuecomment-262034669" target="_blank" rel="noopener">GitHub Issue 210</a> darüber berichtet.</p>
 <p>Scheinbar gibt es einen Windows Registry-Eintrag, der für die Auflistung von verfügbaren Netzwerkprovidern verantwortlich ist, namens <a href="https://technet.microsoft.com/en-us/library/cc959369.aspx" target="_blank" rel="noopener">ProviderOrder</a>. Das virtuelle Laufwerk von Cryptomator basiert auf WebDAV, daher führt ein fehlender <code>webclient</code>-Wert im Registry-Schlüssel <code>ProviderOrder</code> zu genau diesem Fehler. Wir waren lange Zeit über diese Situation verzweifelt, da wir dieses Problem auf unseren Rechnern nie reproduzieren konnten. Wir haben bspw. die Option IPv6-Literal eingeführt (die wahrscheinlich in einer zukünftigen Version entfernt wird) oder dachten, dass es an irgendeiner Firewall liegt. Aber nein! Jetzt ist klar, dass es Anwendungen gibt, die diesen Registry-Eintrag verändern, weil der <code>webclient</code>-Wert bei einer sauberen Windows-Installation definitiv nicht fehlt. Shame on them! 🔔</p>
 <p>Wir haben dieses Problem nun behoben, indem wir den Windows-Installer von Cryptomator angepasst haben. Der Registry-Schlüssel lässt sich übrigens in <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\NetworkProvider\Order</code> finden. Falls Sie ein Entwickler sind und zufällig auf diesen Blog-Beitrag gestoßen sind, weil Sie dasselbe Problem haben und sogar selbst Inno Setup nutzen, können Sie <a href="https://github.com/cryptomator/cryptomator-win/blob/master/package/windows/Cryptomator.iss" target="_blank" rel="noopener">den Code auf GitHub finden</a>.</p>
 <p>Ein großes Dankeschön an Cycor, der die Lösung für diesen merkwürdigen Fehler gefunden hat! 😄</p>
@@ -551,11 +551,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <h2 id="was-kommt-als-nächstes">Was kommt als Nächstes?</h2>
 <p>Wir haben <a href="https://github.com/cryptomator/cryptofs" target="_blank" rel="noopener">CryptoFS</a> in Version 1.0.0 veröffentlicht und diese Bibliothek ist nun bereit für die Integration in die Hauptanwendung Cryptomator. Daher wird der nächste Minor-Release Cryptomator 1.3 hauptsächlich eine &ldquo;Herztransplantation&rdquo; mit der Integration von CryptoFS beinhalten. Dies ist Voraussetzung, bevor wir mit der Integration von FUSE/Dokany beginnen können, die zurzeit für Version 1.4 angesetzt ist.</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator für Android 0.1 Beta</h2>
-        <p>Wir haben endlich die erste Beta-Version von Cryptomator für Android nach einer fast 6-monatigen Entwicklungszeit veröffentlicht. Es handelt sich dabei um eine komplett neue und native App. Dazu haben wir den kryptographischen Code aus unserem Hauptprojekt ausgelagert, der nun als <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a> verfügbar ist.</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator für Android 0.1 Beta</h2>
+          <p>Wir haben endlich die erste Beta-Version von Cryptomator für Android nach einer fast 6-monatigen Entwicklungszeit veröffentlicht. Es handelt sich dabei um eine komplett neue und native App. Dazu haben wir den kryptographischen Code aus unserem Hauptprojekt ausgelagert, der nun als <a href="https://github.com/cryptomator/cryptolib" target="_blank" rel="noopener">CryptoLib</a> verfügbar ist.</p>
 <p>Für mehr Informationen zum Beta-Test folgen Sie bitte <a href="/de/android/" target="_blank" rel="noopener">diesem Link</a>. Version 0.1 beinhaltet noch lange nicht alle Features, die wir für die finale Version vorgesehen haben, und hat uns bekannte Bugs, aber wir sind trotzdem offen für Vorschläge und natürlich Fehlerberichte.</p>
 <p>Sie können uns Ihr Feedback in unserem Android-Repository auf <a href="https://github.com/cryptomator/cryptomator-android" target="_blank" rel="noopener">GitHub</a> mitteilen. Bitte lesen Sie unsere <a href="https://github.com/cryptomator/cryptomator-android/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contribution Guidelines</a> sorgfältig durch.</p>
 <p>Vielen Dank für Ihre Geduld! Wir wissen, dass einige von Ihnen schon seit vielen Monaten auf eine Android-App von Cryptomator warten. Wir freuen uns auf Ihr Feedback! 😄</p>
@@ -567,11 +567,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <li>Unser Ziel ist es, mit der finalen Version in etwa die gleiche Funktionalität der iOS-App zu bieten.</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.2.0 Release</h2>
-        <p>Cryptomator 1.2.0 für Windows, Mac und Linux ist nun zum Download verfügbar!</p>
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.2.0 Release</h2>
+          <p>Cryptomator 1.2.0 für Windows, Mac und Linux ist nun zum Download verfügbar!</p>
 <h3 id="neue-features">Neue Features</h3>
 <ul>
 <li>Unter Windows und Mac können Sie jetzt Ihr Passwort speichern – natürlich optional. Dieses Feature ist eine Vorbereitung für das automatische Entsperren von Tresoren (GitHub Issue <a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">40</a>), was eines der meistgefragtesten Features ist, das wir für den nächsten Minor-Release planen.</li>
@@ -607,11 +607,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <h2 id="cryptomator-für-android">Cryptomator für Android</h2>
 <p>Wir sind guter Dinge, dass wir in den nächsten Woche über eine Beta informieren können. Danke für Ihre Geduld!</p>
 
-      </article>
-    
-      <article>
-        <h2>Sichersheitslücken behoben mit 1.1.4 Update</h2>
-        <p>Cryptomator 1.1.4 für Windows, OS X und Linux behebt zwei (verwandte) Sicherheitslücken, mit denen es möglich war, Flash-Dateien in den Tresor einzuschleusen und diese über einen Browser auszuführen, der so die <a href="https://de.wikipedia.org/wiki/Same-Origin-Policy" target="_blank" rel="noopener">SOP</a> &ldquo;umgeht&rdquo; (GitHub Issues <a href="https://github.com/cryptomator/cryptomator/issues/318" target="_blank" rel="noopener">318</a> &amp; <a href="https://github.com/cryptomator/cryptomator/issues/319" target="_blank" rel="noopener">319</a>) und Zugriff auf den Tresor erlangen kann. Danke an Lukas Reschke, der uns diese Schwachstellen gemeldet hat!</p>
+        </article>
+      
+        <article>
+          <h2>Sichersheitslücken behoben mit 1.1.4 Update</h2>
+          <p>Cryptomator 1.1.4 für Windows, OS X und Linux behebt zwei (verwandte) Sicherheitslücken, mit denen es möglich war, Flash-Dateien in den Tresor einzuschleusen und diese über einen Browser auszuführen, der so die <a href="https://de.wikipedia.org/wiki/Same-Origin-Policy" target="_blank" rel="noopener">SOP</a> &ldquo;umgeht&rdquo; (GitHub Issues <a href="https://github.com/cryptomator/cryptomator/issues/318" target="_blank" rel="noopener">318</a> &amp; <a href="https://github.com/cryptomator/cryptomator/issues/319" target="_blank" rel="noopener">319</a>) und Zugriff auf den Tresor erlangen kann. Danke an Lukas Reschke, der uns diese Schwachstellen gemeldet hat!</p>
 <p>Weiterhin wurden Fehler im Zusammenhang mit Dropbox, Google Drive, Windows Laufwerksbuchstaben, die Windows Registry und WebDAV-Zugriff unter Linux behoben. Eine detaillierte Liste mit den geschlossenen Issues lässt sich <a href="https://github.com/cryptomator/cryptomator/milestone/20?closed=1" target="_blank" rel="noopener">hier</a> einsehen.</p>
 <hr>
 <h2 id="was-kommt-als-nächstes">Was kommt als Nächstes?</h2>
@@ -622,11 +622,11 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <li>Wir haben den Meilenstein 1.2 noch nicht geplant, aber das <a href="https://github.com/cryptomator/cryptomator/issues/40" target="_blank" rel="noopener">Feature </a> wurde von unseren Nutzern schon häufig vorgeschlagen und ist derzeit der wahrscheinlichste Kandidat für das nächste größere Update. Danke für Ihr Feedback! 😄</li>
 </ul>
 
-      </article>
-    
-      <article>
-        <h2>In-Depth: Export Compliance for French iOS App Store</h2>
-        <p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href="https://itunes.apple.com/fr/app/cryptomator/id953086535" target="_blank" rel="noopener">French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p>
+        </article>
+      
+        <article>
+          <h2>In-Depth: Export Compliance for French iOS App Store</h2>
+          <p>Cyptomator for iOS has finally been approved by the French administration. You can download it now in the <a href="https://itunes.apple.com/fr/app/cryptomator/id953086535" target="_blank" rel="noopener">French App Store</a>. We&rsquo;d like to share our experience on how to receive export compliance for the French iOS App Store.</p>
 <p>Just to be clear, you also need the U.S. Encryption Registration (ERN) approval from the U.S. Bureau of Industry (BIS). But this has already been covered by many sites, just google for <code>export compliance ern ios app store</code>.</p>
 <p>However, there is little information on how to get the French encryption declaration approval from the Agence nationale de la sécurité des systèmes d&rsquo;information (ANSSI). This information could be useful for fellow developers that are e.g. using third-party libraries for cryptographic operations in their iOS app. I&rsquo;m not sure if this is also needed for the Google Play Store (or other Android app stores). We&rsquo;ll see soon enough.</p>
 <h3 id="when-do-you-need-french-approval">When do you need French approval?</h3>
@@ -679,12 +679,12 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <p>I hope you learned something from our experience and if you&rsquo;re an app developer struggling with the same issue, you hopefully received some insight in this process. Obviously, this information may change in the future, so do some additional research. 😉</p>
 <p>Funny story: In the approval form are checkboxes, which you can enable if you&rsquo;re sending a CD or USB flash drive with information of your product (like commercial brochure, user manual, technical details). I couldn&rsquo;t believe what they were asking for, so I didn&rsquo;t send anything besides the approval form. They kindly sent me an email, if I could provide a commercial or technical brochure for Cryptomator so that they can process my request. So I did that via email and everything was fine. 😄</p>
 
-      </article>
-    
-      <article>
-        <h2>Cryptomator 1.1 Release</h2>
-        <p>Cryptomator 1.1 für Windows, OS X und Linux ist nun zum Download verfügbar! Wir haben einen Passwortstärke-Indikator hinzugefügt und Sync-Konflikte werden nun erkannt.</p>
-<figure class="text-center my-8">
+        </article>
+      
+        <article>
+          <h2>Cryptomator 1.1 Release</h2>
+          <p>Cryptomator 1.1 für Windows, OS X und Linux ist nun zum Download verfügbar! Wir haben einen Passwortstärke-Indikator hinzugefügt und Sync-Konflikte werden nun erkannt.</p>
+<figure class="text-center">
   <img class="inline-block" src="/img/blog/cryptomator-1-1.png" srcset="/img/blog/cryptomator-1-1.png 1x, /img/blog/cryptomator-1-1@2x.png 2x" alt="Cryptomator 1.1 für Windows, OS X und Linux" />
 </figure>
 <h3 id="das-ist-neu">Das ist neu:</h3>
@@ -695,7 +695,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 </ul>
 <hr>
 <p>Außerdem haben wir kürzlich Cryptomator 1.1 für iOS veröffentlicht. Die langersehnte WebDAV-Unterstützung ist endlich da! Verschlüsseln Sie Ihre Dateien in Cloud-Speicher-Diensten wie ownCloud, HiDrive, MagentaCLOUD, STACK, blaucloud und vielen weiteren.</p>
-<figure class="text-center my-8">
+<figure class="text-center">
   <img class="inline-block" src="/img/blog/cryptomator-ios-1-1.png" srcset="/img/blog/cryptomator-ios-1-1.png 1x, /img/blog/cryptomator-ios-1-1@2x.png 2x" alt="Cryptomator 1.1 für iOS" />
 </figure>
 <h3 id="das-ist-neu-1">Das ist neu:</h3>
@@ -710,8 +710,9 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
 <h2 id="was-ist-mit-android">Was ist mit Android?</h2>
 <p>Wir haben mit der Entwicklung eines Prototypen der Android-App begonnen und werden Neuigkeiten dazu in Kürze veröffentlichen! 😄</p>
 
-      </article>
-    
+        </article>
+      
+    </div>
   </div>
 
     </div>
@@ -769,7 +770,7 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.a5c8b326e2a51221551c0b06d12cabff4aa5e5db2edcf77bda7bf1b0d0ed2ecf.js" integrity="sha256-pcizJuKlEiFVHAsG0Syr/0ql5dsu3Pd72nvxsNDtLs8="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>
