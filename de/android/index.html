@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.6f98105caca1d0b7e8ad702afa5f7973536fd5b6e8d70c7556e19512f4aa319c.css" integrity="sha256-b5gQXKyh0LforXAq&#43;l95c1Nv1bbo1wx1VuGVEvSqMZw=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.60f103e5dcfa73e9eac80abec6b8502b329631817967b85c076327335bffe97a.css" integrity="sha256-YPED5dz6c&#43;nqyAq&#43;xrhQKzKWMYF5Z7hcB2MnM1v/6Xo=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -146,13 +146,14 @@
     <div class="text-center mt-8">
       <p class="mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="mb-4">
-<input class="mr-1" type="checkbox" id="id-239854761" x-model="acceptTerms" />
-<label for="id-239854761">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-641795238" x-model="acceptTerms" />
+<label for="id-641795238">Ich akzeptiere die <a href="/de/terms/">AGB</a> sowie die <a href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
+      <p class="text-sm w-full lg:w-4/5 mx-auto mt-4">🎉 Verwende den Gutscheincode <code class="text-xs">SUMMERSALE</code> beim Bezahlvorgang, um 40% Rabatt zu erhalten!</p>
     </div>
   </form>
 
