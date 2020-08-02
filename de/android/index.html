@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.63de325d366a866082defb379515560c609f8ba2ff4cfd3950de3d3515ea4890.css" integrity="sha256-Y94yXTZqhmCC3vs3lRVWDGCfi6L/TP05UN49NRXqSJA=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.770605a6efc93d4d2c4a6682f125e7a59bb92e7d8d779bfb94dddaeea65a0d2b.css" integrity="sha256-dwYFpu/JPU0sSmaC8SXnpZu5Ln2Nd5v7lN3a7qZaDSs=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -146,14 +146,13 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-798263451" x-model="acceptTerms" />
-<label for="id-798263451">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-296543781" x-model="acceptTerms" />
+<label for="id-296543781">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
-      <p class="text-sm leading-relaxed text-gray-700 w-full lg:w-4/5 mx-auto mt-4">🎉 Verwende den Gutscheincode <code class="font-bold">SUMMERSALE</code> beim Bezahlvorgang, um 40% Rabatt zu erhalten!</p>
     </div>
   </form>
 
