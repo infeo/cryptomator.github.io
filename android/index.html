@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.6b272005dcf7e36f6923db2da523d36e71ed5b112f1c75be74bc38d3e38b9d64.css" integrity="sha256-aycgBdz3429pI9stpSPTbnHtWxEvHHW&#43;dLw40&#43;OLnWQ=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.bd05baec1c8dc2e5cf14d4e879b35778dfe75093f395c40973f18682b9810ea0.css" integrity="sha256-vQW67ByNwuXPFNToebNXeN/nUJPzlcQJc/GGgrmBDqA=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -146,13 +146,13 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-517342698" x-model="acceptTerms" />
-<label for="id-517342698">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-512483769" x-model="acceptTerms" />
+<label for="id-512483769">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
       </button>
-      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-1" x-text="checkoutData.errorMessage"></p>
+      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="checkoutData.errorMessage"></p>
     </div>
   </form>
 
@@ -186,7 +186,7 @@
       <h3>Download APK</h3>
     </div>
     <div class="px-4 py-8" x-data="{showShaSignature: false}">
-      <img class="inline-block h-24 mb-4" src="/img/logo.svg"/>
+      <img class="inline-block mb-4" src="/img/android/app-icon.png" srcset="/img/android/app-icon.png 1x, /img/android/app-icon@2x.png 2x"/>
       <div class="prose prose-sm max-w-none md:max-w-none mb-4">
         <p>Version 1.5.9 • Minimum: Android 4.3</p>
       </div>
@@ -260,7 +260,7 @@
     <script type="text/javascript" src="/js/jquery/jquery.min.f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="></script>
 
     
-    <script type="text/javascript" src="/js/alpinejs/alpine.2072bba0bd09c246496e9bc36e405267360cccf405acdfe63b979aac40ec0a9e.js" integrity="sha256-IHK7oL0JwkZJbpvDbkBSZzYMzPQFrN/mO5earEDsCp4="></script>
+    <script type="text/javascript" src="/js/alpinejs/alpine.638b51f7da7fc380b1aa61761552827da6837f2e627a7ad64c6a198a44fdbd7e.js" integrity="sha256-Y4tR99p/w4CxqmF2FVKCfaaDfy5ienrWTGoZikT9vX4="></script>
 
     
     <script type="text/javascript" src="/js/lazysizes/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js" integrity="sha256-&#43;2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU="></script>
