@@ -875,6 +875,20 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/de/downloads-thanks/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/downloads-thanks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/downloads-thanks/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/de/enterprise/</loc>
     <xhtml:link
                 rel="alternate"
