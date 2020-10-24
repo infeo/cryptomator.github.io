@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.590840b69c4d51dc386c35fba546e15d71abc89868852a424e054816bc655da4.css" integrity="sha256-WQhAtpxNUdw4bDX7pUbhXXGryJhohSpCTgVIFrxlXaQ=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.d8bc374ed311acc19176f02fd2561de9f2717d77d17962b4222db6b46819b78b.css" integrity="sha256-2Lw3TtMRrMGRdvAv0lYd6fJxfXfReWK0Ii22tGgZt4s=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-826943715" x-model="acceptTerms" />
-<label for="id-826943715">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-219674358" x-model="acceptTerms" />
+<label for="id-219674358">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -176,7 +176,7 @@
   <meta itemprop="name" content="Cryptomator"/>
   <meta itemprop="description" content="A free software to encrypt your cloud files."/>
   <meta itemprop="applicationCategory" content="Productivity"/>
-  <meta itemprop="softwareVersion" content="1.5.9"/>
+  <meta itemprop="softwareVersion" content="1.5.10"/>
   <meta itemprop="applicationSubCategory" content="Encryption"/>
   <meta itemprop="image" content="https://cryptomator.org/img/logo.png"/>
   <meta itemprop="operatingSystem" content="Android"/>
@@ -188,16 +188,16 @@
     <div class="px-4 py-8" x-data="{showShaSignature: false}">
       <img class="inline-block mb-4" src="/img/android/app-icon.png" srcset="/img/android/app-icon.png 1x, /img/android/app-icon@2x.png 2x"/>
       <div class="prose prose-sm max-w-none md:max-w-none mb-4">
-        <p>Version 1.5.9 • Minimum: Android 4.3</p>
+        <p>Version 1.5.10 • Minimum: Android 4.3</p>
       </div>
-      <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.9/Cryptomator-1.5.9.apk" role="button">
+      <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.10/Cryptomator-1.5.10.apk" role="button">
         <span class="fas fa-download" aria-hidden="true"></span> Download
       </a>
       <p class="text-xs">
         <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> SHA256 Signature</a>
       </p>
       <div x-show="showShaSignature" x-cloak class="prose prose-sm md:prose max-w-none md:max-w-none text-sm mt-4">
-        <p><code class="break-all">89bb6d2e11405a9114c373a5c958120829a00000c2f69153d5f5cdf9cead0349</code></p>
+        <p><code class="break-all">7edd9443d06564bf6cdd86151355c2dee3fd783531952575d23ed07e3fe310e7</code></p>
       </div>
     </div>
   </div>
