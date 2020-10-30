@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.d8bc374ed311acc19176f02fd2561de9f2717d77d17962b4222db6b46819b78b.css" integrity="sha256-2Lw3TtMRrMGRdvAv0lYd6fJxfXfReWK0Ii22tGgZt4s=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.f8a6169d140f36edcb541cd7117c9ee1656a13d95f0b806307533c3d53a66ae8.css" integrity="sha256-&#43;KYWnRQPNu3LVBzXEXye4WVqE9lfC4BjB1M8PVOmaug=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -146,13 +146,14 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-984137652" x-model="acceptTerms" />
-<label for="id-984137652">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-319624857" x-model="acceptTerms" />
+<label for="id-319624857">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="checkoutData.errorMessage"></p>
+      <p class="text-sm w-full lg:w-4/5 mx-auto mt-4">🎉 Use coupon code <code class="text-xs">SPOOKYSALE</code> during checkout to get 40% off!</p>
     </div>
   </form>
 
