@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.f8a6169d140f36edcb541cd7117c9ee1656a13d95f0b806307533c3d53a66ae8.css" integrity="sha256-&#43;KYWnRQPNu3LVBzXEXye4WVqE9lfC4BjB1M8PVOmaug=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.d8bc374ed311acc19176f02fd2561de9f2717d77d17962b4222db6b46819b78b.css" integrity="sha256-2Lw3TtMRrMGRdvAv0lYd6fJxfXfReWK0Ii22tGgZt4s=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -146,14 +146,13 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-215398764" x-model="acceptTerms" />
-<label for="id-215398764">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-423965718" x-model="acceptTerms" />
+<label for="id-423965718">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="checkoutData.errorMessage"></p>
-      <p class="text-sm w-full lg:w-4/5 mx-auto mt-4">🎉 Verwende den Gutscheincode <code class="text-xs">SPOOKYSALE</code> beim Bezahlvorgang, um 40% Rabatt zu erhalten!</p>
     </div>
   </form>
 
