@@ -256,7 +256,7 @@
   
   <url>
     <loc>https://cryptomator.org/tags/android/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -271,7 +271,7 @@
   
   <url>
     <loc>https://cryptomator.org/blog/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -286,7 +286,7 @@
   
   <url>
     <loc>https://cryptomator.org/tags/cryptomator/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -301,7 +301,7 @@
   
   <url>
     <loc>https://cryptomator.org/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -311,6 +311,66 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/blog/2020/11/20/roadmap/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2020/11/20/roadmap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2020/11/20/roadmap/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/desktop/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/desktop/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/desktop/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/ios/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/ios/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/ios/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/"
                 />
   </url>
   
@@ -330,21 +390,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/tags/</loc>
-    <lastmod>2020-05-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/blog/2020/04/20/release-1.5.0/</loc>
     <lastmod>2020-04-20T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -356,36 +401,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/blog/2020/04/20/release-1.5.0/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/tags/desktop/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/desktop/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/desktop/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/tags/ios/</loc>
-    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/ios/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/ios/"
                 />
   </url>
   

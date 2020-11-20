@@ -11,8 +11,49 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/android/</link>
     </image>
-    <lastBuildDate>Thu, 19 Nov 2020 08:33:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2020 15:18:54 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator Roadmap Late 2020</title>
+        <description>&lt;p&gt;Wir haben kürzlich Cryptomator 1.5.10 für Windows, macOS und Linux mit vielen neuen Features und Fehlerbehebungen veröffentlicht. Nun, eigentlich waren die Änderungen für 1.5.9 vorgesehen, aber wir haben daraufhin einen Hotfix-Release veröffentlicht. 😁 Da sich das (verrückte) Jahr dem Ende zuneigt, möchten wir euch einen Einblick in unsere plattformübergreifende Roadmap für die kommenden Monate geben!&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-desktop-app&#34;&gt;Stand der Desktop-App&lt;/h2&gt;
+&lt;p&gt;Mit dem Redesign und vollständigen Überarbeitung der Benutzeroberfläche in 1.5.0 haben wir eine gute Grundlage für das Hinzufügen weiterer Features geschaffen. Es gab allerdings ein älteres Feature, das nicht in die engere Wahl geschafft hat, aber jetzt mit der neuesten Version wieder verfügbar ist: Tresor-Statistik. 🎉&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/vault-statistics.png&#34; srcset=&#34;https://cryptomator.org/img/blog/vault-statistics.png 1x, https://cryptomator.org/img/blog/vault-statistics@2x.png 2x&#34; alt=&#34;Tresor-Statistik in Cryptomator&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Aber es geht noch weiter! Tresor-Passwörter können jetzt auch unter Linux in &lt;a href=&#34;https://de.wikipedia.org/wiki/KWallet&#34;&gt;KWallet&lt;/a&gt; gespeichert werden. Herzlichen Dank an Ralph Plawetzki (purejava auf GitHub) für seine Open-Source-Beitrag! Außerdem ist es jetzt unter Windows möglich, den Tresor über FUSE zu mounten. Dies ist allerdings ein Beta-Feature! Um es auszuprobieren, muss &lt;a href=&#34;http://www.secfs.net/winfsp/&#34;&gt;WinFSP&lt;/a&gt; installiert sein. Wir würden uns über euer Feedback dazu freuen!&lt;/p&gt;
+&lt;p&gt;Was die Distribution betrifft, so haben wir unsere Erwartungen nicht ganz erfüllt. Flatpak bereitet uns weiterhin Probleme, da wir seine Sandbox nicht davon überzeugen konnten, FUSE-Laufwerke richtig zu unterstützen. Aber wir werden das Vorhaben nicht aufgeben!&lt;/p&gt;
+&lt;p&gt;Unter der Haube haben wir die &lt;a href=&#34;https://github.com/cryptomator/integrations-api&#34;&gt;integrations-api&lt;/a&gt; nebst Implementierungen für jedes Betriebssystem eingeführt. Es ist ein neuer Weg für Cryptomator, native (auch OS-spezifische) Funktionalitäten einzubinden. Jetzt ist es einfacher denn je, native Funktionen zu implementieren. Schnappt euch also eure Tastatur und fangt an zu hacken! 😁 Mit dieser Änderung haben wir das alte Repository &lt;a href=&#34;https://github.com/cryptomator/native-functions&#34;&gt;native-functions&lt;/a&gt; archiviert. 👋&lt;/p&gt;
+&lt;p&gt;Wie geht es weiter? Unser Plan ist es, zur Version 1.6.x überzugehen. Zuerst wollen wir &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt; integrieren, damit ihr den Zustand eures Tresors überprüfen und Bereinigungs- und Wiederherstellungsbefehle direkt in der Cryptomator-Benutzeroberfläche ausführen könnt. Darüber hinaus planen wir, die Schlüsselherleitung von der Tresorverschlüsselung zu entkoppeln, um mehr Optionen für die Authentifizierung anbieten zu können, einschließlich der Speicherung von Passwörtern durch Dritte, 2FA und Mehrbenutzerzugang mit individuellen Passwörtern.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-android-app&#34;&gt;Stand der Android-App&lt;/h2&gt;
+&lt;p&gt;In den letzten Monaten haben wir neue Features wie &lt;a href=&#34;https://community.cryptomator.org/t/biometric-authentication-e-g-face-unlock-coming-soon/6089&#34;&gt;Face Unlock&lt;/a&gt;, &lt;a href=&#34;https://community.cryptomator.org/t/sort-directory-listings/5958&#34;&gt;Sort Directory Listings&lt;/a&gt; und &lt;a href=&#34;https://community.cryptomator.org/t/search-in-current-folder-using-glob-pattern-matching/5928&#34;&gt;Search Using Glob Pattern Matching&lt;/a&gt; hinzugefügt. Einige Communitymitglieder haben die App auch in &lt;a href=&#34;https://community.cryptomator.org/t/translated-into-french/5962&#34;&gt;Französisch&lt;/a&gt; und &lt;a href=&#34;https://community.cryptomator.org/t/cryptomator-is-soon-available-in-turkish/6560&#34;&gt;Türkisch&lt;/a&gt; übersetzt. Vielen Dank für eure Beiträge!&lt;/p&gt;
+&lt;p&gt;Mit Blick nach vorne haben wir aufregende Neuigkeiten zu unserer Android-App zu berichten! Das Projekt ist in der perfekten Lage, die beiden größten Wünsche der Community zu erfüllen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Source: Veröffentlichung des Quellcodes der App.&lt;/li&gt;
+&lt;li&gt;Document Provider: Zugriff auf den Inhalt des Tresors über Drittanbieter-Apps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ihr habt richtig gehört, wir werden Cryptomator für Android open-sourcen! Die Tatsache, dass die App bisher open-core war, hatte seine legitimen Gründe, aber wir sind jetzt voll und ganz davon überzeugt, dass wir die App ohne Kompromisse open-sourcen können. Wir arbeiten hart daran, den vollständigen Quellcode innerhalb weniger Wochen zu veröffentlichen.&lt;/p&gt;
+&lt;p&gt;Danach wird die Integration des Document Providers auf unserer Roadmap stehen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-ios-app&#34;&gt;Stand der iOS-App&lt;/h2&gt;
+&lt;p&gt;Was passiert zurzeit mit Cryptomator für iOS? In den letzten 6-7 Monaten haben wir hart an einer &lt;em&gt;vollständig&lt;/em&gt; neuen, in Swift geschriebenen App gearbeitet. Unsere ersten Ergebnisse sind bereits in unseren neuen Open-Source-Bibliotheken für Swift zu sehen: &lt;a href=&#34;https://github.com/cryptomator/cryptolib-swift&#34;&gt;cryptolib-swift&lt;/a&gt; und &lt;a href=&#34;https://github.com/cryptomator/cloud-access-swift&#34;&gt;cloud-access-swift&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Was wird an der Überarbeitung so besonders sein? Cryptomator wird vollständig in die Dateien-App integriert sein. Dies bringt viele Vorteile mit sich, wie z.B. Thumbnails, Unterstützung für Drittanbieter-Apps, die Dateien direkt im Tresor bearbeiten können, und vieles mehr! Das bedeutet aber auch, dass es keinen &amp;ldquo;eigenen&amp;rdquo; Dateibrowser mehr in der App geben wird. Die Integration in die Dateien-App ist eine der am meisten nachgefragten Features der Community.&lt;/p&gt;
+&lt;p&gt;Wie steht es mit Open-Source? Wir werden die aktuelle App nicht mehr open-sourcen, weil wir nach vorne schauen möchten. Die neue App haben wir bereits darauf ausgelegt, dass sie ohne Weiteres open-sourcen können, aber es wird noch einige Zeit dauern, bis wir etwas veröffentlichen können.&lt;/p&gt;
+&lt;p&gt;Wir werden auf jeden Fall im nächsten Jahr umfangreiche Tests über TestFlight durchführen. Stay tuned!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/11/20/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/11/20/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator Android-App für uns Paranoide</title>
@@ -307,33 +348,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>other</category>
         
         <category>guest</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator 1.0 für Android Release</title>
-        <description>&lt;p&gt;Wir freuen uns über die heutige Veröffentlichung von Cryptomator 1.0 für Android. 🎉 Jetzt können Sie Ihre Cloud-Dateien auch mit Android-Geräten schützen. Die App ist zu den Desktop- und iOS-Versionen von Cryptomator natürlich kompatibel.&lt;/p&gt;
-&lt;p&gt;Wir haben die App im letzten Jahr kontinuierlich weiterentwickelt, um höchste Sicherheit und Benutzerfreundlichkeit zu gewährleisten. Dank dem Feedback von Ihnen und über 10.000 Beta-Testern hat die Android-App nun ein Stadium erreicht, das den hohen Anforderungen von Cryptomator gerecht wird.&lt;/p&gt;
-&lt;p&gt;Cryptomator für Android ist in der Version 1.0 mit Dropbox, Google Drive, OneDrive sowie WebDAV-basierten Anbietern kompatibel. Sie können auch Tresore in Androids lokalem Speicher anlegen, um diese bspw. auch über Drittanbieter-Apps mit Cloud-Diensten zu synchronisieren. Die App ist im Google Play Store erhältlich. Der Kaufpreis beträgt einmalig 4,99 EUR.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/de/android/&#34;&gt;https://cryptomator.org/de/android/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;änderungen-seit-070&#34;&gt;Änderungen seit 0.7.0&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Button zur Sperrung aller aktiven Tresore in der Notifikation hinzugefügt&lt;/li&gt;
-&lt;li&gt;Performance beim Cloud-Login-Prozess optimiert&lt;/li&gt;
-&lt;li&gt;Internetverbindung für die Verwendung von lokalem Speicher ist nicht mehr notwendig&lt;/li&gt;
-&lt;li&gt;Anzeigefehler beim OneDrive-Login behoben&lt;/li&gt;
-&lt;li&gt;Die App ist in Spanisch verfügbar&lt;/li&gt;
-&lt;li&gt;Die App erfordert nun mindestens Android 4.3&lt;/li&gt;
-&lt;li&gt;Zahlreiche kleinere Fehler und Probleme behoben&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2017/10/17/android-1.0/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2017/10/17/android-1.0/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>android</category>
         
       </item>
     
