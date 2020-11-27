@@ -11,7 +11,7 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/android/</link>
     </image>
-    <lastBuildDate>Fri, 20 Nov 2020 15:18:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2020 13:41:05 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
@@ -311,43 +311,29 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
       </item>
     
       <item>
-        <title>Guest Post: Why Easy Encryption Is Safe Encryption</title>
-        <description>&lt;p&gt;Another day, another data breach. Two weeks ago, the &lt;a href=&#34;http://www.canberratimes.com.au/national/public-service/data-breach-sees-records-of-50000-australian-workers-exposed-20171102-gzdef3.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;headline news&lt;/a&gt; in Australia was that some 50,000 workers had their personal records exposed. And just as every summer now inevitably becomes the hottest on record, every data breach is always the largest in history. This is certainly the case here – such a scale of data loss is unprecedented in Australia, if not elsewhere.&lt;/p&gt;
-&lt;p&gt;The breach is also typical in another way: it was caused by human error. Several government agencies had been working with a &amp;ldquo;third party contractor&amp;rdquo;, and it was this company who were responsible for the leak. They remain unnamed, which is lucky for them, given the reputational damage that can be caused by breaches like this.&lt;/p&gt;
-&lt;p&gt;On a practical level, the leak was caused by … drum roll please … an incorrectly configured cloud storage service. Sounds familiar, right?&lt;/p&gt;
-&lt;p&gt;And whilst I don&amp;rsquo;t know precisely what &amp;ldquo;incorrectly configured&amp;rdquo; means in this particular context, I can make a good guess. My bet would be that the data in the cloud was not encrypted, or at least was not encrypted in transit to the cloud.&lt;/p&gt;
-&lt;p&gt;Further, I assume that whichever &amp;ldquo;third party contractor&amp;rdquo; we are dealing with here had policies that required employees to encrypt data before sending it anywhere. They were dealing with sensitive records, after all, and anything else would have been remiss.&lt;/p&gt;
-&lt;h2 id=&#34;human-error&#34;&gt;Human Error&lt;/h2&gt;
-&lt;p&gt;This might sound like idle speculation, but I raise it to make a serious point: &lt;a href=&#34;https://www.dataprivacymonitor.com/cybersecurity/deeper-dive-human-error-is-to-blame-for-most-breaches/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the majority of data breaches are caused by human error&lt;/a&gt;. Research by Data Privacy Monitor found that in 2015, 37% of &lt;a href=&#34;http://e.bakerlaw.com/s/916f16a49296140a9d10ee92cc567ebd16e76582&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data loss was the direct cause of human error&lt;/a&gt;. And it gets worse – if you broaden the definition of &amp;ldquo;error&amp;rdquo; to include falling for phishing scams, fully 59% of all data breaches fall into this category.&lt;/p&gt;
-&lt;p&gt;In fact, it could be argued that almost all incidents of data breach are the result of human error. The other categories mentioned in the same research are (24%), external theft (17%), vendors (14%), internal theft (8%), and lost or improper disposal (6%). Barring internal theft, pretty much all of these categories rely on human error: external theft is made possible by employees leaving their laptops on trains, and by not having them encrypted, for instance.&lt;/p&gt;
-&lt;p&gt;Given this, it&amp;rsquo;s not surprising that analyses of the &lt;a href=&#34;https://www.venafi.com/blog/7-data-breaches-caused-human-error-did-encryption-play-role&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;biggest data breaches in recent years&lt;/a&gt; have pointed to the role of human error. In most cases, a phishing attack is used to gain access to protected data, but in a sizeable minority the problem is simply that once basic access to a system is achieved, an attacker has access to everything, because nothing is encrypted.&lt;/p&gt;
-&lt;h2 id=&#34;human-ignorance&#34;&gt;Human Ignorance&lt;/h2&gt;
-&lt;p&gt;I don&amp;rsquo;t mean to suggest that everybody is stupid, or that it is easy to spot a sophisticated phishing attack. Even many of Sony&amp;rsquo;s top executives &lt;a href=&#34;https://www.tripwire.com/state-of-security/latest-security-news/sony-hackers-used-phishing-emails-to-breach-company-networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fell foul of such an attack&lt;/a&gt;, of course, back in 2014.&lt;/p&gt;
-&lt;p&gt;Instead, the problem lies with the generally poor level of knowledge on security issues, and nowhere is this more apparent than when it comes to encryption. If you work in tech, it&amp;rsquo;s easy to forget that people don&amp;rsquo;t understand encryption, despite the innumerable and &lt;a href=&#34;https://thebestvpn.com/cryptography/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;excellent guides&lt;/a&gt; available.&lt;/p&gt;
-&lt;figure&gt;
-  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://imgs.xkcd.com/comics/pgp.png&#34; srcset=&#34;https://imgs.xkcd.com/comics/pgp.png 1x, https://imgs.xkcd.com/comics/pgp_2x.png 2x&#34; title=&#34;If you want to be extra safe, check that there&#39;s a big block of jumbled characters at the bottom.&#34; alt=&#34;PGP&#34;/&gt;
-  &lt;figcaption&gt;Illustration by &lt;a href=&#34;https://xkcd.com/1181/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Randall Munroe (xkcd)&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;In my experience, the majority of employees (and perhaps people) fall into two categories. There are those that think that their because they need to enter a Gmail password (sometimes), all their emails are safe as long as they keep their password secret. Or maybe just share it with a few friends.&lt;/p&gt;
-&lt;p&gt;Then there are those, more nihilistic, who figure that the government / hackers / the illuminati / whoever can see everything that is happening anyway, so security is pointless in any case. I remember that several friends were amazed &lt;a href=&#34;https://www.macrumors.com/2017/10/23/fbi-unable-to-crack-6900-devices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;when the FBI couldn&amp;#39;t get into encrypted iPhones&lt;/a&gt; a few years ago – they had assumed that the government could &lt;em&gt;always&lt;/em&gt; get around &lt;em&gt;every&lt;/em&gt; security feature.&lt;/p&gt;
-&lt;p&gt;This type of person is more difficult to encourage into good security habits, but the approach for both types of people should be the same.&lt;/p&gt;
-&lt;h2 id=&#34;make-encryption-simple&#34;&gt;Make Encryption Simple&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;ll let you into a little secret: I don&amp;rsquo;t encrypt all my emails. Some, sure. But if I&amp;rsquo;m just writing to my mother about Christmas, I don&amp;rsquo;t bother: call me lazy, but it&amp;rsquo;s just too much hassle.&lt;/p&gt;
-&lt;p&gt;My personal files are a different matter. I&amp;rsquo;m still amazed by people who say something along the lines of &amp;ldquo;I&amp;rsquo;ve got nothing to hide, so it doesn&amp;rsquo;t matter if someone hacks my computer&amp;rdquo;. You don&amp;rsquo;t have to be a dissident in an oppressive regime to be damaged by a data leak. Emails, purchasing history, even your contact list, can easily be used to impersonate you online, even if there is no incriminating data there.&lt;/p&gt;
-&lt;p&gt;There are endless guides about how to encourage employees, friends, your gran, to store and send data safely. Many point out that proper training and education can bring home to people the importance of encryption. This might be true, but to my mind the most factor in getting people to use encryption is to make it easy to do so.&lt;/p&gt;
-&lt;p&gt;Ideally, what you need is an encrypted local drive, and one that is easy to move files in and out of. There are plenty of services available that work just like Dropbox or similar storage services, but automatically encrypt files as they are uploaded. Using these, encryption becomes second nature, and if files are encrypted locally you don&amp;rsquo;t need to worry about sending them to cloud storage or anything else.&lt;/p&gt;
-&lt;p&gt;And best of all, you need &lt;em&gt;zero&lt;/em&gt; knowledge about how encryption works. I would recommend, of course, reading about what you are actually doing when you encrypt files, but for the non-techies out there, making encryption simple is by far the best way of making it ubiquitous.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;about-the-author&#34;&gt;About the Author&lt;/h2&gt;
-&lt;p&gt;Sam Bocetta is a defense contractor for the U.S. Navy, a defense analyst, and a freelance journalist. He specializes in finding radical – and often heretical – solutions to &amp;ldquo;impossible&amp;rdquo; ballistics problems. He now writes for &lt;a href=&#34;https://gunnewsdaily.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gun News Daily&lt;/a&gt; about naval engineering, mechanical engineering, electrical engineering, marine ops, program management, defense contracting, export control, international commerce, patents, InfoSec, cryptography, cyberwarfare, and cyberdefense.&lt;/p&gt;
+        <title>Cryptomator 1.0 for Android Release</title>
+        <description>&lt;p&gt;Today, we are glad to announce the release of Cryptomator 1.0 for Android. 🎉 Finally, you can protect your cloud files also on Android devices. The app is naturally fully compatible to the desktop and iOS versions of Cryptomator.&lt;/p&gt;
+&lt;p&gt;We have worked extensively during the last year to ensure the app&amp;rsquo;s security and usability. Thanks to your feedback and the experiences of more than 10,000 beta testers, the Android app has finally reached the level of maturity that fulfills Cryptomator&amp;rsquo;s high standards.&lt;/p&gt;
+&lt;p&gt;In version 1.0 for Android, the app is compatible with Dropbox, Google Drive, OneDrive, and WebDAV-based providers. You can also create vaults in Android&amp;rsquo;s local storage and, e.g., sync them with third-party apps. The app is available for $4.99 in the Google Play Store.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/android/&#34;&gt;https://cryptomator.org/android/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;changelog-since-070&#34;&gt;Changelog since 0.7.0&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Added “lock all vaults” option to the auto-lock notification&lt;/li&gt;
+&lt;li&gt;Improved performance of the cloud login process&lt;/li&gt;
+&lt;li&gt;Removed internet connection requirement for local storage&lt;/li&gt;
+&lt;li&gt;Fixed display problem when logging in to OneDrive&lt;/li&gt;
+&lt;li&gt;Translated app into Spanish&lt;/li&gt;
+&lt;li&gt;Increased Android requirement to version 4.3&lt;/li&gt;
+&lt;li&gt;Fixed several smaller bugs and problems&lt;/li&gt;
+&lt;/ul&gt;
 </description>
-        <pubDate>Sat, 18 Nov 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/blog/2017/11/18/why-easy-encryption-is-safe-encryption/</link>
-        <guid isPermaLink="true">https://cryptomator.org/blog/2017/11/18/why-easy-encryption-is-safe-encryption/</guid>
+        <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2017/10/17/android-1.0/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2017/10/17/android-1.0/</guid>
         
-        <category>other</category>
+        <category>cryptomator</category>
         
-        <category>guest</category>
+        <category>android</category>
         
       </item>
     

@@ -510,51 +510,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/de/blog/2017/11/18/why-easy-encryption-is-safe-encryption/</loc>
-    <lastmod>2017-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/blog/2017/11/18/why-easy-encryption-is-safe-encryption/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/blog/2017/11/18/why-easy-encryption-is-safe-encryption/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/de/tags/guest/</loc>
-    <lastmod>2017-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/guest/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/guest/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/de/tags/other/</loc>
-    <lastmod>2017-11-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/other/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/other/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/blog/2017/10/17/android-1.0/</loc>
     <lastmod>2017-10-17T00:00:00+00:00</lastmod>
     <xhtml:link
