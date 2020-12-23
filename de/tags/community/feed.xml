@@ -11,8 +11,32 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/community/</link>
     </image>
-    <lastBuildDate>Mon, 21 Dec 2020 22:50:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Dec 2020 13:34:16 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Open Source: Cryptomator für Android</title>
+        <description>&lt;p&gt;Wir haben es letzten Monat angekündigt und nun ist es soweit… unser Geschenk an die Community rechtzeitig zu den Feiertagen: Cryptomator für Android ist jetzt vollständig Open-Source! Das Repository befindet sich hier: &lt;a href=&#34;https://github.com/cryptomator/android&#34;&gt;https://github.com/cryptomator/android&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-open-source.png&#34; srcset=&#34;https://cryptomator.org/img/blog/android-open-source.png 1x, https://cryptomator.org/img/blog/android-open-source@2x.png 2x&#34; alt=&#34;Cryptomator für Android is nun Open-Source&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Es wird definitiv eine Übergangsphase und Lernkurve für uns geben, um das Repository feinzutunen und Open-Source-Beiträge zu koordinieren, aber es sollte nicht allzu weit vom &amp;ldquo;Haupt&amp;rdquo;-Repository Cryptomator für Windows, macOS und Linux entfernt sein, das von Anfang an Open-Source war.&lt;/p&gt;
+&lt;p&gt;Wir freuen uns auf eure Beiträge und sind dir sowie der gesamten Community, die diesen Schritt ermöglicht hat, sehr dankbar. Um die fortlaufende Open-Source-Entwicklung von Cryptomator zu unterstützen, freuen wir uns über eine &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;Spende&lt;/a&gt; oder ein &lt;a href=&#34;https://cryptomator.org/sponsors/&#34;&gt;Sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+&lt;p&gt;Und was ist mit Cryptomator für iOS? Um aus unserer &amp;ldquo;Roadmap Late 2020&amp;rdquo; zu zitieren:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Wir werden die aktuelle App nicht mehr open-sourcen, weil wir nach vorne schauen möchten. Die neue App haben wir bereits darauf ausgelegt, dass sie ohne Weiteres open-sourcen können, aber es wird noch einige Zeit dauern, bis wir etwas veröffentlichen können.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Frohe Feiertage und einen guten Rutsch in das neue Jahr! 🎁&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/12/23/android-open-source/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/12/23/android-open-source/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator Roadmap Late 2020</title>
@@ -307,33 +331,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>cryptomator</category>
         
         <category>desktop</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator 1.0 für Android Release</title>
-        <description>&lt;p&gt;Wir freuen uns über die heutige Veröffentlichung von Cryptomator 1.0 für Android. 🎉 Jetzt können Sie Ihre Cloud-Dateien auch mit Android-Geräten schützen. Die App ist zu den Desktop- und iOS-Versionen von Cryptomator natürlich kompatibel.&lt;/p&gt;
-&lt;p&gt;Wir haben die App im letzten Jahr kontinuierlich weiterentwickelt, um höchste Sicherheit und Benutzerfreundlichkeit zu gewährleisten. Dank dem Feedback von Ihnen und über 10.000 Beta-Testern hat die Android-App nun ein Stadium erreicht, das den hohen Anforderungen von Cryptomator gerecht wird.&lt;/p&gt;
-&lt;p&gt;Cryptomator für Android ist in der Version 1.0 mit Dropbox, Google Drive, OneDrive sowie WebDAV-basierten Anbietern kompatibel. Sie können auch Tresore in Androids lokalem Speicher anlegen, um diese bspw. auch über Drittanbieter-Apps mit Cloud-Diensten zu synchronisieren. Die App ist im Google Play Store erhältlich. Der Kaufpreis beträgt einmalig 4,99 EUR.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/de/android/&#34;&gt;https://cryptomator.org/de/android/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;änderungen-seit-070&#34;&gt;Änderungen seit 0.7.0&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Button zur Sperrung aller aktiven Tresore in der Notifikation hinzugefügt&lt;/li&gt;
-&lt;li&gt;Performance beim Cloud-Login-Prozess optimiert&lt;/li&gt;
-&lt;li&gt;Internetverbindung für die Verwendung von lokalem Speicher ist nicht mehr notwendig&lt;/li&gt;
-&lt;li&gt;Anzeigefehler beim OneDrive-Login behoben&lt;/li&gt;
-&lt;li&gt;Die App ist in Spanisch verfügbar&lt;/li&gt;
-&lt;li&gt;Die App erfordert nun mindestens Android 4.3&lt;/li&gt;
-&lt;li&gt;Zahlreiche kleinere Fehler und Probleme behoben&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2017/10/17/android-1.0/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2017/10/17/android-1.0/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>android</category>
         
       </item>
     

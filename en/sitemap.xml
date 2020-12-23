@@ -256,7 +256,7 @@
   
   <url>
     <loc>https://cryptomator.org/tags/android/</loc>
-    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -271,7 +271,7 @@
   
   <url>
     <loc>https://cryptomator.org/blog/</loc>
-    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -286,7 +286,7 @@
   
   <url>
     <loc>https://cryptomator.org/tags/cryptomator/</loc>
-    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -301,7 +301,7 @@
   
   <url>
     <loc>https://cryptomator.org/</loc>
-    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -311,6 +311,36 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/blog/2020/12/23/android-open-source/</loc>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2020/12/23/android-open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2020/12/23/android-open-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/</loc>
+    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/"
                 />
   </url>
   
@@ -356,21 +386,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/tags/ios/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/tags/</loc>
-    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/"
                 />
   </url>
   

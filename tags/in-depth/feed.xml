@@ -11,8 +11,32 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/in-depth/</link>
     </image>
-    <lastBuildDate>Mon, 21 Dec 2020 22:50:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Dec 2020 13:34:16 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Open Source: Cryptomator for Android</title>
+        <description>&lt;p&gt;We announced it last month and now we are ready… our gift to the community for the holidays: Cryptomator for Android is now fully open-source! Check out the repository here: &lt;a href=&#34;https://github.com/cryptomator/android&#34;&gt;https://github.com/cryptomator/android&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-open-source.png&#34; srcset=&#34;https://cryptomator.org/img/blog/android-open-source.png 1x, https://cryptomator.org/img/blog/android-open-source@2x.png 2x&#34; alt=&#34;Cryptomator for Android is now open-source&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;There will definitely be a transition phase and learning curve for us to fine-tune the repository and coordinate open-source contributions but it shouldn&amp;rsquo;t be too far off the &amp;ldquo;main&amp;rdquo; repository Cryptomator for Windows, macOS, and Linux, which was open-source from the beginning.&lt;/p&gt;
+&lt;p&gt;We are looking forward to your contributions and are very grateful to you and the whole community that made this step possible. To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;donating&lt;/a&gt; or &lt;a href=&#34;https://cryptomator.org/sponsors/&#34;&gt;sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+&lt;p&gt;And what about Cryptomator for iOS? To quote from our &amp;ldquo;Roadmap Late 2020&amp;rdquo;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We won&amp;rsquo;t open-source the current app anymore because we&amp;rsquo;d like to look forward. The new app is written with open-sourcing it in mind but it will still take some time until we can release anything.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Happy holidays and a happy new year! 🎁&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/12/23/android-open-source/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/12/23/android-open-source/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator Roadmap Late 2020</title>
@@ -307,33 +331,6 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
         <category>cryptomator</category>
         
         <category>desktop</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator 1.0 for Android Release</title>
-        <description>&lt;p&gt;Today, we are glad to announce the release of Cryptomator 1.0 for Android. 🎉 Finally, you can protect your cloud files also on Android devices. The app is naturally fully compatible to the desktop and iOS versions of Cryptomator.&lt;/p&gt;
-&lt;p&gt;We have worked extensively during the last year to ensure the app&amp;rsquo;s security and usability. Thanks to your feedback and the experiences of more than 10,000 beta testers, the Android app has finally reached the level of maturity that fulfills Cryptomator&amp;rsquo;s high standards.&lt;/p&gt;
-&lt;p&gt;In version 1.0 for Android, the app is compatible with Dropbox, Google Drive, OneDrive, and WebDAV-based providers. You can also create vaults in Android&amp;rsquo;s local storage and, e.g., sync them with third-party apps. The app is available for $4.99 in the Google Play Store.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/android/&#34;&gt;https://cryptomator.org/android/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;changelog-since-070&#34;&gt;Changelog since 0.7.0&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Added “lock all vaults” option to the auto-lock notification&lt;/li&gt;
-&lt;li&gt;Improved performance of the cloud login process&lt;/li&gt;
-&lt;li&gt;Removed internet connection requirement for local storage&lt;/li&gt;
-&lt;li&gt;Fixed display problem when logging in to OneDrive&lt;/li&gt;
-&lt;li&gt;Translated app into Spanish&lt;/li&gt;
-&lt;li&gt;Increased Android requirement to version 4.3&lt;/li&gt;
-&lt;li&gt;Fixed several smaller bugs and problems&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/blog/2017/10/17/android-1.0/</link>
-        <guid isPermaLink="true">https://cryptomator.org/blog/2017/10/17/android-1.0/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>android</category>
         
       </item>
     
