@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate</title>
     
-      <meta name="description" content="Cryptomator is provided free of charge as an open-source project despite the high development effort and is therefore dependent on donations. If you are also interested in further development, please consider buying a donation key or feel free to donate any amount."/>
+      <meta name="description" content="If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!"/>
       <meta property="og:title" content="Cryptomator - Donate"/>
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://cryptomator.org/donate/"/>
       <meta property="og:site_name" content="Cryptomator"/>
-      <meta property="og:description" content="Cryptomator is provided free of charge as an open-source project despite the high development effort and is therefore dependent on donations. If you are also interested in further development, please consider buying a donation key or feel free to donate any amount."/>
+      <meta property="og:description" content="If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!"/>
       <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
       <meta property="og:image:width" content="1200"/>
       <meta property="og:image:height" content="630"/>
@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.27e6a9251a91053cdd33979553dc99f70a554151bc7d83033aacfa807924a3d5.css" integrity="sha256-J&#43;apJRqRBTzdM5eVU9yZ9wpVQVG8fYMDOqz6gHkko9U=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.007650c389170307f6935fc9d5d65f0307c660878d7e46976cc733027ddc6d7f.css" integrity="sha256-AHZQw4kXAwf2k1/J1dZfAwfGYIeNfkaXbMczAn3cbX8=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -124,197 +124,209 @@
   <div class="container py-12">
     <header class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
       <h1>Donate</h1>
-      <p class="lead">Cryptomator is provided free of charge as an open-source project despite the high development effort and is therefore dependent on donations. If you are also interested in further development, please consider buying a donation key or feel free to donate any amount.</p>
+      <p class="lead">If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!</p>
     </header>
 
     <div class="flex flex-wrap flex-row-reverse">
-      <section x-data="{showForm: false}" class="w-full py-8 lg:w-1/2 lg:pl-3">
-        <h2 class="font-headline font-medium text-xl md:text-2xl leading-snug mb-4">Just donate</h2>
-        <ul class="fa-ul mb-4">
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Support Cryptomator&#39;s open-source development</li>
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Choose your preferred payment method</li>
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-exclamation-triangle text-orange-500" aria-hidden="true"></i></span>No donation key</li>
-        </ul>
-        <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
-          <i class="fas fa-hand-point-right"></i> Proceed
-        </button>
-        <div x-show="showForm" x-cloak>
-          <div class="rounded shadow bg-white" x-data="{ tab: 'paypal' }">
-    <div class="flex justify-center border-b pt-2 border-primary text-lg text-gray-500">
-      <button @click="tab = 'paypal'" :class="{'border-primary text-primary bg-white': tab === 'paypal'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
-        <i class="fab fa-paypal" aria-hidden="true"></i>
-        <span :class="{'hidden md:inline-block': tab !== 'paypal'}">PayPal</span>
-      </button>
-      <button @click="tab = 'card'" :class="{'border-primary text-primary bg-white': tab === 'card'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
-        <i class="fas fa-credit-card" aria-hidden="true"></i>
-        <span :class="{'hidden md:inline-block': tab !== 'card'}">Credit Card</span>
-      </button>
-      <button @click="tab = 'bank'" :class="{'border-primary text-primary bg-white': tab === 'bank'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
-        <i class="fas fa-landmark" aria-hidden="true"></i>
-        <span :class="{'hidden md:inline-block': tab !== 'bank'}">Bank Transfer</span>
-      </button>
-      <button @click="tab = 'crypto'" :class="{'border-primary text-primary bg-white': tab === 'crypto'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
-        <i class="fas fa-alien-monster" aria-hidden="true"></i>
-        <span :class="{'hidden md:inline-block': tab !== 'crypto'}">Crypto</span>
-      </button>
-    </div>
-    <div class="px-4 py-8">
-
-      
-      <div x-show="tab === 'paypal'" class="text-center">
-        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">After pressing &#34;Proceed&#34;, you will be redirected to our PayPal site.</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" x-data="{acceptTerms: false}">
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
-          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-562148937" x-model="acceptTerms" />
-<label for="id-562148937">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
-</p>
-          <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
-        </form>
-      </div>
-
-      
-      <div x-show="tab === 'card'" x-cloak>
-        <div x-data="{amount: 15, currency: 'EUR', frequency: 'once', oneTimePayment: null, oneTimePaymentStatus: {validCardNum: false, captcha: null, errorMessage: '', inProgress: false, success: false}, recurringPayment: new RecurringPayment(), acceptTerms: false}" x-init="oneTimePayment = new OneTimePayment(oneTimePaymentStatus)">
-          <div class="flex flex-wrap md:flex-no-wrap">
-            <div class="w-full mb-4 md:w-1/2 md:pr-3">
-              <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Amount</label>
-              <div class="flex items-center rounded bg-gray-300">
-                <div class="flex-shrink-0 relative text-gray-700 w-16">
-                  <select x-model="currency" class="appearance-none w-full rounded-r-none bg-gray-300 px-3">
-                    <option value="EUR">€</option>
-                    <option value="USD">$</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3">
-                    <i class="fas fa-chevron-down text-xs"></i>
-                  </div>
-                </div>
-                <input type="number" min="1" step="1" x-model="amount" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 1" required/>
-                <div class="flex-shrink-0 text-gray-700 px-3">.00</div>
-              </div>
-            </div>
-
-            <div class="w-full mb-4 md:w-1/2 md:pl-3">
-              <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Frequency</label>
-              <div class="flex">
-                <button class="w-1/2 py-2 border border-gray-300 rounded-l bg-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-400 focus:bg-gray-400 focus:border-secondary focus:outline-none" :class="{'border-gray-400 bg-gray-400 text-gray-800 font-bold': frequency === 'once'}" @click="frequency = 'once'">
-                  <i class="fas fa-check" x-show="frequency === 'once'"></i>
-                  One-Time
-                </button>
-                <button class="w-1/2 py-2 border border-gray-300 rounded-r bg-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-400 focus:bg-gray-400 focus:border-secondary focus:outline-none" :class="{'border-gray-400 bg-gray-400 text-gray-800 font-bold': frequency === 'recurring'}" @click="frequency = 'recurring'">
-                  <i class="fas fa-check" x-show="frequency === 'recurring'"></i>
-                  Monthly
-                </button>
-              </div>
-            </div>
+      <section x-data="{showForm: false}" class="w-full py-6 lg:w-1/2 lg:pl-3">
+        <div class="rounded shadow bg-white">
+          <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+            <h2>Just donate</h2>
           </div>
-
-          <div x-show="frequency === 'once'">
-            <div class="mb-4">
-              <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Credit Card</label>
-              <div> 
-                <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none focus:outline-none" x-on:focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Loading…', 'en')"/>
-              </div>
-            </div>
-
-            <div class="text-center mt-8" x-show="!oneTimePaymentStatus.success">
-              <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
-
-              <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-827549613" x-model="acceptTerms" />
-<label for="id-827549613">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
-</p>
-
-              <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
-                <button x-bind:disabled="!oneTimePaymentStatus.validCardNum" x-on:click="oneTimePayment.loadRecaptcha($refs.captchaWrapper)" class="btn btn-primary w-full md:w-64">Continue…</button>
-              </div>
-
-              <button x-show="oneTimePaymentStatus.captcha" x-bind:disabled="oneTimePaymentStatus.inProgress || !acceptTerms" x-on:click="oneTimePayment.charge(amount, currency)" class="btn btn-primary w-full md:w-64">
-                <i class="fas fa-credit-card"></i>
-                Pay Now
-                <i class="fas fa-spinner fa-spin" x-show="oneTimePaymentStatus.inProgress" aria-hidden="true"></i>
-              </button>
-
-              <p class="text-sm text-red-600 mt-2" x-text="oneTimePaymentStatus.errorMessage"></p>
-            </div>
-
-            <p class="text-lg text-center mt-8" x-show="oneTimePaymentStatus.success">👍 Your payment was successful!</p>
-          </div>
-
-          <div x-show="frequency === 'recurring'" class="text-center">
-            <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
-            <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-248156937" x-model="acceptTerms" />
-<label for="id-248156937">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
-</p>
-            <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'en')" x-bind:disabled="!acceptTerms">
-              <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
+          <div class="p-4">
+            <ul class="fa-ul mb-4">
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Support Cryptomator&#39;s open-source development</li>
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Choose your preferred payment method</li>
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-exclamation-triangle text-orange-500" aria-hidden="true"></i></span>No donation key</li>
+            </ul>
+            <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
+              <i class="fas fa-hand-point-right"></i> Proceed
             </button>
+          </div>
+          <div x-show="showForm" x-cloak>
+            <div x-data="{ tab: 'paypal' }">
+  <div class="flex justify-center border-b pt-2 border-primary text-lg text-gray-500">
+    <button @click="tab = 'paypal'" :class="{'border-primary text-primary bg-white': tab === 'paypal'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
+      <i class="fab fa-paypal" aria-hidden="true"></i>
+      <span :class="{'hidden md:inline-block': tab !== 'paypal'}">PayPal</span>
+    </button>
+    <button @click="tab = 'card'" :class="{'border-primary text-primary bg-white': tab === 'card'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
+      <i class="fas fa-credit-card" aria-hidden="true"></i>
+      <span :class="{'hidden md:inline-block': tab !== 'card'}">Credit Card</span>
+    </button>
+    <button @click="tab = 'bank'" :class="{'border-primary text-primary bg-white': tab === 'bank'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
+      <i class="fas fa-landmark" aria-hidden="true"></i>
+      <span :class="{'hidden md:inline-block': tab !== 'bank'}">Bank Transfer</span>
+    </button>
+    <button @click="tab = 'crypto'" :class="{'border-primary text-primary bg-white': tab === 'crypto'}" class="border border-b-0 border-transparent rounded-t px-4 py-2 -m-px hover:text-primary focus:text-primary focus:outline-none">
+      <i class="fas fa-alien-monster" aria-hidden="true"></i>
+      <span :class="{'hidden md:inline-block': tab !== 'crypto'}">Crypto</span>
+    </button>
+  </div>
+  <div class="px-4 py-8">
+
+    
+    <div x-show="tab === 'paypal'" class="text-center">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">After pressing &#34;Proceed&#34;, you will be redirected to our PayPal site.</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" x-data="{acceptTerms: false}">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
+        <input type="hidden" name="amount" value="15" />
+        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-972583146" x-model="acceptTerms" />
+<label for="id-972583146">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+</p>
+        <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
+      </form>
+    </div>
+
+    
+    <div x-show="tab === 'card'" x-cloak>
+      <div x-data="{amount: 15, currency: 'EUR', frequency: 'once', oneTimePayment: null, oneTimePaymentStatus: {validCardNum: false, captcha: null, errorMessage: '', inProgress: false, success: false}, recurringPayment: new RecurringPayment(), acceptTerms: false}" x-init="oneTimePayment = new OneTimePayment(oneTimePaymentStatus)">
+        <div class="flex flex-wrap md:flex-no-wrap">
+          <div class="w-full mb-4 md:w-1/2 md:pr-3">
+            <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Amount</label>
+            <div class="flex items-center rounded bg-gray-300">
+              <div class="flex-shrink-0 relative text-gray-700 w-16">
+                <select x-model="currency" class="appearance-none w-full rounded-r-none bg-gray-300 px-3">
+                  <option value="EUR">€</option>
+                  <option value="USD">$</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3">
+                  <i class="fas fa-chevron-down text-xs"></i>
+                </div>
+              </div>
+              <input type="number" min="1" step="1" x-model="amount" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 1" required/>
+              <div class="flex-shrink-0 text-gray-700 px-3">.00</div>
+            </div>
+          </div>
+
+          <div class="w-full mb-4 md:w-1/2 md:pl-3">
+            <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Frequency</label>
+            <div class="flex">
+              <button class="w-1/2 py-2 border border-gray-300 rounded-l bg-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-400 focus:bg-gray-400 focus:border-secondary focus:outline-none" :class="{'border-gray-400 bg-gray-400 text-gray-800 font-bold': frequency === 'once'}" @click="frequency = 'once'">
+                <i class="fas fa-check" x-show="frequency === 'once'"></i>
+                One-Time
+              </button>
+              <button class="w-1/2 py-2 border border-gray-300 rounded-r bg-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-400 focus:bg-gray-400 focus:border-secondary focus:outline-none" :class="{'border-gray-400 bg-gray-400 text-gray-800 font-bold': frequency === 'recurring'}" @click="frequency = 'recurring'">
+                <i class="fas fa-check" x-show="frequency === 'recurring'"></i>
+                Monthly
+              </button>
+            </div>
           </div>
         </div>
 
-        
-          
-          <script type="text/javascript" src="/js/cardpayments.min.c513b29e4b3c99627454d153b8a3ded75cbce855da5b6f5b89326e864007041b.js" integrity="sha256-xROynks8mWJ0VNFTuKPe11y86FXaW29biTJuhkAHBBs=" defer></script>
-        
-      </div>
+        <div x-show="frequency === 'once'">
+          <div class="mb-4">
+            <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Credit Card</label>
+            <div> 
+              <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none focus:outline-none" x-on:focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Loading…', 'en')"/>
+            </div>
+          </div>
 
-      
-      <div x-show="tab === 'bank'" x-cloak>
-        <dl class="flex flex-wrap items-baseline mb-4">
-          <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">Recipient</dt>
-          <dd class="text-sm md:text-base leading-relaxed text-gray-700 mb-4 md:w-2/3 md:mb-0">Skymatic GmbH</dd>
-          <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">IBAN</dt>
-          <dd class="text-sm md:text-base leading-relaxed text-gray-700 mb-4 md:w-2/3 md:mb-0">
-            <span>DE04</span><span class="ml-2">7002</span><span class="ml-2">2200</span><span class="ml-2">0020</span><span class="ml-2">1862</span><span class="ml-2">59</span>
-          </dd>
-          <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">BIC</dt>
-          <dd class="text-sm md:text-base leading-relaxed text-gray-700 md:w-2/3">FDDODEMMXXX</dd>
-        </dl>
-        <p class="text-sm md:text-base leading-relaxed text-gray-700 text-center">By transferring, I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</p>
-      </div>
+          <div class="text-center mt-8" x-show="!oneTimePaymentStatus.success">
+            <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
-      
-      <div x-show="tab === 'crypto'" x-cloak class="text-center">
-        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Select the crypto currency in the next step. After pressing &#34;Proceed&#34;, you will be redirected to our CoinPayments site.</p>
-        <form action="https://www.coinpayments.net/index.php" method="post" target="_top" x-data="{acceptTerms: false}">
-          <input type="hidden" name="cmd" value="_donate" />
-          <input type="hidden" name="reset" value="1" />
-          <input type="hidden" name="merchant" value="963d3aa90995dc5542113e7801e31e2a" />
-          <input type="hidden" name="item_name" value="Cryptomator Donation" />
-          <input type="hidden" name="want_shipping" value="0" />
-          <input type="hidden" name="amountf" value="15" />
-          <input type="hidden" name="currency" value="EUR" />
-          <input type="hidden" name="allow_amount" value="1" />
-          <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
-          <input type="hidden" name="allow_extra" value="1" />
-          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-385927641" x-model="acceptTerms" />
-<label for="id-385927641">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+            <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-796538412" x-model="acceptTerms" />
+<label for="id-796538412">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
-          <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
-        </form>
+
+            <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
+              <button x-bind:disabled="!oneTimePaymentStatus.validCardNum" x-on:click="oneTimePayment.loadRecaptcha($refs.captchaWrapper)" class="btn btn-primary w-full md:w-64">Continue…</button>
+            </div>
+
+            <button x-show="oneTimePaymentStatus.captcha" x-bind:disabled="oneTimePaymentStatus.inProgress || !acceptTerms" x-on:click="oneTimePayment.charge(amount, currency)" class="btn btn-primary w-full md:w-64">
+              <i class="fas fa-credit-card"></i>
+              Pay Now
+              <i class="fas fa-spinner fa-spin" x-show="oneTimePaymentStatus.inProgress" aria-hidden="true"></i>
+            </button>
+
+            <p class="text-sm text-red-600 mt-2" x-text="oneTimePaymentStatus.errorMessage"></p>
+          </div>
+
+          <p class="text-lg text-center mt-8" x-show="oneTimePaymentStatus.success">👍 Your payment was successful!</p>
+        </div>
+
+        <div x-show="frequency === 'recurring'" class="text-center">
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-487162593" x-model="acceptTerms" />
+<label for="id-487162593">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+</p>
+          <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'en')" x-bind:disabled="!acceptTerms">
+            <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
+          </button>
+        </div>
       </div>
+
+      
+        
+        <script type="text/javascript" src="/js/cardpayments.min.c513b29e4b3c99627454d153b8a3ded75cbce855da5b6f5b89326e864007041b.js" integrity="sha256-xROynks8mWJ0VNFTuKPe11y86FXaW29biTJuhkAHBBs=" defer></script>
       
     </div>
-  </div>
 
+    
+    <div x-show="tab === 'bank'" x-cloak>
+      <dl class="flex flex-wrap items-baseline mb-4">
+        <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">Recipient</dt>
+        <dd class="text-sm md:text-base leading-relaxed text-gray-700 mb-4 md:w-2/3 md:mb-0">Skymatic GmbH</dd>
+        <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">IBAN</dt>
+        <dd class="text-sm md:text-base leading-relaxed text-gray-700 mb-4 md:w-2/3 md:mb-0">
+          <span>DE04</span><span class="ml-2">7002</span><span class="ml-2">2200</span><span class="ml-2">0020</span><span class="ml-2">1862</span><span class="ml-2">59</span>
+        </dd>
+        <dt class="block uppercase tracking-wide text-gray-600 text-xs font-bold w-full md:text-right md:w-1/3 md:pr-2">BIC</dt>
+        <dd class="text-sm md:text-base leading-relaxed text-gray-700 md:w-2/3">FDDODEMMXXX</dd>
+      </dl>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 text-center">By transferring, I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</p>
+    </div>
+
+    
+    <div x-show="tab === 'crypto'" x-cloak class="text-center">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Select the crypto currency in the next step. After pressing &#34;Proceed&#34;, you will be redirected to our CoinPayments site.</p>
+      <form action="https://www.coinpayments.net/index.php" method="post" target="_top" x-data="{acceptTerms: false}">
+        <input type="hidden" name="cmd" value="_donate" />
+        <input type="hidden" name="reset" value="1" />
+        <input type="hidden" name="merchant" value="963d3aa90995dc5542113e7801e31e2a" />
+        <input type="hidden" name="item_name" value="Cryptomator Donation" />
+        <input type="hidden" name="want_shipping" value="0" />
+        <input type="hidden" name="amountf" value="15" />
+        <input type="hidden" name="currency" value="EUR" />
+        <input type="hidden" name="allow_amount" value="1" />
+        <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
+        <input type="hidden" name="allow_extra" value="1" />
+        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-954132867" x-model="acceptTerms" />
+<label for="id-954132867">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+</p>
+        <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+          </div>
         </div>
       </section>
 
-      <section x-data="{showForm: false}" class="w-full py-8 lg:w-1/2 lg:pr-3">
-        <h2 class="font-headline font-medium text-xl md:text-2xl leading-snug mb-4">Buy a donation key</h2>
-        <ul class="fa-ul mb-4">
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Register your software and unlock dark mode</li>
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Some might say it&#39;s an awesome people certificate</li>
-          <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Get an invoice</li>
-        </ul>
-        <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
-          <i class="fas fa-hand-point-right"></i> Proceed
-        </button>
-        <div x-show="showForm" x-cloak>
-          <div x-data="{checkoutData: {quantity: 1, amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}" class="rounded shadow bg-white px-4 py-8">
+      <section x-data="{showForm: false}" class="w-full py-6 lg:w-1/2 lg:pr-3">
+        <div class="rounded shadow bg-white">
+          <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+            <h2>Buy a donation key</h2>
+          </div>
+          <div class="p-4">
+            <ul class="fa-ul mb-4">
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Register your software and unlock dark mode</li>
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Some might say it&#39;s an awesome people certificate</li>
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Get an invoice</li>
+            </ul>
+            <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
+              <i class="fas fa-hand-point-right"></i> Proceed
+            </button>
+          </div>
+          <div x-show="showForm" x-cloak>
+            <div x-data="{checkoutData: {quantity: 1, amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}" class="px-4 pt-2 pb-8">
   <form x-show="!checkoutData.success" x-ref="form">
     <div class="flex flex-wrap md:flex-no-wrap">
       <div class="w-full mb-4 md:w-1/2 md:pr-3">
@@ -339,8 +351,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-162539874" x-model="acceptTerms" />
-<label for="id-162539874">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-812573964" x-model="acceptTerms" />
+<label for="id-812573964">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -363,6 +375,7 @@
   <script type="text/javascript" src="/js/desktopkey.min.4fb6183496e0e33cd3fda22c88b4a419a54be20efdcb16d044715c2645156dc6.js" integrity="sha256-T7YYNJbg4zzT/aIsiLSkGaVL4g79yxbQRHFcJkUVbcY=" defer></script>
 
 
+          </div>
         </div>
       </section>
     </div>
