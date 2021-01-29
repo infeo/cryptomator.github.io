@@ -818,34 +818,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/de/privacy-android/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/privacy-android/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/privacy-android/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/de/privacy-ios/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/privacy-ios/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/privacy-ios/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/downloads/</loc>
     <xhtml:link
                 rel="alternate"
