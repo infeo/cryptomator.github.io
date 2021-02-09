@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-316845279" x-model="acceptTerms" />
-<label for="id-316845279">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-192785643" x-model="acceptTerms" />
+<label for="id-192785643">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -188,7 +188,7 @@
     <div class="px-4 py-8" x-data="{showShaSignature: false}">
       <img class="inline-block mb-4" src="/img/android/app-icon.png" srcset="/img/android/app-icon.png 1x, /img/android/app-icon@2x.png 2x"/>
       <div class="prose prose-sm max-w-none md:max-w-none mb-4">
-        <p>Version 1.5.11 • Minimum: Android 4.3</p>
+        <p>Version 1.5.11 • Minimum: Android 6.0</p>
       </div>
       <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.11/Cryptomator-1.5.11.apk" role="button">
         <span class="fas fa-download" aria-hidden="true"></span> Download
