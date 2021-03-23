@@ -129,7 +129,7 @@
     
     <div class="flex flex-wrap">
       <section class="w-full py-6 lg:w-1/2 lg:pr-3">
-        <div x-data="{checkoutData: {productId: 578277, price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
+        <div x-data="{checkoutData: {price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
   <div class="prose prose-sm max-w-none md:max-w-none px-4 py-2 border-b border-primary text-center">
     <h3>Buy a license key</h3>
   </div>
@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-382761495" x-model="acceptTerms" />
-<label for="id-382761495">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-327981456" x-model="acceptTerms" />
+<label for="id-327981456">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -166,7 +166,7 @@
 
 
   
-  <script type="text/javascript" src="/js/androidkey.min.fca7f7b1ccc978f41fbfe98ad394fa849e0b24736910aa82bf0f6b59382ec2de.js" integrity="sha256-/Kf3sczJePQfv&#43;mK05T6hJ4LJHNpEKqCvw9rWTguwt4=" defer></script>
+  <script type="text/javascript" src="/js/androidkey.min.9afdd32a7c258a7fd2bd54d1a4c7d544624000766b95e6b996febd7ff0daf53d.js" integrity="sha256-mv3TKnwlin/SvVTRpMfVRGJAAHZrlea5lv69f/Da9T0=" defer></script>
 
 
       </section>
