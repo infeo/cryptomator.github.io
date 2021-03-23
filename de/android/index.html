@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-214796835" x-model="acceptTerms" />
-<label for="id-214796835">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-783516249" x-model="acceptTerms" />
+<label for="id-783516249">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
@@ -160,13 +160,14 @@
     <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Zahlung war erfolgreich!</h3>
     <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Lizenzschlüssel</label>
     <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
+    <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mb-2" x-text="checkoutData.errorMessage"></p>
     <p class="text-sm md:text-base leading-relaxed text-gray-700">Dies ist dein Lizenzschlüssel. Gib ihn in der Cryptomator-App ein. Der Lizenzschlüssel wurde auch an deine E-Mail-Adresse geschickt.</p>
   </div>
 </div>
 
 
   
-  <script type="text/javascript" src="/js/androidkey.min.9afdd32a7c258a7fd2bd54d1a4c7d544624000766b95e6b996febd7ff0daf53d.js" integrity="sha256-mv3TKnwlin/SvVTRpMfVRGJAAHZrlea5lv69f/Da9T0=" defer></script>
+  <script type="text/javascript" src="/js/androidkey.min.a6cef80d9edddd515f1911105f8ac35ff2fc69f4028447fcb93d0156ba4e8efa.js" integrity="sha256-ps74DZ7d3VFfGREQX4rDX/L8afQChEf8uT0BVrpOjvo=" defer></script>
 
 
       </section>

@@ -3,6 +3,5 @@ window.Paddle.Setup({vendor:PADDLE_VENDOR_ID});return window.Paddle;});}
 loadPrice(){this._paddle.then(paddle=>{paddle.Product.Prices(ANDROID_PRODUCT_ID,prices=>{this._checkoutData.price=prices.price.gross;});});}
 checkout(locale){if(!$(this._form)[0].checkValidity()){$(this._form).find(':input').addClass('show-invalid');return;}
 this._checkoutData.inProgress=true;this._checkoutData.errorMessage='';this._checkoutData.success=false;this._paddle.then(paddle=>{paddle.Checkout.open({product:ANDROID_PRODUCT_ID,email:this._checkoutData.email,allowQuantity:false,locale:locale,successCallback:data=>{this.onCheckoutSucceeded();this.getPaddleOrderDetails(data.checkout.id)},closeCallback:()=>{this._checkoutData.inProgress=false;}});});}
-getPaddleOrderDetails(checkoutId){this._paddle.then(paddle=>{paddle.Order.details(checkoutId,data=>{this._checkoutData.licenseKey=data.lockers[0].license_code;});});}
-onCheckoutFailed(error){this._checkoutData.success=false;this._checkoutData.errorMessage=error;this._checkoutData.inProgress=false;}
+getPaddleOrderDetails(checkoutId){this._paddle.then(paddle=>{paddle.Order.details(checkoutId,data=>{let licenseKey=data.lockers?.[0]?.license_code;if(licenseKey){this._checkoutData.licenseKey=licenseKey;}else{this._checkoutData.errorMessage='Retrieving license key failed. Please check your emails instead.';}});});}
 onCheckoutSucceeded(){this._checkoutData.success=true;this._checkoutData.errorMessage='';this._checkoutData.inProgress=false;}}
