@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-834967251" x-model="acceptTerms" />
-<label for="id-834967251">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-134987562" x-model="acceptTerms" />
+<label for="id-134987562">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
@@ -224,7 +224,7 @@
 
     <div x-show="data.success" x-cloak>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">👍 Wir haben dir die Details zu deinen vergangenen Transaktionen und Lizenzen per E-Mail zugesandt.</p>
-      <p class="text-sm md:text-base leading-relaxed text-gray-700">❓ Wenn du keine E-Mail bekommen hast, <a class="text-primary no-underline hover:underline" href="mailto:sales@cryptomator.org">kontaktiere uns</a>.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700">❓ Wenn du keine E-Mail bekommen hast, <a class="text-primary no-underline hover:underline" href="mailto:support@cryptomator.org">kontaktiere uns</a>.</p>
     </div>
   </section>
 
