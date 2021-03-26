@@ -231,6 +231,25 @@
 
   </div>
 
+  <section x-data="{data: {email: '', errorMessage: '', success: false, inProgress: false}}" class="container text-center py-12 pb-24">
+    <h2 class="font-headline font-medium text-xl md:text-2xl leading-snug mb-4">Let&#39;s stay in touch</h2>
+
+    <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Subscribe to our mailing list or follow <a class="text-primary no-underline hover:underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">@Cryptomator</a> on Twitter.</p>
+      <div class="flex justify-center items-center rounded bg-gray-300">
+        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none bg-white" placeholder="Email address" required/>
+        <button x-bind:disabled="!$refs.form.checkValidity() || data.inProgress" x-on:click="$event.preventDefault(); new Newsletter($refs.form, data).subscribe()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
+          <i x-show="!data.inProgress" class="fas fa-envelope fa-fw" aria-hidden="true"></i><i x-show="data.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Subscribe
+        </button>
+      </div>
+      <p :class="{'hidden': !data.errorMessage}" class="text-sm text-red-600 mt-2" x-text="data.errorMessage"></p>
+    </form>
+
+    <div x-show="data.success" x-cloak>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">💌 Thank you for subscribing! A confirmation link has been sent to your email address.</p>
+    </div>
+  </section>
+
   <div class="bg-dark text-white leading-relaxed">
     <section class="container text-center py-12 md:py-16 lg:py-20">
       <h2 class="font-headline font-medium text-xl md:text-2xl leading-snug mb-8 md:mb-12 lg:mb-16">Brands Trusting our Technology</h2>
@@ -466,6 +485,8 @@
   
     
     <script type="text/javascript" src="/js/index.min.3248d923e6032c8f1b0fc445ca433a80e39e72252708add05fe754149d0554cf.js" integrity="sha256-MkjZI&#43;YDLI8bD8RFykM6gOOeciUnCK3QX&#43;dUFJ0FVM8=" defer></script>
+    
+    <script type="text/javascript" src="/js/newsletter.min.3a9729544239f847ccc5e1912d6a877fc322ce13771b9b21c54b74c2a7525c36.js" integrity="sha256-OpcpVEI5&#43;EfMxeGRLWqHf8MizhN3G5shxUt0wqdSXDY=" defer></script>
   
 
     </div>
