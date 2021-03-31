@@ -255,6 +255,81 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/de/blog/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/de/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/de/tags/event/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/event/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/de/tags/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/de/blog/2021/03/31/world-backup-day/</loc>
+    <lastmod>2021-03-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2021/03/31/world-backup-day/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2021/03/31/world-backup-day/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/de/tags/android/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -266,21 +341,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/tags/android/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/de/blog/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/blog/"
                 />
   </url>
   
@@ -300,21 +360,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/de/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/de/blog/2020/12/23/android-open-source/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -326,21 +371,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cryptomator.org/de/blog/2020/12/23/android-open-source/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/de/tags/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/"
                 />
   </url>
   

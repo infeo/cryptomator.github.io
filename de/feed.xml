@@ -11,8 +11,30 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/</link>
     </image>
-    <lastBuildDate>Wed, 31 Mar 2021 12:03:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Mar 2021 14:55:20 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>World Backup Day: So geht ihr auf Nummer sicher</title>
+        <description>&lt;p&gt;Grundsätzlich gibt es zwei Arten von Menschen: Diejenigen, die regelmäßig Backups erstellen und die, die noch nie Daten verloren haben. Anlässlich des „World Backup Days“ wollen wir euch erklären, wieso ihr drüber nachdenken solltet, regelmäßig ein Backup zu erstellen, auch wenn ihr selbst bisher noch Glück gehabt habt.&lt;/p&gt;
+&lt;h2 id=&#34;was-macht-ein-backup-eigentlich&#34;&gt;Was macht ein Backup eigentlich?&lt;/h2&gt;
+&lt;p&gt;Ganz generell ist ein Backup eine Sicherheitskopie eurer Daten. Das können euer Handy, euer Laptop, eure Festplatte, Familienfotos etc. sein. Sollte euer Gerät aus etwaigen Gründen mal nicht mehr funktionieren, sind eure Daten also nicht verloren, sofern ihr ein Backup erstellt habt. Daher ist es empfehlenswert, die Daten im regelmäßigen Abstand zu sichern, um größere Verluste zu verhindern.&lt;/p&gt;
+&lt;h2 id=&#34;wie-erstelle-ich-ein-backup&#34;&gt;Wie erstelle ich ein Backup?&lt;/h2&gt;
+&lt;p&gt;Wichtig bei einem Backup ist, dass eure Daten an einem externen Ort gespeichert werden. Im klassischen Sinne verstehen viele noch das Backup auf einem externen Datenträger, wie einer Festplatte. Diese unterliegt der moderneren Cloud-Variante allerdings in zwei elementaren Punkten.&lt;/p&gt;
+&lt;p&gt;Generell hat jedes Gerät eine gewisse prozentuale Ausfallwahrscheinlichkeit. Bei einer Festplatte kann diese &lt;a href=&#34;https://en.wikipedia.org/wiki/Hard_disk_drive_failure#Metrics_of_failures&#34;&gt;Ausfallwahrscheinlichkeit&lt;/a&gt; auf ein Jahr gerechnet bspw. zwischen 1,7% (im ersten Jahr) und 8,6% (im dritten Jahr) liegen, mögliche äußerliche Umstände wie Feuer- oder Wasserschaden sind darauf noch nicht eingerechnet. Natürlich kann man auch ein Backup auf mehreren Festplatten erstellen, je mehr man verwendet, desto niedriger die Ausfallwahrscheinlichkeit.&lt;/p&gt;
+&lt;p&gt;Ein weiterer Risikofaktor bei externen Festplatten ist die fehlende geografische Redundanz, kurz die Ortsunabhängigkeit. Sprich, wenn dein Haus Feuer fängt, sind in diesem Fall sowohl dein Computer als auch das Backup auf der Festplatte hinüber. Das ist natürlich relativ drastisch ausgedrückt, aber das Prinzip wird klar. Die geografische Redundanz ist durch die Speicherungen der Daten auf den Servern der Cloud-Anbieter stets gegeben, sie befinden sich auf Servern, die nicht selten geografisch auf der ganzen Welt verteilt sind.&lt;/p&gt;
+&lt;p&gt;Das Problem der Ausfallwahrscheinlichkeit wird durch &lt;a href=&#34;https://de.wikipedia.org/wiki/Mean_Time_Between_Failures#Parallelschaltung&#34;&gt;Parallelschaltungen&lt;/a&gt; minimiert. Kurzum bedeutet das, dass mehrere funktionsgleiche, redundante Kopien des Backups gleichzeitig existieren, jedoch von diesen nur eine funktionieren muss, um die Backup-Daten verfügbar zu machen. Man kann sich das etwa wie eine Spiegelung der Daten vorstellen, mit jeder Spiegelung sinkt das Risiko des Datenverlusts.&lt;/p&gt;
+&lt;h2 id=&#34;wie-schütze-ich-mein-backup-in-der-cloud&#34;&gt;Wie schütze ich mein Backup in der Cloud?&lt;/h2&gt;
+&lt;p&gt;Generell sind eure Daten in der Cloud hinter einem Account geschützt. Jedoch werden sie natürlich immer noch auf Servern gespeichert und sind damit nie zu 100% sicher vor fremdem Zugriff. Mithilfe von Cloud-Verschlüsselung könnt ihr die Sicherheit der Daten jedoch selbst in die Hand nehmen. Mit Cryptomator erstellt ihr eine Art „magischen“ Tresor, auf den nur zugegriffen werden kann, wer auch das entsprechende Passwort zum Öffnen des Tresors hat. So können Angreifer theoretisch zwar immer noch auf die Cloud zugreifen, können mit den verschlüsselten Daten aber nichts anfangen.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/de/downloads/&#34;&gt;Hier&lt;/a&gt; könnt ihr Cryptomator kostenfrei herunterladen.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/03/31/world-backup-day/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/03/31/world-backup-day/</guid>
+        
+        <category>event</category>
+        
+      </item>
     
       <item>
         <title>Open Source: Cryptomator für Android</title>
@@ -301,36 +323,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>cryptomator</category>
         
         <category>sponsors</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Early 2018</title>
-        <description>&lt;p&gt;Da verständlicherweise nicht alle unsere Nutzer alle Entwicklungsaktivitäten auf GitHub verfolgen können, möchte ich an dieser Stelle ein paar Absätze dazu schreiben, welche technischen Neuerungen 2018 bei Cryptomator anstehen und wie sie sich auf die Nutzung auswirken.&lt;/p&gt;
-&lt;h3 id=&#34;fuse&#34;&gt;FUSE&lt;/h3&gt;
-&lt;p&gt;Die größte anstehende Änderung ist die Implementierung von FUSE-basierten Laufwerken. Diese wird es &lt;em&gt;zusätzlich&lt;/em&gt; zu WebDAV geben und sie werden die neue Standardeinstellung werden. Die &lt;a href=&#34;https://github.com/cryptomator/fuse-nio-adapter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notwendige Bibliothek&lt;/a&gt; entwicklen wir gerade. Sie basiert auf &lt;a href=&#34;https://github.com/SerCeMan/jnr-fuse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;jnr-fuse&lt;/a&gt;, was bedeutet, dass &lt;em&gt;FUSE for macOS&lt;/em&gt; bzw. unter Windows &lt;em&gt;WinFsp&lt;/em&gt; installiert sein muss. Der Linux-Kernel unterstützt FUSE out-of-the-box.&lt;/p&gt;
-&lt;p&gt;Eine große Baustelle ist derzeit noch, wie wir &lt;em&gt;WinFsp&lt;/em&gt; bzw. &lt;em&gt;FUSE for macOS&lt;/em&gt; im Installer mit einbinden. Erste Testversionen werden daher vmtl. die manuelle Installation genannter Bibliotheken erfordern.&lt;/p&gt;
-&lt;p&gt;Der Benefit vom Einsatz von FUSE liegt neben Performancesteigerungen (die im derzeitigen Entwicklungsstand für einige Datei-/Verzeichnis-Operationen schon deutlich messbar sind) vor allem in der zu erwartenden Steigerung der Kompatibilität mit Drittanbietersoftware. Probleme im Zusammenhang mit dem WebDAV-Laufwerk gibt es einige, wie sich in &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues?q=is%3Aopen&amp;#43;is%3Aissue&amp;#43;label%3Amisc%3Awebdav&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;unserer Issue-Liste sehen lässt&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;java-9&#34;&gt;Java 9&lt;/h3&gt;
-&lt;p&gt;Über die Weihnachtstage habe ich sämtliche Bibliotheken sowie der Desktop-Anwendung kompatibel zu Java 9 gemacht. Unsere &lt;a href=&#34;https://travis-ci.org/cryptomator/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CI-Builds&lt;/a&gt; laufen jetzt einheitlich mit JDK 9 in Containern. Der Code wird aber weiterhin für ältere Java-Versionen kompiliert, nicht zuletzt weil unsere Android-App darauf angewiesen ist.&lt;/p&gt;
-&lt;p&gt;Was soll das bringen? Java 9 ist ein Riesenschritt in der Entwicklung der Java-Platform. Neben diversen Bugfixes, von denen Cryptomator-Nutzer direkt profitieren, z.B. der besseren Unterstützung von HiDPI-Displays unter Windows und Linux, gab es massive Refactorings, welche die Grundlage für ein neues Release-Modell der Java-Platform mit neuen &lt;a href=&#34;https://blogs.oracle.com/java-platform-group/faster-and-easier-use-and-redistribution-of-java-se&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feature-Releases im Sechs-Monatstakt&lt;/a&gt; bildet. Das bedeutet, dass wir zukünftig schneller von neuen Features profitieren können, ohne auf unstabile Testversionen setzen zu müssen.&lt;/p&gt;
-&lt;p&gt;Die Umstellung auf Java 9 mit Cryptomator 1.4.0 ist aber auch Grundlage für die Nutzung des Java Platform Module Systems ab Cryptomator 1.5.0, wodurch &lt;a href=&#34;http://openjdk.java.net/jeps/275&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;deutlich kleinere Anwendungen&lt;/a&gt; gebaut werden können. In einem ersten Test konnte die Größe der Cryptomator-Anwendung für macOS von über 200 MiB (im installierten Zustand) auf ca. 70 MiB reduziert werden.&lt;/p&gt;
-&lt;h3 id=&#34;intellij&#34;&gt;IntelliJ&lt;/h3&gt;
-&lt;p&gt;Unsere Build-Platform haben wir von Eclipse auf IntelliJ gewechselt, da die mit JDK 9 kompatiblen Versionen von Eclipse Änderungen am Compiler beinhalten, welche nicht mit dem &lt;a href=&#34;https://github.com/google/dagger/issues/949&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;von Dagger generierten Code klar kamen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Des Weiteren sind unsere Android-Entwickler ohnehin IntelliJ gewohnt, so dass wir hier unsere Werkzeuge etwas harmonisieren können.&lt;/p&gt;
-&lt;h3 id=&#34;64-bit&#34;&gt;64 Bit&lt;/h3&gt;
-&lt;p&gt;Da sowohl WinFsp als auch JDK 9 64 Bit erfordern, wird Cryptomator ab Version 1.4.0 keine 32-Bit-Systeme mehr unterstützen. Dies ist zwar einerseits schade, beschleunigt aber auch den Entwicklungsprozess, da weniger Systeme getestet werden müssen.&lt;/p&gt;
-&lt;p&gt;Cryptomator 1.3.x wird 100% kompatibel zu 1.4.0 sein. Das heißt, dass Nutzer, die auf 32-Bit-Software angewiesen sind, auch weiterhin Cryptomator-Tresore nutzen können.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Fanden Sie diesen Einblick interessant? Sollen wir künftig zu jedem größeren Meilenstein einen Ausblick geben? Gerne würden wir Ihre Meinung in den Kommentaren hören!&lt;/p&gt;
-</description>
-        <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2018/01/07/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2018/01/07/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
         
       </item>
     
