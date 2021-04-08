@@ -11,14 +11,14 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/sponsors/</link>
     </image>
-    <lastBuildDate>Thu, 08 Apr 2021 13:08:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Apr 2021 13:23:40 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
         <title>Cryptomator Roadmap Early 2021</title>
         <description>&lt;p&gt;Die Arbeiten an Cryptomator 1.5.x neigen sich allmählich dem Ende zu und wir widmen uns nun der nächsten größeren Version 1.6.x. Mehr dazu gibt&amp;rsquo;s in dieser Roadmap!&lt;/p&gt;
 &lt;h2 id=&#34;stand-der-desktop-app&#34;&gt;Stand der Desktop-App&lt;/h2&gt;
-&lt;p&gt;Das Update auf die Version 1.6.0 steht vor der Tür! Das Release wird vor allem einige unsichtbare Änderungen enthalten, die es uns ermöglichen, zeitnah neue Features einzubauen. Einer der Hauptpunkte hierbei ist, ein neues Tresorformat zu implementieren (Vault Format 8). Besonders am neuen Tresorformat ist, dass zukünftig andere Authentifizierungsmethoden integriert werden können, um bspw. 2FA zu ermöglichen.&lt;/p&gt;
+&lt;p&gt;Das Update auf die Version 1.6.0 steht vor der Tür! Das Release wird vor allem einige unsichtbare Änderungen enthalten, die es uns ermöglichen, zeitnah neue Features einzubauen. Einer der Hauptpunkte hierbei ist, ein neues Tresorformat zu implementieren (Vault Format 8). Besonders am neuen Tresorformat ist, dass zukünftig &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/8&#34;&gt;andere Authentifizierungsmethoden&lt;/a&gt; integriert werden können, um bspw. 2FA zu ermöglichen.&lt;/p&gt;
 &lt;p&gt;Ein weiteres Feature ist die &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/7&#34;&gt;Integration von einem Sanitizer&lt;/a&gt;. Bisher wurde ein separates Programm benötigt, um den Zustand eures Tresors zu prüfen sowie Bereinigungs- und Wiederherstellungsbefehle auszuführen. Das wird künftig direkt in der Cryptomator Benutzeroberfläche möglich sein.&lt;/p&gt;
 &lt;p&gt;Außerdem gibt es nun einen Prototyp für die Auslieferung von Cryptomator als Microsoft Software Installation (.msi), die Umsetzung hat allerdings noch Alpha-Charakter. Des Weiteren haben wir Cryptomator mit dem letzten &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.14&#34;&gt;Update 1.5.14&lt;/a&gt; auf JDK 16 angehoben, was einige Upstream-Fixes mit sich bringt. Im Bezug auf Flatpak konnten wir leider keine Fortschritte erzielen.&lt;/p&gt;
 &lt;h2 id=&#34;stand-der-android-app&#34;&gt;Stand der Android-App&lt;/h2&gt;
