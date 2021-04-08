@@ -11,8 +11,38 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/cyberduck/</link>
     </image>
-    <lastBuildDate>Wed, 31 Mar 2021 14:58:41 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Apr 2021 13:08:34 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator Roadmap Early 2021</title>
+        <description>&lt;p&gt;Die Arbeiten an Cryptomator 1.5.x neigen sich allmählich dem Ende zu und wir widmen uns nun der nächsten größeren Version 1.6.x. Mehr dazu gibt&amp;rsquo;s in dieser Roadmap!&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-desktop-app&#34;&gt;Stand der Desktop-App&lt;/h2&gt;
+&lt;p&gt;Das Update auf die Version 1.6.0 steht vor der Tür! Das Release wird vor allem einige unsichtbare Änderungen enthalten, die es uns ermöglichen, zeitnah neue Features einzubauen. Einer der Hauptpunkte hierbei ist, ein neues Tresorformat zu implementieren (Vault Format 8). Besonders am neuen Tresorformat ist, dass zukünftig andere Authentifizierungsmethoden integriert werden können, um bspw. 2FA zu ermöglichen.&lt;/p&gt;
+&lt;p&gt;Ein weiteres Feature ist die &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/7&#34;&gt;Integration von einem Sanitizer&lt;/a&gt;. Bisher wurde ein separates Programm benötigt, um den Zustand eures Tresors zu prüfen sowie Bereinigungs- und Wiederherstellungsbefehle auszuführen. Das wird künftig direkt in der Cryptomator Benutzeroberfläche möglich sein.&lt;/p&gt;
+&lt;p&gt;Außerdem gibt es nun einen Prototyp für die Auslieferung von Cryptomator als Microsoft Software Installation (.msi), die Umsetzung hat allerdings noch Alpha-Charakter. Des Weiteren haben wir Cryptomator mit dem letzten &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.14&#34;&gt;Update 1.5.14&lt;/a&gt; auf JDK 16 angehoben, was einige Upstream-Fixes mit sich bringt. Im Bezug auf Flatpak konnten wir leider keine Fortschritte erzielen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-android-app&#34;&gt;Stand der Android-App&lt;/h2&gt;
+&lt;p&gt;Wie ihr vielleicht schon in unserem Blog mitbekommen habt, haben wir nun endlich den Quellcode der App veröffentlicht! Ansonsten ist auch hier das Vault Format 8 ein großes Thema in unserer Entwicklung.&lt;/p&gt;
+&lt;p&gt;Seit dem Update 1.5.14 (aktuell noch in einer Beta-Version) wird pCloud von Cryptomator nativ unterstützt. Vielen Dank an Manu für &lt;a href=&#34;https://github.com/cryptomator/android/pull/283&#34;&gt;seine Open-Source-Contribution&lt;/a&gt;! Eine weitere kleine Änderung ist, dass es seit dem &lt;a href=&#34;https://github.com/cryptomator/android/releases/tag/1.5.13&#34;&gt;Update 1.5.13&lt;/a&gt; möglich ist, die Tresorliste selbst zu sortieren und somit einen besseren Überblick über die Tresore zu bekommen.&lt;/p&gt;
+&lt;p&gt;Das ist aber nicht alles, was wir mit der Android-App vorhaben! Wir freuen uns, Cryptomator bald auch bei F-Droid veröffentlichen zu können. Außerdem hoffen wir, bald noch weitere Clouds einzubinden zu können und den Zugriff auf Inhalte des Tresors über Drittanbieter-Apps mit einem „Document Provider“ zu ermöglichen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-ios-app&#34;&gt;Stand der iOS-App&lt;/h2&gt;
+&lt;p&gt;Mit der Einführung von Vault Format 8, bekommt auch die „alte“ iOS-App voraussichtlich ihr letztes großes Update auf die Version 1.6.0.&lt;/p&gt;
+&lt;p&gt;Die Arbeiten an der „neuen“ iOS-App gehen derweil weiter. Wie bereits in der letzten Roadmap angekündigt, soll die iOS-App vollständig in die Dateien-App integriert sein. Dabei sind wir mittlerweile schon sehr weit. Trotzdem gibt es für uns noch einiges zu tun, da wir einige Features wie den Dunkelmodus oder die Unterstützung mehrerer Accounts desselben Cloud-Anbieters bereits von Anfang an anbieten wollen.&lt;/p&gt;
+&lt;p&gt;Einen genauen Release-Termin können wir euch noch nicht versprechen, wir hoffen aber, im Sommer eine erste Beta-Version über TestFlight zur Verfügung stellen zu können.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/04/08/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/04/08/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>World Backup Day: So geht ihr auf Nummer sicher</title>
@@ -302,27 +332,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>cryptomator</category>
         
         <category>desktop</category>
-        
-      </item>
-    
-      <item>
-        <title>Werden Sie Cryptomator-Sponsor</title>
-        <description>&lt;p&gt;Liebe Community,&lt;/p&gt;
-&lt;p&gt;wie Sie wissen, bieten wir Cryptomator als Pay-What-You-Want Software an und wir wollen es dabei belassen. Inzwischen sind wir zu einem kleinen Team herangewachsen, das Vollzeit an diesem Projekt arbeitet. Und wir alle müssen unsere Rechnungen bezahlen.&lt;/p&gt;
-&lt;p&gt;Dafür brauchen wir Ihre Hilfe! Wenn Sie Cryptomator in Ihrem Unternehmen einsetzen oder ein Unternehmen kennen, das Open-Source-Software einsetzt, fragen Sie bitte, ob es offizieller Sponsor von Cryptomator werden möchte. Alternativ können Sie Cryptomator durch &lt;a href=&#34;https://cryptomator.org/de/sponsors/#donate&#34;&gt;regelmäßige Spenden&lt;/a&gt; unterstützen.&lt;/p&gt;
-&lt;p&gt;Wir haben drei Sponsoring-Pakete mit unterschiedlichen Gegenleistungen für Sie vorbereitet. Besuchen Sie unsere &lt;a href=&#34;https://cryptomator.org/de/sponsors/&#34;&gt;Sponsorenseite&lt;/a&gt; für weitere Informationen.&lt;/p&gt;
-&lt;p&gt;Ihr Cryptomator-Team&lt;/p&gt;
-&lt;figure&gt;
-  &lt;img class=&#34;inline-block&#34; src=&#34;https://cryptomator.org/img/blog/cryptobot-sponsor.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptobot-sponsor.png 1x, https://cryptomator.org/img/blog/cryptobot-sponsor@2x.png 2x&#34; alt=&#34;Cryptobot Sponsor&#34; /&gt;
-&lt;/figure&gt;
-</description>
-        <pubDate>Mon, 18 Jun 2018 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2018/06/18/sponsors/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2018/06/18/sponsors/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>sponsors</category>
         
       </item>
     
