@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-372916548" x-model="acceptTerms" />
-<label for="id-372916548">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-492867531" x-model="acceptTerms" />
+<label for="id-492867531">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
@@ -177,7 +177,7 @@
   <meta itemprop="name" content="Cryptomator"/>
   <meta itemprop="description" content="A free software to encrypt your cloud files."/>
   <meta itemprop="applicationCategory" content="Productivity"/>
-  <meta itemprop="softwareVersion" content="1.5.13"/>
+  <meta itemprop="softwareVersion" content="1.5.14"/>
   <meta itemprop="applicationSubCategory" content="Encryption"/>
   <meta itemprop="image" content="https://cryptomator.org/img/logo.png"/>
   <meta itemprop="operatingSystem" content="Android"/>
@@ -189,16 +189,16 @@
     <div class="px-4 py-8" x-data="{showShaSignature: false}">
       <img class="inline-block mb-4" src="/img/android/app-icon.png" srcset="/img/android/app-icon.png 1x, /img/android/app-icon@2x.png 2x"/>
       <div class="prose prose-sm max-w-none md:max-w-none mb-4">
-        <p>Version 1.5.13 • Minimum: Android 6.0</p>
+        <p>Version 1.5.14 • Minimum: Android 6.0</p>
       </div>
-      <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.13/Cryptomator-1.5.13.apk" role="button">
+      <a class="btn btn-primary w-full md:w-48 mb-2" href="https://static.cryptomator.org/android/1.5.14/Cryptomator-1.5.14.apk" role="button">
         <span class="fas fa-download" aria-hidden="true"></span> Download
       </a>
       <p class="text-xs">
         <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="showShaSignature = !showShaSignature"><i :class="{ 'fa-eye': !showShaSignature, 'fa-eye-slash': showShaSignature }" class="fas fa-fw"></i> SHA256-Signatur</a>
       </p>
       <div x-show="showShaSignature" x-cloak class="prose prose-sm md:prose max-w-none md:max-w-none text-sm mt-4">
-        <p><code class="break-all">1151af090e781bcf29ba6515ab45190e5caa72fae8fc759e55a5fa8d2e7f00db</code></p>
+        <p><code class="break-all">81de58e71d946d31458e06fb6f500c5f015fe3f2b3179ffac67d2542711d82e3</code></p>
       </div>
     </div>
   </div>
