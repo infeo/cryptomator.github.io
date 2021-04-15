@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptomator Blog</title>
+    <description>Recent Blog Posts on cryptomator.org</description>
+    <link>https://cryptomator.org/tags/encryption/</link>
+    <language>en</language>
+    <atom:link href="https://cryptomator.org/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://cryptomator.org/img/logo.png</url>
+      <title>Cryptomator Blog</title>
+      <link>https://cryptomator.org/tags/encryption/</link>
+    </image>
+    <lastBuildDate>Thu, 15 Apr 2021 11:54:00 +0000</lastBuildDate>
+    <generator>Hugo</generator>
+    
+      <item>
+        <title>Strategic Autonomy in Danger: European Tech Companies Warn Of Lowering Data Protection Levels in the EU</title>
+        <description>&lt;p class=&#34;lead&#34;&gt;Joint statement from IT companies Boxcryptor, Cryptomator, Mailbox.org, Mail.de, Mailfence, Praxonomy, Tresorit, and Tutanota.&lt;/p&gt;
+&lt;p&gt;In the course of the initiative &amp;ldquo;Fighting child sexual abuse: detection, removal, and reporting of illegal content&amp;rdquo;, the European Union plans to abolish the digital privacy of correspondence. In order to automatically detect illegal content, all private chat messages are to be screened in the future. This should also apply to content that has so far been protected with strong end-to-end encryption. If this initiative is implemented according to the current plan it would enormously damage our European ideals and the indisputable foundations of our democracy, namely freedom of expression and the protection of privacy. The initiative would also severely harm Europe’s strategic autonomy and thus EU-based companies.&lt;/p&gt;
+&lt;p&gt;Europe as a global technology leader is respected internationally for its high level of data protection, notably due to the exemplary effect of the GDPR. In an internationally very competitive market, European companies are in first position when it comes to data protection. The EU initiative could now endanger this unique selling point of European IT companies.&lt;/p&gt;
+&lt;p&gt;For these reasons we request:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The high level of data protection in the European Union must be maintained.&lt;/li&gt;
+&lt;li&gt;Fundamental rights must be preserved, especially the right to privacy and digital privacy of correspondence.&lt;/li&gt;
+&lt;li&gt;Call for mass surveillance is too simplistic and short-thought.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;high-level-of-data-protection-in-the-eu-must-be-maintained&#34;&gt;High level of data protection in the EU must be maintained&lt;/h2&gt;
+&lt;p&gt;The General Data Protection Regulation is a global model for the protection of personal data. Some countries have already launched or enacted their own versions of the GDPR. The European Union now planning exactly the opposite steps is a wrong signal with fatal effects for the EU as an IT location. High data protection standards lead to great trust in European IT products. The &amp;ldquo;Made in Europe&amp;rdquo; label weighs heavily in our customers’ – not only in Europe, but  worldwide. The compulsion to break the high protection of end-to-end encrypted communication endangers the business of numerous IT companies throughout the EU. It would destroy an important unique selling point for European IT companies on the global market.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We explicitly emphasize that access to encrypted communication by private organizations and public authorities is incompatible with a strong EU as a technology location.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;right-to-privacy-and-the-digital-secrecy-of-correspondence&#34;&gt;Right to privacy and the digital secrecy of correspondence&lt;/h2&gt;
+&lt;p&gt;Protected communication is essential for coexistence within our society. The doctor&amp;rsquo;s duty of confidentiality and the attorney-client privilege, for example, are considered immeasurably valuable rights. But how are these professions supposed to maintain their professional secrecy if protected communication with patients and clients is not possible? Like most modern industries they rely on secure, digital communication to keep their vows of confidentiality. The monitoring of all communication within number-independent services equals a technological setback to the 20th century. Postal and personal communication would be left the only secure alternatives.&lt;/p&gt;
+&lt;p&gt;Yet, the EU initiative will not stop crimes from being committed. It will also not stop criminal individuals to set up private, end-to-end encrypted chat services for illegal activities with little effort and thus continue to elude law enforcement authorities. It is the majority of private individuals, relying on public networks with many participants, who will be truly affected by the EU initiative – and who will be deprived of their right to confidential communication in digital spaces.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The protection of digital privacy of correspondence must not be weakened. To the contrary, with the steady shift of sensitive communication in all areas of our society to the digital sphere, strong end-to-end encryption is imperative.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;call-for-mass-surveillance-is-too-simplistic-and-short-thought&#34;&gt;Call for mass surveillance is too simplistic and short-thought&lt;/h2&gt;
+&lt;p&gt;Finally, we would like to call on the European Commission to refrain from populist, actionist politics and to solve problems on the substantive level. To effectively ban secure communications for all EU citizens makes life unsafe for everyone.&lt;/p&gt;
+&lt;p&gt;The abolition of privacy is particularly problematic in relation to private communication.  Automated checks of most intimate messages like nude pictures sent via public networks, for example,  can result in employees of international corporations and police authorities viewing these intimate images. In other words: strangers gain access to someone’s most personal messages and could in turn disseminate them. This creates a new risk.&lt;/p&gt;
+&lt;p&gt;Mass surveillance does not, as some argue, contribute to preventing terrorism or child sexual abuse. Sascha Lobo has argued in the German news magazine Der Spiegel that  more surveillance does not necessarily lead to more security : &amp;ldquo;Since 2014, a total of 24 identified perpetrators have carried out 13 Islamist murder attacks in the EU – and all, yes literally 100 percent of the attackers were previously known to the authorities and had a propensity for violence.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The Effectiveness of mass surveillance in solving crimes has not been proven. However, three things are certain  to help in  effectively protecting children from sexual violence:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Targeted prosecution, instead of overburdening the authorities with harmless footage.&lt;/li&gt;
+&lt;li&gt;Prevention and intervention work in families and institutions, regular public discussions with experts in the media, and mandatory training for all those who work with people.&lt;/li&gt;
+&lt;li&gt;Recognition of the fact that abuse mostly happens within the family.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In summary, we conclude: We must not base the standards of our society on the behavior of criminals. Crimes cannot be prevented by making every citizen a potential suspect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We see a clear danger in the EU initiative &amp;ldquo;Fighting child sexual abuse: detection, removal, and reporting of illegal content&amp;rdquo; that secure communication for citizens and companies is to be abandoned on the grounds of child protection. This must not happen in an open, democratic society.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As experts in the field of secure communication, we are available to discuss with the EU Commission on what is technically feasible.&lt;/p&gt;
+&lt;p&gt;This letter was written with the assistance of Tanja Bullert, community worker specializing in the prevention of and intervention in sexualized violence.&lt;/p&gt;
+&lt;p&gt;Signatory:&lt;/p&gt;
+&lt;div class=&#34;flex flex-wrap justify-center&#34;&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/boxcryptor-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/boxcryptor-logo.png 1x, https://cryptomator.org/img/blog/boxcryptor-logo@2x.png 2x&#34; alt=&#34;Boxcryptor Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-logo.png 1x, https://cryptomator.org/img/blog/cryptomator-logo@2x.png 2x&#34; alt=&#34;Cryptomator Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailboxorg-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailboxorg-logo.png 1x, https://cryptomator.org/img/blog/mailboxorg-logo@2x.png 2x&#34; alt=&#34;Mailbox.org Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailde-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailde-logo.png 1x, https://cryptomator.org/img/blog/mailde-logo@2x.png 2x&#34; alt=&#34;Mail.de Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailfence-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailfence-logo.png 1x, https://cryptomator.org/img/blog/mailfence-logo@2x.png 2x&#34; alt=&#34;Mailfence Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/praxonomy-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/praxonomy-logo.png 1x, https://cryptomator.org/img/blog/praxonomy-logo@2x.png 2x&#34; alt=&#34;Praxonomy Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/tresorit-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/tresorit-logo.png 1x, https://cryptomator.org/img/blog/tresorit-logo@2x.png 2x&#34; alt=&#34;Tresorit Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/tutanota-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/tutanota-logo.png 1x, https://cryptomator.org/img/blog/tutanota-logo@2x.png 2x&#34; alt=&#34;Tutanota Logo&#34;/&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2021/04/15/eu-e2ee-strategic-autonomy-in-danger/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2021/04/15/eu-e2ee-strategic-autonomy-in-danger/</guid>
+        
+        <category>data protection</category>
+        
+        <category>encryption</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Early 2021</title>
+        <description>&lt;p&gt;Development on Cryptomator 1.5.x is coming to an end and we are now working on the next major version 1.6.x. Read more about it in this roadmap!&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-desktop-app&#34;&gt;State of the Desktop App&lt;/h2&gt;
+&lt;p&gt;The update to version 1.6.0 is just around the corner! The release will mainly contain some invisible changes that will allow us to add new features in a timely manner. One of the main points here is to implement a new vault format (Vault Format 8). It makes the integration of &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/8&#34;&gt;other authentication methods&lt;/a&gt; in the future possible, for example to enable 2FA.&lt;/p&gt;
+&lt;p&gt;Another feature is the &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/7&#34;&gt;integration of a sanitizer&lt;/a&gt;. Until now, a separate program was needed to check the state of your vault and to execute cleanup and restore commands. In the future, this will be possible directly in the Cryptomator user interface.&lt;/p&gt;
+&lt;p&gt;In addition, there is now a prototype for the distribution of Cryptomator as a Microsoft Software Installation (.msi), but the implementation still has alpha character. Furthermore, we have updated Cryptomator to JDK 16 with the latest &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.14&#34;&gt;version 1.5.14&lt;/a&gt;, which brings some upstream fixes. Unfortunately, we could not make any progress with regard to Flatpak.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-android-app&#34;&gt;State of the Android App&lt;/h2&gt;
+&lt;p&gt;As you might have noticed in our blog, we finally published the source code of the app! Apart from that, vault format 8 is also a big topic in our development here.&lt;/p&gt;
+&lt;p&gt;Since the update to version 1.5.14 (currently still in a beta version), pCloud is natively supported by Cryptomator. Many thanks to Manu for &lt;a href=&#34;https://github.com/cryptomator/android/pull/283&#34;&gt;his open source contribution&lt;/a&gt;! Another small change is that since the update 1.5.13, it is possible to sort the vault list and thus get a better overview of the vaults.&lt;/p&gt;
+&lt;p&gt;But that&amp;rsquo;s not all we have planned for the Android app! We are happy to release Cryptomator on F-Droid soon. Also, we hope to be able to include more clouds soon and enable access to content of the vault via third-party apps with a &amp;ldquo;document provider&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-ios-app&#34;&gt;State of the iOS App&lt;/h2&gt;
+&lt;p&gt;With the introduction of vault format 8, the &amp;ldquo;old&amp;rdquo; iOS app will probably get its last major update to version 1.6.0.&lt;/p&gt;
+&lt;p&gt;Meanwhile, work on the &amp;ldquo;new&amp;rdquo; iOS app continues. As announced in the last roadmap, the iOS app will be fully integrated into the Files app. We are already very far along. Nevertheless, we still have some work to do, as we want to offer some features like dark mode or support for multiple accounts from the same cloud provider right from the start.&lt;/p&gt;
+&lt;p&gt;We can&amp;rsquo;t promise you an exact release date yet, but we hope we will release a first beta version via TestFlight in the summer.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2021/04/08/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2021/04/08/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>World Backup Day: How to Be on the Safe Side</title>
+        <description>&lt;p&gt;Basically, there are two types of people: Those who back up regularly and those who have never lost data. On the occasion of &amp;ldquo;World Backup Day&amp;rdquo;, we want to explain to you why you should think about creating a backup regularly, even if you have been lucky so far.&lt;/p&gt;
+&lt;h2 id=&#34;what-does-a-backup-actually-do&#34;&gt;What does a backup actually do?&lt;/h2&gt;
+&lt;p&gt;In general, a backup is a copy of your data. This can be your smartphone, your laptop, your hard drive, family photos, etc. If your device stops working for any reason, your data is not lost if you have created a backup. Therefore, it is recommended to back up your data at regular intervals to prevent major losses.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-i-create-a-backup&#34;&gt;How do I create a backup?&lt;/h2&gt;
+&lt;p&gt;It is important that your data is stored in an external location. Many still associate a backup with an external data carrier, such as a hard drive. However, this is inferior to the modern cloud variant in two elementary points.&lt;/p&gt;
+&lt;p&gt;In general, every device has a certain percentage probability of failure. In the case of a hard drive, for example, this &lt;a href=&#34;https://en.wikipedia.org/wiki/Hard_disk_drive_failure#Metrics_of_failures&#34;&gt;failure probability&lt;/a&gt; can be between 1.7% (in the first year) and 8.6% (in the third year), not including possible external circumstances such as fire or water damage. Of course, you can also create a backup on several hard drives, the more you use, the lower the probability of failure.&lt;/p&gt;
+&lt;p&gt;Another risk factor with external hard drives is the lack of geographic redundancy, in short, location independence. In other words, if your house catches fire, both your computer and the backup on the hard drive are gone. Of course, that&amp;rsquo;s a rather drastic way of putting it, but that is the basic concept. You can achieve geographical redundancy by storing the data on the servers of cloud providers; it is not uncommon for them to be geographically distributed all over the world.&lt;/p&gt;
+&lt;p&gt;The problem of the failure probability is minimized by arranging the hard drives &lt;a href=&#34;https://en.wikipedia.org/wiki/Mean_time_between_failures#MTBF_and_MDT_for_networks_of_components&#34;&gt;in parallel&lt;/a&gt;. In short, this means that several functionally identical, redundant copies of the backup exist at the same time, but only one of these needs to function in order to make the backup data available. You can think of this as mirroring data, with each mirroring the risk of data loss decreases.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-i-protect-my-backup-in-the-cloud&#34;&gt;How do I protect my backup in the cloud?&lt;/h2&gt;
+&lt;p&gt;Generally, your data is protected in the cloud behind an account. However, they are of course still stored on servers and are therefore never 100% secure from unauthorized access. With the help of cloud encryption, you can take the security of your data into your own hands. With Cryptomator, you can create a kind of &amp;ldquo;magic&amp;rdquo; vault that can only be accessed by those who have the correct password to open the vault. This way, attackers can theoretically still access the cloud, but cannot do anything with the encrypted data.&lt;/p&gt;
+&lt;p&gt;You can download Cryptomator free of charge &lt;a href=&#34;https://cryptomator.org/downloads/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2021/03/31/world-backup-day/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2021/03/31/world-backup-day/</guid>
+        
+        <category>event</category>
+        
+      </item>
+    
+      <item>
+        <title>Open Source: Cryptomator for Android</title>
+        <description>&lt;p&gt;We announced it last month and now we are ready… our gift to the community for the holidays: Cryptomator for Android is now fully open-source! Check out the repository here: &lt;a href=&#34;https://github.com/cryptomator/android&#34;&gt;https://github.com/cryptomator/android&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-open-source.png&#34; srcset=&#34;https://cryptomator.org/img/blog/android-open-source.png 1x, https://cryptomator.org/img/blog/android-open-source@2x.png 2x&#34; alt=&#34;Cryptomator for Android is now open-source&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;There will definitely be a transition phase and learning curve for us to fine-tune the repository and coordinate open-source contributions but it shouldn&amp;rsquo;t be too far off the &amp;ldquo;main&amp;rdquo; repository Cryptomator for Windows, macOS, and Linux, which was open-source from the beginning.&lt;/p&gt;
+&lt;p&gt;We are looking forward to your contributions and are very grateful to you and the whole community that made this step possible. To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;donating&lt;/a&gt; or &lt;a href=&#34;https://cryptomator.org/sponsors/&#34;&gt;sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+&lt;p&gt;And what about Cryptomator for iOS? To quote from our &amp;ldquo;Roadmap Late 2020&amp;rdquo;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We won&amp;rsquo;t open-source the current app anymore because we&amp;rsquo;d like to look forward. The new app is written with open-sourcing it in mind but it will still take some time until we can release anything.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Happy holidays and a happy new year! 🎁&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/12/23/android-open-source/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/12/23/android-open-source/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Late 2020</title>
+        <description>&lt;p&gt;We recently released Cryptomator 1.5.10 for Windows, macOS, and Linux with many new features and bugfixes. Well, actually the changes were in 1.5.9 but we followed it up with a hotfix release. 😁 With the (crazy) year nearing its end, we&amp;rsquo;d like to give you some insight to our roadmap across all platforms for the upcoming months!&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-desktop-app&#34;&gt;State of the Desktop App&lt;/h2&gt;
+&lt;p&gt;With the redesign and full rewrite of the UI in 1.5.0, we established a good foundation for adding further features. There was one former feature that didn&amp;rsquo;t make the cut though, which is now back with the latest version: Vault Statistics. 🎉&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/vault-statistics.png&#34; srcset=&#34;https://cryptomator.org/img/blog/vault-statistics.png 1x, https://cryptomator.org/img/blog/vault-statistics@2x.png 2x&#34; alt=&#34;Vault Statistics in Cryptomator&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;We didn&amp;rsquo;t stop there! Vault passwords can now also be stored in &lt;a href=&#34;https://en.wikipedia.org/wiki/KWallet&#34;&gt;KWallet&lt;/a&gt; on Linux. Huge thanks to Ralph Plawetzki (purejava on GitHub) for his contribution! And last but not least, it is now possible to mount the vault via FUSE on Windows. This is still a beta feature! In order to try it, &lt;a href=&#34;http://www.secfs.net/winfsp/&#34;&gt;WinFSP&lt;/a&gt; needs to be installed. We&amp;rsquo;d love to hear your feedback on this!&lt;/p&gt;
+&lt;p&gt;On the distribution front, we didn&amp;rsquo;t quite meet our expectations. So far, we&amp;rsquo;ve been struggling with Flatpak as we just can&amp;rsquo;t convince its sandbox to properly support FUSE drives. But we&amp;rsquo;re not giving up on this!&lt;/p&gt;
+&lt;p&gt;Behind the UI, we introduced the &lt;a href=&#34;https://github.com/cryptomator/integrations-api&#34;&gt;integrations-api&lt;/a&gt; alongside implementations for each OS. It&amp;rsquo;s a new way for Cryptomator to include native (also OS-specific) functionalities. Now easier than ever, you can implement native functions. So grab your keyboard and start hacking! 😁 With this change, we archived the old &lt;a href=&#34;https://github.com/cryptomator/native-functions&#34;&gt;native-functions&lt;/a&gt; repository. 👋&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s next? Our plan is to move on to 1.6.x. First of all, we want to integrate &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt;, so you can check your vault health and run cleanup and recovery tasks right within the Cryptomator UI. Furthermore, by decoupling the key derivation from the vault encryption, we plan to give you more options for authentication, including third-party password storage, 2FA, and multi-user access using individual passwords.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-android-app&#34;&gt;State of the Android App&lt;/h2&gt;
+&lt;p&gt;In the last months, we added new features like &lt;a href=&#34;https://community.cryptomator.org/t/biometric-authentication-e-g-face-unlock-coming-soon/6089&#34;&gt;face unlock&lt;/a&gt;, &lt;a href=&#34;https://community.cryptomator.org/t/sort-directory-listings/5958&#34;&gt;sort directory listings&lt;/a&gt;, and &lt;a href=&#34;https://community.cryptomator.org/t/search-in-current-folder-using-glob-pattern-matching/5928&#34;&gt;search using glob pattern matching&lt;/a&gt;. Some community members also translated the app to &lt;a href=&#34;https://community.cryptomator.org/t/translated-into-french/5962&#34;&gt;French&lt;/a&gt; and &lt;a href=&#34;https://community.cryptomator.org/t/cryptomator-is-soon-available-in-turkish/6560&#34;&gt;Turkish&lt;/a&gt;. Many thanks for their contributions!&lt;/p&gt;
+&lt;p&gt;Looking forward, we have some exciting news about our Android app! The project is in the perfect situation to fulfill the two biggest wishes of the community:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Source: Publishing the source code of the app.&lt;/li&gt;
+&lt;li&gt;Document Provider: Accessing the content of the vault using third-party apps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You heard that right, we are going to open-source Cryptomator for Android! The fact that the app is open-core had its legitimate reasons but we are now fully confident that we can open-source the app without compromises. We are working hard to publish the complete source code within a few weeks.&lt;/p&gt;
+&lt;p&gt;After that, the highly anticipated Document Provider feature will be on our roadmap.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-ios-app&#34;&gt;State of the iOS App&lt;/h2&gt;
+&lt;p&gt;What&amp;rsquo;s up with Cryptomator for iOS? For the last 6-7 months, we have been hard at work on a &lt;em&gt;completely&lt;/em&gt; new app written in Swift. Our first efforts can already be seen in our new open-source libraries for Swift: &lt;a href=&#34;https://github.com/cryptomator/cryptolib-swift&#34;&gt;cryptolib-swift&lt;/a&gt; and &lt;a href=&#34;https://github.com/cryptomator/cloud-access-swift&#34;&gt;cloud-access-swift&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What will be so special about the rewrite? Cryptomator will be fully integrated into the Files app. This comes with many benefits like thumbnails, support for third-party apps that can edit files directly inside the vault, and many more! But that also means, there won&amp;rsquo;t be a &amp;ldquo;custom&amp;rdquo; file browser inside the app anymore. Integration into the Files app is one of the most requested features of the community.&lt;/p&gt;
+&lt;p&gt;What about open source? We won&amp;rsquo;t open-source the current app anymore because we&amp;rsquo;d like to look forward. The new app is written with open-sourcing it in mind but it will still take some time until we can release anything.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll definitely do extensive testing via TestFlight in the next year. Stay tuned for that!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/11/20/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/11/20/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator for Android for Us Paranoids</title>
+        <description>&lt;p&gt;This blog post is aimed towards the paranoid Cryptomator power users among us and describes how to fully establish a relationship of trust with Cryptomator for Android.&lt;/p&gt;
+&lt;p&gt;When it comes to our desktop application, we claim that you should in fact &lt;em&gt;not&lt;/em&gt; trust us but you (or at least many developers) can instead &lt;em&gt;inspect&lt;/em&gt; what Cryptomator is doing. For our mobile apps, this is only half the truth, frankly. While the encryption code is fully open-source, the UI and cloud access code isn&amp;rsquo;t (yet 😉).&lt;br&gt;
+If you count yourself as one of the more paranoid users, who prefer to compile everything yourselves, you might ask the legitimate question: How can you check the current, open-core app for backdoors?&lt;/p&gt;
+&lt;p&gt;A backdoor usually requires communication with an external server. If vaults are only opened from the device&amp;rsquo;s file system, the Cryptomator app does not require an internet connection. Alternatively, the vault can be synchronized bidirectionally to the file system of the smartphone with a third-party application such as &lt;a href=&#34;https://syncthing.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syncthing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using this setup, the Cryptomator app can have its internet access revoked using the Android operating system features, which prevents the app from sending or receiving any data to or from the internet.&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-for-paranoids-permission.png&#34; alt=&#34;Android revoke Cryptomator&#39;s internet permission&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Thus, even if there ever was a backdoor in Cryptomator for Android, it would not be possible for the intercepted data to leave the smartphone. This is ensured by the operating system.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/05/07/cryptomator-for-android-for-paranoids/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator 1.5.0 Release</title>
+        <description>&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-5-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&amp;rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.&lt;/p&gt;
+&lt;p&gt;To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;buying a donation key&lt;/a&gt;, which unlocks the new dark mode. ❤️ &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Detailed release notes&lt;/a&gt; for the desktop app are available on GitHub.&lt;/p&gt;
+&lt;p&gt;As you might have noticed, this website is also shining in a completely new design. ✨&lt;/p&gt;
+&lt;h2 id=&#34;cryptomator-for-ios--android&#34;&gt;Cryptomator for iOS &amp;amp; Android&lt;/h2&gt;
+&lt;p&gt;New updates for iOS and Android have been released as well. To celebrate the release, our mobile apps are 40% off until April 23! 🤖&lt;/p&gt;
+&lt;p&gt;Cryptomator for Android is now also available as an APK version &lt;a href=&#34;https://cryptomator.org/android/&#34;&gt;through our own online store&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/04/20/release-1.5.0/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/04/20/release-1.5.0/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>ios</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Early 2020</title>
+        <description>&lt;p&gt;Between all the work on Cryptomator, we need to remind ourselves to not forget about our regular updates post. While most of you have already noticed that we&amp;rsquo;re approaching a new major release of Cryptomator, I think it is time to inform you where we&amp;rsquo;re currently standing and what our roadmap looks like.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-our-desktop-application&#34;&gt;State of our Desktop Application&lt;/h2&gt;
+&lt;p&gt;We plan to release 1.5.0 within Q1 2020. In our currently running beta (huge shout-outs to all the helpful test feedback), we have already sorted out several problems and feel confident to deliver outstanding quality.&lt;/p&gt;
+&lt;p&gt;While we have already discussed &lt;a href=&#34;https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter&#34;&gt;upcoming changes&lt;/a&gt; to what we call the &lt;em&gt;vault format&lt;/em&gt; (i.e. the layout of the encrypted files and directory) to increase compatibility with some cloud services and at the same time reduce the complexity for certain I/O operations, the far more obvious change affects the GUI:&lt;/p&gt;
+&lt;p&gt;We did not simply &lt;em&gt;redesign&lt;/em&gt; our UI, we did a full &lt;em&gt;rewrite&lt;/em&gt; of it. Nearly every single line of code that was involved in Cryptomator 1.4.x has been deleted. Why would you do something like this? Well, the application grew over time. Cryptomator has been started more than six years ago and some concepts weren&amp;rsquo;t established back then that make development easier today. During the rewrite, we planned a whole new code structure which makes it easier to extend the application in the future and at the same time have new developers understand what parts of the code is responsible for what dialog in the software.&lt;/p&gt;
+&lt;p&gt;One goal of the redesign was to make the onboarding process easier for users who don&amp;rsquo;t feel too comfortable with encryption software. We attended (and organized) some usability tests in our vicinity and saw how first-time users reacted to the vault creation process. This helped us to design the workflows and understand common misconceptions.&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-android-app&#34;&gt;State of the Android App&lt;/h2&gt;
+&lt;p&gt;Not worth mentioning is that the Android app in 1.5.0 will support vault format 7. In the Android app, we focused on implementing new features and improving stability:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Already opened files are cached on the smartphone. When reopened and if the file has not changed in the cloud, the file is loaded from the local file system, which leads to a huge performance improvement.&lt;/li&gt;
+&lt;li&gt;Fixed and improved auto photo upload e.g., after device reboot or on Android 10 under certain conditions the upload didn’t work&lt;/li&gt;
+&lt;li&gt;We added an option to lock a vault immediately when Cryptomator is closed or in background&lt;/li&gt;
+&lt;li&gt;Last but not least, we&amp;rsquo;ve put a lot of work into a new license store that will enable us to provide an alternative way of distributing our Android app, as we have a lot of requests from users who prefer not to use Google services such as the Play Store&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;state-of-the-ios-app&#34;&gt;State of the iOS App&lt;/h2&gt;
+&lt;p&gt;The iOS app will also support vault format 7, obviously. There are some further fixes and improvements under the hood, but no new features. It already supports caching and it you can even buy it without using the Google Play Store. 😉&lt;/p&gt;
+&lt;h2 id=&#34;what-is-missing-for-the-final-release-of-150&#34;&gt;What is missing for the final release of 1.5.0?&lt;/h2&gt;
+&lt;p&gt;While at the time of writing this, there are only few missing features planned for 1.5.0 (such as vault recovery) and only some final polishing is required from our side, we want to make sure our mobile apps and also third party apps such as Cyberduck are ready to deal with the new vault format, too. For some bugs scheduled for 1.5.0 (such as &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/986&#34;&gt;this one&lt;/a&gt;), we&amp;rsquo;re currently waiting for an upstream fix.&lt;/p&gt;
+&lt;p&gt;Simultaneously, we&amp;rsquo;re preparing new documentation pages for 1.5.0 as well as a new website with a new FAQ section and we integrate &lt;a href=&#34;https://community.cryptomator.org/t/localization-of-cryptomator-1-5-0/4269?u=overheadhunter&#34;&gt;new translations&lt;/a&gt; added by our great community on a regular basis.&lt;/p&gt;
+&lt;h2 id=&#34;whats-up-next&#34;&gt;What&amp;rsquo;s up next?&lt;/h2&gt;
+&lt;p&gt;Our first priority right after 1.5.0 is to migrate from Java 11 to Java 14. Java 14 includes a long-awaited new tool that is required for our packaging. We&amp;rsquo;re currently using a workaround that prevents us from upgrading to the latest bundled JRE. This is a small change that will probably be shipped right with 1.5.1. However, we didn&amp;rsquo;t want to dig up new holes right before 1.5.0 and decided to postpone this to 1.5.1.&lt;/p&gt;
+&lt;p&gt;Next, we want to focus on Flatpak. We ditched &lt;code&gt;.deb&lt;/code&gt; and &lt;code&gt;.rpm&lt;/code&gt; files some time ago and replaced them with AppImages. We also really like how the Flatpak ecosystem is gaining traction and is supported natively by a steadily increasing number of distributions. So far, &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/729&#34;&gt;we didn&amp;rsquo;t get Cryptomator working&lt;/a&gt; due to the complexity behind the file system mounts. But after we&amp;rsquo;ve finished 1.5.0, we hope to be able to put some more attention to this and solve this to ship Cryptomator as a Flatpak soon.&lt;/p&gt;
+&lt;p&gt;In the Android app, the next big feature will be accessing files of a Cryptomator vault inside other apps using a DocumentProvider. For example, a file explorer will be able to access the content of the vault in this way. As well as smaller features like recursive upload of folders to the vault are planned.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2020/02/12/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2020/02/12/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Mid 2019</title>
+        <description>&lt;p&gt;We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&amp;rsquo;re also going to have a look at the roadmaps of our mobile apps.&lt;/p&gt;
+&lt;h2 id=&#34;desktop&#34;&gt;Desktop&lt;/h2&gt;
+&lt;p&gt;In the desktop area, we are currently pursuing two different branches: On the one hand we are striving for feature completion of 1.4.x, with 1.4.12 already available as a release candidate. It will finally allow Linux users to store their password in the system and include the much desired &amp;ldquo;Custom Mount Flags&amp;rdquo; feature.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Save password in system (Linux):&lt;/strong&gt; For a long time, you could only store your vault&amp;rsquo;s password in the system under macOS and Windows. Through a community contribution, this is now finally also possible under (some) Linux systems. 😄 The existence of GNOME Keyring or another keychain via Secret Service API is required. Many thanks to Ralph Plawetzki (purejava on GitHub) and Sebastian Wiesendahl (swiesend on GitHub) for the implementation!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom Mount Flags:&lt;/strong&gt; Cryptomator uses default options to mount a drive (both for Dokany and FUSE) that we chose for security or performance reasons. However, this leads to limited functionality in some cases and users who want to set their own options can now change them. Be aware: &lt;em&gt;Use at your own risk!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On the other hand the implementation of 1.5.0 has already started. For 1.5.0, as announced, we want to fully concentrate on the redesign of the user interface and improve the internal processing of Cryptomator, because like many open-source projects it has grown organically over time and therefore needs a good refactoring. 😉&lt;/p&gt;
+&lt;h2 id=&#34;ios&#34;&gt;iOS&lt;/h2&gt;
+&lt;p&gt;After the release of Cryptomator 1.4.0 for iOS with built-in cache functionality, which on the one hand avoids repeated downloading of files and on the other hand allows (limited) offline access, the work on Cryptomator 1.5.0 for iOS has started.&lt;/p&gt;
+&lt;p&gt;The main focus will be the integration into the Files app of iOS. The first step will be the expansion of our &lt;a href=&#34;https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Document Provider&lt;/a&gt; which is going to be extended by the methods &amp;ldquo;Open&amp;rdquo; and &amp;ldquo;Move&amp;rdquo;. This will make a direct access to files within a Cryptomator vault from other apps possible without having to copy them back and forth.&lt;/p&gt;
+&lt;h2 id=&#34;android&#34;&gt;Android&lt;/h2&gt;
+&lt;p&gt;Cryptomator 1.4.0 for Android is currently being finalized with the following features, which can already be tested in a beta version:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Automatic photo upload:&lt;/strong&gt; After activation, all images created on the smartphone will be uploaded the next time the selected vault is unlocked.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make files writable by third-party apps:&lt;/strong&gt; Files that are opened can be edited in third-party apps. When you finish the editing process by saving and returning to the Cryptomator app, the changes are transferred to the cloud.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are considering these features for future versions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LRU Cache:&lt;/strong&gt; To save network traffic, certain server responses are cached to avoid repeated downloading, for example of unmodified images from the cloud.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support for Google Team Drives:&lt;/strong&gt; Access to vaults located in Google Team Drive should be made possible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Distribution of the app outside of Google Play:&lt;/strong&gt; Cryptomator for Android should also be available from alternative sources. We are thinking about setting up a licensing system, through which a license could be purchased directly.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Unlocking with system password:&lt;/strong&gt; You should be able to use the system password of the smartphone to open vaults. (Similar to unlocking with a fingerprint.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access to files via DocumentProvider:&lt;/strong&gt; Access to a Cryptomator vault inside other apps should be made possible via a DocumentProvider. For example, a file explorer would then be able to access the vault in this way.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload of directories (recursive):&lt;/strong&gt; The download of whole folders already works, the upload including all subfolders is not possible yet.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2019/07/21/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2019/07/21/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>ios</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Early 2019</title>
+        <description>&lt;p&gt;Hey it&amp;rsquo;s a new year, so here comes our &lt;del&gt;quarterly&lt;/del&gt; annual 🙈 roadmap preview.&lt;/p&gt;
+&lt;h3 id=&#34;openjdk-and-openjfx&#34;&gt;OpenJDK and OpenJFX&lt;/h3&gt;
+&lt;p&gt;Until now we&amp;rsquo;ve been using Oracle JDK, since this included the GUI library we used for Cryptomator: JavaFX. Beginning with JDK 11, we plan to switch to OpenJDK and OpenJFX. JavaFX will no longer be included in the Oracle JDK anyway and OpenJFX promises shorter release cycles and - as the name suggests - is developed in an open process.&lt;/p&gt;
+&lt;p&gt;Since we no longer depend on non-free software, Cryptomator could theoretically move from &amp;ldquo;contrib&amp;rdquo; to &amp;ldquo;main&amp;rdquo; in Debian repos.&lt;/p&gt;
+&lt;p&gt;We also hope that building Cryptomator becomes easier, since OpenJFX is a normal dependency and you no longer need to install the Oracle JDK.&lt;/p&gt;
+&lt;h3 id=&#34;symlinks&#34;&gt;Symlinks&lt;/h3&gt;
+&lt;p&gt;We have successfully moved to FUSE (Linux and macOS) and Dokany (Windows). Now it is time to improve the file systems. One of the most asked features is support for symbolic links. If you don&amp;rsquo;t know what this is, don&amp;rsquo;t worry. For everyone else: Stay tuned for a 1.4.x update introducing symlinks.&lt;/p&gt;
+&lt;h3 id=&#34;ui-redesign&#34;&gt;UI Redesign&lt;/h3&gt;
+&lt;p&gt;We plan to redesign the whole user interface from scratch with Cryptomator 1.5.0. In order to do this, we are happy to get your input. If you have any ideas on how Cryptomator should look, feel free to join the discussion in our &lt;a href=&#34;https://community.cryptomator.org/t/ui-redesign-thread/2850&#34;&gt;redesign thread&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2019/01/14/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2019/01/14/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>encryption</title>
+    
+      <meta name="description" content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."/>
+      <meta property="og:title" content="Cryptomator - encryption"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://cryptomator.org/tags/encryption/"/>
+      <meta property="og:site_name" content="Cryptomator"/>
+      <meta property="og:description" content="Encrypt Dropbox, Google Drive, and any other cloud. Cryptomator is free and open source."/>
+      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+    <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    
+      
+      <link rel="stylesheet" href="/css/main.min.1727b6e82bdcbf2130b2b30a13e6170c9b7abe9afc951a0f60f28216b5cb00b6.css" integrity="sha256-Fye26CvcvyEwsrMKE&#43;YXDJt6vpr8lRoPYPKCFrXLALY=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+    
+      <link rel="alternate" hreflang="de" href="/de/tags/encryption/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/coop/">Cooperations</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/faq/">FAQ</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>EN</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            
+            <a href="/de/tags/encryption/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Cooperations</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/faq/">FAQ</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+    
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> EN
+    </div>
+    <div class="mt-1">
+      
+      <a href="/de/tags/encryption/" lang="de" class="block px-2 py-1 hover:text-secondary hover:no-underline">Deutsch</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container py-12">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+      <header class="mb-6">
+        <h1>Posts</h1>
+      </header>
+    
+      
+        <article>
+          <h2>Strategic Autonomy in Danger: European Tech Companies Warn Of Lowering Data Protection Levels in the EU</h2>
+          <p class="lead">Joint statement from IT companies Boxcryptor, Cryptomator, Mailbox.org, Mail.de, Mailfence, Praxonomy, Tresorit, and Tutanota.</p>
+<p>In the course of the initiative &ldquo;Fighting child sexual abuse: detection, removal, and reporting of illegal content&rdquo;, the European Union plans to abolish the digital privacy of correspondence. In order to automatically detect illegal content, all private chat messages are to be screened in the future. This should also apply to content that has so far been protected with strong end-to-end encryption. If this initiative is implemented according to the current plan it would enormously damage our European ideals and the indisputable foundations of our democracy, namely freedom of expression and the protection of privacy. The initiative would also severely harm Europe’s strategic autonomy and thus EU-based companies.</p>
+<p>Europe as a global technology leader is respected internationally for its high level of data protection, notably due to the exemplary effect of the GDPR. In an internationally very competitive market, European companies are in first position when it comes to data protection. The EU initiative could now endanger this unique selling point of European IT companies.</p>
+<p>For these reasons we request:</p>
+<ol>
+<li>The high level of data protection in the European Union must be maintained.</li>
+<li>Fundamental rights must be preserved, especially the right to privacy and digital privacy of correspondence.</li>
+<li>Call for mass surveillance is too simplistic and short-thought.</li>
+</ol>
+<h2 id="high-level-of-data-protection-in-the-eu-must-be-maintained">High level of data protection in the EU must be maintained</h2>
+<p>The General Data Protection Regulation is a global model for the protection of personal data. Some countries have already launched or enacted their own versions of the GDPR. The European Union now planning exactly the opposite steps is a wrong signal with fatal effects for the EU as an IT location. High data protection standards lead to great trust in European IT products. The &ldquo;Made in Europe&rdquo; label weighs heavily in our customers’ – not only in Europe, but  worldwide. The compulsion to break the high protection of end-to-end encrypted communication endangers the business of numerous IT companies throughout the EU. It would destroy an important unique selling point for European IT companies on the global market.</p>
+<p><strong>We explicitly emphasize that access to encrypted communication by private organizations and public authorities is incompatible with a strong EU as a technology location.</strong></p>
+<h2 id="right-to-privacy-and-the-digital-secrecy-of-correspondence">Right to privacy and the digital secrecy of correspondence</h2>
+<p>Protected communication is essential for coexistence within our society. The doctor&rsquo;s duty of confidentiality and the attorney-client privilege, for example, are considered immeasurably valuable rights. But how are these professions supposed to maintain their professional secrecy if protected communication with patients and clients is not possible? Like most modern industries they rely on secure, digital communication to keep their vows of confidentiality. The monitoring of all communication within number-independent services equals a technological setback to the 20th century. Postal and personal communication would be left the only secure alternatives.</p>
+<p>Yet, the EU initiative will not stop crimes from being committed. It will also not stop criminal individuals to set up private, end-to-end encrypted chat services for illegal activities with little effort and thus continue to elude law enforcement authorities. It is the majority of private individuals, relying on public networks with many participants, who will be truly affected by the EU initiative – and who will be deprived of their right to confidential communication in digital spaces.</p>
+<p><strong>The protection of digital privacy of correspondence must not be weakened. To the contrary, with the steady shift of sensitive communication in all areas of our society to the digital sphere, strong end-to-end encryption is imperative.</strong></p>
+<h2 id="call-for-mass-surveillance-is-too-simplistic-and-short-thought">Call for mass surveillance is too simplistic and short-thought</h2>
+<p>Finally, we would like to call on the European Commission to refrain from populist, actionist politics and to solve problems on the substantive level. To effectively ban secure communications for all EU citizens makes life unsafe for everyone.</p>
+<p>The abolition of privacy is particularly problematic in relation to private communication.  Automated checks of most intimate messages like nude pictures sent via public networks, for example,  can result in employees of international corporations and police authorities viewing these intimate images. In other words: strangers gain access to someone’s most personal messages and could in turn disseminate them. This creates a new risk.</p>
+<p>Mass surveillance does not, as some argue, contribute to preventing terrorism or child sexual abuse. Sascha Lobo has argued in the German news magazine Der Spiegel that  more surveillance does not necessarily lead to more security : &ldquo;Since 2014, a total of 24 identified perpetrators have carried out 13 Islamist murder attacks in the EU – and all, yes literally 100 percent of the attackers were previously known to the authorities and had a propensity for violence.&rdquo;</p>
+<p>The Effectiveness of mass surveillance in solving crimes has not been proven. However, three things are certain  to help in  effectively protecting children from sexual violence:</p>
+<ol>
+<li>Targeted prosecution, instead of overburdening the authorities with harmless footage.</li>
+<li>Prevention and intervention work in families and institutions, regular public discussions with experts in the media, and mandatory training for all those who work with people.</li>
+<li>Recognition of the fact that abuse mostly happens within the family.</li>
+</ol>
+<p>In summary, we conclude: We must not base the standards of our society on the behavior of criminals. Crimes cannot be prevented by making every citizen a potential suspect.</p>
+<p><strong>We see a clear danger in the EU initiative &ldquo;Fighting child sexual abuse: detection, removal, and reporting of illegal content&rdquo; that secure communication for citizens and companies is to be abandoned on the grounds of child protection. This must not happen in an open, democratic society.</strong></p>
+<p>As experts in the field of secure communication, we are available to discuss with the EU Commission on what is technically feasible.</p>
+<p>This letter was written with the assistance of Tanja Bullert, community worker specializing in the prevention of and intervention in sexualized violence.</p>
+<p>Signatory:</p>
+<div class="flex flex-wrap justify-center">
+  <img class="px-8 py-4" src="/img/blog/boxcryptor-logo.png" srcset="/img/blog/boxcryptor-logo.png 1x, /img/blog/boxcryptor-logo@2x.png 2x" alt="Boxcryptor Logo"/>
+  <img class="px-8 py-4" src="/img/blog/cryptomator-logo.png" srcset="/img/blog/cryptomator-logo.png 1x, /img/blog/cryptomator-logo@2x.png 2x" alt="Cryptomator Logo"/>
+  <img class="px-8 py-4" src="/img/blog/mailboxorg-logo.png" srcset="/img/blog/mailboxorg-logo.png 1x, /img/blog/mailboxorg-logo@2x.png 2x" alt="Mailbox.org Logo"/>
+  <img class="px-8 py-4" src="/img/blog/mailde-logo.png" srcset="/img/blog/mailde-logo.png 1x, /img/blog/mailde-logo@2x.png 2x" alt="Mail.de Logo"/>
+  <img class="px-8 py-4" src="/img/blog/mailfence-logo.png" srcset="/img/blog/mailfence-logo.png 1x, /img/blog/mailfence-logo@2x.png 2x" alt="Mailfence Logo"/>
+  <img class="px-8 py-4" src="/img/blog/praxonomy-logo.png" srcset="/img/blog/praxonomy-logo.png 1x, /img/blog/praxonomy-logo@2x.png 2x" alt="Praxonomy Logo"/>
+  <img class="px-8 py-4" src="/img/blog/tresorit-logo.png" srcset="/img/blog/tresorit-logo.png 1x, /img/blog/tresorit-logo@2x.png 2x" alt="Tresorit Logo"/>
+  <img class="px-8 py-4" src="/img/blog/tutanota-logo.png" srcset="/img/blog/tutanota-logo.png 1x, /img/blog/tutanota-logo@2x.png 2x" alt="Tutanota Logo"/>
+</div>
+
+        </article>
+      
+    </div>
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/presskit/">Press Kit</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Contribute</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/donate/">Donate</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Translate</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Follow Us</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/feed.xml" rel="alternate" type="application/rss+xml">RSS Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Legal</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/privacy/">Privacy Policy</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/terms/">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>
