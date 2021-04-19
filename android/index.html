@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.3c594a45cf0050338bb303554f92e21434b44a6948be219fb7ddb1e741bf5485.css" integrity="sha256-PFlKRc8AUDOLswNVT5LiFDS0SmlIviGft92x50G/VIU=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.53414be1dd50b5def7ab7a2a64d8bbd5f5e8c92223c0ca3d19b67d64d63af9d3.css" integrity="sha256-U0FL4d1Qtd73q3oqZNi71fXoySIjwMo9GbZ9ZNY6&#43;dM=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -127,9 +127,9 @@
       <p class="lead">Purchase Cryptomator for Android without going through Google Play.</p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-        <section class="row-span-2 rounded shadow bg-white">
-          <div x-data="{checkoutData: {price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
+    <div class="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0">
+      <section class="w-full md:w-1/2">
+        <div x-data="{checkoutData: {price: null, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false, androidLicense: null}" x-init="androidLicense = new AndroidLicense($refs.form, checkoutData); androidLicense.loadPrice()" class="rounded shadow bg-white">
   <div class="prose prose-sm max-w-none md:max-w-none px-4 py-2 border-b border-primary text-center">
     <h3>Buy a license key</h3>
   </div>
@@ -146,8 +146,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-178563429" x-model="acceptTerms" />
-<label for="id-178563429">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-783146592" x-model="acceptTerms" />
+<label for="id-783146592">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); androidLicense.checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -170,8 +170,10 @@
   <script type="text/javascript" src="/js/androidkey.min.a6cef80d9edddd515f1911105f8ac35ff2fc69f4028447fcb93d0156ba4e8efa.js" integrity="sha256-ps74DZ7d3VFfGREQX4rDX/L8afQChEf8uT0BVrpOjvo=" defer></script>
 
 
-        </section>
-        <section class="row-span-1 rounded shadow bg-white">
+      </section>
+
+      <div class="flex flex-col space-y-6 w-full md:w-1/2">
+        <section>
           <div class="text-center" itemscope itemtype="http://schema.org/SoftwareApplication">
   <meta itemprop="name" content="Cryptomator"/>
   <meta itemprop="description" content="A free software to encrypt your cloud files."/>
@@ -203,7 +205,8 @@
 </div>
 
         </section>
-        <section class="row-span-1 rounded shadow bg-white">
+
+        <section>
           <div class="text-center" itemscope itemtype="http://schema.org/SoftwareApplication">
   <meta itemprop="name" content="Cryptomator"/>
   <meta itemprop="description" content="A free software to encrypt your cloud files."/>
@@ -224,14 +227,15 @@
       <p class="text-xs">
         <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="showQrCode = !showQrCode"><i :class="{ 'fa-eye': !showQrCode, 'fa-eye-slash': showQrCode }" class="fas fa-fw"></i> QR Code</a>
       </p>
-      <div x-show="showQrCode" x-cloak class="prose prose-sm md:prose max-w-none md:max-w-none text-sm mt-4">
-        <img class="inline-block mb-4" src="/img/android/fdroid-qr-code.png"/>
+      <div x-show="showQrCode" x-cloak class="mt-4">
+        <img class="inline-block h-48" src="/img/android/fdroid-qr-code.svg"/>
       </div>
     </div>
   </div>
 </div>
 
         </section>
+      </div>
     </div>
   </div>
 
