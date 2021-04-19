@@ -20,7 +20,7 @@
     <meta property="og:image:height" content="256" />
     
       
-      <link rel="stylesheet" href="/css/main.min.1727b6e82bdcbf2130b2b30a13e6170c9b7abe9afc951a0f60f28216b5cb00b6.css" integrity="sha256-Fye26CvcvyEwsrMKE&#43;YXDJt6vpr8lRoPYPKCFrXLALY=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.3c594a45cf0050338bb303554f92e21434b44a6948be219fb7ddb1e741bf5485.css" integrity="sha256-PFlKRc8AUDOLswNVT5LiFDS0SmlIviGft92x50G/VIU=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -173,8 +173,8 @@
         <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
         <input type="hidden" name="amount" value="15" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-342168795" x-model="acceptTerms" />
-<label for="id-342168795">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-758916432" x-model="acceptTerms" />
+<label for="id-758916432">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
       </form>
@@ -228,8 +228,8 @@
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-514796283" x-model="acceptTerms" />
-<label for="id-514796283">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-372541689" x-model="acceptTerms" />
+<label for="id-372541689">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
 
             <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -251,8 +251,8 @@
         <div x-show="frequency === 'recurring'" class="text-center">
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-967512438" x-model="acceptTerms" />
-<label for="id-967512438">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-284957361" x-model="acceptTerms" />
+<label for="id-284957361">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'en')" x-bind:disabled="!acceptTerms">
             <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
@@ -296,8 +296,8 @@
         <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
         <input type="hidden" name="allow_extra" value="1" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-492375168" x-model="acceptTerms" />
-<label for="id-492375168">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-264598317" x-model="acceptTerms" />
+<label for="id-264598317">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
       </form>
@@ -351,8 +351,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-793845162" x-model="acceptTerms" />
-<label for="id-793845162">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-519367482" x-model="acceptTerms" />
+<label for="id-519367482">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
