@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate</title>
     
-      <meta name="description" content="If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!"/>
+      <meta name="description" content="If you are interested in further development of Cryptomator, please consider buying a supporter certificate or feel free to donate any amount. Thank you for your support!"/>
       <meta property="og:title" content="Cryptomator - Donate"/>
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://cryptomator.org/donate/"/>
       <meta property="og:site_name" content="Cryptomator"/>
-      <meta property="og:description" content="If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!"/>
+      <meta property="og:description" content="If you are interested in further development of Cryptomator, please consider buying a supporter certificate or feel free to donate any amount. Thank you for your support!"/>
       <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
       <meta property="og:image:width" content="1200"/>
       <meta property="og:image:height" content="630"/>
@@ -124,7 +124,7 @@
   <div class="container py-12">
     <header class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
       <h1>Donate</h1>
-      <p class="lead">If you are interested in further development of Cryptomator, please consider buying a donation key or feel free to donate any amount. Thank you for your support!</p>
+      <p class="lead">If you are interested in further development of Cryptomator, please consider buying a supporter certificate or feel free to donate any amount. Thank you for your support!</p>
     </header>
 
     <div class="flex flex-col space-y-6 lg:flex-row-reverse lg:space-x-6 lg:space-x-reverse lg:space-y-0">
@@ -137,7 +137,7 @@
             <ul class="fa-ul mb-4">
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Support Cryptomator&#39;s open-source development</li>
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Choose your preferred payment method</li>
-              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-exclamation-triangle text-orange-500" aria-hidden="true"></i></span>No donation key</li>
+              <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-exclamation-triangle text-orange-500" aria-hidden="true"></i></span>No supporter certificate</li>
             </ul>
             <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
               <i class="fas fa-hand-point-right"></i> Proceed
@@ -173,8 +173,8 @@
         <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
         <input type="hidden" name="amount" value="15" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-486973215" x-model="acceptTerms" />
-<label for="id-486973215">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-572643189" x-model="acceptTerms" />
+<label for="id-572643189">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
       </form>
@@ -228,8 +228,8 @@
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-386271594" x-model="acceptTerms" />
-<label for="id-386271594">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-259681473" x-model="acceptTerms" />
+<label for="id-259681473">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
 
             <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -251,8 +251,8 @@
         <div x-show="frequency === 'recurring'" class="text-center">
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-156839742" x-model="acceptTerms" />
-<label for="id-156839742">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-187536429" x-model="acceptTerms" />
+<label for="id-187536429">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'en')" x-bind:disabled="!acceptTerms">
             <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
@@ -296,8 +296,8 @@
         <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
         <input type="hidden" name="allow_extra" value="1" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-215694837" x-model="acceptTerms" />
-<label for="id-215694837">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-682491573" x-model="acceptTerms" />
+<label for="id-682491573">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
       </form>
@@ -313,7 +313,7 @@
       <section x-data="{showForm: false}" class="w-full lg:w-1/2">
         <div class="rounded shadow bg-white">
           <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
-            <h2>Buy a donation key</h2>
+            <h2>Buy a supporter certificate</h2>
           </div>
           <div class="p-4">
             <ul class="fa-ul mb-4">
@@ -351,8 +351,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-672348519" x-model="acceptTerms" />
-<label for="id-672348519">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-187392564" x-model="acceptTerms" />
+<label for="id-187392564">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout
@@ -363,16 +363,16 @@
 
   <div x-show="checkoutData.success" x-cloak>
     <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Your payment was successful!</h3>
-    <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Donation Key</label>
+    <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Supporter Certificate</label>
     <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed break-all w-full mb-2" rows="6" placeholder="Loading…" readonly></textarea>
     <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mb-2" x-text="checkoutData.errorMessage"></p>
-    <p class="text-sm md:text-base leading-relaxed text-gray-700">This is your donation key. Enter it in the Cryptomator settings under &#34;Donate&#34;. The donation key has also been sent to your email address.</p>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">This is your supporter certificate. Enter it in the Cryptomator settings under &#34;Support Us&#34;. It has also been sent to your email address.</p>
   </div>
 </div>
 
 
   
-  <script type="text/javascript" src="/js/desktopkey.min.310a025a3c8d86f44c73eacfc94800a41bbdc7bb7668c1c20224264d429d2a35.js" integrity="sha256-MQoCWjyNhvRMc&#43;rPyUgApBu9x7t2aMHCAiQmTUKdKjU=" defer></script>
+  <script type="text/javascript" src="/js/desktopkey.min.77d5a81c0a4a62dce258d4bc7c3e3643f703cd5d14a51ea2a409dafd09afca24.js" integrity="sha256-d9WoHApKYtziWNS8fD42Q/cDzV0UpR6ipAna/QmvyiQ=" defer></script>
 
 
           </div>
@@ -389,10 +389,10 @@
   </section>
 
   <section x-data="{data: {email: '', errorMessage: '', success: false, inProgress: false}}" class="container text-center pt-12 pb-24">
-    <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Did you lose your donation key?</h3>
+    <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Did you lose your supporter certificate?</h3>
 
     <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
-      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">To recover a lost donation key or receipt, enter your email address below.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">To recover a lost certificate or receipt, enter your email address below.</p>
       <div class="flex justify-center items-center rounded bg-gray-300">
         <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none bg-white" placeholder="Email address" required/>
         <button x-bind:disabled="!$refs.form.checkValidity() || data.inProgress" x-on:click="$event.preventDefault(); new KeyRecovery($refs.form, data).getUserHistory()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
