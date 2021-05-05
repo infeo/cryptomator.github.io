@@ -18,9 +18,13 @@
     <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
     <meta property="og:image:width" content="256" />
     <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="en_US" />
+    
+      <meta property="og:locale:alternate" content="de_DE" />
+    
     
       
-      <link rel="stylesheet" href="/css/main.min.53414be1dd50b5def7ab7a2a64d8bbd5f5e8c92223c0ca3d19b67d64d63af9d3.css" integrity="sha256-U0FL4d1Qtd73q3oqZNi71fXoySIjwMo9GbZ9ZNY6&#43;dM=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.b9c0c58c84d114802ea5bd256c808e28743822dbf1a3d5512718103a2b47fe02.css" integrity="sha256-ucDFjITRFIAupb0lbICOKHQ4Itvxo9VRJxgQOitH/gI=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -43,17 +47,26 @@
       <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
         <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
       </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/coop/">Cooperations</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/faq/">FAQ</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
-      </li>
       <li class="flex items-center lg:mx-2 border-b-2 border-primary hover:border-primary">
         <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/sponsors/">Sponsors</a>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>Learn More</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+            <a href="/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">How Open Source Strengthens Security</a>
+            <a href="/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Encrypt Your Dropbox</a>
+            <a href="/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Our Cooperation Partners</a>
+            <a href="/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Customizations for Your Enterprise</a>
+            <a href="/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">GDPR Compliancy</a>
+          </div>
+        </div>
       </li>
       
       <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
@@ -65,9 +78,7 @@
         </button>
         <div class="relative">
           <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
-            
             <a href="/de/donate/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
-            
           </div>
         </div>
       </li>
@@ -89,11 +100,22 @@
   
   <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Cooperations</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/faq/">FAQ</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/sponsors/">Sponsors</a>
     
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Learn More
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/open-source/">How Open Source Strengthens Security</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/encrypt-dropbox/">Encrypt Your Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Our Cooperation Partners</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/enterprise/">Customizations for Your Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/gdpr/">GDPR Compliancy</a>
+    </div>
+
     <hr class="border-primary my-2"/>
     
     <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
@@ -173,8 +195,8 @@
         <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
         <input type="hidden" name="amount" value="15" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-498372561" x-model="acceptTerms" />
-<label for="id-498372561">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-234697185" x-model="acceptTerms" />
+<label for="id-234697185">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
       </form>
@@ -228,8 +250,8 @@
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-859761432" x-model="acceptTerms" />
-<label for="id-859761432">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-638947215" x-model="acceptTerms" />
+<label for="id-638947215">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
 
             <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -251,8 +273,8 @@
         <div x-show="frequency === 'recurring'" class="text-center">
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-842356971" x-model="acceptTerms" />
-<label for="id-842356971">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-497236581" x-model="acceptTerms" />
+<label for="id-497236581">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
           <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'en')" x-bind:disabled="!acceptTerms">
             <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
@@ -296,8 +318,8 @@
         <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
         <input type="hidden" name="allow_extra" value="1" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-958176243" x-model="acceptTerms" />
-<label for="id-958176243">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-147859632" x-model="acceptTerms" />
+<label for="id-147859632">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
         <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
       </form>
@@ -351,8 +373,8 @@
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-579236841" x-model="acceptTerms" />
-<label for="id-579236841">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-397214685" x-model="acceptTerms" />
+<label for="id-397214685">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Checkout

@@ -3,76 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://cryptomator.org/faq/general/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/general/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/general/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/usage/encrypt-dropbox/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/usage/encrypt-dropbox/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/usage/encrypt-dropbox/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/gdpr/gdpr-compliant/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/gdpr/gdpr-compliant/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/gdpr/gdpr-compliant/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/general/free/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/general/free/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/general/free/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/security/opensource/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/security/opensource/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/security/opensource/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/downloads/win/</loc>
     <xhtml:link
                 rel="alternate"
@@ -83,48 +13,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/downloads/win/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/gdpr/dpa-cryptomator/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/gdpr/dpa-cryptomator/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/gdpr/dpa-cryptomator/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/usage/encrypt-google-drive/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/usage/encrypt-google-drive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/usage/encrypt-google-drive/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/general/compare-to-veracrypt/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/general/compare-to-veracrypt/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/general/compare-to-veracrypt/"
                 />
   </url>
   
@@ -143,48 +31,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/faq/security/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/security/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/security/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/security/audits/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/security/audits/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/security/audits/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/gdpr/dpa-cloudprovider/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/gdpr/dpa-cloudprovider/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/gdpr/dpa-cloudprovider/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/downloads/linux/</loc>
     <xhtml:link
                 rel="alternate"
@@ -199,20 +45,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/faq/usage/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/usage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/usage/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/downloads/android/</loc>
     <xhtml:link
                 rel="alternate"
@@ -223,20 +55,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/downloads/android/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/faq/gdpr/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/faq/gdpr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/faq/gdpr/"
                 />
   </url>
   
@@ -936,6 +754,34 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/open-source/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/open-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/encrypt-dropbox/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/encrypt-dropbox/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/encrypt-dropbox/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/enterprise/</loc>
     <xhtml:link
                 rel="alternate"
@@ -950,16 +796,16 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/faq/</loc>
+    <loc>https://cryptomator.org/gdpr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://cryptomator.org/de/faq/"
+                href="https://cryptomator.org/de/gdpr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://cryptomator.org/faq/"
+                href="https://cryptomator.org/gdpr/"
                 />
   </url>
   

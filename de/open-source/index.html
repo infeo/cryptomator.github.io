@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud-Speicher verschlüsseln: Wie Open Source die Sicherheit stärkt</title>
+    
+      <meta name="description" content="Vertrauen ist gut, Kontrolle ist besser: Willst du deinen Cloud-Speicher verschlüsseln, bietet dir Open-Source-Verschlüsselungssoftware noch mehr Schutz.">
+      <meta property="og:title" content="Cloud-Speicher verschlüsseln: Wie Open Source die Sicherheit stärkt">
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://cryptomator.org/de/open-source/">
+      <meta property="og:site_name" content="Cryptomator">
+      <meta property="og:description" content="Vertrauen ist gut, Kontrolle ist besser: Willst du deinen Cloud-Speicher verschlüsseln, bietet dir Open-Source-Verschlüsselungssoftware noch mehr Schutz.">
+      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+    <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
+    
+      
+      <link rel="stylesheet" href="/css/main.min.b9c0c58c84d114802ea5bd256c808e28743822dbf1a3d5512718103a2b47fe02.css" integrity="sha256-ucDFjITRFIAupb0lbICOKHQ4Itvxo9VRJxgQOitH/gI=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
+    
+      <link rel="alternate" hreflang="en" href="/open-source/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/donate/">Spenden</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            <a href="/open-source/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/open-source/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container-prose py-12">
+    <article>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="deine-daten-sicher-im-cloud-speicher-verschlüsseln-wie-du-durch-open-source-deine-datensicherheit-weiter-erhöhst">Deine Daten sicher im Cloud-Speicher verschlüsseln: Wie du durch Open Source deine Datensicherheit weiter erhöhst</h1>
+<p class="lead">Vielleicht hast du dich jetzt schon eine Weile mit der Verschlüsselung deines Cloud-Speichers beschäftigt und bist dabei auf das Thema „Open Source“ gestoßen. Vielleicht fragst du dich, warum Open Source so wichtig ist, wenn du deinen Dateien verschlüsseln willst? Hier erklären wir es dir.</p>
+<p>Damit du noch besser nachvollziehen kannst, was Open Source eigentlich bedeutet, lass uns mit einem Beispiel starten.</p>
+<p>Stell dir vor, du bist in einer fremden Stadt und besuchst abends einen Stadtteil, der als etwas zwielichtig gilt. Dort gehst du in eine Bar und willst etwas trinken.</p>
+<p>Welche der folgenden Szenarien hört sich für dich sicherer an:</p>
+
+</div>
+<table class="my-6">
+  <tr>
+    <td class="text-center">
+      <div class="fa-stack flex-shrink-0 text-xl text-secondary">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <strong class="fa-stack-1x fa-inverse">1</strong>
+      </div>
+    </td>
+    <td class="pl-3">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700">Der Barkeeper bereitet deinen Drink live vor deinen Augen zu.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-center py-6">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700">oder</p>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="text-center">
+      <div class="fa-stack flex-shrink-0 text-xl text-secondary">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <strong class="fa-stack-1x fa-inverse">2</strong>
+      </div>
+    </td>
+    <td class="pl-3">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700">Ein Unbekannter bietet dir etwas von seinem Getränk an.</p>
+    </td>
+  </tr>
+</table>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><p>Wahrscheinlich spürst du bereits eine Tendenz: Die fremde Person kann noch so nett aussehen – und in den meisten Fällen gibt es sicher keinen Grund für Misstrauen.</p>
+<p>Doch du weißt nicht: Was, wenn da doch etwas in dem Drink ist, was da lieber nicht drin sein sollte?</p>
+<p>Und möglicherweise kommt dir hier das alte Sprichwort in den Sinn: Vertrauen ist gut – Kontrolle ist besser.</p>
+<h2 id="trust-but-verify">Vertrauen ist gut, Kontrolle ist besser – gerade, wenn du sensible Daten im Cloud-Speicher verschlüsseln willst</h2>
+<p>Und genau diesen Vorteil der Kontrolle bietet dir Open-Source-Software, wenn du deinen Cloud-Speicher (wie z.B. Dropbox) verschlüsseln willst.</p>
+<p>Um noch einmal auf das Beispiel mit der Bar sprechen zu kommen: Grundsätzlich wäre es sogar möglich, dass du deinen Drink selbst mixt.</p>
+<p>Denn Open Source ermöglicht dir genau das: Die Anleitung und alle Zutaten liegen bereit. Zusätzlich hast du sogar die Möglichkeit, das Rezept ggf. anzupassen und weiter zu verbessern.</p>
+<h2 id="advantages">Wie genau Open-Source-Software deine Datensicherheit steigert</h2>
+<p>Vielleicht hast du Open Source auch schon mal unter dem Begriff „quelloffen“ kennengelernt. Diese Quelloffenheit siehst du auf den ersten Blick nicht. Denn die Vorteile liegen in den sicherheitsrelevanten Kriterien, die im Hintergrund ablaufen.</p>
+<p>Bevor wir weitergehen, lass uns nun noch kurz die Maxime der Datenverschlüsselung (der Kryptographie) anschauen. Denn diese lautet:</p>
+<p>Die Sicherheit eines Verschlüsselungsverfahrens muss allein vom Schlüssel abhängen und darf nicht auf der Geheimhaltung der Verschlüsselungsalgorithmen beruhen. (Das sogenannte <a href="https://de.wikipedia.org/wiki/Kerckhoffs%E2%80%99_Prinzip" target="_blank" rel="noopener">Kerckhoffs’sche Prinzip</a>.)</p>
+<figure class="text-center">
+  <img class="inline-block rounded" src="/img/open-source/auguste-kerckhoffs.jpg" alt="Auguste Kerckhoffs" />
+  <figcaption>Benannt nach <a href="https://de.wikipedia.org/wiki/Auguste_Kerckhoffs" target="_blank" rel="noopener">Auguste Kerckhoffs</a> (1835 – 1903)</figcaption>
+</figure>
+<p>Da also die Sicherheit lediglich vom Schlüssel abhängt, ergibt sich durch die Veröffentlichung des Algorithmus kein Nachteil.</p>
+<p>Gleichzeitig hat Quelloffenheit aber viele sicherheitsfördernde Vorteile:</p>
+
+</div>
+<div class="flex my-6">
+  <div class="fa-stack flex-shrink-0 text-xl text-secondary mr-3">
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+  </div>
+  <div>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Der Quellcode kann von einer Community aus Programmierern – vom Hobbyprogrammierer bis zum Sicherheitsforscher – eingesehen werden, wodurch unbefugter Zugriff direkt erkannt wird.</p>
+    <div x-data="{ isLearnMoreOpen: false }">
+      <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="isLearnMoreOpen = !isLearnMoreOpen"><i :class="{ 'fa-eye': !isLearnMoreOpen, 'fa-eye-slash': isLearnMoreOpen }" class="fas fa-fw"></i> Mehr erfahren</a>
+      <div x-show="isLearnMoreOpen" x-cloak class="rounded shadow bg-white mt-4">
+        <div class="p-4">
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Weil jeder den Quellcode einsehen kann, wird verhindert, dass unbemerkt Hintertüren für Regierungen, Strafverfolgungsbehörden oder Geschäftspartner eingebaut werden können.</p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700"><strong>Würde also jemand Unbefugtes Zugriff auf deine Daten haben, würde das zumindest sehr schnell auffallen.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex my-6">
+  <div class="fa-stack flex-shrink-0 text-xl text-secondary mr-3">
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fas fa-sync fa-stack-1x fa-inverse"></i>
+  </div>
+  <div>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Der Quellcode wird ständig überprüft und somit laufend weiter verbessert.</p>
+    <div x-data="{ isLearnMoreOpen: false }">
+      <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="isLearnMoreOpen = !isLearnMoreOpen"><i :class="{ 'fa-eye': !isLearnMoreOpen, 'fa-eye-slash': isLearnMoreOpen }" class="fas fa-fw"></i> Mehr erfahren</a>
+      <div x-show="isLearnMoreOpen" x-cloak class="rounded shadow bg-white mt-4">
+        <div class="p-4">
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Abgesehen von offiziellen Audits wird der Quellcode auch von Dritten verwendet und somit ständig überprüft.</p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Werden dabei Schwachstellen gefunden, können diese nicht stillschweigend ignoriert werden. Falls es mal ein Problem gibt, fällt dies schnell auf und der Anbieter der Verschlüsselungssoftware ist zu einer zügigen Reaktion gezwungen. Sowohl die Ursache als auch die Abhilfe werden öffentlich dokumentiert.</p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4"><strong>Du kannst dich also darauf verlassen, dass die Sicherheit beim Verschlüsseln deines Cloud-Speichers nicht nur einmalig intensiv, sondern auch laufend durch Leute vom Fach verifiziert wird.</strong></p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700">Die Geschichte zeigt, dass in anderen Fällen (bei sogenannter Closed-Source-Software) Sicherheitslücken über Jahre ungefixt blieben, weil der Anbieter keinen öffentlichen Druck zur Reaktion hatte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex mt-6 mb-12">
+  <div class="fa-stack flex-shrink-0 text-xl text-secondary mr-3">
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fas fa-clouds fa-stack-1x fa-inverse"></i>
+  </div>
+  <div>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Der Quellcode wird hundertfach kopiert, was die Verschlüsselung unabhängig vom Anbieter macht.</p>
+    <div x-data="{ isLearnMoreOpen: false }">
+      <a class="text-primary no-underline hover:underline" href="#" x-on:click.prevent="isLearnMoreOpen = !isLearnMoreOpen"><i :class="{ 'fa-eye': !isLearnMoreOpen, 'fa-eye-slash': isLearnMoreOpen }" class="fas fa-fw"></i> Mehr erfahren</a>
+      <div x-show="isLearnMoreOpen" x-cloak class="rounded shadow bg-white mt-4">
+        <div class="p-4">
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Selbst wenn der Anbieter der Verschlüsselungssoftware irgendwann seinen Betrieb einstellt, <strong>hast du weiterhin Zugriff auf deine verschlüsselten Daten und kannst deinen Cloud-Speicher weiterhin verschlüsseln.</strong></p>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700">Denn der Quellcode wird hunderte Male kopiert und kann völlig legal von anderen weiterveröffentlicht werden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="robust-crypto">Cloud-Speicher mit Open-Source-Software verschlüsseln: Mit Cryptomator auf der sicheren Seite</h2>
+<p>Cryptomator ist genauso eine solche Open-Source-Verschlüsselungssoftware. Dank des quelloffenen Charakters ist eine maximale Transparenz gewährleistet. Somit wird die Sicherheit deiner Daten also auf vielen Ebenen gesichert und ständig weiter erhöht:</p>
+<ol>
+<li>Neben dem eigentlichen Code sind auch Qualitätsmetriken aus automatisierten Tests sowie Fehlerberichten öffentlich einsehbar.</li>
+<li>Der Code wird ständig an die neuesten Standards angepasst.</li>
+<li>Das Feedback aus der Community wird umgehend umgesetzt.</li>
+<li>Wir nutzen erprobte Chiffren zur Verschlüsselung, deren korrekte Verwendung mehrfach auditiert und darüber hinaus permanent verifizierbar ist.</li>
+<li>Uns ist es unmöglich, Sicherheitslücken etwa aus Marketinggründen zu verschweigen, weil der gesamte Code jederzeit von der Community geprüft werden kann.</li>
+</ol>
+<p>All dies führt zu einer herausragenden Widerstandsfähigkeit der kryptografischen Umsetzung, die auch Auditoren hervorgehoben haben:</p>
+<blockquote>
+<p>The cryptographic implementation exhibited a quite exceptional level of robustness.</p>
+<p><em>Die kryptografische Implementierung wies ein ganz außergewöhnliches Maß an Robustheit auf.</em></p>
+</blockquote>
+<p>– <a href="https://cryptomator.org/audits/2017-11-27%20crypto%20cure53.pdf" target="_blank" rel="noopener">Audit von Cure53</a></p>
+<p><strong>In anderen Worten: Diese Robustheit erhöht deine Datensicherheit um ein Vielfaches, wenn du deine Dateien im Cloud-Speicher mit Open-Source-Software verschlüsselst.</strong></p>
+<p>Mit Cryptomator haben wir zudem einen Fokus auf hohe Anwenderfreundlichkeit gelegt. Du kannst <a href="/de/encrypt-dropbox/">Dropbox</a>, Google Drive, OneDrive und Co. wie gewohnt nutzen und weißt gleichzeitig alle sensiblen Daten sicher.</p>
+
+</div>
+
+    </article>
+    
+      <section class="text-center max-w-xl mx-auto py-12">
+        <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Du willst deinen Cloud-Speicher mit Cryptomator verschlüsseln?</h3>
+        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Cryptomator ist kostenfrei und ohne Account nutzbar. Du kannst jederzeit loslegen. Einfach direkt herunterladen und starten.</p>
+        <a href="/de/downloads/" role="button" class="btn btn-primary px-8">Jetzt deinen Cloud-Speicher verschlüsseln</a>
+      </section>
+    
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>

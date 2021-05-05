@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropbox verschlüsseln: Deine Daten sicher schützen mit Cryptomator</title>
+    
+      <meta name="description" content="Schutz für deine Cloud: Wie du mit Cryptomator deine sensiblen Dateien in Dropbox verschlüsseln kannst.">
+      <meta property="og:title" content="Dropbox verschlüsseln: Deine Daten sicher schützen mit Cryptomator">
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://cryptomator.org/de/encrypt-dropbox/">
+      <meta property="og:site_name" content="Cryptomator">
+      <meta property="og:description" content="Schutz für deine Cloud: Wie du mit Cryptomator deine sensiblen Dateien in Dropbox verschlüsseln kannst.">
+      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+    <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
+    
+      
+      <link rel="stylesheet" href="/css/main.min.b9c0c58c84d114802ea5bd256c808e28743822dbf1a3d5512718103a2b47fe02.css" integrity="sha256-ucDFjITRFIAupb0lbICOKHQ4Itvxo9VRJxgQOitH/gI=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
+    
+      <link rel="alternate" hreflang="en" href="/encrypt-dropbox/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/donate/">Spenden</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+            <a href="/encrypt-dropbox/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/encrypt-dropbox/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator on Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator on Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container-prose py-12">
+    <article>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="dropbox-sicher-verschlüsseln-so-schützt-du-mit-cryptomator-deine-sensiblen-dateien-in-der-cloud">Dropbox sicher verschlüsseln: So schützt du mit Cryptomator deine sensiblen Dateien in der Cloud</h1>
+<p class="lead">Du willst deine <strong>Dropbox verschlüsseln und Privatsphäre schützen</strong> – und weiterhin die gesamte Freiheit, wie du deine Daten organisierst? Hier kommt Cryptomator ins Spiel.</p>
+<p>Mit Cryptomator kannst du deinen <strong>Cloud-Speicher verschlüsseln</strong>, indem du in Dropbox einen Tresor erzeugst und dort deine Dateien hineinlegst. Mit dieser zusätzlichen Sicherheitsschicht errichtest du eine nahezu unüberwindbare Barriere vor Angreifern – ohne dass die Dateiablage und Synchronisation von Dropbox eingeschränkt wird.</p>
+<h2 id="free-dropbox-encryption">Kostenfreie Dropbox Verschlüsselung</h2>
+<p>Cryptomator für Windows, macOS und Linux ist kostenfrei. <a href="/de/downloads/">Lade dir jetzt Cryptomator herunter.</a></p>
+<p>Willst du auch auf dem Smartphone deine Dateien schützen, zahlst du für die mobile App einmalig 9,99 Euro.</p>
+<p>Die App gibt es für iOS und Android.</p>
+<h2 id="features">Deine Dropbox verschlüsseln und Daten zuverlässig schützen: So hilft dir Cryptomator dabei</h2>
+
+</div>
+<div class="rounded shadow bg-white my-6">
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+    <h3><i class="fab fa-dropbox fa-fw text-primary"></i> Nutze Dropbox wie bisher</h3>
+  </div>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
+    <p><strong>Deine Ordner-Struktur in Dropbox kannst du wie bisher beibehalten</strong> – Cryptomator passt sich nahtlos an. Du kannst gezielt einzelne Ordner deiner Dropbox verschlüsseln und weiterhin Dateien oder Ordner unverschlüsselt lassen.</p>
+  </div>
+</div>
+<div class="rounded shadow bg-white my-6">
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+    <h3><i class="fas fa-share fa-fw text-primary"></i> Geschützte Daten bequem für Freunde, Familie und Kollegen freigeben</h3>
+  </div>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
+    <p>Macht mit Cryptomator eure Daten in der Cloud sicher und <strong>bewahrt die Privatsphäre über mehrere Computer hinweg.</strong> Alles, was ihr braucht, ist Cryptomator auf jedem Gerät und den Sicherheitsschlüssel, um Zugriff auf die Daten zu erhalten.</p>
+  </div>
+</div>
+<div class="rounded shadow bg-white my-6">
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+    <h3><i class="fas fa-key fa-fw text-primary"></i> Den Schlüssel zu deinen Cloud-Daten hat nur, wer ihn haben soll</h3>
+  </div>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
+    <p>Die <strong>Ende-zu-Ende-Verschlüsselung</strong> macht es potenziellen Angreifer noch schwieriger, dir zu schaden. Denn dank der verschlüsselten Dateinamen können Dritte keine Rückschlüsse auf die Dateitypen ziehen – was eines der häufigsten Einfallstore für sie ist.</p>
+  </div>
+</div>
+<div class="rounded shadow bg-white my-6">
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+    <h3><i class="fas fa-sync fa-fw text-primary"></i> Keine Dateien versehentlich überschreiben</h3>
+  </div>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
+    <p>Wenn gleichzeitig mehrere Geräte auf ein Dokument zugreifen, und dadurch <strong>Synchronisationskonflikte</strong> entstehen, erkennt Cryptomator diese trotz Dateinamensverschlüsselung. Zusätzlich bleibt, so wie du es kennst, die Versionshistorie von deinem Cloud-Speicher-Anbieter erhalten.</p>
+  </div>
+</div>
+<div class="rounded shadow bg-white mt-6 mb-12">
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none px-4 py-2 border-b border-primary">
+    <h3><i class="fas fa-clouds fa-fw text-primary"></i> Deine sensiblen Daten in Dropbox überall schnell griffbereit</h3>
+  </div>
+  <div class="prose prose-sm md:prose max-w-none md:max-w-none p-4">
+    <p>Cryptomator wurde speziell für die <strong>Verschlüsselung von Cloud-Diensten</strong> entwickelt. Weil die <strong>Dateien einzeln verschlüsselt sind</strong>, werden immer nur die Dateien neu hochgeladen bzw. verschlüsselt, die du gerade geändert hast – und nicht (wie bei sogenannten „Containerlösungen“) der gesamte Ordner. Änderungen synchronisieren sich also viel schneller – und das macht sich gerade unterwegs bemerkbar.</p>
+  </div>
+</div>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="how-the-vault-works">Wie Cryptomator deine Dropbox Verschlüsselung sicherstellt</h2>
+<p>Cryptomator legt die Daten in deiner Dropbox in einen „magischen“ Tresor. Magisch deshalb, weil der gesamte Tresor und sein Inhalt nur mit dem richtigen Passwort erscheinen – und nur für denjenigen mit dem richtigen Passwort.</p>
+<p>Wird die Tür zum Tresor wieder geschlossen, verschwindet der gesamte Tresor mitsamt dem wertvollen Inhalt wieder, bis du ihn das nächste Mal mit dem richtigen Passwort öffnest.</p>
+<p>Das heißt: Angreifern würde es nicht mal etwas bringen, sich durch die Wand des Tresors zu bohren. Denn der Tresor ist leer, wenn das richtige Passwort fehlt. (Für die Marvel-Fans: Es funktioniert in etwa wie das Portal in Doctor Strange.)</p>
+<h2 id="how-cryptomator-works">Und so funktioniert Cryptomator in der Praxis</h2>
+<p>Willst du den Tresor mit deinen Dateien erscheinen lassen, öffnest du zunächst Cryptomator. Nun gibst du dein Passwort ein und der Tresor erscheint (in Form eines virtuellen Laufwerks in deinem Dateiexplorer).</p>
+<p>Du hast noch nie mit einem virtuellen Laufwerk gearbeitet? Ein virtuelles Laufwerk funktioniert wie eine Art USB-Stick. Das Laufwerk ist also nur sichtbar, solange der USB-Stick angeschlossen ist. Wirfst du den Stick aus, verschwindet das USB-Laufwerk wieder.</p>
+<p>Dieses virtuelle Laufwerk nennen wir „Tresor-Laufwerk“. Das kannst du wie gewohnt öffnen und die Daten bearbeiten. Sobald du in Cryptomator „Tresor sperren“ klickst, wird das virtuelle Laufwerk entfernt (und damit der Zugang zu den sensiblen Daten). Der Tresor ist jetzt wieder verschwunden.</p>
+<p>Du kannst übrigens beliebig viele solcher Tresore anlegen, um deine Daten ganz individuell zu organisieren.</p>
+<h2 id="setup-guide">So leicht verknüpfst du Cryptomator mit deiner Dropbox</h2>
+<ol>
+<li>Installiere Cryptomator.</li>
+<li>Sobald Cryptomator installiert ist, kannst du einen neuen Tresor erstellen.</li>
+<li>Gib deinem Tresor einen Namen.</li>
+<li>Wähle nun als Ablageort deines Tresors Dropbox aus.</li>
+<li>Vergib ein Passwort.</li>
+</ol>
+<p>Und schon hast du deinen ersten Tresor erfolgreich erstellt.</p>
+<p>Wenn du möchtest, kannst du diesen sofort entsperren und das virtuelle Laufwerk sichtbar werden lassen.</p>
+<p>Hier legst du ab sofort deine sensiblen Dateien ab, um diese in Dropbox zu verschlüsseln.</p>
+<p><a href="https://docs.cryptomator.org/en/latest/desktop/adding-vaults/" target="_blank" rel="noopener">Eine ausführliche Anleitung gibt es hier.</a></p>
+
+</div>
+
+    </article>
+    
+      <section class="text-center max-w-xl mx-auto py-12">
+        <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Du willst deine Dropbox mit Cryptomator verschlüsseln?</h3>
+        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Cryptomator ist kostenfrei und ohne Account nutzbar. Du kannst jederzeit loslegen. Einfach direkt herunterladen und starten.</p>
+        <a href="/de/downloads/" role="button" class="btn btn-primary px-8">Jetzt deine Dropbox verschlüsseln</a>
+      </section>
+    
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>

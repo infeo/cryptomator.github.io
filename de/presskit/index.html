@@ -18,9 +18,13 @@
     <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
     <meta property="og:image:width" content="256" />
     <meta property="og:image:height" content="256" />
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
     
       
-      <link rel="stylesheet" href="/css/main.min.53414be1dd50b5def7ab7a2a64d8bbd5f5e8c92223c0ca3d19b67d64d63af9d3.css" integrity="sha256-U0FL4d1Qtd73q3oqZNi71fXoySIjwMo9GbZ9ZNY6&#43;dM=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.b9c0c58c84d114802ea5bd256c808e28743822dbf1a3d5512718103a2b47fe02.css" integrity="sha256-ucDFjITRFIAupb0lbICOKHQ4Itvxo9VRJxgQOitH/gI=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -44,16 +48,25 @@
         <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
       </li>
       <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/de/coop/">Kooperationen</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/de/faq/">FAQ</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
         <a class="p-2 hover:no-underline" href="/de/donate/">Spenden</a>
+      </li>
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
       </li>
       
       <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
@@ -65,9 +78,7 @@
         </button>
         <div class="relative">
           <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
-            
             <a href="/presskit/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
-            
           </div>
         </div>
       </li>
@@ -89,11 +100,22 @@
   
   <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Kooperationen</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/faq/">FAQ</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a>
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
     
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
     <hr class="border-primary my-2"/>
     
     <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
