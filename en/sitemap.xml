@@ -880,6 +880,20 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/coop/proxystore/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/coop/proxystore/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/coop/proxystore/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/sponsors/</loc>
     <xhtml:link
                 rel="alternate"

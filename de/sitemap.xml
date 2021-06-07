@@ -894,6 +894,20 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/de/coop/proxystore/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/coop/proxystore/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/coop/proxystore/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/de/donate/</loc>
     <xhtml:link
                 rel="alternate"
