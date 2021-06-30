@@ -11,8 +11,32 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/cyberduck/</link>
     </image>
-    <lastBuildDate>Fri, 25 Jun 2021 08:45:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jun 2021 06:47:05 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator 2.0 for iOS: Open Source and Beta Release</title>
+        <description>&lt;p&gt;Finally, the time has come! 🎉 The brand new iOS app of Cryptomator can now be tried out in a beta version via TestFlight and the project is now, as previously announced, fully open-source! This means that the entire Cryptomator family is now open-source, consisting of the Desktop, Android, and iOS versions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cryptomator 2.0 for iOS on TestFlight: &lt;a href=&#34;https://testflight.apple.com/join/WMtYSrzD&#34;&gt;https://testflight.apple.com/join/WMtYSrzD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open-source repository on GitHub: &lt;a href=&#34;https://github.com/cryptomator/ios&#34;&gt;https://github.com/cryptomator/ios&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png&#34; srcset=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png 1x, https://cryptomator.org/img/blog/ios-2.0-beta@2x.png 2x&#34; alt=&#34;Cryptomator 2.0 for iOS: Open Source and Beta Release&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;The new Cryptomator app with full integration into the Files app of iOS fulfills one of the biggest feature requests. For example, it is now possible to save encrypted files directly into a Cryptomator vault within Word. On iPad, drag &amp;amp; drop is possible with the new app. In general, all features of the Files app are automatically supported by Cryptomator.&lt;/p&gt;
+&lt;p&gt;Development on the new iOS app started just over a year ago and was rewritten from scratch in the Swift programming language. We are now using the latest tools to develop the app and can therefore support new features of iOS faster. This makes the project more future-proof and easier to maintain. Half a year ago, we were able to open-source the Android app and have released numerous updates with great contributions from the community since then. We couldn&amp;rsquo;t wait to release the source code of the new iOS app as well. Through open-source, the new app is now accessible to all interested developers and the whole community, as we are used to from our other projects.&lt;/p&gt;
+&lt;p&gt;We are looking forward to your feedback and contributions and are very grateful to you and the whole community that made this step possible. To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;donating&lt;/a&gt; or &lt;a href=&#34;https://cryptomator.org/sponsors/&#34;&gt;sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2021/06/30/ios-2.0-beta/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2021/06/30/ios-2.0-beta/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>Strategic Autonomy in Danger: European Tech Companies Warn Of Lowering Data Protection Levels in the EU</title>
@@ -311,28 +335,6 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
         <category>ios</category>
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Early 2019</title>
-        <description>&lt;p&gt;Hey it&amp;rsquo;s a new year, so here comes our &lt;del&gt;quarterly&lt;/del&gt; annual 🙈 roadmap preview.&lt;/p&gt;
-&lt;h3 id=&#34;openjdk-and-openjfx&#34;&gt;OpenJDK and OpenJFX&lt;/h3&gt;
-&lt;p&gt;Until now we&amp;rsquo;ve been using Oracle JDK, since this included the GUI library we used for Cryptomator: JavaFX. Beginning with JDK 11, we plan to switch to OpenJDK and OpenJFX. JavaFX will no longer be included in the Oracle JDK anyway and OpenJFX promises shorter release cycles and - as the name suggests - is developed in an open process.&lt;/p&gt;
-&lt;p&gt;Since we no longer depend on non-free software, Cryptomator could theoretically move from &amp;ldquo;contrib&amp;rdquo; to &amp;ldquo;main&amp;rdquo; in Debian repos.&lt;/p&gt;
-&lt;p&gt;We also hope that building Cryptomator becomes easier, since OpenJFX is a normal dependency and you no longer need to install the Oracle JDK.&lt;/p&gt;
-&lt;h3 id=&#34;symlinks&#34;&gt;Symlinks&lt;/h3&gt;
-&lt;p&gt;We have successfully moved to FUSE (Linux and macOS) and Dokany (Windows). Now it is time to improve the file systems. One of the most asked features is support for symbolic links. If you don&amp;rsquo;t know what this is, don&amp;rsquo;t worry. For everyone else: Stay tuned for a 1.4.x update introducing symlinks.&lt;/p&gt;
-&lt;h3 id=&#34;ui-redesign&#34;&gt;UI Redesign&lt;/h3&gt;
-&lt;p&gt;We plan to redesign the whole user interface from scratch with Cryptomator 1.5.0. In order to do this, we are happy to get your input. If you have any ideas on how Cryptomator should look, feel free to join the discussion in our &lt;a href=&#34;https://community.cryptomator.org/t/ui-redesign-thread/2850&#34;&gt;redesign thread&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/blog/2019/01/14/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/blog/2019/01/14/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
         
       </item>
     

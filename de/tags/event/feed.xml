@@ -11,8 +11,32 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/event/</link>
     </image>
-    <lastBuildDate>Fri, 25 Jun 2021 08:45:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jun 2021 06:47:06 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Cryptomator 2.0 für iOS: Open Source und Beta-Release</title>
+        <description>&lt;p&gt;Endlich ist es soweit! 🎉 Die brandneue iOS-App von Cryptomator kann nun in einer Beta-Version per TestFlight ausprobiert werden und das Projekt ist jetzt wie angekündigt vollständig quelloffen! Damit ist nun die gesamte Cryptomator-Familie open-source, bestehend aus der Desktop-, Android- und iOS-Version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cryptomator 2.0 für iOS auf TestFlight: &lt;a href=&#34;https://testflight.apple.com/join/WMtYSrzD&#34;&gt;https://testflight.apple.com/join/WMtYSrzD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open-Source-Repository auf GitHub: &lt;a href=&#34;https://github.com/cryptomator/ios&#34;&gt;https://github.com/cryptomator/ios&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png&#34; srcset=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png 1x, https://cryptomator.org/img/blog/ios-2.0-beta@2x.png 2x&#34; alt=&#34;Cryptomator 2.0 für iOS: Open Source und Beta-Release&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Die neue Cryptomator-App mit der vollständigen Integration in die Dateien-App von iOS erfüllt einen der größten Nutzerwünsche. Beispielsweise ist es nun möglich, Dateien innerhalb von Word direkt in einen Cryptomator-Tresor verschlüsselt zu speichern. Auf dem iPad wird Drag &amp;amp; Drop mit der neuen App ermöglicht. Generell werden alle Features der Dateien-App automatisch von Cryptomator mitunterstützt.&lt;/p&gt;
+&lt;p&gt;Die Entwicklung an der neuen iOS-App hat vor gut einem Jahr begonnen und wurde von Grund auf in der Programmiersprache Swift neu geschrieben. D.h. wir nutzen nun die aktuellsten Tools zur Entwicklung der App und können somit schneller neue Features von iOS unterstützen. Das Projekt ist dadurch zukunftssicherer und leichter zu warten. Nachdem wir die Android-App vor einem halben Jahr open-sourcen konnten und seitdem zahlreiche Updates mit tollen Beiträgen aus der Community veröffentlicht haben, konnten wir es kaum erwarten, auch den Quellcode der neuen iOS-App zu veröffentlichen. Durch Open-Source ist die neue App nun, wie von unseren anderen Projekten gewohnt, zugänglich für alle interessierten Entwickler:innen und die ganze Community.&lt;/p&gt;
+&lt;p&gt;Wir sind schon sehr gespannt auf euer Feedback und eure Beiträge und sind dir sowie der gesamten Community, die diesen Schritt ermöglicht hat, sehr dankbar. Um die fortlaufende Open-Source-Entwicklung von Cryptomator zu unterstützen, freuen wir uns über eine &lt;a href=&#34;https://cryptomator.org/de/donate/&#34;&gt;Spende&lt;/a&gt; oder ein &lt;a href=&#34;https://cryptomator.org/de/sponsors/&#34;&gt;Sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/06/30/ios-2.0-beta/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/06/30/ios-2.0-beta/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>ios</category>
+        
+      </item>
     
       <item>
         <title>Strategische Autonomie in Gefahr: Europäische Tech-Unternehmen warnen vor sinkendem Datenschutzniveau in der EU</title>
@@ -310,28 +334,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>ios</category>
         
         <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Early 2019</title>
-        <description>&lt;p&gt;Hey, es ist ein neues Jahr, also kommt hier in alter Tradition unser &lt;del&gt;viertel&lt;/del&gt;jährlicher 🙈 Blick auf die Roadmap.&lt;/p&gt;
-&lt;h3 id=&#34;openjdk-und-openjfx&#34;&gt;OpenJDK und OpenJFX&lt;/h3&gt;
-&lt;p&gt;Bisher haben wir das Oracle JDK verwendet, da dies die GUI-Bibliothek beinhaltete, die wir für Cryptomator verwendet haben: JavaFX. Ab JDK 11 planen wir die Umstellung auf OpenJDK und OpenJFX. JavaFX wird ohnehin nicht mehr im Oracle JDK enthalten sein und OpenJFX verspricht kürzere Release-Zyklen und wird - wie der Name schon sagt - in einem offenen Prozess entwickelt.&lt;/p&gt;
-&lt;p&gt;Da wir nicht mehr auf &amp;ldquo;unfreie&amp;rdquo; Software angewiesen sind, könnte Cryptomator in Debian-Repos theoretisch von &amp;ldquo;contrib&amp;rdquo; auf &amp;ldquo;main&amp;rdquo; wechseln.&lt;/p&gt;
-&lt;p&gt;Wir hoffen auch, dass das Bauen von Cryptomators einfacher wird, da OpenJFX eine normale Abhängigkeit ist und das Oracle JDK mit enthaltenem JavaFX nicht mehr benötigt wird.&lt;/p&gt;
-&lt;h3 id=&#34;symlinks&#34;&gt;Symlinks&lt;/h3&gt;
-&lt;p&gt;Wir sind erfolgreich auf FUSE (Linux und macOS) und Dokany (Windows) umgestiegen. Jetzt ist es an der Zeit, die Dateisysteme zu verbessern. Eines der am häufigsten nachgefragten Features ist die Unterstützung von symbolischen Links. Keine Ahnung was das ist? Nicht weiter schlimm. 😉 Für alle, die darauf warten: Wir planen, Symlinks mit einem der kommenden 1.4.x Releases einzuführen.&lt;/p&gt;
-&lt;h3 id=&#34;ui-redesign&#34;&gt;UI Redesign&lt;/h3&gt;
-&lt;p&gt;Wir wollen die gesamte Benutzeroberfläche mit Cryptomator 1.5.0 von Grund auf neu gestalten. Um dies zu erreichen, freuen wir über Input aus der Community. Anregungen und Ideen dürfen gerne in unseren &lt;a href=&#34;https://community.cryptomator.org/t/ui-redesign-thread/2850&#34;&gt;Redesign-Thread&lt;/a&gt; einfließen.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2019/01/14/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2019/01/14/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
         
       </item>
     

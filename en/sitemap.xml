@@ -74,7 +74,7 @@
   
   <url>
     <loc>https://cryptomator.org/blog/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -88,8 +88,23 @@
   </url>
   
   <url>
+    <loc>https://cryptomator.org/tags/cryptomator/</loc>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/cryptomator/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/cryptomator/"
+                />
+  </url>
+  
+  <url>
     <loc>https://cryptomator.org/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -99,6 +114,51 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/blog/2021/06/30/ios-2.0-beta/</loc>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2021/06/30/ios-2.0-beta/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2021/06/30/ios-2.0-beta/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/ios/</loc>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/ios/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/ios/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cryptomator.org/tags/</loc>
+    <lastmod>2021-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/"
                 />
   </url>
   
@@ -148,21 +208,6 @@
   </url>
   
   <url>
-    <loc>https://cryptomator.org/tags/</loc>
-    <lastmod>2021-04-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://cryptomator.org/tags/android/</loc>
     <lastmod>2021-04-08T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -174,21 +219,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/tags/android/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/tags/cryptomator/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/cryptomator/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/cryptomator/"
                 />
   </url>
   
@@ -219,21 +249,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/tags/desktop/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://cryptomator.org/tags/ios/</loc>
-    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/ios/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/ios/"
                 />
   </url>
   
