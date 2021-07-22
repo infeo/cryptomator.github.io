@@ -11,8 +11,36 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/android/</link>
     </image>
-    <lastBuildDate>Sat, 17 Jul 2021 13:53:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jul 2021 11:06:18 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Update on the Document Provider Development</title>
+        <description>&lt;p&gt;Hey Community,&lt;/p&gt;
+&lt;p&gt;From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&amp;rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.&lt;/p&gt;
+&lt;h2 id=&#34;the-document-provider-feature&#34;&gt;The Document Provider Feature&lt;/h2&gt;
+&lt;p&gt;As users of our Android app, you know how cumbersome sometimes the work with it is: You open your favourite notes app to quickly jot something down, then notice that you cannot open your to-do list from the app because you store it encrypted with Cryptomator. So you sigh, open the Cryptomator app, unlock your vault, navigate to the to-do list file and open it with the aforementioned notes app. Definitely not the optimal workflow.&lt;/p&gt;
+&lt;p&gt;We always strive to provide the same features across all our supported platforms. One of these is a user-friendly integration of the vault into the running OS to easily access content of unlocked vaults. For the desktop systems, this feature was always present and recently we added it in our new iOS app. The last OS, where it is missing is Android. And the way to resolve this, is implementing a Document Provider for our Android app.&lt;/p&gt;
+&lt;p&gt;The Document Provider feature creates a virtual access point to an unlocked vault, with the consequence that you can conveniently browse and access a vault’s content via the standard file browser. Also, any app which supports browsing through Document Providers can directly load files from your unlocked vault without the need to go via Cryptomator’s app GUI.&lt;/p&gt;
+&lt;h2 id=&#34;development-status&#34;&gt;Development Status&lt;/h2&gt;
+&lt;p&gt;The development is tracked in the following ticket of our issue tracker: &lt;a href=&#34;https://github.com/cryptomator/android/issues/35&#34;&gt;https://github.com/cryptomator/android/issues/35&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the issue is already quite old and got over the time a countable amount of comments. After &lt;a href=&#34;https://cryptomator.org/blog/2020/12/23/android-open-source/&#34;&gt;publishing the source code&lt;/a&gt; of the app at the end of 2020, our plan was to work on this important feature.&lt;/p&gt;
+&lt;p&gt;From the technical side, we already determined the parts of code needed to be edited, developed a concept and built a proof of concept (see the linked ticket). The next step would be to actually implement it including rigorous testing.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we determined that integrating Document Provider into the existing app would require major architectural changes, therefore requiring a lot of time and resources. We have exciting plans with Cryptomator after our next major release with version 1.6.0 so that we have to delay the development of the Document Provider integration to the end of 2021.&lt;/p&gt;
+&lt;p&gt;Meanwhile, maybe you, our community can help us out.&lt;/p&gt;
+&lt;h2 id=&#34;call-for-contributions&#34;&gt;Call for Contributions&lt;/h2&gt;
+&lt;p&gt;Cryptomator for Desktop was always open source. Cryptomator for iOS and Android are now open source as well. And as such, we also rely on our community to receive feedback, distribute the app and improve its functionality.&lt;/p&gt;
+&lt;p&gt;So, we are always very excited about contributions and are happy to assist, especially when it comes to the Document Provider. 😉&lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/blog/2021/07/22/android-document-provider/</link>
+        <guid isPermaLink="true">https://cryptomator.org/blog/2021/07/22/android-document-provider/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator 2.0 for iOS: Open Source and Beta Release</title>
@@ -290,49 +318,6 @@ If you count yourself as one of the more paranoid users, who prefer to compile e
         <category>cryptomator</category>
         
         <category>desktop</category>
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Mid 2019</title>
-        <description>&lt;p&gt;We would like to take a more regular look at our roadmap to publicly document the past, present, and future developments of Cryptomator. Unlike before, we&amp;rsquo;re also going to have a look at the roadmaps of our mobile apps.&lt;/p&gt;
-&lt;h2 id=&#34;desktop&#34;&gt;Desktop&lt;/h2&gt;
-&lt;p&gt;In the desktop area, we are currently pursuing two different branches: On the one hand we are striving for feature completion of 1.4.x, with 1.4.12 already available as a release candidate. It will finally allow Linux users to store their password in the system and include the much desired &amp;ldquo;Custom Mount Flags&amp;rdquo; feature.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Save password in system (Linux):&lt;/strong&gt; For a long time, you could only store your vault&amp;rsquo;s password in the system under macOS and Windows. Through a community contribution, this is now finally also possible under (some) Linux systems. 😄 The existence of GNOME Keyring or another keychain via Secret Service API is required. Many thanks to Ralph Plawetzki (purejava on GitHub) and Sebastian Wiesendahl (swiesend on GitHub) for the implementation!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Custom Mount Flags:&lt;/strong&gt; Cryptomator uses default options to mount a drive (both for Dokany and FUSE) that we chose for security or performance reasons. However, this leads to limited functionality in some cases and users who want to set their own options can now change them. Be aware: &lt;em&gt;Use at your own risk!&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;On the other hand the implementation of 1.5.0 has already started. For 1.5.0, as announced, we want to fully concentrate on the redesign of the user interface and improve the internal processing of Cryptomator, because like many open-source projects it has grown organically over time and therefore needs a good refactoring. 😉&lt;/p&gt;
-&lt;h2 id=&#34;ios&#34;&gt;iOS&lt;/h2&gt;
-&lt;p&gt;After the release of Cryptomator 1.4.0 for iOS with built-in cache functionality, which on the one hand avoids repeated downloading of files and on the other hand allows (limited) offline access, the work on Cryptomator 1.5.0 for iOS has started.&lt;/p&gt;
-&lt;p&gt;The main focus will be the integration into the Files app of iOS. The first step will be the expansion of our &lt;a href=&#34;https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Document Provider&lt;/a&gt; which is going to be extended by the methods &amp;ldquo;Open&amp;rdquo; and &amp;ldquo;Move&amp;rdquo;. This will make a direct access to files within a Cryptomator vault from other apps possible without having to copy them back and forth.&lt;/p&gt;
-&lt;h2 id=&#34;android&#34;&gt;Android&lt;/h2&gt;
-&lt;p&gt;Cryptomator 1.4.0 for Android is currently being finalized with the following features, which can already be tested in a beta version:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Automatic photo upload:&lt;/strong&gt; After activation, all images created on the smartphone will be uploaded the next time the selected vault is unlocked.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Make files writable by third-party apps:&lt;/strong&gt; Files that are opened can be edited in third-party apps. When you finish the editing process by saving and returning to the Cryptomator app, the changes are transferred to the cloud.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We are considering these features for future versions:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;LRU Cache:&lt;/strong&gt; To save network traffic, certain server responses are cached to avoid repeated downloading, for example of unmodified images from the cloud.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Support for Google Team Drives:&lt;/strong&gt; Access to vaults located in Google Team Drive should be made possible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Distribution of the app outside of Google Play:&lt;/strong&gt; Cryptomator for Android should also be available from alternative sources. We are thinking about setting up a licensing system, through which a license could be purchased directly.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unlocking with system password:&lt;/strong&gt; You should be able to use the system password of the smartphone to open vaults. (Similar to unlocking with a fingerprint.)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Access to files via DocumentProvider:&lt;/strong&gt; Access to a Cryptomator vault inside other apps should be made possible via a DocumentProvider. For example, a file explorer would then be able to access the vault in this way.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload of directories (recursive):&lt;/strong&gt; The download of whole folders already works, the upload including all subfolders is not possible yet.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/blog/2019/07/21/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/blog/2019/07/21/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
-        
-        <category>ios</category>
         
         <category>android</category>
         

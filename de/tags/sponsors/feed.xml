@@ -11,8 +11,36 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/sponsors/</link>
     </image>
-    <lastBuildDate>Sat, 17 Jul 2021 13:53:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Jul 2021 11:06:18 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Update on the Document Provider Development</title>
+        <description>&lt;p&gt;Hey Community,&lt;/p&gt;
+&lt;p&gt;From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&amp;rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.&lt;/p&gt;
+&lt;h2 id=&#34;the-document-provider-feature&#34;&gt;The Document Provider Feature&lt;/h2&gt;
+&lt;p&gt;As users of our Android app, you know how cumbersome sometimes the work with it is: You open your favourite notes app to quickly jot something down, then notice that you cannot open your to-do list from the app because you store it encrypted with Cryptomator. So you sigh, open the Cryptomator app, unlock your vault, navigate to the to-do list file and open it with the aforementioned notes app. Definitely not the optimal workflow.&lt;/p&gt;
+&lt;p&gt;We always strive to provide the same features across all our supported platforms. One of these is a user-friendly integration of the vault into the running OS to easily access content of unlocked vaults. For the desktop systems, this feature was always present and recently we added it in our new iOS app. The last OS, where it is missing is Android. And the way to resolve this, is implementing a Document Provider for our Android app.&lt;/p&gt;
+&lt;p&gt;The Document Provider feature creates a virtual access point to an unlocked vault, with the consequence that you can conveniently browse and access a vault’s content via the standard file browser. Also, any app which supports browsing through Document Providers can directly load files from your unlocked vault without the need to go via Cryptomator’s app GUI.&lt;/p&gt;
+&lt;h2 id=&#34;development-status&#34;&gt;Development Status&lt;/h2&gt;
+&lt;p&gt;The development is tracked in the following ticket of our issue tracker: &lt;a href=&#34;https://github.com/cryptomator/android/issues/35&#34;&gt;https://github.com/cryptomator/android/issues/35&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the issue is already quite old and got over the time a countable amount of comments. After &lt;a href=&#34;https://cryptomator.org/blog/2020/12/23/android-open-source/&#34;&gt;publishing the source code&lt;/a&gt; of the app at the end of 2020, our plan was to work on this important feature.&lt;/p&gt;
+&lt;p&gt;From the technical side, we already determined the parts of code needed to be edited, developed a concept and built a proof of concept (see the linked ticket). The next step would be to actually implement it including rigorous testing.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we determined that integrating Document Provider into the existing app would require major architectural changes, therefore requiring a lot of time and resources. We have exciting plans with Cryptomator after our next major release with version 1.6.0 so that we have to delay the development of the Document Provider integration to the end of 2021.&lt;/p&gt;
+&lt;p&gt;Meanwhile, maybe you, our community can help us out.&lt;/p&gt;
+&lt;h2 id=&#34;call-for-contributions&#34;&gt;Call for Contributions&lt;/h2&gt;
+&lt;p&gt;Cryptomator for Desktop was always open source. Cryptomator for iOS and Android are now open source as well. And as such, we also rely on our community to receive feedback, distribute the app and improve its functionality.&lt;/p&gt;
+&lt;p&gt;So, we are always very excited about contributions and are happy to assist, especially when it comes to the Document Provider. 😉&lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/07/22/android-document-provider/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/07/22/android-document-provider/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
     
       <item>
         <title>Cryptomator 2.0 für iOS: Open Source und Beta-Release</title>
@@ -289,49 +317,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <category>cryptomator</category>
         
         <category>desktop</category>
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Mid 2019</title>
-        <description>&lt;p&gt;Wir möchten uns vornehmen, einen regelmäßigeren Blick auf unsere Roadmap zu geben, da wir vergangene, aktuelle und zukünftige Entwicklungen an Cryptomator öffentlich dokumentieren möchten. Anders als bisher möchten wir auch von den Roadmaps unserer mobilen Apps berichten.&lt;/p&gt;
-&lt;h2 id=&#34;desktop&#34;&gt;Desktop&lt;/h2&gt;
-&lt;p&gt;Im Desktop-Bereich verfolgen wir zurzeit zwei verschiedene Branches: Zum einen streben wir die Feature-Vervollständigung von 1.4.x an, wobei 1.4.12 bereits in den Startlöchern steht. Er wird für Linux-Nutzer endlich eine Möglichkeit der Speicherung ihres Passworts im System ermöglichen und das viel gewünschte Feature der &amp;ldquo;Custom Mount Flags&amp;rdquo; beinhalten.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Passwort im System speichern (Linux):&lt;/strong&gt; Lange Zeit konnte man nur unter macOS und Windows sein Tresor-Passwort im System hinterlegen. Durch einen Community-Beitrag ist dies nun endlich auch unter (manchen) Linux-System möglich. 😄 Voraussetzung dafür ist die Existenz des GNOME-Keyrings oder anderer Schlüsselverwaltungen mit Secret Service API. Vielen Dank an Ralph Plawetzki (purejava auf GitHub) und Sebastian Wiesendahl (swiesend auf GitHub) für die Umsetzung!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Custom Mount Flags:&lt;/strong&gt; Zum Mounten eines Laufwerks nutzt Cryptomator Standardoptionen (sowohl für Dokany als auch FUSE), die wir aufgrund von Sicherheit oder Performance gewählt haben. Dadurch wurde jedoch die Funktionalität in einigen Fällen eingeschränkt und Nutzer, die eigene Optionen setzen möchten, können diese nun ändern. Jedoch gilt hier: &lt;em&gt;Verwendung auf eigene Gefahr!&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Zum anderen hat bereits die Umsetzung von 1.5.0 begonnen. Wir wollen uns für 1.5.0, wie angekündigt, voll auf die Überarbeitung der Oberfläche konzentrieren und die interne Verarbeitung von Cryptomator etwas entknoten, da es wie viele Open-Source-Projekt über die Zeit organisch gewachsen ist und deshalb eine gutes Refactoring mal nötig hat. 😉&lt;/p&gt;
-&lt;h2 id=&#34;ios&#34;&gt;iOS&lt;/h2&gt;
-&lt;p&gt;Nach dem Release von Cryptomator 1.4.0 für iOS mit eingebauter Cache-Funktion, mit der einerseits das wiederholte Herunterladen von Dateien vermieden und andererseits ein (limitierter) Offine-Zugriff ermöglicht wird, haben die Arbeiten an Cryptomator 1.5.0 für iOS begonnen.&lt;/p&gt;
-&lt;p&gt;Das Hauptaugenmerk wird die Integration in die Dateien-App von iOS sein. Voraussichtlich wird hier erst der Ausbau unseres &lt;a href=&#34;https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Document Providers&lt;/a&gt; erfolgen, welches um die Methoden “Open” und “Move” erweitert wird. Damit wird es dann möglich sein, aus anderen Apps heraus direkt auf Dateien innerhalb eines Cryptomator-Tresors zuzugreifen, ohne dass diese hin- und herkopiert werden müssen.&lt;/p&gt;
-&lt;h2 id=&#34;android&#34;&gt;Android&lt;/h2&gt;
-&lt;p&gt;Zurzeit wird Cryptomator 1.4.0 für Android mit folgenden Features finalisiert, die bereits als Beta getestet werden können:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Automatischer Fotoupload:&lt;/strong&gt; Nach Aktivierung werden alle auf dem Smartphone erstellten Bilder beim nächsten Entsperren des ausgewählten Tresors hochgeladen.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dateien durch Drittanwendungen schreibbar:&lt;/strong&gt; Dateien, die geöffnet werden, können in Drittanwendungen bearbeitet werden. Beendet man den Editier-Vorgang durch das Abspeichern und Zurückkehren in die Cryptomator-App, werden die Änderungen in die Cloud übertragen.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Diese Features ziehen wir für zukünftige Versionen in Erwägung:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;LRU-Cache:&lt;/strong&gt; Um Netzverkehr zu sparen, werden bestimmte Server-Antworten zwischengespeichert, um das erneute Herunterladen von beispielsweise unveränderter Bilder aus der Cloud zu vermeiden.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Unterstützung für Google Team Drives:&lt;/strong&gt; Zugriff auf Tresore, die sich im Google Team Drive befinden, soll ermöglicht werden.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vertrieb der App außerhalb von Google Play:&lt;/strong&gt; Cryptomator für Android soll auch über alternative Quellen bezogen werden können. Denkbar ist der Aufbau eines Lizenzsystems, über das direkt eine Lizenz erworben werden kann.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Entsperren mit System-Passwort:&lt;/strong&gt; Das System-Passwort des Smartphones soll dazu verwendet werden können, um Tresore zu öffnen. (Ähnlich dem Entsperren mit dem Fingerabdruck.)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Zugriff auf Dateien mittels DocumentProvider:&lt;/strong&gt; Zugriff anderer Apps auf den Cryptomator-Tresor mittels eines DocumentProviders soll ermöglicht werden. Beispielsweise mit einem entsprechenden Datei-Explorer kann so auf den Tresor zugegriffen werden.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload von Verzeichnissen (rekursiv):&lt;/strong&gt; Das Herunterladen von ganzen Ordnern funktioniert bereits, das Hochladen inklusive aller Unterordner steht aus.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2019/07/21/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2019/07/21/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
-        
-        <category>ios</category>
         
         <category>android</category>
         

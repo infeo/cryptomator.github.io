@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tags</title>
+    <title>Update on the Document Provider Development</title>
     
-      <meta name="description" content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."/>
-      <meta property="og:title" content="Cryptomator - Tags"/>
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://cryptomator.org/de/tags/"/>
-      <meta property="og:site_name" content="Cryptomator"/>
-      <meta property="og:description" content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."/>
-      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
-      <meta property="og:image:width" content="1200"/>
-      <meta property="og:image:height" content="630"/>
+      <meta name="description" content="From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project.">
+      <meta property="og:title" content="Update on the Document Provider Development">
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://cryptomator.org/de/blog/2021/07/22/android-document-provider/">
+      <meta property="og:site_name" content="Cryptomator">
+      <meta property="og:description" content="From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project.">
+      <meta property="article:author" content="Cryptobot" />
+      <meta property="article:published_time" content="2021-07-22" />
+      
+        <meta property="article:tag" content="cryptomator" />
+      
+        <meta property="article:tag" content="android" />
+      
+      <meta property="og:image" content="https://cryptomator.org/img/logo.png" />
+      <meta property="og:image:width" content="256" />
+      <meta property="og:image:height" content="256" />
     
     <meta property="og:locale" content="de_DE" />
     
@@ -25,7 +32,7 @@
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
-      <link rel="alternate" hreflang="en" href="/tags/" />
+      <link rel="alternate" hreflang="en" href="/blog/2021/07/22/android-document-provider/" />
     
     
       
@@ -75,7 +82,7 @@
         </button>
         <div class="relative">
           <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
-            <a href="/tags/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+            <a href="/blog/2021/07/22/android-document-provider/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
           </div>
         </div>
       </li>
@@ -120,7 +127,7 @@
     </div>
     <div class="mt-1">
       
-      <a href="/tags/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      <a href="/blog/2021/07/22/android-document-provider/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
       
     </div>
     
@@ -141,69 +148,54 @@
     
     
   <div class="container-prose py-12">
-    <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+    <article class="mb-12">
       <header class="mb-6">
-        <h1>Posts</h1>
+        <div class="prose prose-sm md:prose max-w-none md:max-w-none mb-4">
+          <h1><a href="/de/blog/">Blog</a> / Update on the Document Provider Development</a></h1>
+        </div>
+        <div class="flex items-center mb-4">
+          
+          <span><a class="text-primary no-underline hover:underline" href="/de/blog/2021/07/22/android-document-provider/">2021-07-22</a></span>
+        </div>
+        
+          <p class="italic">Dieser Blog-Post ist nicht auf Deutsch verfügbar.</p>
+        
       </header>
-    
-      
-        <article>
-          <h2>android</h2>
-          
-        </article>
-      
-        <article>
-          <h2>cryptomator</h2>
-          
-        </article>
-      
-        <article>
-          <h2>ios</h2>
-          
-        </article>
-      
-        <article>
-          <h2>data protection</h2>
-          
-        </article>
-      
-        <article>
-          <h2>encryption</h2>
-          
-        </article>
-      
-        <article>
-          <h2>desktop</h2>
-          
-        </article>
-      
-        <article>
-          <h2>event</h2>
-          
-        </article>
-      
-        <article>
-          <h2>sponsors</h2>
-          
-        </article>
-      
-        <article>
-          <h2>community</h2>
-          
-        </article>
-      
-        <article>
-          <h2>cyberduck</h2>
-          
-        </article>
-      
-        <article>
-          <h2>in-depth</h2>
-          
-        </article>
-      
-    </div>
+
+      <hr class="my-8"/>
+
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+        <p>Hey Community,</p>
+<p>From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.</p>
+<h2 id="the-document-provider-feature">The Document Provider Feature</h2>
+<p>As users of our Android app, you know how cumbersome sometimes the work with it is: You open your favourite notes app to quickly jot something down, then notice that you cannot open your to-do list from the app because you store it encrypted with Cryptomator. So you sigh, open the Cryptomator app, unlock your vault, navigate to the to-do list file and open it with the aforementioned notes app. Definitely not the optimal workflow.</p>
+<p>We always strive to provide the same features across all our supported platforms. One of these is a user-friendly integration of the vault into the running OS to easily access content of unlocked vaults. For the desktop systems, this feature was always present and recently we added it in our new iOS app. The last OS, where it is missing is Android. And the way to resolve this, is implementing a Document Provider for our Android app.</p>
+<p>The Document Provider feature creates a virtual access point to an unlocked vault, with the consequence that you can conveniently browse and access a vault’s content via the standard file browser. Also, any app which supports browsing through Document Providers can directly load files from your unlocked vault without the need to go via Cryptomator’s app GUI.</p>
+<h2 id="development-status">Development Status</h2>
+<p>The development is tracked in the following ticket of our issue tracker: <a href="https://github.com/cryptomator/android/issues/35">https://github.com/cryptomator/android/issues/35</a></p>
+<p>As you can see, the issue is already quite old and got over the time a countable amount of comments. After <a href="https://cryptomator.org/blog/2020/12/23/android-open-source/">publishing the source code</a> of the app at the end of 2020, our plan was to work on this important feature.</p>
+<p>From the technical side, we already determined the parts of code needed to be edited, developed a concept and built a proof of concept (see the linked ticket). The next step would be to actually implement it including rigorous testing.</p>
+<p>Unfortunately, we determined that integrating Document Provider into the existing app would require major architectural changes, therefore requiring a lot of time and resources. We have exciting plans with Cryptomator after our next major release with version 1.6.0 so that we have to delay the development of the Document Provider integration to the end of 2021.</p>
+<p>Meanwhile, maybe you, our community can help us out.</p>
+<h2 id="call-for-contributions">Call for Contributions</h2>
+<p>Cryptomator for Desktop was always open source. Cryptomator for iOS and Android are now open source as well. And as such, we also rely on our community to receive feedback, distribute the app and improve its functionality.</p>
+<p>So, we are always very excited about contributions and are happy to assist, especially when it comes to the Document Provider. 😉</p>
+
+      </div>
+    </article>
+
+    <div id="discourse-comments"></div>
   </div>
+
+  <script type="text/javascript" x-url="https://cryptomator.org/blog/2021/07/22/android-document-provider/">
+    var url = document.currentScript.getAttribute('x-url');
+    DiscourseEmbed = { discourseUrl: 'https://community.cryptomator.org/', discourseEmbedUrl: url };
+    (function() {
+      var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+      d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+    })();
+  </script>
 
     </div>
     <footer class="border-t-2 border-secondary pt-8 pb-16">
