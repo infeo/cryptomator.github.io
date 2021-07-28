@@ -21,7 +21,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.e4ef5b9eccda8bbb0cc2ec8872c91ee512344d054957d9f95b43043e9c3018c4.css" integrity="sha256-5O9bnszai7sMwuyIcske5RI0TQVJV9n5W0MEPpwwGMQ=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.778ddf410aa3df9d979f6f72bf2c496fa3640716927220d9105a4c4ba020d7a4.css" integrity="sha256-d43fQQqj352Xn29yvyxJb6NkBxaSciDZEFpMS6Ag16Q=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -51,12 +51,12 @@
         <a class="p-2 hover:no-underline" href="/de/sponsors/">Sponsoren</a>
       </li>
       <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
-        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
           <span>Mehr erfahren</span>
           <i class="fas fa-chevron-down text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md">
             <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
             <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
             <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
@@ -69,7 +69,7 @@
       <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
       
       <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
-        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
           <span>DE</span>
           <i class="fas fa-chevron-down text-xs"></i>
         </button>
@@ -345,27 +345,27 @@
       <div class="container flex flex-wrap justify-center text-white p-2">
         
           <div class="w-1/3 md:w-1/5 p-2">
-            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'win' }" @click="tab = 'win'" class="btn btn-outline-gray-500 px-2 w-full whitespace-no-wrap"><i class="fab fa-windows"></i> Windows
+            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'win' }" @click="tab = 'win'" class="btn btn-outline-gray-500 px-2 w-full whitespace-nowrap"><i class="fab fa-windows"></i> Windows
 </button>
           </div>
         
           <div class="w-1/3 md:w-1/5 p-2">
-            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'mac' }" @click="tab = 'mac'" class="btn btn-outline-gray-500 px-2 w-full whitespace-no-wrap"><i class="fab fa-apple"></i> macOS
+            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'mac' }" @click="tab = 'mac'" class="btn btn-outline-gray-500 px-2 w-full whitespace-nowrap"><i class="fab fa-apple"></i> macOS
 </button>
           </div>
         
           <div class="w-1/3 md:w-1/5 p-2">
-            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'linux' }" @click="tab = 'linux'" class="btn btn-outline-gray-500 px-2 w-full whitespace-no-wrap"><i class="fab fa-linux"></i> Linux
+            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'linux' }" @click="tab = 'linux'" class="btn btn-outline-gray-500 px-2 w-full whitespace-nowrap"><i class="fab fa-linux"></i> Linux
 </button>
           </div>
         
           <div class="w-1/3 md:w-1/5 p-2">
-            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'android' }" @click="tab = 'android'" class="btn btn-outline-gray-500 px-2 w-full whitespace-no-wrap"><i class="fab fa-android"></i> Android
+            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'android' }" @click="tab = 'android'" class="btn btn-outline-gray-500 px-2 w-full whitespace-nowrap"><i class="fab fa-android"></i> Android
 </button>
           </div>
         
           <div class="w-1/3 md:w-1/5 p-2">
-            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'ios' }" @click="tab = 'ios'" class="btn btn-outline-gray-500 px-2 w-full whitespace-no-wrap"><i class="fab fa-apple"></i> iOS
+            <button :class="{ 'text-primary hover:text-primary focus:text-primary border-primary hover:border-primary focus:border-primary': tab === 'ios' }" @click="tab = 'ios'" class="btn btn-outline-gray-500 px-2 w-full whitespace-nowrap"><i class="fab fa-apple"></i> iOS
 </button>
           </div>
         
@@ -382,7 +382,7 @@
 
   
     
-    <script type="text/javascript" src="/js/download.min.b263c524f10b92aaa45a906eb407ffb95e6a1d3c7e93669692ef3abbdbfbbaeb.js" integrity="sha256-smPFJPELkqqkWpButAf/uV5qHTx&#43;k2aWku86u9v7uus=" defer></script>
+    <script type="text/javascript" src="/js/download.min.20b0b1b81dfb2f0db66e623566adfa5c74d90ffcc66c74295068636adf5f6185.js" integrity="sha256-ILCxuB37Lw22bmI1Zq36XHTZD/zGbHQpUGhjat9fYYU=" defer></script>
   
 
     </div>

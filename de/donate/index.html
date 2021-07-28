@@ -21,7 +21,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.e4ef5b9eccda8bbb0cc2ec8872c91ee512344d054957d9f95b43043e9c3018c4.css" integrity="sha256-5O9bnszai7sMwuyIcske5RI0TQVJV9n5W0MEPpwwGMQ=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.778ddf410aa3df9d979f6f72bf2c496fa3640716927220d9105a4c4ba020d7a4.css" integrity="sha256-d43fQQqj352Xn29yvyxJb6NkBxaSciDZEFpMS6Ag16Q=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
     
@@ -51,12 +51,12 @@
         <a class="p-2 hover:no-underline" href="/de/sponsors/">Sponsoren</a>
       </li>
       <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
-        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-no-wrap p-2">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
           <span>Mehr erfahren</span>
           <i class="fas fa-chevron-down text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-84 bg-white rounded shadow-md">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md">
             <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
             <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
             <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
@@ -69,7 +69,7 @@
       <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
       
       <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
-        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-no-wrap p-2">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
           <span>DE</span>
           <i class="fas fa-chevron-down text-xs"></i>
         </button>
@@ -158,7 +158,7 @@
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Bevorzugte Zahlungsmethode auswählen</li>
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-exclamation-triangle text-orange-500" aria-hidden="true"></i></span>Kein Supporter-Zertifikat</li>
             </ul>
-            <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
+            <button x-show="!showForm" @click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
               <i class="fas fa-hand-point-right"></i> Weiter
             </button>
           </div>
@@ -192,22 +192,22 @@
         <input type="hidden" name="hosted_button_id" value="NUQ7XQSWMQEGS" />
         <input type="hidden" name="amount" value="15" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-398145267" x-model="acceptTerms" />
-<label for="id-398145267">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-159238467" x-model="acceptTerms" />
+<label for="id-159238467">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
-        <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu PayPal</button>
+        <button type="submit" class="btn btn-primary w-full md:w-64" :disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu PayPal</button>
       </form>
     </div>
 
     
     <div x-show="tab === 'card'" x-cloak>
       <div x-data="{amount: 15, currency: 'EUR', frequency: 'once', oneTimePayment: null, oneTimePaymentStatus: {validCardNum: false, captcha: null, errorMessage: '', inProgress: false, success: false}, recurringPayment: new RecurringPayment(), acceptTerms: false}" x-init="oneTimePayment = new OneTimePayment(oneTimePaymentStatus)">
-        <div class="flex flex-wrap md:flex-no-wrap">
+        <div class="flex flex-wrap md:flex-nowrap">
           <div class="w-full mb-4 md:w-1/2 md:pr-3">
             <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Betrag</label>
             <div class="flex items-center rounded bg-gray-300">
               <div class="flex-shrink-0 relative text-gray-700 w-16">
-                <select x-model="currency" class="appearance-none w-full rounded-r-none bg-gray-300 px-3">
+                <select x-model="currency" class="appearance-none w-full rounded-r-none border-gray-300 bg-gray-300 px-3">
                   <option value="EUR">€</option>
                   <option value="USD">$</option>
                 </select>
@@ -215,7 +215,7 @@
                   <i class="fas fa-chevron-down text-xs"></i>
                 </div>
               </div>
-              <input type="number" min="1" step="1" x-model="amount" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 1" required/>
+              <input type="number" min="1" step="1" x-model="amount" class="flex-grow min-w-0 rounded-none text-right placeholder-gray-500 border-gray-300 bg-white md:pr-0" placeholder="min. 1" required/>
               <div class="flex-shrink-0 text-gray-700 px-3">,00</div>
             </div>
           </div>
@@ -239,7 +239,7 @@
           <div class="mb-4">
             <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Kreditkarte</label>
             <div> 
-              <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none focus:outline-none" x-on:focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Lädt…', 'de')"/>
+              <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none border-gray-300 focus:outline-none" @focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Lädt…', 'de')"/>
             </div>
           </div>
 
@@ -247,15 +247,15 @@
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Kreditkartenzahlungen werden über Stripe abgewickelt. Wir können dabei weder deine Kartennummer noch die Prüfziffer einsehen. In deiner Abrechnung wird <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">eine Buchung von Stripe</a> enthalten sein.</p>
 
             <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-538274169" x-model="acceptTerms" />
-<label for="id-538274169">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-321548976" x-model="acceptTerms" />
+<label for="id-321548976">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
 
             <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
-              <button x-bind:disabled="!oneTimePaymentStatus.validCardNum" x-on:click="oneTimePayment.loadRecaptcha($refs.captchaWrapper)" class="btn btn-primary w-full md:w-64">Weiter…</button>
+              <button :disabled="!oneTimePaymentStatus.validCardNum" @click="oneTimePayment.loadRecaptcha($refs.captchaWrapper)" class="btn btn-primary w-full md:w-64">Weiter…</button>
             </div>
 
-            <button x-show="oneTimePaymentStatus.captcha" x-bind:disabled="oneTimePaymentStatus.inProgress || !acceptTerms" x-on:click="oneTimePayment.charge(amount, currency)" class="btn btn-primary w-full md:w-64">
+            <button x-show="oneTimePaymentStatus.captcha" :disabled="oneTimePaymentStatus.inProgress || !acceptTerms" @click="oneTimePayment.charge(amount, currency)" class="btn btn-primary w-full md:w-64">
               <i class="fas fa-credit-card"></i>
               Jetzt bezahlen
               <i class="fas fa-spinner fa-spin" x-show="oneTimePaymentStatus.inProgress" aria-hidden="true"></i>
@@ -270,10 +270,10 @@
         <div x-show="frequency === 'recurring'" class="text-center">
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Wiederkehrende Kreditkartenzahlungen werden über unsere Stripe-Seite erstellt.</p>
           <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-815243769" x-model="acceptTerms" />
-<label for="id-815243769">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-679831254" x-model="acceptTerms" />
+<label for="id-679831254">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
-          <button type="submit" class="btn btn-primary w-full md:w-64" x-on:click="recurringPayment.checkout(amount, currency, 'de')" x-bind:disabled="!acceptTerms">
+          <button type="submit" class="btn btn-primary w-full md:w-64" @click="recurringPayment.checkout(amount, currency, 'de')" :disabled="!acceptTerms">
             <i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu Stripe
           </button>
         </div>
@@ -281,7 +281,7 @@
 
       
         
-        <script type="text/javascript" src="/js/cardpayments.min.c513b29e4b3c99627454d153b8a3ded75cbce855da5b6f5b89326e864007041b.js" integrity="sha256-xROynks8mWJ0VNFTuKPe11y86FXaW29biTJuhkAHBBs=" defer></script>
+        <script type="text/javascript" src="/js/cardpayments.min.be7eee3466f2b547bf603ebdc0a92858240c8fc3c9803137ec853a9b91675f77.js" integrity="sha256-vn7uNGbytUe/YD69wKkoWCQMj8PJgDE37IU6m5FnX3c=" defer></script>
       
     </div>
 
@@ -315,10 +315,10 @@
         <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
         <input type="hidden" name="allow_extra" value="1" />
         <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-918263574" x-model="acceptTerms" />
-<label for="id-918263574">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+<input class="mr-1" type="checkbox" id="id-549617283" x-model="acceptTerms" />
+<label for="id-549617283">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
 </p>
-        <button type="submit" class="btn btn-primary w-full md:w-64" x-bind:disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu CoinPayments</button>
+        <button type="submit" class="btn btn-primary w-full md:w-64" :disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Weiter zu CoinPayments</button>
       </form>
     </div>
 
@@ -340,24 +340,24 @@
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Manche sagen, es wäre ein &#34;Awesome People&#34;-Zertifikat</li>
               <li class="text-sm md:text-base leading-relaxed text-gray-700 my-2"><span class="fa-li"><i class="fas fa-check text-secondary" aria-hidden="true"></i></span>Rechnung erhalten</li>
             </ul>
-            <button x-show="!showForm" x-on:click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
+            <button x-show="!showForm" @click.prevent="showForm = true" class="btn btn-primary text-lg px-8">
               <i class="fas fa-hand-point-right"></i> Weiter
             </button>
           </div>
           <div x-show="showForm" x-cloak>
             <div x-data="{checkoutData: {quantity: 1, amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}" class="px-4 pt-2 pb-8">
   <form x-show="!checkoutData.success" x-ref="form">
-    <div class="flex flex-wrap md:flex-no-wrap">
+    <div class="flex flex-wrap md:flex-nowrap">
       <div class="w-full mb-4 md:w-1/2 md:pr-3">
         <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Anzahl Lizenzen</label>
-        <input x-model="checkoutData.quantity" type="number" min="1" max="100" step="1" class="appearance-none w-full mb-2" placeholder="min. 1" required/>
+        <input x-model="checkoutData.quantity" type="number" min="1" max="100" step="1" class="appearance-none placeholder-gray-500 border-gray-300 w-full mb-2" placeholder="min. 1" required/>
         <p class="text-xs text-gray-600">Lizenz gilt für einen Nutzer und kann auf mehreren Computern verwendet werden.</p>
       </div>
       <div class="w-full mb-4 md:w-1/2 md:pl-3">
         <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Preis pro Lizenz</label>
         <div class="flex items-center rounded bg-gray-300 mb-2">
           <div class="flex-shrink-0 text-gray-700 px-3">€ / $</div>
-          <input x-model="checkoutData.amount" type="number" min="15" step="1" class="flex-grow min-w-0 rounded-none text-right bg-white md:pr-0" placeholder="min. 15" required/>
+          <input x-model="checkoutData.amount" type="number" min="15" step="1" class="flex-grow min-w-0 rounded-none text-right placeholder-gray-500 border-gray-300 bg-white md:pr-0" placeholder="min. 15" required/>
           <div class="flex-shrink-0 text-gray-700 px-3">,00</div>
         </div>
         <p class="text-xs text-gray-600">Mindestbetrag ist 15 pro Lizenz. Währung wird im Zahlungsvorgang ermittelt.</p>
@@ -365,15 +365,15 @@
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
-      <input x-model="checkoutData.email" type="email" class="appearance-none w-full" placeholder="E-Mail-Adresse" required/>
+      <input x-model="checkoutData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-381952467" x-model="acceptTerms" />
-<label for="id-381952467">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>. Im Zahlungsvorgang eingelöste Gutscheine sind vom Widerrufsrecht ausgeschlossen.</label>
+<input class="mr-1" type="checkbox" id="id-675938142" x-model="acceptTerms" />
+<label for="id-675938142">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>. Im Zahlungsvorgang eingelöste Gutscheine sind vom Widerrufsrecht ausgeschlossen.</label>
 </p>
-      <button x-bind:disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" x-on:click="$event.preventDefault(); new DesktopLicense($refs.form, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
+      <button :disabled="!$refs.form.checkValidity() || checkoutData.inProgress || !acceptTerms" @click.prevent="new DesktopLicense($refs.form, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
         <i x-show="!checkoutData.inProgress" class="fas fa-shopping-cart fa-fw" aria-hidden="true"></i><i x-show="checkoutData.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Zur Zahlung
       </button>
       <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="checkoutData.errorMessage"></p>
@@ -383,7 +383,7 @@
   <div x-show="checkoutData.success" x-cloak>
     <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Zahlung war erfolgreich!</h3>
     <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Supporter-Zertifikat</label>
-    <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed break-all w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
+    <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed break-all placeholder-gray-500 border-gray-300 w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
     <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mb-2" x-text="checkoutData.errorMessage"></p>
     <p class="text-sm md:text-base leading-relaxed text-gray-700">Dies ist dein Supporter-Zertifikat. Gib es in den Cryptomator-Einstellungen unter &#34;Unterstütze uns&#34; ein. Es wurde auch an deine E-Mail-Adresse geschickt.</p>
   </div>
@@ -391,7 +391,7 @@
 
 
   
-  <script type="text/javascript" src="/js/desktopkey.min.77d5a81c0a4a62dce258d4bc7c3e3643f703cd5d14a51ea2a409dafd09afca24.js" integrity="sha256-d9WoHApKYtziWNS8fD42Q/cDzV0UpR6ipAna/QmvyiQ=" defer></script>
+  <script type="text/javascript" src="/js/desktopkey.min.c90be2fd293cecee6959f1e99c236f8671055ca53afa0d29643c33a5bf16ba69.js" integrity="sha256-yQvi/Sk87O5pWfHpnCNvhnEFXKU6&#43;g0pZDwzpb8Wumk=" defer></script>
 
 
           </div>
@@ -413,8 +413,8 @@
     <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Um ein verlorenes Zertifikat oder einen Zahlungsbeleg wiederzuerlangen, gib unten deine E-Mail-Adresse ein.</p>
       <div class="flex justify-center items-center rounded bg-gray-300">
-        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none bg-white" placeholder="E-Mail-Adresse" required/>
-        <button x-bind:disabled="!$refs.form.checkValidity() || data.inProgress" x-on:click="$event.preventDefault(); new KeyRecovery($refs.form, data).getUserHistory()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
+        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="E-Mail-Adresse" required/>
+        <button :disabled="!$refs.form.checkValidity() || data.inProgress" @click.prevent="new KeyRecovery($refs.form, data).getUserHistory()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
           <i x-show="!data.inProgress" class="fas fa-envelope fa-fw" aria-hidden="true"></i><i x-show="data.inProgress" class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i> Abrufen
         </button>
       </div>
@@ -429,7 +429,7 @@
 
   
     
-    <script type="text/javascript" src="/js/keyrecovery.min.1590b5565f232619d851013903f1681fe79fb1237fdccb0239e01e2849b18e06.js" integrity="sha256-FZC1Vl8jJhnYUQE5A/FoH&#43;efsSN/3MsCOeAeKEmxjgY=" defer></script>
+    <script type="text/javascript" src="/js/keyrecovery.min.ea9f6c148411dd2489b05de5e2caa2ef87fe0f5354376103825f4870761cd80a.js" integrity="sha256-6p9sFIQR3SSJsF3l4sqi74f&#43;D1NUN2EDgl9IcHYc2Ao=" defer></script>
   
 
     </div>
