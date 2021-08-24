@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supporter-Zertifikat</title>
+    
+      <meta name="description" content="Beantrage ein Supporter-Zertifikat, um deine Software zu registrieren und den Dunkel-Modus freizuschalten. Vielen Dank für deine Unterstützung!"/>
+      <meta property="og:title" content="Cryptomator - Supporter-Zertifikat"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://cryptomator.org/de/supporter-cert/"/>
+      <meta property="og:site_name" content="Cryptomator"/>
+      <meta property="og:description" content="Beantrage ein Supporter-Zertifikat, um deine Software zu registrieren und den Dunkel-Modus freizuschalten. Vielen Dank für deine Unterstützung!"/>
+      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
+    
+      
+      <link rel="stylesheet" href="/css/main.min.77719e23862ae362449321078ce446b960497e13d49dae0aacf6a269c82e119a.css" integrity="sha256-d3GeI4Yq42JEkyEHjORGuWBJfhPUna4KrPaiacguEZo=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
+    
+      <link rel="alternate" hreflang="en" href="/supporter-cert/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li x-data="{ isSupportUsDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isSupportUsDropdownOpen = !isSupportUsDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Unterstütze uns</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isSupportUsDropdownOpen" @click.away="isSupportUsDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-64 bg-white rounded shadow-md z-50">
+            <a href="/de/supporter-cert/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Supporter-Zertifikat</a>
+            <a href="/de/donate/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Spenden</a>
+            <a href="/de/sponsors/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Sponsoren</a>
+          </div>
+        </div>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md z-50">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/boxcryptor-alternative/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Alternative zu Boxcryptor</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md z-50">
+            <a href="/supporter-cert/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Unterstütze uns
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/supporter-cert/">Supporter-Zertifikat</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+    </div>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/boxcryptor-alternative/">Alternative zu Boxcryptor</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/supporter-cert/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator auf Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator auf Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container py-12">
+    <header class="prose prose-sm md:prose max-w-none md:max-w-none mb-6">
+      <h1>Supporter-Zertifikat</h1>
+      <p class="lead">Beantrage ein Supporter-Zertifikat, um deine Software zu registrieren und den Dunkel-Modus freizuschalten. Vielen Dank für deine Unterstützung!</p>
+    </header>
+
+    <div x-data="{showTab: location.hash}" @hashchange.window="showTab = location.hash" class="flex flex-col space-y-4 w-full relative">
+      
+        <div class="space-y-2 lg:space-y-0">
+          <div class="w-full lg:pr-3 lg:w-1/2">
+            <button @click.prevent="location.hash = '#funder'" :class="{'border-white': showTab != '#funder', 'border-primary': showTab == '#funder'}" class="flex items-center justify-between bg-white border-l-4 rounded shadow text-left p-4 w-full">
+              <div class="flex items-center">
+                <i :class="{'text-gray-600': showTab != '#funder', 'text-primary': showTab == '#funder'}" class="flex-shrink-0 fas fa-sack-dollar fa-fw text-2xl mr-4" aria-hidden="true"></i>
+                <div>
+                  <h2 :class="{'text-primary': showTab == '#funder'}" class="font-headline font-medium text-xl lg:text-2xl leading-snug mb-1">Förderer</h2>
+                  <p class="text-gray-600">Unterstütze die Open-Source-Entwicklung</p>
+                </div>
+              </div>
+              <div class="ml-3">
+                <i :class="{'text-gray-500': showTab != '#funder', 'text-primary': showTab == '#funder'}" class="fas fa-chevron-right hidden lg:block"></i>
+                <i :class="{'fa-chevron-right text-gray-500': showTab != '#funder', 'fa-chevron-down text-primary': showTab == '#funder'}" class="fas lg:hidden"></i>
+              </div>
+            </button>
+          </div>
+          <div x-show="showTab == '#funder'" x-ref="" class="w-full lg:absolute lg:top-0 lg:right-0 lg:pl-3 lg:w-1/2" x-cloak>
+            <div class="rounded shadow bg-white p-4" x-cloak>
+              <div x-data="{checkoutData: {quantity: 1, amount: 25, email: '', errorMessage: '', success: false, inProgress: false, licenseKey: null}, acceptTerms: false}">
+  <form x-show="!checkoutData.success" x-ref="funderForm">
+    <div class="flex flex-wrap md:flex-nowrap">
+      <div class="w-full mb-4 md:w-1/2 md:pr-3">
+        <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Anzahl Lizenzen</label>
+        <input x-model="checkoutData.quantity" type="number" min="1" max="100" step="1" class="appearance-none placeholder-gray-500 border-gray-300 w-full mb-2" placeholder="min. 1" required/>
+        <p class="text-xs text-gray-600">Lizenz gilt für einen Nutzer und kann auf mehreren Computern verwendet werden.</p>
+      </div>
+      <div class="w-full mb-4 md:w-1/2 md:pl-3">
+        <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Preis pro Lizenz</label>
+        <div class="flex items-center rounded bg-gray-300 mb-2">
+          <div class="flex-shrink-0 text-gray-700 px-3">€ / $</div>
+          <input x-model="checkoutData.amount" type="number" min="15" step="1" class="flex-grow min-w-0 rounded-none text-right placeholder-gray-500 border-gray-300 bg-white md:pr-0" placeholder="min. 15" required/>
+          <div class="flex-shrink-0 text-gray-700 px-3">,00</div>
+        </div>
+        <p class="text-xs text-gray-600">Mindestbetrag ist 15 pro Lizenz. Währung wird im Zahlungsvorgang ermittelt.</p>
+      </div>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="checkoutData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Zahlungen werden über Paddle abgewickelt.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-721465983" x-model="acceptTerms" />
+<label for="id-721465983">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>. Im Zahlungsvorgang eingelöste Gutscheine sind vom Widerrufsrecht ausgeschlossen.</label>
+</p>
+      <button :disabled="!$refs.funderForm.checkValidity() || checkoutData.inProgress || !acceptTerms" @click.prevent="new DesktopLicense($refs.funderForm, checkoutData).checkout('de')" type="submit" class="btn btn-primary w-full md:w-64">
+        <i :class="{'fa-shopping-cart': !checkoutData.inProgress, 'fa-spinner fa-spin': checkoutData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Zur Zahlung
+      </button>
+      <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="checkoutData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="checkoutData.success" x-cloak>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Zahlung war erfolgreich!</h3>
+    <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Supporter-Zertifikat</label>
+    <textarea x-model="checkoutData.licenseKey" class="appearance-none text-sm md:text-base leading-relaxed break-all placeholder-gray-500 border-gray-300 w-full mb-2" rows="6" placeholder="Lädt…" readonly></textarea>
+    <p :class="{'hidden': !checkoutData.errorMessage}" class="text-sm text-red-600 mb-2" x-text="checkoutData.errorMessage"></p>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Dies ist dein Supporter-Zertifikat. Gib es in den Cryptomator-Einstellungen unter &#34;Unterstütze uns&#34; ein. Es wurde auch an deine E-Mail-Adresse geschickt.</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="space-y-2 lg:space-y-0">
+          <div class="w-full lg:pr-3 lg:w-1/2">
+            <button @click.prevent="location.hash = '#contributor'" :class="{'border-white': showTab != '#contributor', 'border-primary': showTab == '#contributor'}" class="flex items-center justify-between bg-white border-l-4 rounded shadow text-left p-4 w-full">
+              <div class="flex items-center">
+                <i :class="{'text-gray-600': showTab != '#contributor', 'text-primary': showTab == '#contributor'}" class="flex-shrink-0 fas fa-code-merge fa-fw text-2xl mr-4" aria-hidden="true"></i>
+                <div>
+                  <h2 :class="{'text-primary': showTab == '#contributor'}" class="font-headline font-medium text-xl lg:text-2xl leading-snug mb-1">Mitwirkender</h2>
+                  <p class="text-gray-600">Implementiere Features oder behebe Bugs in Cryptomator</p>
+                </div>
+              </div>
+              <div class="ml-3">
+                <i :class="{'text-gray-500': showTab != '#contributor', 'text-primary': showTab == '#contributor'}" class="fas fa-chevron-right hidden lg:block"></i>
+                <i :class="{'fa-chevron-right text-gray-500': showTab != '#contributor', 'fa-chevron-down text-primary': showTab == '#contributor'}" class="fas lg:hidden"></i>
+              </div>
+            </button>
+          </div>
+          <div x-show="showTab == '#contributor'" x-ref="" class="w-full lg:absolute lg:top-0 lg:right-0 lg:pl-3 lg:w-1/2" x-cloak>
+            <div class="rounded shadow bg-white p-4" x-cloak>
+              <div x-data="{feedbackData: {success: false, inProgress: false, errorMessage: ''}, submitData: {captcha: null, type: 'contributor', email: '', github_username: '', github_contribution_link: ''}, acceptTerms: false}">
+  <form x-show="!feedbackData.success" x-ref="form">
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">GitHub Username</label>
+      <input x-model="submitData.github_username" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38}$" maxlength="39" placeholder="Username auf GitHub" required/>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">GitHub Contribution Link</label>
+      <input x-model="submitData.github_contribution_link" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Link zur Contribution auf GitHub (https://github.com/...)" required/>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">In unserem <a class="text-primary no-underline hover:underline" href="https://github.com/cryptomator/cryptomator/blob/develop/.github/CONTRIBUTING.md" target="_blank" rel="noopener">Contribution Guide</a> findest du die ersten Informationen.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-428913756" x-model="acceptTerms" />
+<label for="id-428913756">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+</p>
+      <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
+        <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Weiter…</button>
+      </div>
+      <button x-show="submitData.captcha" :disabled="!$refs.form.checkValidity() || feedbackData.inProgress || !acceptTerms" @click.prevent="new SupporterCertificate($refs.form, feedbackData, submitData).request()" type="submit" class="btn btn-primary w-full md:w-64" x-cloak>
+        <i :class="{'fa-paper-plane': !feedbackData.inProgress, 'fa-spinner fa-spin': feedbackData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Anfrage senden
+      </button>
+      <p :class="{'hidden': !feedbackData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="feedbackData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="feedbackData.success" x-cloak>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Anfrage wurde versendet!</h3>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Wir haben deine Anfrage erhalten und werden sie so schnell wie möglich prüfen. Je nach Auslastung kann dies einige Tage dauern.</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="space-y-2 lg:space-y-0">
+          <div class="w-full lg:pr-3 lg:w-1/2">
+            <button @click.prevent="location.hash = '#translator'" :class="{'border-white': showTab != '#translator', 'border-primary': showTab == '#translator'}" class="flex items-center justify-between bg-white border-l-4 rounded shadow text-left p-4 w-full">
+              <div class="flex items-center">
+                <i :class="{'text-gray-600': showTab != '#translator', 'text-primary': showTab == '#translator'}" class="flex-shrink-0 fas fa-language fa-fw text-2xl mr-4" aria-hidden="true"></i>
+                <div>
+                  <h2 :class="{'text-primary': showTab == '#translator'}" class="font-headline font-medium text-xl lg:text-2xl leading-snug mb-1">Übersetzer</h2>
+                  <p class="text-gray-600">Übersetze Cryptomator in deine bevorzugte Sprache</p>
+                </div>
+              </div>
+              <div class="ml-3">
+                <i :class="{'text-gray-500': showTab != '#translator', 'text-primary': showTab == '#translator'}" class="fas fa-chevron-right hidden lg:block"></i>
+                <i :class="{'fa-chevron-right text-gray-500': showTab != '#translator', 'fa-chevron-down text-primary': showTab == '#translator'}" class="fas lg:hidden"></i>
+              </div>
+            </button>
+          </div>
+          <div x-show="showTab == '#translator'" x-ref="" class="w-full lg:absolute lg:top-0 lg:right-0 lg:pl-3 lg:w-1/2" x-cloak>
+            <div class="rounded shadow bg-white p-4" x-cloak>
+              <div x-data="{feedbackData: {errorMessage: '', success: false, inProgress: false}, submitData: {captcha: null, type: 'translator', email: '', crowdin_username: ''}, acceptTerms: false}">
+  <form x-show="!feedbackData.success" x-ref="form">
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Crowdin Username</label>
+      <input x-model="submitData.crowdin_username" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d\-_.]{0,254}$" maxlength="255" placeholder="Username auf Crowdin" required/>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4"><a class="text-primary no-underline hover:underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Hierüber</a> kannst du Cryptomator in deine bevorzugte Sprache übersetzen.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-152843796" x-model="acceptTerms" />
+<label for="id-152843796">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+</p>
+      <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
+        <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Weiter…</button>
+      </div>
+      <button x-show="submitData.captcha" :disabled="!$refs.form.checkValidity() || feedbackData.inProgress || !acceptTerms" @click.prevent="new SupporterCertificate($refs.form, feedbackData, submitData).request()" type="submit" class="btn btn-primary w-full md:w-64" x-cloak>
+        <i :class="{'fa-paper-plane': !feedbackData.inProgress, 'fa-spinner fa-spin': feedbackData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Anfrage senden
+      </button>
+      <p :class="{'hidden': !feedbackData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="feedbackData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="feedbackData.success" x-cloak>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Anfrage wurde versendet!</h3>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Wir haben deine Anfrage erhalten und werden sie so schnell wie möglich prüfen. Je nach Auslastung kann dies einige Tage dauern.</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="space-y-2 lg:space-y-0">
+          <div class="w-full lg:pr-3 lg:w-1/2">
+            <button @click.prevent="location.hash = '#influencer'" :class="{'border-white': showTab != '#influencer', 'border-primary': showTab == '#influencer'}" class="flex items-center justify-between bg-white border-l-4 rounded shadow text-left p-4 w-full">
+              <div class="flex items-center">
+                <i :class="{'text-gray-600': showTab != '#influencer', 'text-primary': showTab == '#influencer'}" class="flex-shrink-0 fas fa-hashtag fa-fw text-2xl mr-4" aria-hidden="true"></i>
+                <div>
+                  <h2 :class="{'text-primary': showTab == '#influencer'}" class="font-headline font-medium text-xl lg:text-2xl leading-snug mb-1">Influencer</h2>
+                  <p class="text-gray-600">Verbreite etwas über Cryptomator</p>
+                </div>
+              </div>
+              <div class="ml-3">
+                <i :class="{'text-gray-500': showTab != '#influencer', 'text-primary': showTab == '#influencer'}" class="fas fa-chevron-right hidden lg:block"></i>
+                <i :class="{'fa-chevron-right text-gray-500': showTab != '#influencer', 'fa-chevron-down text-primary': showTab == '#influencer'}" class="fas lg:hidden"></i>
+              </div>
+            </button>
+          </div>
+          <div x-show="showTab == '#influencer'" x-ref="" class="w-full lg:absolute lg:top-0 lg:right-0 lg:pl-3 lg:w-1/2" x-cloak>
+            <div class="rounded shadow bg-white p-4" x-cloak>
+              <div x-data="{feedbackData: {success: false, inProgress: false, errorMessage: ''}, submitData: {captcha: null, type: 'influencer', email: '', reference: ''}, acceptTerms: false}">
+  <form x-show="!feedbackData.success" x-ref="form">
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Referenz</label>
+      <textarea x-model="submitData.reference" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="- Link zum Blogbeitrag, Anleitungsvideo, Wiki-Beitrag etc. (https://...)
+- Anzahl der Follower, geschätzte Seitenaufrufe etc.
+
+max. 800 Zeichen" required></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Teile etwas über Cryptomator in den sozialen Medien, auf deiner Website oder über andere Medien.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-349285167" x-model="acceptTerms" />
+<label for="id-349285167">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+</p>
+      <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
+        <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Weiter…</button>
+      </div>
+      <button x-show="submitData.captcha" :disabled="!$refs.form.checkValidity() || feedbackData.inProgress || !acceptTerms" @click.prevent="new SupporterCertificate($refs.form, feedbackData, submitData).request()" type="submit" class="btn btn-primary w-full md:w-64" x-cloak>
+        <i :class="{'fa-paper-plane': !feedbackData.inProgress, 'fa-spinner fa-spin': feedbackData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Anfrage senden
+      </button>
+      <p :class="{'hidden': !feedbackData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="feedbackData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="feedbackData.success" x-cloak>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Anfrage wurde versendet!</h3>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Wir haben deine Anfrage erhalten und werden sie so schnell wie möglich prüfen. Je nach Auslastung kann dies einige Tage dauern.</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="space-y-2 lg:space-y-0">
+          <div class="w-full lg:pr-3 lg:w-1/2">
+            <button @click.prevent="location.hash = '#other'" :class="{'border-white': showTab != '#other', 'border-primary': showTab == '#other'}" class="flex items-center justify-between bg-white border-l-4 rounded shadow text-left p-4 w-full">
+              <div class="flex items-center">
+                <i :class="{'text-gray-600': showTab != '#other', 'text-primary': showTab == '#other'}" class="flex-shrink-0 fas fa-hand-holding-heart fa-fw text-2xl mr-4" aria-hidden="true"></i>
+                <div>
+                  <h2 :class="{'text-primary': showTab == '#other'}" class="font-headline font-medium text-xl lg:text-2xl leading-snug mb-1">Sonstiges</h2>
+                  <p class="text-gray-600">Unterstütze Cryptomator auf andere Weise</p>
+                </div>
+              </div>
+              <div class="ml-3">
+                <i :class="{'text-gray-500': showTab != '#other', 'text-primary': showTab == '#other'}" class="fas fa-chevron-right hidden lg:block"></i>
+                <i :class="{'fa-chevron-right text-gray-500': showTab != '#other', 'fa-chevron-down text-primary': showTab == '#other'}" class="fas lg:hidden"></i>
+              </div>
+            </button>
+          </div>
+          <div x-show="showTab == '#other'" x-ref="" class="w-full lg:absolute lg:top-0 lg:right-0 lg:pl-3 lg:w-1/2" x-cloak>
+            <div class="rounded shadow bg-white p-4" x-cloak>
+              <div x-data="{feedbackData: {success: false, inProgress: false, errorMessage: ''}, submitData: {captcha: null, type: 'other', email: '', reason: ''}, acceptTerms: false}">
+  <form x-show="!feedbackData.success" x-ref="form">
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Grund</label>
+      <textarea x-model="submitData.reason" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="max. 800 Zeichen" required></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">E-Mail</label>
+      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="E-Mail-Adresse" required/>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Teile uns einen anderen Grund mit, der nicht in die anderen Kategorien passt.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+<input class="mr-1" type="checkbox" id="id-945861723" x-model="acceptTerms" />
+<label for="id-945861723">Ich akzeptiere die <a class="text-primary no-underline hover:underline" href="/de/terms/">AGB</a> sowie die <a class="text-primary no-underline hover:underline" href="/de/privacy/">Datenschutzerklärung</a>.</label>
+</p>
+      <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
+        <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Weiter…</button>
+      </div>
+      <button x-show="submitData.captcha" :disabled="!$refs.form.checkValidity() || feedbackData.inProgress || !acceptTerms" @click.prevent="new SupporterCertificate($refs.form, feedbackData, submitData).request()" type="submit" class="btn btn-primary w-full md:w-64" x-cloak>
+        <i :class="{'fa-paper-plane': !feedbackData.inProgress, 'fa-spinner fa-spin': feedbackData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Anfrage senden
+      </button>
+      <p :class="{'hidden': !feedbackData.errorMessage}" class="text-sm text-red-600 mt-2" x-text="feedbackData.errorMessage"></p>
+    </div>
+  </form>
+
+  <div x-show="feedbackData.success" x-cloak>
+    <h3 class="font-headline text-lg md:text-xl leading-relaxed mb-4">👍 Deine Anfrage wurde versendet!</h3>
+    <p class="text-sm md:text-base leading-relaxed text-gray-700">Wir haben deine Anfrage erhalten und werden sie so schnell wie möglich prüfen. Je nach Auslastung kann dies einige Tage dauern.</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <section x-data="{data: {email: '', errorMessage: '', success: false, inProgress: false}}" class="container text-center pt-12 pb-24">
+    <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Hast du dein Supporter-Zertifikat verloren?</h3>
+
+    <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Um ein verlorenes Zertifikat oder einen Zahlungsbeleg wiederzuerlangen, gib unten deine E-Mail-Adresse ein.</p>
+      <div class="flex justify-center items-center rounded bg-gray-300">
+        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="E-Mail-Adresse" required/>
+        <button :disabled="!$refs.form.checkValidity() || data.inProgress" @click.prevent="new KeyRecovery($refs.form, data).getUserHistory()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
+          <i :class="{'fa-envelope': !data.inProgress, 'fa-spinner fa-spin': data.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Abrufen
+        </button>
+      </div>
+      <p :class="{'hidden': !data.errorMessage}" class="text-sm text-red-600 mt-2" x-text="data.errorMessage"></p>
+    </form>
+
+    <div x-show="data.success" x-cloak>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">👍 Wir haben dir die Details zu deinen vergangenen Transaktionen und Lizenzen per E-Mail zugesandt.</p>
+      <p class="text-sm md:text-base leading-relaxed text-gray-700">❓ Wenn du keine E-Mail bekommen hast, <a class="text-primary no-underline hover:underline" href="mailto:sales@cryptomator.org">kontaktiere uns</a>.</p>
+    </div>
+  </section>
+
+  
+    
+    <script type="text/javascript" src="/js/desktopkey.min.c90be2fd293cecee6959f1e99c236f8671055ca53afa0d29643c33a5bf16ba69.js" integrity="sha256-yQvi/Sk87O5pWfHpnCNvhnEFXKU6&#43;g0pZDwzpb8Wumk=" defer></script>
+    
+    <script type="text/javascript" src="/js/recaptcha.min.f47a146642f05b425c753c4e07e588c9a1fce709b48e16c40885cd59cef1c7fb.js" integrity="sha256-9HoUZkLwW0JcdTxOB&#43;WIyaH85wm0jhbECIXNWc7xx/s=" defer></script>
+    
+    <script type="text/javascript" src="/js/supportercert.min.c79abfe705262df64d651c079b564ee194b5098d67909c8861d87ee1cd9cfda7.js" integrity="sha256-x5q/5wUmLfZNZRwHm1ZO4ZS1CY1nkJyIYdh&#43;4c2c/ac=" defer></script>
+    
+    <script type="text/javascript" src="/js/keyrecovery.min.ea9f6c148411dd2489b05de5e2caa2ef87fe0f5354376103825f4870761cd80a.js" integrity="sha256-6p9sFIQR3SSJsF3l4sqi74f&#43;D1NUN2EDgl9IcHYc2Ao=" defer></script>
+  
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>

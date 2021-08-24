@@ -749,6 +749,18 @@
                 href="https://cryptomator.org/impressum/"
                 />
   </url><url>
+    <loc>https://cryptomator.org/boxcryptor-alternative/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/boxcryptor-alternative/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/boxcryptor-alternative/"
+                />
+  </url><url>
     <loc>https://cryptomator.org/coop/mountainduck/</loc>
     <xhtml:link
                 rel="alternate"
@@ -807,6 +819,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/sponsors/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/supporter-cert/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/supporter-cert/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/supporter-cert/"
                 />
   </url><url>
     <loc>https://cryptomator.org/terms/</loc>

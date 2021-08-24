@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mehr als nur eine kostenlose Alternative zu Boxcryptor: Cryptomator</title>
+    
+      <meta name="description" content="Du willst deine Daten in der Cloud verschlüsseln und suchst die beste Alternative? Wir vergleichen für dich Boxcryptor mit der Open-Source-Lösung Cryptomator.">
+      <meta property="og:title" content="Mehr als nur eine kostenlose Alternative zu Boxcryptor: Cryptomator">
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="https://cryptomator.org/de/boxcryptor-alternative/">
+      <meta property="og:site_name" content="Cryptomator">
+      <meta property="og:description" content="Du willst deine Daten in der Cloud verschlüsseln und suchst die beste Alternative? Wir vergleichen für dich Boxcryptor mit der Open-Source-Lösung Cryptomator.">
+      
+        <meta property="og:image" content="https://cryptomator.org/img/boxcryptor-alternative/og-image.png">
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="541"/>
+      
+    
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
+    
+      
+      <link rel="stylesheet" href="/css/main.min.77719e23862ae362449321078ce446b960497e13d49dae0aacf6a269c82e119a.css" integrity="sha256-d3GeI4Yq42JEkyEHjORGuWBJfhPUna4KrPaiacguEZo=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
+    
+      <link rel="alternate" hreflang="en" href="/boxcryptor-alternative/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li x-data="{ isSupportUsDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isSupportUsDropdownOpen = !isSupportUsDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Unterstütze uns</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isSupportUsDropdownOpen" @click.away="isSupportUsDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-64 bg-white rounded shadow-md z-50">
+            <a href="/de/supporter-cert/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Supporter-Zertifikat</a>
+            <a href="/de/donate/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Spenden</a>
+            <a href="/de/sponsors/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Sponsoren</a>
+          </div>
+        </div>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md z-50">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/boxcryptor-alternative/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Alternative zu Boxcryptor</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md z-50">
+            <a href="/boxcryptor-alternative/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Unterstütze uns
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/supporter-cert/">Supporter-Zertifikat</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+    </div>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/boxcryptor-alternative/">Alternative zu Boxcryptor</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/boxcryptor-alternative/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator auf Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator auf Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container-prose py-12">
+    <article>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="die-beste-alternative-um-deine-sensiblen-daten-in-der-cloud-zu-verschlüsseln-boxcryptor-vs-cryptomator">Die beste Alternative, um deine sensiblen Daten in der Cloud zu verschlüsseln: Boxcryptor vs. Cryptomator</h1>
+<p class="lead">Boxcryptor und die Alternative Cryptomator dienen demselben Zweck: deine Privatsphäre zu sichern und gleichzeitig Daten bequem in der Cloud zu speichern. Worin genau unterscheiden sie sich? Und was passt besser zu deinen Bedürfnissen? Hier erfährst du es.</p>
+<p><img class="inline-block" src="/img/boxcryptor-alternative/cryptobot-analysis.png" srcset="/img/boxcryptor-alternative/cryptobot-analysis.png 1x, /img/boxcryptor-alternative/cryptobot-analysis@2x.png 2x" alt="Cryptomator wird ständig von Fachleuten mit modernen Tools analysiert." /></p>
+<p>Du willst deine sensiblen Daten in der Cloud sicher wissen. Doch bisher konnte dich noch keine Verschlüsselungslösung überzeugen?</p>
+<p>Vielleicht bist du auf der Suche nach einer kostenfreien Alternative zu Boxcryptor, vielleicht fehlen dir bei Boxcryptor relevante Features, vielleicht ist dir aber auch Unabhängigkeit und Freiheit durch Free Software wichtig.</p>
+<p>Was auch immer es ist – hier findest du Antworten auf deine Fragen.</p>
+<p>In diesem Artikel stellen wir dir mit Cryptomator eine Alternative zu Boxcryptor vor und erklären dir Gemeinsamkeiten und Unterschiede.</p>
+<p>Folgende Kriterien vergleichen wir in diesem Artikel:</p>
+<ul>
+<li>„Sichtbare“ Features</li>
+<li>„Unsichtbare“ Features bzw. sicherheitsrelevante Kriterien</li>
+</ul>
+<h2 id="a-word-in-advance">Noch ein Wort vorab</h2>
+<p>Wie du wahrscheinlich bereits mitbekommen hast, schreiben hier die Entwickler von Cryptomator. Vielleicht fragst du dich gerade, wie neutral ein Vergleich mit Boxcryptor dann überhaupt sein kann. Eine berechtige Frage.</p>
+<p>Unser Ziel ist es nicht, dich davon zu überzeugen, dass Cryptomator die beste Alternative zu Boxcryptor ist, die die Welt je gesehen hat. Uns ist es wichtig, dass du dir selbst eine Meinung machen kannst, weswegen wir dir auch erklären werden, wann Boxcryptor die bessere Alternative für dich ist.</p>
+<h2 id="about-cryptomator">Über Cryptomator</h2>
+<p>Cryptomator haben wir entwickelt, weil uns bestehende Verschlüsselungssoftwares nicht überzeugt und wir uns eine Alternative zu Boxcryptor gewünscht haben.</p>
+<p>Der Knackpunkt bei anderen Anbietern für Cloud-Verschlüsselung war:</p>
+<ul>
+<li>Entweder waren sie einfach zu bedienen, doch handelte sich, zum Beispiel bei Boxcryptor, um sogenannte „Closed-Source-Software“ …</li>
+<li>… oder sie verfolgten einen Open-Source-Ansatz, aber überzeugten uns nicht in Sachen Anwenderfreundlichkeit.</li>
+</ul>
+<p>Solltest du dich jetzt fragen, was es mit „Open Source“ und „Closed Source“ auf sich hat, keine Sorge: Wir erklären dir gleich, was das bedeutet und warum Closed-Source-Software ein Nachteil sein kann.</p>
+<p>(Um es direkt vorweg zu sagen: Closed Source bedeutet nicht per se, dass es schlecht ist. Doch im Kontext von Daten-Verschlüsselung solltest du das Thema Transparenz nicht unterschätzen – und die bietet Closed-Source-Software eben nicht.)</p>
+<h2 id="the-big-difference">Der große Unterschied: Cryptomator ist eine Open-Source-Software und damit transparenter</h2>
+<p><img class="inline-block" src="/img/open-source/bartender-vs-stranger.png" srcset="/img/open-source/bartender-vs-stranger.png 1x, /img/open-source/bartender-vs-stranger@2x.png 2x" alt="Der sicherheitsbewusste Kunde entscheidet sich für Produkte, deren Rezeptur und Qualität er prüfen kann. Nicht überprüfbare Alternativen wirken zwielichtig." /></p>
+<p>Und damit kommen wir zu dem großen Unterschied zwischen Cryptomator und Boxcryptor: <strong>Cryptomator ist eine Open-Source-Software, Boxcryptor eine Closed-Sourced-Software.</strong></p>
+<p>Bei einer Open-Source-Software haben viele Augen einen prüfenden Blick auf das Herzstück der Verschlüsselungssoftware, also den Quellcode. Sie können also schauen, ob der Quellcode tatsächlich das tut, was der Verschlüsselungsalgorithmus vorsieht. Und genau das macht die Verschlüsselung noch sicherer.</p>
+<p>Die Sicherheit des Algorithmus wird damit nicht nur mittels offiziellen Audits geprüft, sondern auch durch eine breite Community, die Schwachstellen schnell aufdeckt. Die Überprüfung des Codes wird dadurch nicht durch zeitliche oder personelle Ressourcen oder Vereinbarungen eingeschränkt.</p>
+<p>Zusätzlich ist der Code komplett zugänglich. Keine Chance, zu Marketingzwecken nur einen Teil des Codes auditieren zu lassen oder Sicherheitslücken zu verbergen.</p>
+<p>Die Stärken von quelloffener Verschlüsselungssoftware siehst du also auf den ersten Blick nicht. Denn die Vorteile liegen in sicherheitsrelevanten Kriterien im Hintergrund.</p>
+<p><strong>Lies hier weiter, wenn du noch mehr über Datensicherheit und Open-Source-Software erfahren willst:</strong></p>
+<p><a href="/de/open-source/">Deine Daten in der Cloud sicher verschlüsseln: Wie du durch Open Source deine Datensicherheit weiter stärkst.</a></p>
+<h2 id="comparison">Vergleich der Features von Boxcryptor und Cryptomator</h2>
+<p>Während Cryptomator sich auf seine Kernaufgabe konzentriert (Verschlüsselung von Cloud-Speichern), punktet Boxcryptor bei der Integration mit weiteren Diensten von Secomba.</p>
+<h3 id="general-features">Generelle Features</h3>
+<p>Kommen wir nun zum Vergleich der sichtbaren Funktionen. Die folgende Tabelle zeigt dir die Gemeinsamkeiten und Unterschiede der beiden Verschlüsselungssoftwares:</p>
+
+</div>
+<table class="table-fixed divide-y divide-primary rounded shadow bg-white min-w-full mt-6 mb-12">
+  <thead>
+    <tr class="py-2">
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/2"></th>
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/4">Cryptomator</th>
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/4">Boxcryptor</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">Unbeschränkte Anzahl Geräte</td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-check-circle fa-fw text-2xl text-gray-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">in Boxcryptor kostenpflichtig</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">Kein Account notwendig</td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">Opt-in für lokalen Account; Standardeinstellung speichert Schlüssel auf Boxcryptor-Server</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">Direktes Teilen von Dateien („Integrated Sharing“)</td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <span>Passwort wiederherstellen ohne E-Mail-Adresse („Offline Key Recovery“)</span>
+        <div class="has-tooltip">
+          <i class="fas fa-info-circle fa-fw text-gray-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">Deine Daten liegen nicht in Mails bei einem E-Mail-Account-Anbieter, was die Sicherheit weiter erhöht.</div>
+        </div>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">Erkennung von Synchronisationskonflikten bei Bearbeitung durch mehrere Personen</td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">Unterstützung aller gängigen Betriebssysteme</td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-check-circle fa-fw text-2xl text-primary"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">Windows, macOS, Linux, Android, iOS</div>
+        </div>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">
+            <p class="mb-2">Windows, macOS, Android, iOS</p>
+            <p><i class="fas fa-times fa-fw text-red-600"></i> kein Linux</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h3 id="security-relevant-features">Sicherheitsrelevante Features</h3>
+<p>Wie bereits zu Anfang geschildert, ist der große Unterschied zwischen Boxcryptor und Cryptomator unsichtbar, denn die Quelloffenheit und sicherheitsrelevanten Merkmale siehst du im Alltag nicht.</p>
+<p>Lass uns jetzt einen Blick auf diese Merkmale werfen. Dafür vergleichen wir die Features wieder als Tabelle:</p>
+
+</div>
+<table class="table-fixed divide-y divide-primary rounded shadow bg-white min-w-full mt-6 mb-12">
+  <thead>
+    <tr class="py-2">
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/2"></th>
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/4">Cryptomator</th>
+      <th class="font-headline text-lg md:text-xl leading-relaxed font-normal text-left px-4 py-2 w-1/4">Boxcryptor</th>
+    </tr>
+  </thead>
+  <tbody x-data="{ isFileContentEncryptionOpen: false, isFileNameEncryptionOpen: false, isFileAttributeEncryptionOpen: false, isFOSSOpen: false, isDirectoryObfuscationOpen: false, isIntegrityProtectionOpen: false, isQuantumResistantOpen: false, isAuditedCryptographyOpen: false, isMemoryHardKDFOpen: false, isShareKeysOpen: false }" class="divide-y divide-gray-200">
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isFileContentEncryptionOpen = !isFileContentEncryptionOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isFileContentEncryptionOpen, 'fa-chevron-circle-down': isFileContentEncryptionOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Dateiinhalte-Verschlüsselung</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+    </tr>
+    <tr x-show="isFileContentEncryptionOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Niemand kann unberechtigt den Dateiinhalt mitlesen.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Das ist die Grundvoraussetzung, um dein Recht auf Privatsphäre selbst in die Hand zu nehmen.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isFileNameEncryptionOpen = !isFileNameEncryptionOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isFileNameEncryptionOpen, 'fa-chevron-circle-down': isFileNameEncryptionOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Dateinamen-Verschlüsselung</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-check-circle fa-fw text-2xl text-gray-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">in Boxcryptor kostenpflichtig und optional</div>
+        </div>
+      </td>
+    </tr>
+    <tr x-show="isFileNameEncryptionOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Niemand kann unberechtigt den Dateinamen erkennen.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Metadaten wie der Dateiname verraten mehr über dich, als du denkst. Aus Dateiendungen kann ein Profil über die von dir verwendeten Daten erstellt werden. Im schlimmsten Fall kann dich trotz Verschlüsselung des Dateiinhalts bereits der Name „Bericht Menschensrechtsverletzungen.docx“ am falschen Flughafen vor Probleme stellen.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isFileAttributeEncryptionOpen = !isFileAttributeEncryptionOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isFileAttributeEncryptionOpen, 'fa-chevron-circle-down': isFileAttributeEncryptionOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Dateiattribute-Verschlüsselung</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-times-circle fa-fw text-2xl text-gray-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">geplant</div>
+        </div>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isFileAttributeEncryptionOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Niemand erhält Zugriff auf zusätzliche Dateiattribute.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Manche Drittsoftwares speichern möglicherweise Metadaten über deine Datei in dessen Dateiattributen. Werden diese nicht verschlüsselt, kann diese jeder mitlesen und sogar manipulieren, um dein Betriebssystem zu bestimmten Verhaltensweisen zu zwingen.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isFOSSOpen = !isFOSSOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isFOSSOpen, 'fa-chevron-circle-down': isFOSSOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Freie & quelloffene Software (FOSS)</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isFOSSOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Der Quellcode ist einer breiten Community zugänglich, was die Sicherheit der Verschlüsselung erhöht.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Die Sicherheit eines Systems muss allein vom Schlüssel abhängen und darf nicht auf der Geheimhaltung der Algorithmen beruhen. Da der Verschlüsselungsalgorithmus von einer breiten Community kontrolliert und diskutiert wird, werden Schwachstellen oder Fehler im Code schnell erkannt.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isDirectoryObfuscationOpen = !isDirectoryObfuscationOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isDirectoryObfuscationOpen, 'fa-chevron-circle-down': isDirectoryObfuscationOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Verzeichnis-Verschleierung</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isDirectoryObfuscationOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Die verschlüsselte Verzeichnisstruktur entspricht nicht der tatsächlichen bzw. unverschlüsselten Verzeichnisstruktur.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Manche Anwendungen erzeugen beim Speichern gleich mehrere Dateien, die in bestimmten Strukturen abgelegt werden. Falls diese Strukturen im verschlüsselten Zustand noch erkennbar ist, kann ein Angreifer trotz Verschlüsselung Rückschlüsse auf die Art der Daten ziehen.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isIntegrityProtectionOpen = !isIntegrityProtectionOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isIntegrityProtectionOpen, 'fa-chevron-circle-down': isIntegrityProtectionOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Integritätsschutz</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isIntegrityProtectionOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Da Verschlüsselung nicht sofort auch vor Manipulation der Daten schützt, muss eine unbefugte Veränderung der Daten erkannt werden.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Um dich vor einer Vielzahl raffinierter Angriffe zu schützen, muss die Unversehrtheit deiner verschlüsselten Daten überprüft werden, bevor du sie entschlüsselst. Passiert dies nicht, ist es grundsätzlich denkbar, dass manipulierte Daten eingeschleust werden, die du dann unbemerkt öffnest. (<a href="https://en.wikipedia.org/wiki/Chosen-ciphertext_attack" target="_blank" rel="noopener">Dies kann im schlimmsten Fall sogar von Angreifern genutzt werden, um die Verschlüsselung zu knacken.</a>)</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isQuantumResistantOpen = !isQuantumResistantOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isQuantumResistantOpen, 'fa-chevron-circle-down': isQuantumResistantOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Quantenresistente Kryptographie</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isQuantumResistantOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Die eingesetzten Verschlüsselungsalgorithmen sind auch dann noch sicher, wenn der Angreifer über Quantencomputer verfügt.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Manche Verschlüsselungsverfahren basieren auf mathematischen Problemen, die normalerweise schwer zu berechnen sind. Für Quantencomputer sind sie dagegen viel weniger komplex. Verfügt ein Angreifer über Zugang zu einem entsprechenden Quantencomputer, ist die Verschlüsselung deiner Daten de facto unwirksam.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isAuditedCryptographyOpen = !isAuditedCryptographyOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isAuditedCryptographyOpen, 'fa-chevron-circle-down': isAuditedCryptographyOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Geprüfte Kryptographie</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+    </tr>
+    <tr x-show="isAuditedCryptographyOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Der Verschlüsselungscode wird von unabhängigen Gutachtern untersucht.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Audits mit Fokus auf kryptografisch relevanten Code können ein wichtiges Element zur Qualitätskontrolle sein, sofern der Auditor genug Zeit hat und nicht nur einen flüchtigen Überblick erhält.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isMemoryHardKDFOpen = !isMemoryHardKDFOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isMemoryHardKDFOpen, 'fa-chevron-circle-down': isMemoryHardKDFOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Speicherintensive KDF</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-times-circle fa-fw text-2xl text-red-600"></i></td>
+    </tr>
+    <tr x-show="isMemoryHardKDFOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Die Key Derivation Function (KDF) wird verwendet, um aus dem von dir eingegebenen Passwort den kryptografischen Schlüssel herzuleiten. Diese Funktion muss möglichst komplex sein, um Bruteforce-Angriffe (das wahllose Ausprobieren von Zeichenkombinationen) zu verhindern.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p class="mb-2">Um deinen Schlüssel aus deinem Passwort herzuleiten, braucht ein Computer 200ms. Das klingt kurz, addiert sich aber schnell zu astronomisch hohen Zeiten, wenn ein Angreifer alle denkbaren Passwörter durchprobieren muss. Angreifer könnten allerdings Spezialhardware (sog. ASICs) einsetzen, um hunderttausende Möglichkeiten gleichzeitig zu probieren.</p>
+        <p>Um dem vorzubeugen, werden KDFs eingesetzt, die speicherintensiv („memory-hard“) sind, also besonders viel Speicher benötigen. Das  gestaltet einen Angriff unproportional aufwendig und somit unattraktiv für den Angreifer.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <a class="flex items-center" href="#" @click.prevent="isShareKeysOpen = !isShareKeysOpen">
+          <i :class="{ 'fa-chevron-circle-right': !isShareKeysOpen, 'fa-chevron-circle-down': isShareKeysOpen }" class="flex-shrink-0 fas fa-fw text-gray-600 mr-2"></i>
+          <span>Gemeinsame Nutzung ohne Weitergabe von Passwörtern</span>
+        </a>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4">
+        <div class="has-tooltip">
+          <i class="fas fa-times-circle fa-fw text-2xl text-gray-600"></i>
+          <div class="tooltip tooltip-center rounded shadow-md bg-white text-xs w-max max-w-xs p-2">derzeit nur für White-Labels</div>
+        </div>
+      </td>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4"><i class="fas fa-check-circle fa-fw text-2xl text-primary"></i></td>
+    </tr>
+    <tr x-show="isShareKeysOpen" x-cloak>
+      <td class="text-sm md:text-base leading-relaxed text-gray-700 p-4" colspan="3">
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Was bedeutet das?</p>
+        <p class="mb-4">Ideal bei Team-Nutzung des Cloud-Speichers: Jedes Teammitglied kann ein individuelles Passwort verwenden – trotzdem habt ihr Zugriff auf die verschlüsselten Daten.</p>
+        <p class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Warum ist das wichtig für die Datensicherheit?</p>
+        <p>Individuelle Passwörter in größeren Teams erhöhen die Sicherheit. Zum einen, weil die Weitergabe eines Passworts je nach Kommunikationskanal ein Risiko darstellt, zum anderen, weil Passwörter, die geteilt werden, oft schwächer (weil einfacher zu merken) sind.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="conclusion">Fazit: Wann Boxcryptor bzw. Cryptomator für dich die passende Alternative für dich sind</h2>
+<p>Du kennst jetzt die Unterschiede zwischen Boxcryptor und der Alternative Cryptomator. Nun kannst du dir selbst eine Meinung bilden:</p>
+<p>Prüfe, ob dir die Vorteile von Open-Source-Software und damit die sicherheitsrelevanten Kriterien wichtig sind. Sagt dir der Ansatz von Cryptomator zu, könnte es für dich die passendere Alternative sein.</p>
+<p>Möglicherweise ist der Funktionsumfang von Boxcryptor für dich ausreichend? Dann kannst du nach persönlicher Präferenz entscheiden.</p>
+
+</div>
+
+    </article>
+    
+      <section class="text-center mx-auto py-12">
+        <h3 class="font-headline text-xl md:text-2xl leading-relaxed mb-4">Möchtest du Cryptomator als Alternative zu Boxcryptor testen?</h3>
+        <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Cryptomator ist kostenlos und ohne Account nutzbar. Einfach herunterladen und loslegen.</p>
+        <a href="/de/downloads/" role="button" class="btn btn-primary px-8">Jetzt Cryptomator herunterladen</a>
+      </section>
+    
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>

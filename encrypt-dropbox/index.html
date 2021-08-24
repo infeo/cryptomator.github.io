@@ -23,7 +23,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.778ddf410aa3df9d979f6f72bf2c496fa3640716927220d9105a4c4ba020d7a4.css" integrity="sha256-d43fQQqj352Xn29yvyxJb6NkBxaSciDZEFpMS6Ag16Q=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.77719e23862ae362449321078ce446b960497e13d49dae0aacf6a269c82e119a.css" integrity="sha256-d3GeI4Yq42JEkyEHjORGuWBJfhPUna4KrPaiacguEZo=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -46,21 +46,29 @@
       <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
         <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
       </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/sponsors/">Sponsors</a>
+      <li x-data="{ isSupportUsDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isSupportUsDropdownOpen = !isSupportUsDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Support Us</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isSupportUsDropdownOpen" @click.away="isSupportUsDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-64 bg-white rounded shadow-md z-50">
+            <a href="/supporter-cert/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Supporter Certificate</a>
+            <a href="/donate/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Donate</a>
+            <a href="/sponsors/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Sponsors</a>
+          </div>
+        </div>
       </li>
       <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
         <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
           <span>Learn More</span>
-          <i class="fas fa-chevron-down text-xs"></i>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md z-50">
             <a href="/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">How Open Source Strengthens Security</a>
             <a href="/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Encrypt Your Dropbox</a>
+            <a href="/boxcryptor-alternative/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Alternative to Boxcryptor</a>
             <a href="/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Our Cooperation Partners</a>
             <a href="/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Customizations for Your Enterprise</a>
             <a href="/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">GDPR Compliancy</a>
@@ -73,10 +81,10 @@
       <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
         <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
           <span>EN</span>
-          <i class="fas fa-chevron-down text-xs"></i>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md z-50">
             <a href="/de/encrypt-dropbox/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
           </div>
         </div>
@@ -99,8 +107,17 @@
   
   <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/sponsors/">Sponsors</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Support Us
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/supporter-cert/">Supporter Certificate</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/sponsors/">Sponsors</a>
+    </div>
     
     <hr class="border-primary my-2"/>
 
@@ -110,6 +127,7 @@
     <div class="mt-1">
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/open-source/">How Open Source Strengthens Security</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/encrypt-dropbox/">Encrypt Your Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/boxcryptor-alternative/">Alternative to Boxcryptor</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Our Cooperation Partners</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/enterprise/">Customizations for Your Enterprise</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/gdpr/">GDPR Compliancy</a>
@@ -144,15 +162,15 @@
     
   <div class="container-prose py-12">
     <article>
-      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="encrypt-dropbox-securely-how-to-protect-your-sensitive-files-in-the-cloud-with-cryptomator">Encrypt Dropbox securely: How to protect your sensitive files in the cloud with Cryptomator</h1>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="encrypt-dropbox-securely-how-to-protect-your-sensitive-files-in-the-cloud-with-cryptomator">Encrypt Dropbox Securely: How to Protect Your Sensitive Files in the Cloud With Cryptomator</h1>
 <p class="lead">You want to <strong>encrypt your Dropbox and protect your privacy</strong> – and still have all the freedom in how you organize your data? That's where Cryptomator comes in.</p>
 <p><img class="inline-block" src="/img/encrypt-dropbox/cryptobot-unlocking-vault.png" srcset="/img/encrypt-dropbox/cryptobot-unlocking-vault.png 1x, /img/encrypt-dropbox/cryptobot-unlocking-vault@2x.png 2x" alt="Cryptomator allows you to access your cleartext data without the need to remove encryption protection." /></p>
 <p>With Cryptomator, you can <strong>encrypt your cloud storage</strong> by creating a vault in Dropbox and putting your files into it. With this extra layer of security, you&rsquo;ll build an almost insurmountable barrier against attackers – without restricting Dropbox&rsquo;s file storage and synchronization.</p>
-<h2 id="how-the-vault-works">How Cryptomator secures your Dropbox encryption</h2>
+<h2 id="how-the-vault-works">How Cryptomator Secures Your Dropbox Encryption</h2>
 <p>Cryptomator puts the data in your Dropbox into a &ldquo;magic&rdquo; vault. Magical because the entire vault and its contents only appear with the right password – and only to the person with the right password.</p>
 <p>When the door to the vault is closed again, the entire vault and its valuable contents disappear again until the next time you open it with the right password.</p>
 <p>This means that attackers would not even benefit from drilling through the wall of the vault. Because the vault is empty if the correct password is missing. (For Marvel fans: It works similarly to the portal in Doctor Strange).</p>
-<h2 id="features">Encrypt your Dropbox and reliably protect your data: This is how Cryptomator helps you</h2>
+<h2 id="features">Encrypt Your Dropbox and Reliably Protect Your Data: This Is How Cryptomator Helps You</h2>
 
 </div>
 <div class="rounded shadow bg-white my-6">
@@ -195,12 +213,12 @@
     <p>Cryptomator is specifically designed to <strong>encrypt cloud services</strong>. Because the <strong>files are encrypted individually</strong>, only the files you just changed are uploaded or encrypted – and not (as with so-called "container solutions") the entire folder. Changes are synchronized much faster – and this is especially noticeable when you are on the road.</p>
   </div>
 </div>
-<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="how-cryptomator-works">And this is how Cryptomator works in practice</h2>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="how-cryptomator-works">And This Is How Cryptomator Works in Practice</h2>
 <p>If you want the vault to appear with your files, you first open Cryptomator. Now you enter your password and the vault appears (in the form of a virtual drive in your file explorer).</p>
 <p>Never worked with a virtual drive before? A virtual drive works like a USB flash drive. So the drive is only visible as long as the USB stick is connected. If you eject the stick, the USB drive disappears again.</p>
 <p>We call this virtual drive &ldquo;vault drive&rdquo;. You can open it as usual and edit the data. As soon as you click &ldquo;Lock Vault&rdquo; in Cryptomator, the virtual drive is removed (and with it, the access to the sensitive data). The vault is now gone again.</p>
 <p>By the way, you can create as many vaults as you like to organize your data individually.</p>
-<h2 id="setup-guide">How to easily use Cryptomator with your Dropbox</h2>
+<h2 id="setup-guide">How to Easily Use Cryptomator With Your Dropbox</h2>
 <ol>
 <li>Install Cryptomator.</li>
 <li>Once Cryptomator is installed, you can create a new vault.</li>

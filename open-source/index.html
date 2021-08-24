@@ -23,7 +23,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.778ddf410aa3df9d979f6f72bf2c496fa3640716927220d9105a4c4ba020d7a4.css" integrity="sha256-d43fQQqj352Xn29yvyxJb6NkBxaSciDZEFpMS6Ag16Q=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.77719e23862ae362449321078ce446b960497e13d49dae0aacf6a269c82e119a.css" integrity="sha256-d3GeI4Yq42JEkyEHjORGuWBJfhPUna4KrPaiacguEZo=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -46,21 +46,29 @@
       <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
         <a class="p-2 hover:no-underline" href="/downloads/">Downloads</a>
       </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/donate/">Donate</a>
-      </li>
-      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
-        <a class="p-2 hover:no-underline" href="/sponsors/">Sponsors</a>
+      <li x-data="{ isSupportUsDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isSupportUsDropdownOpen = !isSupportUsDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Support Us</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isSupportUsDropdownOpen" @click.away="isSupportUsDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-64 bg-white rounded shadow-md z-50">
+            <a href="/supporter-cert/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Supporter Certificate</a>
+            <a href="/donate/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Donate</a>
+            <a href="/sponsors/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Sponsors</a>
+          </div>
+        </div>
       </li>
       <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
         <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
           <span>Learn More</span>
-          <i class="fas fa-chevron-down text-xs"></i>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md z-50">
             <a href="/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">How Open Source Strengthens Security</a>
             <a href="/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Encrypt Your Dropbox</a>
+            <a href="/boxcryptor-alternative/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Alternative to Boxcryptor</a>
             <a href="/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Our Cooperation Partners</a>
             <a href="/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Customizations for Your Enterprise</a>
             <a href="/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">GDPR Compliancy</a>
@@ -73,10 +81,10 @@
       <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
         <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
           <span>EN</span>
-          <i class="fas fa-chevron-down text-xs"></i>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
         </button>
         <div class="relative">
-          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md z-50">
             <a href="/de/open-source/" lang="de" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Deutsch</a>
           </div>
         </div>
@@ -99,8 +107,17 @@
   
   <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
     <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/downloads/">Downloads</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
-    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/sponsors/">Sponsors</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Support Us
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/supporter-cert/">Supporter Certificate</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/donate/">Donate</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/sponsors/">Sponsors</a>
+    </div>
     
     <hr class="border-primary my-2"/>
 
@@ -110,6 +127,7 @@
     <div class="mt-1">
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/open-source/">How Open Source Strengthens Security</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/encrypt-dropbox/">Encrypt Your Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/boxcryptor-alternative/">Alternative to Boxcryptor</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/coop/">Our Cooperation Partners</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/enterprise/">Customizations for Your Enterprise</a>
       <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/gdpr/">GDPR Compliancy</a>
@@ -144,7 +162,7 @@
     
   <div class="container-prose py-12">
     <article>
-      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="encrypt-your-data-securely-in-the-cloud-how-you-can-further-increase-your-data-security-through-open-source">Encrypt your data securely in the cloud: How you can further increase your data security through open source</h1>
+      <div class="prose prose-sm md:prose max-w-none md:max-w-none"><h1 id="encrypt-your-data-securely-in-the-cloud-how-you-can-further-increase-your-data-security-through-open-source">Encrypt Your Data Securely in the Cloud: How You Can Further Increase Your Data Security Through Open Source</h1>
 <p class="lead">Maybe you've been looking into encrypting your cloud storage for a while now, and you've come across "open source" solutions. Maybe you're wondering why open source is so important if you want to encrypt your files? Here we explain it to you.</p>
 <p><img class="inline-block" src="/img/open-source/bartender-vs-stranger.png" srcset="/img/open-source/bartender-vs-stranger.png 1x, /img/open-source/bartender-vs-stranger@2x.png 2x" alt="The security-conscious customer opts for products whose composition and quality he can check. Non-verifiable alternatives seem shady." /></p>
 <p>To help you understand what open source actually means, let&rsquo;s start with an example.</p>
@@ -185,11 +203,11 @@
 <div class="prose prose-sm md:prose max-w-none md:max-w-none"><p>You probably already sense a tendency: The stranger may look nice – and in most cases there is certainly no reason for suspicion.</p>
 <p>But you don&rsquo;t know: What if there is something in the drink that shouldn&rsquo;t be there?</p>
 <p>And maybe the old saying comes to your mind: Trust, but verify.</p>
-<h2 id="trust-but-verify">Trust, but verify – especially if you want to encrypt sensitive data in the cloud</h2>
+<h2 id="trust-but-verify">Trust, but Verify – Especially if You Want to Encrypt Sensitive Data in the Cloud</h2>
 <p>And it&rsquo;s exactly this advantage of verification that open source software offers you when you want to encrypt your cloud storage (such as Dropbox).</p>
 <p>To come back to the example with the bar: In fact, it would even be possible for you to mix your own drink.</p>
 <p>Because open source allows you to do just that: The instructions and all the ingredients are available. In addition, you even have the option of adapting and further improving the recipe if necessary.</p>
-<h2 id="advantages">Exactly how open source software increases your data security</h2>
+<h2 id="advantages">Exactly How Open Source Software Increases Your Data Security</h2>
 <p>At first glance, you don&rsquo;t &ldquo;see&rdquo; the aspects of open source in the software itself. This is because the advantages lie in the security-related criteria for the development of the software.</p>
 <p>Before we go any further, let&rsquo;s now briefly look at the following axiom of data encryption (cryptography):</p>
 <p>The security of an encryption process must depend solely on the key and must not be based on the secrecy of the encryption algorithms. (The so-called <a href="https://en.wikipedia.org/wiki/Kerckhoffs%27s_principle" target="_blank" rel="noopener">Kerckhoff's principle</a>.)</p>
@@ -257,7 +275,7 @@
     </div>
   </div>
 </div>
-<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="robust-crypto">Encrypt cloud storage with open source software: On the safe side with Cryptomator</h2>
+<div class="prose prose-sm md:prose max-w-none md:max-w-none"><h2 id="robust-crypto">Encrypt Cloud Storage With Open Source Software: On the Safe Side With Cryptomator</h2>
 <p>Cryptomator is just such an open source encryption software. Thanks to its open source nature, maximum transparency is guaranteed. Thus, the security of your data is secured on many levels and constantly increased:</p>
 <ol>
 <li>In addition to the actual code, quality metrics from automated tests as well as bug reports are publicly available.</li>
