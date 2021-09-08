@@ -188,8 +188,8 @@
     <input type="hidden" name="hosted_button_id" value="7HHT9KSN2WS3Y" />
     <input type="hidden" name="amount" value="15" />
     <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-327914865" x-model="acceptTerms" />
-<label for="id-327914865">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-186943527" x-model="acceptTerms" />
+<label for="id-186943527">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
     <button type="submit" class="btn btn-primary w-full md:w-64" :disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to PayPal</button>
   </form>
@@ -252,7 +252,7 @@
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Credit Card</label>
       <div> 
-        <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none border-gray-300 focus:outline-none" @focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Loading…', '')"/>
+        <input type="text" x-ref="stripePlaceholder" class="w-full appearance-none border-gray-300 focus:outline-none" @focus.once="oneTimePayment.initStripeField($refs.stripePlaceholder, 'Loading…', 'en')"/>
       </div>
     </div>
 
@@ -260,8 +260,8 @@
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Credit card payments are securely handled by Stripe. We will not be able to see your card number or CVC. Please expect to be <a class="text-primary no-underline hover:underline" href="https://support.stripe.com/questions/unknown-charge-on-card-from-stripe" target="_blank" rel="noopener">charged by Stripe</a>.</p>
 
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-791285634" x-model="acceptTerms" />
-<label for="id-791285634">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-167458923" x-model="acceptTerms" />
+<label for="id-167458923">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
 
       <div x-ref="captchaWrapper" x-show="!oneTimePaymentStatus.captcha" class="flex justify-center">
@@ -283,10 +283,10 @@
   <div x-show="frequency === 'recurring'" class="text-center">
     <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Recurring credit card payments will be set up on our Stripe page.</p>
     <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-751489236" x-model="acceptTerms" />
-<label for="id-751489236">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-419357682" x-model="acceptTerms" />
+<label for="id-419357682">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
-    <button type="submit" class="btn btn-primary w-full md:w-64" @click="recurringPayment.checkout(amount, currency, '')" :disabled="!acceptTerms">
+    <button type="submit" class="btn btn-primary w-full md:w-64" @click="recurringPayment.checkout(amount, currency, 'en')" :disabled="!acceptTerms">
       <i class="fas fa-external-link" aria-hidden="true"></i> Proceed to Stripe
     </button>
   </div>
@@ -296,7 +296,7 @@
   
   <script type="text/javascript" src="/js/recaptcha.min.f47a146642f05b425c753c4e07e588c9a1fce709b48e16c40885cd59cef1c7fb.js" integrity="sha256-9HoUZkLwW0JcdTxOB&#43;WIyaH85wm0jhbECIXNWc7xx/s=" defer></script>
   
-  <script type="text/javascript" src="/js/cardpayments.min.2f93bf515c0ed3009542eb6ddc7a03a6b5591e8ac672ad52104d9e80ec0b1415.js" integrity="sha256-L5O/UVwO0wCVQutt3HoDprVZHorGcq1SEE2egOwLFBU=" defer></script>
+  <script type="text/javascript" src="/js/cardpayments.min.88d3e5248e46eeadf2cb8978dff8f6be798880433a34ee23fcd6ec405d38177f.js" integrity="sha256-iNPlJI5G7q3yy4l43/j2vnmIgEM6NO4j/NbsQF04F38=" defer></script>
 
 
             </div>
@@ -363,8 +363,8 @@
     <input type="hidden" name="success_url" value="https://cryptomator.org/donate/thanks" />
     <input type="hidden" name="allow_extra" value="1" />
     <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-129438576" x-model="acceptTerms" />
-<label for="id-129438576">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-258467319" x-model="acceptTerms" />
+<label for="id-258467319">I accept the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
     <button type="submit" class="btn btn-primary w-full md:w-64" :disabled="!acceptTerms"><i class="fas fa-external-link" aria-hidden="true"></i> Proceed to CoinPayments</button>
   </form>
