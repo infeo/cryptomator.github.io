@@ -22,7 +22,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.28853a6df4b15c8ee058ad571a9c8dc7b1ca9498d8fc45ae05eb7a6e41dfddf5.css" integrity="sha256-KIU6bfSxXI7gWK1XGpyNx7HKlJjY/EWuBet6bkHf3fU=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.2898492bcb2d35b38ca40339d250970e360c0659da84049343fdb100c54f3d2e.css" integrity="sha256-KJhJK8stNbOMpAM50lCXDjYMBlnahASTQ/2xAMVPPS4=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -274,7 +274,7 @@
     <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Subscribe to our mailing list or follow <a class="text-primary no-underline hover:underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">@Cryptomator</a> on Twitter.</p>
       <div class="flex justify-center items-center rounded bg-gray-300">
-        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="Email address" required/>
+        <input x-model="data.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="Email address" required/>
         <button :disabled="!$refs.form.checkValidity() || data.inProgress" @click.prevent="new Newsletter($refs.form, data).subscribe()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
           <i :class="{'fa-envelope': !data.inProgress, 'fa-spinner fa-spin': data.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Subscribe
         </button>

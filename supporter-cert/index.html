@@ -21,7 +21,7 @@
     
     
       
-      <link rel="stylesheet" href="/css/main.min.28853a6df4b15c8ee058ad571a9c8dc7b1ca9498d8fc45ae05eb7a6e41dfddf5.css" integrity="sha256-KIU6bfSxXI7gWK1XGpyNx7HKlJjY/EWuBet6bkHf3fU=" media="screen" />
+      <link rel="stylesheet" href="/css/main.min.2898492bcb2d35b38ca40339d250970e360c0659da84049343fdb100c54f3d2e.css" integrity="sha256-KJhJK8stNbOMpAM50lCXDjYMBlnahASTQ/2xAMVPPS4=" media="screen" />
     
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
     
@@ -189,14 +189,14 @@
     <div class="flex flex-wrap md:flex-nowrap">
       <div class="w-full mb-4 md:w-1/2 md:pr-3">
         <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Number of Licenses</label>
-        <input x-model="checkoutData.quantity" type="number" min="1" max="100" step="1" class="appearance-none placeholder-gray-500 border-gray-300 w-full mb-2" placeholder="min. 1" required/>
+        <input x-model="checkoutData.quantity" x-ref="quantity" @blur="$refs.quantity.classList.add('show-invalid')" type="number" min="1" max="100" step="1" class="appearance-none placeholder-gray-500 border-gray-300 w-full mb-2" placeholder="min. 1" required/>
         <p class="text-xs text-gray-600">License is valid for one user and can be used on multiple computers.</p>
       </div>
       <div class="w-full mb-4 md:w-1/2 md:pl-3">
         <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Price per License</label>
         <div class="flex items-center rounded bg-gray-300 mb-2">
           <div class="flex-shrink-0 text-gray-700 px-3">€ / $</div>
-          <input x-model="checkoutData.amount" type="number" min="15" step="1" class="flex-grow min-w-0 rounded-none text-right placeholder-gray-500 border-gray-300 bg-white md:pr-0" placeholder="min. 15" required/>
+          <input x-model="checkoutData.amount" x-ref="amount" @blur="$refs.amount.classList.add('show-invalid')" type="number" min="15" step="1" class="flex-grow min-w-0 rounded-none text-right placeholder-gray-500 border-gray-300 bg-white md:pr-0" placeholder="min. 15" required/>
           <div class="flex-shrink-0 text-gray-700 px-3">.00</div>
         </div>
         <p class="text-xs text-gray-600">Minimum amount is 15 per license. Currency is determined during checkout.</p>
@@ -204,13 +204,13 @@
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Email</label>
-      <input x-model="checkoutData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
+      <input x-model="checkoutData.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Payments are securely handled by Paddle.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-138476952" x-model="acceptTerms" />
-<label for="id-138476952">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>. Coupons redeemed during checkout are excluded from the right of withdrawal.</label>
+<input class="mr-1" type="checkbox" id="id-193624587" x-model="acceptTerms" />
+<label for="id-193624587">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>. Coupons redeemed during checkout are excluded from the right of withdrawal.</label>
 </p>
       <button :disabled="!$refs.funderForm.checkValidity() || checkoutData.inProgress || !acceptTerms" @click.prevent="new DesktopLicense($refs.funderForm, checkoutData).checkout('en')" type="submit" class="btn btn-primary w-full md:w-64">
         <i :class="{'fa-shopping-cart': !checkoutData.inProgress, 'fa-spinner fa-spin': checkoutData.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Checkout
@@ -254,21 +254,21 @@
   <form x-show="!feedbackData.success" x-ref="form">
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">GitHub Username</label>
-      <input x-model="submitData.github_username" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38}$" maxlength="39" placeholder="Username on GitHub" required/>
+      <input x-model="submitData.github_username" x-ref="github_username" @blur="$refs.github_username.classList.add('show-invalid')" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d](?:[A-Za-z\d]|-(?=[A-Za-z\d])){0,38}$" maxlength="39" placeholder="Username on GitHub" required/>
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">GitHub Contribution Link</label>
-      <input x-model="submitData.github_contribution_link" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Contribution link on GitHub (https://github.com/...)" required/>
+      <input x-model="submitData.github_contribution_link" x-ref="github_contribution_link" @blur="$refs.github_contribution_link.classList.add('show-invalid')" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Contribution link on GitHub (https://github.com/...)" required/>
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Email</label>
-      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
+      <input x-model="submitData.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Check out our <a class="text-primary no-underline hover:underline" href="https://github.com/cryptomator/cryptomator/blob/develop/.github/CONTRIBUTING.md" target="_blank" rel="noopener">contribution guide</a> to get started.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-164895327" x-model="acceptTerms" />
-<label for="id-164895327">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-135726894" x-model="acceptTerms" />
+<label for="id-135726894">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
         <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Continue…</button>
@@ -312,17 +312,17 @@
   <form x-show="!feedbackData.success" x-ref="form">
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Crowdin Username</label>
-      <input x-model="submitData.crowdin_username" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d\-_.]{0,254}$" maxlength="255" placeholder="Username on Crowdin" required/>
+      <input x-model="submitData.crowdin_username" x-ref="crowdin_username" @blur="$refs.crowdin_username.classList.add('show-invalid')" type="text" class="appearance-none placeholder-gray-500 border-gray-300 w-full" pattern="^[A-Za-z\d\-_.]{0,254}$" maxlength="255" placeholder="Username on Crowdin" required/>
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Email</label>
-      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
+      <input x-model="submitData.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4"><a class="text-primary no-underline hover:underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Help translating</a> Cryptomator to your favorite language.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-714895326" x-model="acceptTerms" />
-<label for="id-714895326">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-625743891" x-model="acceptTerms" />
+<label for="id-625743891">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
         <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Continue…</button>
@@ -366,20 +366,20 @@
   <form x-show="!feedbackData.success" x-ref="form">
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Reference</label>
-      <textarea x-model="submitData.reference" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="- Link to blog post, how-to video, wiki contribution, etc. (https://...)
+      <textarea x-model="submitData.reference" x-ref="reference" @blur="$refs.reference.classList.add('show-invalid')" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="- Link to blog post, how-to video, wiki contribution, etc. (https://...)
 - Number of followers, estimated page views, etc.
 
 max. 800 characters" required></textarea>
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Email</label>
-      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
+      <input x-model="submitData.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Share anything about Cryptomator on social media, on your website, or on any other media to spread the word.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-374169285" x-model="acceptTerms" />
-<label for="id-374169285">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-789635124" x-model="acceptTerms" />
+<label for="id-789635124">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
         <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Continue…</button>
@@ -423,17 +423,17 @@ max. 800 characters" required></textarea>
   <form x-show="!feedbackData.success" x-ref="form">
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Reason</label>
-      <textarea x-model="submitData.reason" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="max. 800 characters" required></textarea>
+      <textarea x-model="submitData.reason" x-ref="reason" @blur="$refs.reason.classList.add('show-invalid')" type="url" class="appearance-none placeholder-gray-500 border-gray-300 w-full" rows="5" maxlength="800" placeholder="max. 800 characters" required></textarea>
     </div>
     <div class="mb-4">
       <label class="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2">Email</label>
-      <input x-model="submitData.email" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
+      <input x-model="submitData.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="appearance-none placeholder-gray-500 border-gray-300 w-full" placeholder="Email address" required/>
     </div>
     <div class="text-center mt-8">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">Let us know any other reason that doesn&#39;t fit in the other categories.</p>
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-<input class="mr-1" type="checkbox" id="id-386175249" x-model="acceptTerms" />
-<label for="id-386175249">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
+<input class="mr-1" type="checkbox" id="id-581972364" x-model="acceptTerms" />
+<label for="id-581972364">I accept the <a class="text-primary no-underline hover:underline" href="/terms/">Terms & Conditions</a> as well as the <a class="text-primary no-underline hover:underline" href="/privacy/">Privacy Policy</a>.</label>
 </p>
       <div x-show="!submitData.captcha" x-ref="captchaWrapper" class="flex justify-center">
         <button :disabled="!$refs.form.checkValidity() || !acceptTerms" @click.prevent="loadRecaptcha($refs.captchaWrapper, (token) => submitData.captcha = token)" class="btn btn-primary w-full md:w-64">Continue…</button>
@@ -464,7 +464,7 @@ max. 800 characters" required></textarea>
     <form x-show="!data.success" x-ref="form" class="max-w-xl mx-auto">
       <p class="text-sm md:text-base leading-relaxed text-gray-700 mb-4">To recover a lost certificate or receipt, enter your email address below.</p>
       <div class="flex justify-center items-center rounded bg-gray-300">
-        <input x-model="data.email" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="Email address" required/>
+        <input x-model="data.email" x-ref="email" @blur="$refs.email.classList.add('show-invalid')" type="email" class="flex-grow min-w-0 rounded-r-none placeholder-gray-500 border-gray-300 bg-white" placeholder="Email address" required/>
         <button :disabled="!$refs.form.checkValidity() || data.inProgress" @click.prevent="new KeyRecovery($refs.form, data).getUserHistory()" type="submit" class="flex-shrink-0 btn btn-primary rounded-l-none px-4">
           <i :class="{'fa-envelope': !data.inProgress, 'fa-spinner fa-spin': data.inProgress}" class="fas fa-fw" aria-hidden="true"></i> Retrieve
         </button>
