@@ -11,7 +11,7 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/vault-format/</link>
     </image>
-    <lastBuildDate>Mon, 11 Oct 2021 15:23:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Oct 2021 15:42:19 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
@@ -98,7 +98,7 @@ The new format prepares Cryptomator for future features and corrects inconsisten
 For more details, check out the more-in-depth &lt;a href=&#34;https://cryptomator.org/blog/2021/10/11/vault-format-8/&#34;&gt;article&lt;/a&gt; about it.&lt;/p&gt;
 &lt;h3 id=&#34;vault-health-check&#34;&gt;Vault Health Check&lt;/h3&gt;
 &lt;p&gt;We added an integrated tool to detect and fix structural problems of a vault (e.g., missing directories).
-Until Cryptomator 1.5.0, this task was done by the so-called [Sanitizer] (&lt;a href=&#34;https://github.com/cryptomator/sanitizer)&#34;&gt;https://github.com/cryptomator/sanitizer)&lt;/a&gt;. But the tool was hard to maintain and hard to use so that it was abandoned with the goal to integrate similar functionality directly within Cryptomator.&lt;/p&gt;
+Until Cryptomator 1.5.0, this task was done by the so-called &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt;. But the tool was hard to maintain and hard to use so that it was abandoned with the goal to integrate similar functionality directly within Cryptomator.&lt;/p&gt;
 &lt;p&gt;This plan finally bore fruit into a workflow to perform different checks on a vault to detect common problems.
 The results are shown on the fly and once the check is finished, you can export the results.
 For 1.6.0, there will be only three checks to execute, but we plan to add more.
