@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vault-format</title>
+    
+      <meta name="description" content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."/>
+      <meta property="og:title" content="Cryptomator - vault-format"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://cryptomator.org/de/tags/vault-format/"/>
+      <meta property="og:site_name" content="Cryptomator"/>
+      <meta property="og:description" content="Verschlüssle deine Dropbox, Google Drive, und Co. Cryptomator ist eine freie Open-Source-Software."/>
+      <meta property="og:image" content="https://cryptomator.org/img/og-image.png">
+      <meta property="og:image:width" content="1200"/>
+      <meta property="og:image:height" content="630"/>
+    
+    <meta property="og:locale" content="de_DE" />
+    
+      <meta property="og:locale:alternate" content="en_US" />
+    
+    
+      
+      <link rel="stylesheet" href="/css/main.min.498bbb18985e7626feb695d1c9d7448c1f04c938db4a0de03ccb10af9f7141df.css" integrity="sha256-SYu7GJhedib&#43;tpXRyddEjB8EyTjbSg3gPMsQr59xQd8=" media="screen" />
+    
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/de/feed.xml" />
+    
+      <link rel="alternate" hreflang="en" href="/tags/vault-format/" />
+    
+    
+      
+    
+  </head>
+  <body class="bg-dark font-body text-gray-900">
+    <nav x-data="{ isNavOpen: false }" :class="isNavOpen ? 'relative' : 'relative'" class="w-full text-primary absolute lg:px-8 bg-white border-t-2 border-primary shadow">
+  <div class="flex justify-between items-stretch w-full">
+    <a class="flex items-center hover:no-underline py-2 mx-2 lg:ml-0" href="/de/">
+      <img src="/img/logo.svg" class="h-8" alt="Logo"/>
+      <span class="font-headline font-bold ml-2 pb-px">CRYPTOMATOR</span>
+    </a>
+
+    
+    <ul class="hidden md:flex items-stretch list-none m-0">
+      <li class="flex items-center lg:mx-2 border-b-2 border-transparent hover:border-primary">
+        <a class="p-2 hover:no-underline" href="/de/downloads/">Downloads</a>
+      </li>
+      <li x-data="{ isSupportUsDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isSupportUsDropdownOpen = !isSupportUsDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Unterstütze uns</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isSupportUsDropdownOpen" @click.away="isSupportUsDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-64 bg-white rounded shadow-md z-50">
+            <a href="/de/supporter-cert/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Supporter-Zertifikat</a>
+            <a href="/de/donate/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Spenden</a>
+            <a href="/de/sponsors/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Sponsoren</a>
+          </div>
+        </div>
+      </li>
+      <li x-data="{ isLearnMoreDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLearnMoreDropdownOpen = !isLearnMoreDropdownOpen" class="whitespace-nowrap p-2">
+          <span>Mehr erfahren</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLearnMoreDropdownOpen" @click.away="isLearnMoreDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-96 bg-white rounded shadow-md z-50">
+            <a href="/de/open-source/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Wie Open Source die Sicherheit stärkt</a>
+            <a href="/de/encrypt-dropbox/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Verschlüsselung deiner Dropbox</a>
+            <a href="/de/boxcryptor-alternative/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Alternative zu Boxcryptor</a>
+            <a href="/de/coop/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Unsere Kooperationspartner</a>
+            <a href="/de/enterprise/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">Einsatz im Enterprise</a>
+            <a href="/de/gdpr/" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">DSGVO-Konformität</a>
+          </div>
+        </div>
+      </li>
+      
+      <li class="flex items-center mx-5 my-3 border-l border-primary"></li>
+      
+      <li x-data="{ isLangDropdownOpen: false }" class="flex items-center border-b-2 border-transparent">
+        <button @click="isLangDropdownOpen = !isLangDropdownOpen" class="whitespace-nowrap p-2">
+          <span>DE</span>
+          <i class="fas fa-chevron-down fa-fw text-xs"></i>
+        </button>
+        <div class="relative">
+          <div x-show="isLangDropdownOpen" @click.away="isLangDropdownOpen = false" x-cloak class="absolute right-0 mt-6 py-2 w-48 bg-white rounded shadow-md z-50">
+            <a href="/tags/vault-format/" lang="en" class="block px-4 py-2 text-gray-800 hover:bg-secondary hover:text-white hover:no-underline">English</a>
+          </div>
+        </div>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-twitter fa-fw" aria-label="Twitter"></i></a>
+      </li>
+      <li class="flex items-center border-b-2 border-transparent">
+        <a class="p-2 hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-fw" aria-label="Facebook"></i></a>
+      </li>
+    </ul>
+    
+    
+    <button @click="isNavOpen = !isNavOpen" type="button" class="self-center md:hidden border border-primary rounded px-2 py-1 mx-2" aria-label="Toggle Navigation">
+      <i x-show="isNavOpen" class="fas fa-times fa-fw"></i>
+      <i x-show="!isNavOpen" class="fas fa-bars fa-fw"></i>
+    </button>
+  </div>
+  
+  
+  <div :class="isNavOpen ? 'block' : 'hidden'" x-cloak class="md:hidden">
+    <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/downloads/">Downloads</a>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Unterstütze uns
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/supporter-cert/">Supporter-Zertifikat</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/sponsors/">Sponsoren</a>
+    </div>
+    
+    <hr class="border-primary my-2"/>
+
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      Mehr erfahren
+    </div>
+    <div class="mt-1">
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/open-source/">Wie Open Source die Sicherheit stärkt</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/encrypt-dropbox/">Verschlüsselung deiner Dropbox</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/boxcryptor-alternative/">Alternative zu Boxcryptor</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/coop/">Unsere Kooperationspartner</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/enterprise/">Einsatz im Enterprise</a>
+      <a class="block py-2 mx-2 hover:text-secondary hover:no-underline" href="/de/gdpr/">DSGVO-Konformität</a>
+    </div>
+
+    <hr class="border-primary my-2"/>
+    
+    <div class="uppercase tracking-wide text-gray-500 text-xs font-bold p-2">
+      <i class="fas fa-globe fa-fw"></i> DE
+    </div>
+    <div class="mt-1">
+      
+      <a href="/tags/vault-format/" lang="en" class="block px-2 py-1 hover:text-secondary hover:no-underline">English</a>
+      
+    </div>
+    
+    <hr class="border-primary my-2"/>
+    
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-fw"></i>
+      <span>Cryptomator auf Twitter</span>
+    </a>
+    <a class="block p-2 hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-f fa-fw"></i>
+      <span>Cryptomator auf Facebook</span>
+    </a>
+  </div>
+</nav>
+
+    <div class="bg-gray-100 min-vh-80">
+    
+    
+  <div class="container-prose py-12">
+    <div class="prose prose-sm md:prose max-w-none md:max-w-none">
+      <header class="mb-6">
+        <h1>Posts</h1>
+      </header>
+    
+      
+        <article>
+          <h2>Vault Format 8</h2>
+          <p>Hallo Community!</p>
+<p>im Zuge des anstehenden Releases von Cryptomator 1.6.0 möchten wir euch einen Einblick über die Motivation und Umsetzung eine der wichtigen Änderungen geben: Das neue Tresorformat in Version 8.</p>
+<p>Ja, ein neues Tresorformat.
+Diejenigen, die sich an das letzte Upgrade erinnern, werden vielleicht etwas schlucken, denn beim letzten Mal war der Migrationsprozess von Tresorformat 6 zu 7 in einigen Fällen nicht ohne Hindernisse und Probleme zu bewältigen.
+Aber keine Sorge, dieses Mal sind die Änderungen minimal invasiv!</p>
+<p>Dieser Artikel wird die Motivation für die Gestaltung des neuen Formats dargelegen, die Änderungen erläutern und skizziert, wie der Migrationsprozess abläuft.</p>
+<h2 id="die-motivation">Die Motivation</h2>
+<p>Der Speicherort des Masterkey eines Tresors ist ein Thema, das schon in den Anfangstagen von Cryptomator viele Fragen aufgeworfen und zu mehreren Feature Requests geführt hat. (vergleiche die Klickzahlen im Forumsartikel <a href="https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/">&ldquo;Why is the masterkey stored in the cloud&rdquo;</a>)</p>
+<p>Woher kommt das?
+Der Masterkey eines Tresors wird innerhalb der Tresor-Ordnerstruktur in einer Datei namens <code>masterkey.cryptomator</code> gespeichert und mit nach heutigem Kenntnisstand modernen und sicheren Algorithmen verschlüsselt.
+Sein Speicherort stellt kein Sicherheitsrisiko dar und gewährleistet zudem, dass dieser integrale Bestandteil eines Tresors immer mit dem Tresor verschoben wird.
+Zugegeben, über den Namen der Datei lässt sich streiten, aber es ist eindeutig, dass die Datei wichtig ist.</p>
+<p>Doch hier geht es nicht um den Namen.
+Wenn man festlegt, wo der Hauptschlüssel gespeichert wird, verliert man die Flexibilität, ihn von einem anderen Ort zu laden. (Ein entsprechender <a href="https://github.com/cryptomator/cryptomator/issues/96">Feature Request</a> ist unter den ersten 100 Tickets von Cryptomator!)
+Was ist, wenn ein Benutzer einen Hardware-Token hat, der ihn speichern könnte?
+Oder was ist, wenn ein Unternehmen eine zentralisierte Schlüsselverwaltung mit [Single Sign-On] (<a href="https://en.wikipedia.org/wiki/Single_sign-on">https://en.wikipedia.org/wiki/Single_sign-on</a>) hat und diese mit Cryptomator nutzen möchte?
+Und selbst wenn Lösungen für die oben genannten Fragen gefunden werden, wie passt man diese an, wenn sich die Struktur/das Format des Tresors ändert?</p>
+<p>Diese Fragen führten zu der Idee, das Laden des Masterkeys von der Tresorstruktur zu entkoppeln, und schließlich zum Entwurf des Tresorformats 8.</p>
+<h2 id="die-änderungen">Die Änderungen</h2>
+<p>Mit Tresorformat 8 führen wir eine neue Datei namens <code>vault.cryptomator</code> für jeden Tresor ein, die sich im Stammverzeichnis des Tresors befindet.
+Dies ist die neue, zentrale Konfigurationsdatei des Tresors.
+Zusammen mit dem Datenverzeichnis namens &ldquo;d&rdquo; bilden sie das erforderliche Minimum für einen gültigen Tresor.</p>
+<p>Die Tresorkonfigurationsdatei ist ein <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a>, welche die grundlegenden Informationen über den Tresor (wie einen eindeutige Id) und insbesondere den Ort enthält, woher der Hauptschlüssel geladen werden soll.
+Alle anderen Parameter, die für das Laden des Masterkeys erforderlich sind, werden nicht mehr in der Tresorkonfiguration gespeichert, was zur gewünschten Entkopplung des Masterkeys von Tresorformat zur Folge hat und die Möglichkeit eröffnet, den Masterkey aus anderen Quellen als nur der Datei &ldquo;masterkey.cryptomator&rdquo; im Tresor zu beziehen.
+In zukünftigen Versionen kann beispielsweise der Masterkey aus einem <a href="https://www.yubico.com">Yubikey</a> oder dem Microsoft Certification Store geladen werden.
+Da es sich bei der Tresorkonfiguration um ein JWT handelt, kann durch Signieren der Datei mit dem Masterkey sichergestellt werden, dass diese nicht manipuliert wurde.</p>
+<p>Wie bereits erwähnt, kann die Tresorkonfigurationsdatei auch zusätzliche Informationen speichern.
+Eine davon ist die tresorspezifische Schwelle für die Verkürzung von <em>verschlüsselten</em> Dateinamen.
+Vor Format 8 war dieser Wert im Verschlüsselungsschema von Cryptomator fest verankert.
+Durch die Angabe in der Tresorkonfiguration kann sie in Zukunft konfiguriert werden, so dass die vollen Funktionen eines Tresors auch an restriktiveren Speicherorten verfügbar sind.</p>
+<p>Das Verschlüsselungsschema, die Verzeichnisstruktur und die verschlüsselten Dateien bleiben unverändert.</p>
+<h2 id="die-migration">Die Migration</h2>
+<p>Was bedeuten diese Änderungen für eine Migration von Tresorformat 7 auf 8?
+So gut wie nichts!</p>
+<p>Die einzige Datei, die bearbeitet wird, ist <code>masterkey.cryptomator</code>.
+Für alle &ldquo;Nur-Online&rdquo;-Nutzer wäre es daher ausreichend, nur diese Datei herunterzuladen.</p>
+<p>Im eigentlichen Migrationsprozess wird zuerst die Tresorkonfigurationsdatei <code>vault.cryptomator</code> erstellt und mit den korrekten Werten wie dem bereits erwähnten eindeutigen Tresorkennzeichen gefüllt.
+Zweitens wird die bereits vorhandene Masterkey-Datei aktualisiert.
+Und drittens&hellip; das war&rsquo;s auch schon 😄 Keine anderen Dateien müssen geändert werden!</p>
+<p>Wie Ihr seht, bringt das Tresorformat 8 nur eine kleine und leicht zu bewerkstelligende Änderung mit sich und macht gleichzeitig Platz für interessante und spannende neue Funktionen.
+Mit dem Update auf Cryptomator 1.6.0, werden neu erstelle Tresore das Format 8 direkt besitzten, Tresore einer früheren Version müssen migriert werden.
+Beachtet, dass die Masterkey-Datei weiterhin benötigt wird, da sie den eigentlichen Schlüssel zu eurem Tresor enthält.</p>
+<p>Wir hoffen, dass Ihr nach dem Lesen des Artikels ohne Sorge auf ein Tresor-Upgrade blickt!
+Wenn Ihr mehr über die kommende Version 1.6.0 von Cryptomator erfahren wollt, lest <a href="https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/">Cryptomator 1.6.0: Was hat sich geändert?</a>.</p>
+
+        </article>
+      
+    </div>
+  </div>
+
+    </div>
+    <footer class="border-t-2 border-secondary pt-8 pb-16">
+  <section class="container text-white font-light leading-loose grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-3 lg:grid-cols-5">
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Cryptomator</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/blog/">Blog</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://cryptomator.redbubble.com/" target="_blank" rel="noopener">Merchandise</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/presskit/">Pressemappe</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Etwas beitragen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://github.com/cryptomator/cryptomator" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/donate/">Spenden</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://translate.cryptomator.org/" target="_blank" rel="noopener">Übersetzen</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Support</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://docs.cryptomator.org/" target="_blank" rel="noopener">Docs</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://community.cryptomator.org/" target="_blank" rel="noopener">Community</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/contact/">Kontakt</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Uns folgen</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://twitter.com/Cryptomator" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="https://facebook.com/Cryptomator" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/feed.xml" rel="alternate" type="application/rss+xml">RSS-Feed</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2">Rechtliches</h4>
+      <ul class="list-none m-0">
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/impressum/">Impressum</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/privacy/">Datenschutzerklärung</a></li>
+        <li><a class="text-white hover:text-secondary hover:no-underline" href="/de/terms/">AGB</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+
+    
+    <script type="text/javascript" src="/js/jquery/jquery.min.ff1523fb7389539c84c65aba19260648793bb4f5e29329d2ee8804bc37a3fe6e.js" integrity="sha256-/xUj&#43;3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="></script>
+
+    
+    <script type="text/javascript" src="/js/alpinejs/alpine.f51e3857a88299557ba038af492be73e6e286188ab1fa802edfb74f484b88fea.js" integrity="sha256-9R44V6iCmVV7oDivSSvnPm4oYYirH6gC7ft09IS4j&#43;o="></script>
+
+    
+    <script type="text/javascript" src="/js/lazysizes/lazysizes.min.3d9120fa621da6d613c1698b7014ec6bdf4620366e8f2b7b547059f4b6f6272b.js" integrity="sha256-PZEg&#43;mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys="></script>
+  </body>
+</html>

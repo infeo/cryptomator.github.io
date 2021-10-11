@@ -62,21 +62,8 @@
                 href="https://cryptomator.org/downloads/ios/"
                 />
   </url><url>
-    <loc>https://cryptomator.org/tags/android/</loc>
-    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cryptomator.org/de/tags/android/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cryptomator.org/tags/android/"
-                />
-  </url><url>
     <loc>https://cryptomator.org/blog/</loc>
-    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -89,7 +76,7 @@
                 />
   </url><url>
     <loc>https://cryptomator.org/tags/cryptomator/</loc>
-    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -102,7 +89,7 @@
                 />
   </url><url>
     <loc>https://cryptomator.org/</loc>
-    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -114,8 +101,47 @@
                 href="https://cryptomator.org/"
                 />
   </url><url>
+    <loc>https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2021/10/11/1-6-0-what-you-need-to-know/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/tags/linux/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/linux/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/tags/mac/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/mac/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/mac/"
+                />
+  </url><url>
     <loc>https://cryptomator.org/tags/</loc>
-    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -125,6 +151,58 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cryptomator.org/tags/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/blog/2021/10/11/vault-format-8/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/blog/2021/10/11/vault-format-8/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/blog/2021/10/11/vault-format-8/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/tags/vault-format/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/vault-format/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/vault-format/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/tags/windows/</loc>
+    <lastmod>2021-10-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/windows/"
+                />
+  </url><url>
+    <loc>https://cryptomator.org/tags/android/</loc>
+    <lastmod>2021-07-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cryptomator.org/de/tags/android/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cryptomator.org/tags/android/"
                 />
   </url><url>
     <loc>https://cryptomator.org/blog/2021/07/22/android-document-provider/</loc>

@@ -166,6 +166,110 @@
     
       
         <article>
+          <h2>Cryptomator 1.6.0: Was hat sich geändert?</h2>
+          <p>Hallo Community!</p>
+<p>In diesem Blog-Beitrag möchten wir euch einige Neuigkeiten über das bevorstehende Update von Cryptomator auf Version 1.6.0 mitteilen.
+Wir präsentieren euch die wichtigsten Änderungen und neuen Funktionen und wollen sicherstellen, dass ihr auf das Update vorbereite seid.</p>
+<h2 id="änderungen-und-features">Änderungen und Features</h2>
+<p>Die beiden wichtigsten Änderungen sind die Verwendung eines neuen Tresorformats (Version 8) und die lang versprochene Integration des <a href="https://community.cryptomator.org/t/sanitizer-how-to-use/43">Sanitizer</a> (jetzt Vault Health Check).
+Eine vollständigere Liste finden Sie auf der <a href="https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2">Release-Seite</a> von Cryptomator.</p>
+<h3 id="auto-lock">Auto Lock</h3>
+<p>Eine Funktion, die bereits in den ersten Tagen von Cryptomator gewünscht wurde, ist nun implementiert: Auto Lock - das automatische Sperren eines Tresors.
+Für jeden Tresor kann nun ein Timer konfiguriert werden, nach dessen Ablauf der Tresor automatisch gesperrt wird.
+Wenn während dieser Zeitspanne ein Schreib- oder Lesevorgang stattfindet, wird der Timer zurückgesetzt und beginnt von vorn.</p>
+<h3 id="überarbeiteter-fehlerdialog">Überarbeiteter Fehlerdialog</h3>
+<p>Nach viel indirekten Feedback von euch über den Dialog von unerwarteten Fehlern in der GUI haben wir uns zu einem Redesign des selbigen entschlossen, damit dieser mehr den Erwartungen entspricht.
+Die offensichtlichste und wichtigste Änderung ist das Anzeigen eines Fehlercodes.
+Er mag genauso kryptisch sein wie der bereits vorhandene Stack-Trace, aber er beschleunigt die Suche nach Lösungen oder Workarounds für das spezifisches Problem in unserer Fehlercode-Datenbank.
+Neben dem Fehlercode bietet der Dialog auch Links zur schnellen Abfrage der Datenbank.
+Und wenn der Fehlercode noch nicht existiert, unterstützt der Dialog euch dabei, den Fehler in einem Format zu melden, das uns hilft, das Problem zu verstehen.</p>
+<h3 id="tresor-format-8">Tresor Format 8</h3>
+<p>Die große Änderung hinter den Kulissen ist ein neues Tresorformat.
+Beginnend mit 1.6.0 wird es standardmäßig verwendet und <em>erzwungen</em>.
+Das neue Format bereitet Cryptomator auf künftige Funktionen vor und behebt Unstimmigkeiten in früheren Versionen.
+Weitere Einzelheiten findet ihr im <a href="https://cryptomator.org/blog/2021/10/11/vault-format-8/">Artikel zum Tresorformat 8</a>.</p>
+<h3 id="vault-health-check">Vault Health Check</h3>
+<p>Mit Version 1.6.0 kommt auch ein integriertes Werkzeug, um strukturelle Probleme eines Tresors (z. B. verschwundene Verzeichnisse) zu erkennen und zu beheben.
+Bis Cryptomator 1.5.0 wurde diese Aufgabe durch den so genannten <a href="https://github.com/cryptomator/sanitizer">Sanitizer</a> übernommen.
+Das Tool war jedoch schwer zu warten und schwer zu benutzen, so dass es mit dem Ziel aufgegeben wurde, ähnliche Funktionen direkt in Cryptomator zu integrieren.</p>
+<p>Dieser Plan führte schließlich zu einem Arbeitsablauf, mit dem verschiedene Prüfungen eines Tresors durchgeführt werden können, um häufige Probleme zu erkennen.
+Die Ergebnisse werden sofort angezeigt, und sobald die Prüfung abgeschlossen ist, können das Ergenis exportiert werden.
+Für 1.6.0 wird es nur drei Checks geben, aber wir planen, weitere hinzuzufügen.
+Bitte denkt daran, dass der Health Check nicht als magisches Tool zur Behebung aller Probleme gedacht ist.
+Bei Problemen mit einem Tresor solltet ihr euch zuerst vergewissern, dass die Tresordateien vollständig synchronisiert sind, bevor ihr den Health Check verwendet.
+Trotzdem freuen wir uns natürlich über Feedback zur Benutzerfreundlichkeit und Funktionalität. (Link zur github Diskussion?)</p>
+<h3 id="plugin-api">Plugin API</h3>
+<p>Cryptomator ist nun in der Lage, Plugins aus einem eigenen Plugin-Verzeichnis zu laden.
+Langfristig ermöglicht dies die Integration von Diensten Dritter, z. B. die Eingabe von Passwörtern über einen Passwortmanager.
+Die Funktion ist zwar noch experimentell und kann sich im Laufe der Zeit ändern, aber ein erstes Plugin ist bereits verfügbar: Eine KeePassXC-Integration, entwickelt von PureJava.
+Ihr könnt es <a href="https://plugin.purejava.org">hier</a> herunterladen.</p>
+<h2 id="migration-leitfaden">Migration Leitfaden</h2>
+<p>Grundsätzlich solltet Ihr immer sobald wie möglich auf die neueste Version aktualisieren, um nicht nur von neuen Features, sondern auch von Bugfixes zu profitieren.
+Dennoch gibt es Gründe das 1.6.0 Update hinauszuzögern: Das neue Tresorformat ist verplfichtend, d.h. alte Tresore müssen migriert werden, um sie zu entsperren, und sobald ein Tresor migriert ist, können ältere Desktop-Versionen ihn nicht mehr öffnen.</p>
+<p>Natürlich bietet Cryptomator wie immer eine in-App Migration von älteren Formaten auf Version 8 an.
+Dazu benötigt die Anwendung jedoch Schreibzugriff auf die Tresordateien (Konfigurationsdateien und verschlüsselte Daten).
+Einzelheiten über die Migration findet ihr im Artikel Tresorformat 8.</p>
+<p>Deshalb solltet Ihr mit dem Update warten, wenn</p>
+<ul>
+<li>nicht alle verwendeten Cryptomator-Anwendungen (für Desktop und Smartphone) aktualisiert werden können oder</li>
+<li>Ihr keinen Schreibzugriff auf alle verwendeten Tresore habt.</li>
+</ul>
+<p>Wenn Ihr euch für eine Aktualisierung entscheidet, gibt es noch eine letzte Sache zu prüfen.
+Falls jemals die Einstellung <code>filenameLengthLimit</code> für einen Tresor in der Datei <code>settings.json</code> manuell geändert wurde, gehen diese Änderungen nach der Aktualisierung verloren und werden ignoriert, wenn sie einfach zurückkopiert werden.
+Eine Anleitung zur Migration dieses Randfalls wird bald veröffentlicht.</p>
+
+        </article>
+      
+        <article>
+          <h2>Vault Format 8</h2>
+          <p>Hallo Community!</p>
+<p>im Zuge des anstehenden Releases von Cryptomator 1.6.0 möchten wir euch einen Einblick über die Motivation und Umsetzung eine der wichtigen Änderungen geben: Das neue Tresorformat in Version 8.</p>
+<p>Ja, ein neues Tresorformat.
+Diejenigen, die sich an das letzte Upgrade erinnern, werden vielleicht etwas schlucken, denn beim letzten Mal war der Migrationsprozess von Tresorformat 6 zu 7 in einigen Fällen nicht ohne Hindernisse und Probleme zu bewältigen.
+Aber keine Sorge, dieses Mal sind die Änderungen minimal invasiv!</p>
+<p>Dieser Artikel wird die Motivation für die Gestaltung des neuen Formats dargelegen, die Änderungen erläutern und skizziert, wie der Migrationsprozess abläuft.</p>
+<h2 id="die-motivation">Die Motivation</h2>
+<p>Der Speicherort des Masterkey eines Tresors ist ein Thema, das schon in den Anfangstagen von Cryptomator viele Fragen aufgeworfen und zu mehreren Feature Requests geführt hat. (vergleiche die Klickzahlen im Forumsartikel <a href="https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/">&ldquo;Why is the masterkey stored in the cloud&rdquo;</a>)</p>
+<p>Woher kommt das?
+Der Masterkey eines Tresors wird innerhalb der Tresor-Ordnerstruktur in einer Datei namens <code>masterkey.cryptomator</code> gespeichert und mit nach heutigem Kenntnisstand modernen und sicheren Algorithmen verschlüsselt.
+Sein Speicherort stellt kein Sicherheitsrisiko dar und gewährleistet zudem, dass dieser integrale Bestandteil eines Tresors immer mit dem Tresor verschoben wird.
+Zugegeben, über den Namen der Datei lässt sich streiten, aber es ist eindeutig, dass die Datei wichtig ist.</p>
+<p>Doch hier geht es nicht um den Namen.
+Wenn man festlegt, wo der Hauptschlüssel gespeichert wird, verliert man die Flexibilität, ihn von einem anderen Ort zu laden. (Ein entsprechender <a href="https://github.com/cryptomator/cryptomator/issues/96">Feature Request</a> ist unter den ersten 100 Tickets von Cryptomator!)
+Was ist, wenn ein Benutzer einen Hardware-Token hat, der ihn speichern könnte?
+Oder was ist, wenn ein Unternehmen eine zentralisierte Schlüsselverwaltung mit [Single Sign-On] (<a href="https://en.wikipedia.org/wiki/Single_sign-on">https://en.wikipedia.org/wiki/Single_sign-on</a>) hat und diese mit Cryptomator nutzen möchte?
+Und selbst wenn Lösungen für die oben genannten Fragen gefunden werden, wie passt man diese an, wenn sich die Struktur/das Format des Tresors ändert?</p>
+<p>Diese Fragen führten zu der Idee, das Laden des Masterkeys von der Tresorstruktur zu entkoppeln, und schließlich zum Entwurf des Tresorformats 8.</p>
+<h2 id="die-änderungen">Die Änderungen</h2>
+<p>Mit Tresorformat 8 führen wir eine neue Datei namens <code>vault.cryptomator</code> für jeden Tresor ein, die sich im Stammverzeichnis des Tresors befindet.
+Dies ist die neue, zentrale Konfigurationsdatei des Tresors.
+Zusammen mit dem Datenverzeichnis namens &ldquo;d&rdquo; bilden sie das erforderliche Minimum für einen gültigen Tresor.</p>
+<p>Die Tresorkonfigurationsdatei ist ein <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a>, welche die grundlegenden Informationen über den Tresor (wie einen eindeutige Id) und insbesondere den Ort enthält, woher der Hauptschlüssel geladen werden soll.
+Alle anderen Parameter, die für das Laden des Masterkeys erforderlich sind, werden nicht mehr in der Tresorkonfiguration gespeichert, was zur gewünschten Entkopplung des Masterkeys von Tresorformat zur Folge hat und die Möglichkeit eröffnet, den Masterkey aus anderen Quellen als nur der Datei &ldquo;masterkey.cryptomator&rdquo; im Tresor zu beziehen.
+In zukünftigen Versionen kann beispielsweise der Masterkey aus einem <a href="https://www.yubico.com">Yubikey</a> oder dem Microsoft Certification Store geladen werden.
+Da es sich bei der Tresorkonfiguration um ein JWT handelt, kann durch Signieren der Datei mit dem Masterkey sichergestellt werden, dass diese nicht manipuliert wurde.</p>
+<p>Wie bereits erwähnt, kann die Tresorkonfigurationsdatei auch zusätzliche Informationen speichern.
+Eine davon ist die tresorspezifische Schwelle für die Verkürzung von <em>verschlüsselten</em> Dateinamen.
+Vor Format 8 war dieser Wert im Verschlüsselungsschema von Cryptomator fest verankert.
+Durch die Angabe in der Tresorkonfiguration kann sie in Zukunft konfiguriert werden, so dass die vollen Funktionen eines Tresors auch an restriktiveren Speicherorten verfügbar sind.</p>
+<p>Das Verschlüsselungsschema, die Verzeichnisstruktur und die verschlüsselten Dateien bleiben unverändert.</p>
+<h2 id="die-migration">Die Migration</h2>
+<p>Was bedeuten diese Änderungen für eine Migration von Tresorformat 7 auf 8?
+So gut wie nichts!</p>
+<p>Die einzige Datei, die bearbeitet wird, ist <code>masterkey.cryptomator</code>.
+Für alle &ldquo;Nur-Online&rdquo;-Nutzer wäre es daher ausreichend, nur diese Datei herunterzuladen.</p>
+<p>Im eigentlichen Migrationsprozess wird zuerst die Tresorkonfigurationsdatei <code>vault.cryptomator</code> erstellt und mit den korrekten Werten wie dem bereits erwähnten eindeutigen Tresorkennzeichen gefüllt.
+Zweitens wird die bereits vorhandene Masterkey-Datei aktualisiert.
+Und drittens&hellip; das war&rsquo;s auch schon 😄 Keine anderen Dateien müssen geändert werden!</p>
+<p>Wie Ihr seht, bringt das Tresorformat 8 nur eine kleine und leicht zu bewerkstelligende Änderung mit sich und macht gleichzeitig Platz für interessante und spannende neue Funktionen.
+Mit dem Update auf Cryptomator 1.6.0, werden neu erstelle Tresore das Format 8 direkt besitzten, Tresore einer früheren Version müssen migriert werden.
+Beachtet, dass die Masterkey-Datei weiterhin benötigt wird, da sie den eigentlichen Schlüssel zu eurem Tresor enthält.</p>
+<p>Wir hoffen, dass Ihr nach dem Lesen des Artikels ohne Sorge auf ein Tresor-Upgrade blickt!
+Wenn Ihr mehr über die kommende Version 1.6.0 von Cryptomator erfahren wollt, lest <a href="https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/">Cryptomator 1.6.0: Was hat sich geändert?</a>.</p>
+
+        </article>
+      
+        <article>
           <h2>Update on the Document Provider Development</h2>
           <p>Hey Community,</p>
 <p>From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.</p>

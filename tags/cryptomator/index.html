@@ -166,6 +166,112 @@
     
       
         <article>
+          <h2>Cryptomator 1.6.0: What you need to know</h2>
+          <p>Hello Community!</p>
+<p>In this blog post, we&rsquo;d like to give you some news about the upcoming major update of Cryptomator to version 1.6.0.
+We&rsquo;ll be highlighting the most significant changes and new features and make sure that you are ready for the update.</p>
+<h2 id="changes-and-features">Changes and Features</h2>
+<p>The two most important changes are the usage of a new vault format (version 8) and a long promised integration of the <a href="https://community.cryptomator.org/t/sanitizer-how-to-use/43">Sanitizer</a> (now called Vault Health Check).
+For a more complete list, read the <a href="https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2">release page</a> of Cryptomator.</p>
+<h3 id="auto-lock">Auto Lock</h3>
+<p>A feature already wished in its earliest days will be present: Auto Lock – the automatic locking of a vault.
+For every vault you can set up an idle timer after which the vault is automatically locked.
+If any write or read happens during the time span, the timer is reset.</p>
+<h3 id="redesigned-error-dialog">Redesigned Error Dialog</h3>
+<p>After a lot of indirect feedback from you about the error dialog, we decided to change its design to fit more of your needs.
+The most obvious and important change is the new error code.
+It might be as cryptic as the already existing stack trace, but it speeds up the search for solutions or workarounds for your specific problem in our error code database.
+Along with the error code the dialog also provides links to quickly query the database.
+And if the error is not yet known, it&rsquo;ll make it easier for you to report it in a format that helps us understand the problem.</p>
+<h3 id="vault-format-8">Vault Format 8</h3>
+<p>The big change behind the scenes is a new vault format.
+Starting with 1.6.0, it will be used by default and <em>enforced</em>.
+The new format prepares Cryptomator for future features and corrects inconsistencies in former versions.
+For more details, check out the more-in-depth <a href="https://cryptomator.org/blog/2021/10/11/vault-format-8/">article</a> about it.</p>
+<h3 id="vault-health-check">Vault Health Check</h3>
+<p>We added an integrated tool to detect and fix structural problems of a vault (e.g., missing directories).
+Until Cryptomator 1.5.0, this task was done by the so-called [Sanitizer] (<a href="https://github.com/cryptomator/sanitizer)">https://github.com/cryptomator/sanitizer)</a>. But the tool was hard to maintain and hard to use so that it was abandoned with the goal to integrate similar functionality directly within Cryptomator.</p>
+<p>This plan finally bore fruit into a workflow to perform different checks on a vault to detect common problems.
+The results are shown on the fly and once the check is finished, you can export the results.
+For 1.6.0, there will be only three checks to execute, but we plan to add more.
+But keep in mind that the Health Check is not designed as a magical fix-all-tool.
+If you are encountering problems with a vault, make sure that the vault files are properly synchronized before running this tool.
+That said, of course, we appreciate feedback about it regarding usability and functionality.</p>
+<h3 id="plugin-api">Plugin API</h3>
+<p>Cryptomator is now able to load plugins from a dedicated plugin directory.
+In the long run, this allows integrating third party services, e.g. enter password via password manager.
+The feature is still experimental and might change over time.
+A first plugin is already available: A KeePassXC integration developed by PureJava. You can download it <a href="https://plugin.purejava.org">here</a>.</p>
+<h2 id="update-guide">Update Guide</h2>
+<p>In general, you should update, because you not only benefit from new features, but also from bug fixes.
+Still, you might consider to delay the update, because Cryptomator 1.6.0 enforces the new format, i.e. old vaults need to be migrated in order to unlock them, and once a vault is migrated, older desktop versions won’t be able to open it.</p>
+<p>Of course, and as always, Cryptomator provides a migration from older formats to version 8.
+But to perform it, the app needs write access to the vault files (configuration files and encrypted data).
+Details about the migration can be found in the vault format 8 article.
+​
+You should wait with the update, if</p>
+<ul>
+<li>you cannot update all Cryptomator apps (desktop and mobile)</li>
+<li>you don&rsquo;t have write access to all the vaults you use.</li>
+</ul>
+<p>When you decide to update, there is one last issue you need to check beforehand:
+If you ever manually altered the setting file <code>filenameLengthLimit</code> for a vault in the <code>settings.json</code> file, these modifications will be lost after the update and will be ignored if simply copied back.
+A guide to migrate in this setting will be published soon.</p>
+
+        </article>
+      
+        <article>
+          <h2>Vault Format 8</h2>
+          <p>Hello Community!</p>
+<p>We’d like to give you some information about an important part of the upcoming 1.6.0 release: The new vault format in version 8.</p>
+<p>Yes, a new vault format. The ones who remember the last upgrade might start to groan, because last time the migration process from vault format 6 to 7 was in some cases not without hiccups.
+But don&rsquo;t worry, this time the changes are significantly less invasive!</p>
+<p>This article will give motivation for designing the new format, what the changes are in detail, and sketches how the migration process looks like, such that you know what you are up to.
+​</p>
+<h2 id="the-motivation">The Motivation</h2>
+<p>The storage location of the masterkey is a topic, which in the early days of Cryptomator already raised a lot of questions and led to several feature requests. (e.g., look at the number of clicks in <a href="https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/">https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/</a>)</p>
+<p>So, what is all the fuss about?
+The masterkey of a vault is stored within the vault structure in a file called <code>masterkey.cryptomator</code> and encrypted with state-of-the-art algorithms.
+Its location is not a security risk and, additionally, the location ensures that this integral part of a vault is always moved with the vault.
+Admittedly, calling the file &ldquo;masterkey&rdquo; is an arguable decision, but it’s definitely obvious that the file is important.</p>
+<p>But this isn&rsquo;t about the name.
+By hardwiring where the masterkey is stored, we lose flexibility to load it from somewhere else. (A relating <a href="https://github.com/cryptomator/cryptomator/issues/96">feature request</a> is under the first 100 tickets of Cryptomator!)
+What if a user has a hardware token which could store it?
+Or what if a company has a centralized key management with <a href="https://en.wikipedia.org/wiki/Single_sign-on">single sign-on</a> and wants to use it with Cryptomator?
+And even if workarounds for the above questions are found, how to deal with them when the vault structure/format changes?
+​
+These questions led to the idea of decoupling the masterkey retrieval from the vault structure and eventually into the design of vault format 8.
+​</p>
+<h2 id="the-changes">The Changes</h2>
+<p>With vault format 8, we introduce a new file named <code>vault.cryptomator</code> for every vault located in the vault root.
+This is the vault configuration file. Together with the data directory named <code>d</code>, they form the required minimum for a valid vault.</p>
+<p>The vault config file is a <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> containing the basic information about the vault (like a unique identifier) and especially where to load the masterkey from.
+All other parameters that are required to derive the masterkey are not stored in the vault config anymore, which decouples the key derivation from the vault format itself and opens the door to get the masterkey from other sources than just the <code>masterkey.cryptomator</code> file inside the vault.
+For example, in future releases, you might be able to store the vault masterkey inside a <a href="https://www.yubico.com">Yubikey</a> or the Microsoft Certification Store.
+Additionally, with the vault config being a JWT, it is signed by the masterkey itself and ensures that nobody tampered with it.</p>
+<p>As noted above, the vault config file can also store additional information.
+One is the vault-specific threshold of shortening <em>encrypted</em> filenames.
+Before format 8, this value was set in stone in Cryptomator’s encryption scheme.
+By specifying it in the vault config, it can be configurable in the future, such that the full capabilities of a vault are also available on more restrictive storage locations.</p>
+<p>The encryption scheme, the directory structure, and encrypted files stay the same.
+​</p>
+<h2 id="the-migration">The Migration</h2>
+<p>What do these changes mean for a migration from vault format 7 to 8? Nearly nothing!</p>
+<p>The only file edited is <code>masterkey.cryptomator</code>.
+Hence, for all &ldquo;online only&rdquo; users, it would be sufficient to only download this file.
+For the migration process itself, first, the vault config file <code>vault.cryptomator</code> will be created and filled with the correct values like the aforementioned unique vault identifier and the filename shortening threshold.
+Second, the already present masterkey file is updated.
+And third… that&rsquo;s already it. 😄 No other files need to be altered.
+​</p>
+<p>As you can see, vault format 8 only imposes a small and easy to migrate change, while making way for interesting and exciting new features.
+With updating to Cryptomator 1.6.0, vaults of a former version need to be migrated and newly created ones will already be in format 8.
+Keep in mind that the masterkey file is still needed, since it securely contains the actual key to your vault.​</p>
+<p>We hope that your worries about a vault upgrade are reduced and you are eager to update!
+If you want to know more about the upcoming 1.6.0 version of Cryptomator, continue reading the <a href="https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/">article</a> about it.</p>
+
+        </article>
+      
+        <article>
           <h2>Update on the Document Provider Development</h2>
           <p>Hey Community,</p>
 <p>From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.</p>

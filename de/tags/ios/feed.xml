@@ -11,8 +11,132 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/ios/</link>
     </image>
-    <lastBuildDate>Thu, 30 Sep 2021 09:37:48 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Oct 2021 15:23:08 +0000</lastBuildDate>
     <generator>Hugo</generator>
+    
+      <item>
+        <title>Vault Format 8</title>
+        <description>&lt;p&gt;Hallo Community!&lt;/p&gt;
+&lt;p&gt;im Zuge des anstehenden Releases von Cryptomator 1.6.0 möchten wir euch einen Einblick über die Motivation und Umsetzung eine der wichtigen Änderungen geben: Das neue Tresorformat in Version 8.&lt;/p&gt;
+&lt;p&gt;Ja, ein neues Tresorformat.
+Diejenigen, die sich an das letzte Upgrade erinnern, werden vielleicht etwas schlucken, denn beim letzten Mal war der Migrationsprozess von Tresorformat 6 zu 7 in einigen Fällen nicht ohne Hindernisse und Probleme zu bewältigen.
+Aber keine Sorge, dieses Mal sind die Änderungen minimal invasiv!&lt;/p&gt;
+&lt;p&gt;Dieser Artikel wird die Motivation für die Gestaltung des neuen Formats dargelegen, die Änderungen erläutern und skizziert, wie der Migrationsprozess abläuft.&lt;/p&gt;
+&lt;h2 id=&#34;die-motivation&#34;&gt;Die Motivation&lt;/h2&gt;
+&lt;p&gt;Der Speicherort des Masterkey eines Tresors ist ein Thema, das schon in den Anfangstagen von Cryptomator viele Fragen aufgeworfen und zu mehreren Feature Requests geführt hat. (vergleiche die Klickzahlen im Forumsartikel &lt;a href=&#34;https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/&#34;&gt;&amp;ldquo;Why is the masterkey stored in the cloud&amp;rdquo;&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Woher kommt das?
+Der Masterkey eines Tresors wird innerhalb der Tresor-Ordnerstruktur in einer Datei namens &lt;code&gt;masterkey.cryptomator&lt;/code&gt; gespeichert und mit nach heutigem Kenntnisstand modernen und sicheren Algorithmen verschlüsselt.
+Sein Speicherort stellt kein Sicherheitsrisiko dar und gewährleistet zudem, dass dieser integrale Bestandteil eines Tresors immer mit dem Tresor verschoben wird.
+Zugegeben, über den Namen der Datei lässt sich streiten, aber es ist eindeutig, dass die Datei wichtig ist.&lt;/p&gt;
+&lt;p&gt;Doch hier geht es nicht um den Namen.
+Wenn man festlegt, wo der Hauptschlüssel gespeichert wird, verliert man die Flexibilität, ihn von einem anderen Ort zu laden. (Ein entsprechender &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/96&#34;&gt;Feature Request&lt;/a&gt; ist unter den ersten 100 Tickets von Cryptomator!)
+Was ist, wenn ein Benutzer einen Hardware-Token hat, der ihn speichern könnte?
+Oder was ist, wenn ein Unternehmen eine zentralisierte Schlüsselverwaltung mit [Single Sign-On] (&lt;a href=&#34;https://en.wikipedia.org/wiki/Single_sign-on&#34;&gt;https://en.wikipedia.org/wiki/Single_sign-on&lt;/a&gt;) hat und diese mit Cryptomator nutzen möchte?
+Und selbst wenn Lösungen für die oben genannten Fragen gefunden werden, wie passt man diese an, wenn sich die Struktur/das Format des Tresors ändert?&lt;/p&gt;
+&lt;p&gt;Diese Fragen führten zu der Idee, das Laden des Masterkeys von der Tresorstruktur zu entkoppeln, und schließlich zum Entwurf des Tresorformats 8.&lt;/p&gt;
+&lt;h2 id=&#34;die-änderungen&#34;&gt;Die Änderungen&lt;/h2&gt;
+&lt;p&gt;Mit Tresorformat 8 führen wir eine neue Datei namens &lt;code&gt;vault.cryptomator&lt;/code&gt; für jeden Tresor ein, die sich im Stammverzeichnis des Tresors befindet.
+Dies ist die neue, zentrale Konfigurationsdatei des Tresors.
+Zusammen mit dem Datenverzeichnis namens &amp;ldquo;d&amp;rdquo; bilden sie das erforderliche Minimum für einen gültigen Tresor.&lt;/p&gt;
+&lt;p&gt;Die Tresorkonfigurationsdatei ist ein &lt;a href=&#34;https://en.wikipedia.org/wiki/JSON_Web_Token&#34;&gt;JWT&lt;/a&gt;, welche die grundlegenden Informationen über den Tresor (wie einen eindeutige Id) und insbesondere den Ort enthält, woher der Hauptschlüssel geladen werden soll.
+Alle anderen Parameter, die für das Laden des Masterkeys erforderlich sind, werden nicht mehr in der Tresorkonfiguration gespeichert, was zur gewünschten Entkopplung des Masterkeys von Tresorformat zur Folge hat und die Möglichkeit eröffnet, den Masterkey aus anderen Quellen als nur der Datei &amp;ldquo;masterkey.cryptomator&amp;rdquo; im Tresor zu beziehen.
+In zukünftigen Versionen kann beispielsweise der Masterkey aus einem &lt;a href=&#34;https://www.yubico.com&#34;&gt;Yubikey&lt;/a&gt; oder dem Microsoft Certification Store geladen werden.
+Da es sich bei der Tresorkonfiguration um ein JWT handelt, kann durch Signieren der Datei mit dem Masterkey sichergestellt werden, dass diese nicht manipuliert wurde.&lt;/p&gt;
+&lt;p&gt;Wie bereits erwähnt, kann die Tresorkonfigurationsdatei auch zusätzliche Informationen speichern.
+Eine davon ist die tresorspezifische Schwelle für die Verkürzung von &lt;em&gt;verschlüsselten&lt;/em&gt; Dateinamen.
+Vor Format 8 war dieser Wert im Verschlüsselungsschema von Cryptomator fest verankert.
+Durch die Angabe in der Tresorkonfiguration kann sie in Zukunft konfiguriert werden, so dass die vollen Funktionen eines Tresors auch an restriktiveren Speicherorten verfügbar sind.&lt;/p&gt;
+&lt;p&gt;Das Verschlüsselungsschema, die Verzeichnisstruktur und die verschlüsselten Dateien bleiben unverändert.&lt;/p&gt;
+&lt;h2 id=&#34;die-migration&#34;&gt;Die Migration&lt;/h2&gt;
+&lt;p&gt;Was bedeuten diese Änderungen für eine Migration von Tresorformat 7 auf 8?
+So gut wie nichts!&lt;/p&gt;
+&lt;p&gt;Die einzige Datei, die bearbeitet wird, ist &lt;code&gt;masterkey.cryptomator&lt;/code&gt;.
+Für alle &amp;ldquo;Nur-Online&amp;rdquo;-Nutzer wäre es daher ausreichend, nur diese Datei herunterzuladen.&lt;/p&gt;
+&lt;p&gt;Im eigentlichen Migrationsprozess wird zuerst die Tresorkonfigurationsdatei &lt;code&gt;vault.cryptomator&lt;/code&gt; erstellt und mit den korrekten Werten wie dem bereits erwähnten eindeutigen Tresorkennzeichen gefüllt.
+Zweitens wird die bereits vorhandene Masterkey-Datei aktualisiert.
+Und drittens&amp;hellip; das war&amp;rsquo;s auch schon 😄 Keine anderen Dateien müssen geändert werden!&lt;/p&gt;
+&lt;p&gt;Wie Ihr seht, bringt das Tresorformat 8 nur eine kleine und leicht zu bewerkstelligende Änderung mit sich und macht gleichzeitig Platz für interessante und spannende neue Funktionen.
+Mit dem Update auf Cryptomator 1.6.0, werden neu erstelle Tresore das Format 8 direkt besitzten, Tresore einer früheren Version müssen migriert werden.
+Beachtet, dass die Masterkey-Datei weiterhin benötigt wird, da sie den eigentlichen Schlüssel zu eurem Tresor enthält.&lt;/p&gt;
+&lt;p&gt;Wir hoffen, dass Ihr nach dem Lesen des Artikels ohne Sorge auf ein Tresor-Upgrade blickt!
+Wenn Ihr mehr über die kommende Version 1.6.0 von Cryptomator erfahren wollt, lest &lt;a href=&#34;https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/&#34;&gt;Cryptomator 1.6.0: Was hat sich geändert?&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/10/11/vault-format-8/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/10/11/vault-format-8/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>vault-format</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator 1.6.0: Was hat sich geändert?</title>
+        <description>&lt;p&gt;Hallo Community!&lt;/p&gt;
+&lt;p&gt;In diesem Blog-Beitrag möchten wir euch einige Neuigkeiten über das bevorstehende Update von Cryptomator auf Version 1.6.0 mitteilen.
+Wir präsentieren euch die wichtigsten Änderungen und neuen Funktionen und wollen sicherstellen, dass ihr auf das Update vorbereite seid.&lt;/p&gt;
+&lt;h2 id=&#34;änderungen-und-features&#34;&gt;Änderungen und Features&lt;/h2&gt;
+&lt;p&gt;Die beiden wichtigsten Änderungen sind die Verwendung eines neuen Tresorformats (Version 8) und die lang versprochene Integration des &lt;a href=&#34;https://community.cryptomator.org/t/sanitizer-how-to-use/43&#34;&gt;Sanitizer&lt;/a&gt; (jetzt Vault Health Check).
+Eine vollständigere Liste finden Sie auf der &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2&#34;&gt;Release-Seite&lt;/a&gt; von Cryptomator.&lt;/p&gt;
+&lt;h3 id=&#34;auto-lock&#34;&gt;Auto Lock&lt;/h3&gt;
+&lt;p&gt;Eine Funktion, die bereits in den ersten Tagen von Cryptomator gewünscht wurde, ist nun implementiert: Auto Lock - das automatische Sperren eines Tresors.
+Für jeden Tresor kann nun ein Timer konfiguriert werden, nach dessen Ablauf der Tresor automatisch gesperrt wird.
+Wenn während dieser Zeitspanne ein Schreib- oder Lesevorgang stattfindet, wird der Timer zurückgesetzt und beginnt von vorn.&lt;/p&gt;
+&lt;h3 id=&#34;überarbeiteter-fehlerdialog&#34;&gt;Überarbeiteter Fehlerdialog&lt;/h3&gt;
+&lt;p&gt;Nach viel indirekten Feedback von euch über den Dialog von unerwarteten Fehlern in der GUI haben wir uns zu einem Redesign des selbigen entschlossen, damit dieser mehr den Erwartungen entspricht.
+Die offensichtlichste und wichtigste Änderung ist das Anzeigen eines Fehlercodes.
+Er mag genauso kryptisch sein wie der bereits vorhandene Stack-Trace, aber er beschleunigt die Suche nach Lösungen oder Workarounds für das spezifisches Problem in unserer Fehlercode-Datenbank.
+Neben dem Fehlercode bietet der Dialog auch Links zur schnellen Abfrage der Datenbank.
+Und wenn der Fehlercode noch nicht existiert, unterstützt der Dialog euch dabei, den Fehler in einem Format zu melden, das uns hilft, das Problem zu verstehen.&lt;/p&gt;
+&lt;h3 id=&#34;tresor-format-8&#34;&gt;Tresor Format 8&lt;/h3&gt;
+&lt;p&gt;Die große Änderung hinter den Kulissen ist ein neues Tresorformat.
+Beginnend mit 1.6.0 wird es standardmäßig verwendet und &lt;em&gt;erzwungen&lt;/em&gt;.
+Das neue Format bereitet Cryptomator auf künftige Funktionen vor und behebt Unstimmigkeiten in früheren Versionen.
+Weitere Einzelheiten findet ihr im &lt;a href=&#34;https://cryptomator.org/blog/2021/10/11/vault-format-8/&#34;&gt;Artikel zum Tresorformat 8&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;vault-health-check&#34;&gt;Vault Health Check&lt;/h3&gt;
+&lt;p&gt;Mit Version 1.6.0 kommt auch ein integriertes Werkzeug, um strukturelle Probleme eines Tresors (z. B. verschwundene Verzeichnisse) zu erkennen und zu beheben.
+Bis Cryptomator 1.5.0 wurde diese Aufgabe durch den so genannten &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt; übernommen.
+Das Tool war jedoch schwer zu warten und schwer zu benutzen, so dass es mit dem Ziel aufgegeben wurde, ähnliche Funktionen direkt in Cryptomator zu integrieren.&lt;/p&gt;
+&lt;p&gt;Dieser Plan führte schließlich zu einem Arbeitsablauf, mit dem verschiedene Prüfungen eines Tresors durchgeführt werden können, um häufige Probleme zu erkennen.
+Die Ergebnisse werden sofort angezeigt, und sobald die Prüfung abgeschlossen ist, können das Ergenis exportiert werden.
+Für 1.6.0 wird es nur drei Checks geben, aber wir planen, weitere hinzuzufügen.
+Bitte denkt daran, dass der Health Check nicht als magisches Tool zur Behebung aller Probleme gedacht ist.
+Bei Problemen mit einem Tresor solltet ihr euch zuerst vergewissern, dass die Tresordateien vollständig synchronisiert sind, bevor ihr den Health Check verwendet.
+Trotzdem freuen wir uns natürlich über Feedback zur Benutzerfreundlichkeit und Funktionalität. (Link zur github Diskussion?)&lt;/p&gt;
+&lt;h3 id=&#34;plugin-api&#34;&gt;Plugin API&lt;/h3&gt;
+&lt;p&gt;Cryptomator ist nun in der Lage, Plugins aus einem eigenen Plugin-Verzeichnis zu laden.
+Langfristig ermöglicht dies die Integration von Diensten Dritter, z. B. die Eingabe von Passwörtern über einen Passwortmanager.
+Die Funktion ist zwar noch experimentell und kann sich im Laufe der Zeit ändern, aber ein erstes Plugin ist bereits verfügbar: Eine KeePassXC-Integration, entwickelt von PureJava.
+Ihr könnt es &lt;a href=&#34;https://plugin.purejava.org&#34;&gt;hier&lt;/a&gt; herunterladen.&lt;/p&gt;
+&lt;h2 id=&#34;migration-leitfaden&#34;&gt;Migration Leitfaden&lt;/h2&gt;
+&lt;p&gt;Grundsätzlich solltet Ihr immer sobald wie möglich auf die neueste Version aktualisieren, um nicht nur von neuen Features, sondern auch von Bugfixes zu profitieren.
+Dennoch gibt es Gründe das 1.6.0 Update hinauszuzögern: Das neue Tresorformat ist verplfichtend, d.h. alte Tresore müssen migriert werden, um sie zu entsperren, und sobald ein Tresor migriert ist, können ältere Desktop-Versionen ihn nicht mehr öffnen.&lt;/p&gt;
+&lt;p&gt;Natürlich bietet Cryptomator wie immer eine in-App Migration von älteren Formaten auf Version 8 an.
+Dazu benötigt die Anwendung jedoch Schreibzugriff auf die Tresordateien (Konfigurationsdateien und verschlüsselte Daten).
+Einzelheiten über die Migration findet ihr im Artikel Tresorformat 8.&lt;/p&gt;
+&lt;p&gt;Deshalb solltet Ihr mit dem Update warten, wenn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nicht alle verwendeten Cryptomator-Anwendungen (für Desktop und Smartphone) aktualisiert werden können oder&lt;/li&gt;
+&lt;li&gt;Ihr keinen Schreibzugriff auf alle verwendeten Tresore habt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wenn Ihr euch für eine Aktualisierung entscheidet, gibt es noch eine letzte Sache zu prüfen.
+Falls jemals die Einstellung &lt;code&gt;filenameLengthLimit&lt;/code&gt; für einen Tresor in der Datei &lt;code&gt;settings.json&lt;/code&gt; manuell geändert wurde, gehen diese Änderungen nach der Aktualisierung verloren und werden ignoriert, wenn sie einfach zurückkopiert werden.
+Eine Anleitung zur Migration dieses Randfalls wird bald veröffentlicht.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/10/11/1-6-0-what-you-need-to-know/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/10/11/1-6-0-what-you-need-to-know/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>windows</category>
+        
+        <category>mac</category>
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>Update on the Document Provider Development</title>
@@ -253,70 +377,6 @@ Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles sel
         <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/</guid>
         
         <category>cryptomator</category>
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator 1.5.0 Release</title>
-        <description>&lt;figure class=&#34;text-center&#34;&gt;
-  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-5-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-5-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.5.0 is now available with a brand-new user interface (incl. dark mode) and an improved vault format&#34; /&gt;
-&lt;/figure&gt;
-&lt;p&gt;Cryptomator has been redesigned and comes with a new dark mode. It is not simply a redesign, it was a full rewrite of the UI. During the rewrite, a whole new code structure was planned which makes it easier to extend the application in the future. One goal of the redesign was to make the onboarding process easier for users who don&amp;rsquo;t feel too comfortable with encryption software. Usability tests helped designing the workflows and understanding common misconceptions. Besides the redesign, the new vault format 7 increases compatibility with some cloud services and at the same time reduces the complexity for certain I/O operations.&lt;/p&gt;
-&lt;p&gt;To support the ongoing open-source development of Cryptomator, consider &lt;a href=&#34;https://cryptomator.org/de/donate/&#34;&gt;buying a donation key&lt;/a&gt;, which unlocks the new dark mode. ❤️ &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Detailed release notes&lt;/a&gt; for the desktop app are available on GitHub.&lt;/p&gt;
-&lt;p&gt;As you might have noticed, this website is also shining in a completely new design. ✨&lt;/p&gt;
-&lt;h2 id=&#34;cryptomator-for-ios--android&#34;&gt;Cryptomator for iOS &amp;amp; Android&lt;/h2&gt;
-&lt;p&gt;New updates for iOS and Android have been released as well. To celebrate the release, our mobile apps are 40% off until April 23! 🤖&lt;/p&gt;
-&lt;p&gt;Cryptomator for Android is now also available as an APK version &lt;a href=&#34;https://cryptomator.org/de/android/&#34;&gt;through our own online store&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2020/04/20/release-1.5.0/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/04/20/release-1.5.0/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
-        
-        <category>ios</category>
-        
-        <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Cryptomator Roadmap Early 2020</title>
-        <description>&lt;p&gt;Bei all der Arbeit an Cryptomator müssen wir uns gelegentlich selbst an unser Vorhaben erinnern, euch über die Entwicklungsarbeiten auf dem Laufenden zu halten. Wie viele von euch schon bemerkt haben, geht es mit großen Schritten auf das nächste größere Release von Cryptomator zu. Daher denke ich, ist es an der Zeit ein kurzes Statusupdate sowie einen Ausblick zu geben.&lt;/p&gt;
-&lt;h2 id=&#34;status-der-desktop-anwendung&#34;&gt;Status der Desktop-Anwendung&lt;/h2&gt;
-&lt;p&gt;Wir planen noch in Q1 2020 Version 1.5.0 zu releasen. Während der derzeit noch laufenden Beta-Phase (an dieser Stelle nochmal Danke an all unsere fleißigen Tester) haben wir bereits viele Problemchen behoben und sind überzeugt eine hervorragende Qualität abliefern zu können.&lt;/p&gt;
-&lt;p&gt;Über die &lt;a href=&#34;https://community.cryptomator.org/t/handling-of-long-filenames-in-cryptomator-1-5-0/4191?u=overheadhunter&#34;&gt;anstehenden Änderungen&lt;/a&gt; an unserem sog. &lt;em&gt;Tresorformat&lt;/em&gt; (d.h. der verschlüsselten Ordnerstruktur) haben wir bereits informiert. Ziel ist es zum einen die Kompatibilität mit einigen Cloud-Anbietern zu erhöhen, zum anderen die Komplexität für viele I/O-Operationen zu reduzieren. Aber eine viel offensichtlichere Änderung in 1.5.0 wird die Programmoberfläche (GUI) betreffen:&lt;/p&gt;
-&lt;p&gt;Diese haben wir nämlich nicht einfach nur &lt;em&gt;umgestaltet&lt;/em&gt;, wir haben sie komplette neu geschrieben. Nahezu jede einzelne Zeile Code aus Cryptomator 1.4.x ist der Löschen-Taste zum Opfer gefallen. Warum sollte man so etwas tun? Nun, Programmcode &lt;em&gt;wächst&lt;/em&gt; um Laufe der Zeit. Und im Falle von Cryptomator wächst er seit inzwischen über sechs Jahren, als viele moderne Möglichkeiten uns noch nicht zur Verfügung standen und wir andere Annahmen über die Zukunft der Software getroffen haben. Durch die Neuentwicklung der Programmoberfläche konnten wir eine komplett neue Codestruktur planen, welche die Wartung, zukünftige Erweiterungen sowie die Einarbeitung neuer Entwickler in bestimmte Programm-Abschnitte einfacher macht.&lt;/p&gt;
-&lt;p&gt;Eins der vielen Ziele des Redesigns betraf die Neugestaltung des Tresor-Erstellungs-Prozesses, der für neue Nutzer so leicht verständlich wie möglich gestaltet werden sollte. Hierzu besuchten (und organisierten) wir mehrere Usability-Testessen in unserer Nähe und beobachteten Nutzer bei ihrem ersten Kontakt mit besagtem Prozess. Dies half uns insbesondere dabei, Fehlannahmen im Umgang mit bestimmten Funktionen nachzuvollziehen und unsere Workflows entsprechend anzupassen.&lt;/p&gt;
-&lt;h2 id=&#34;status-der-android-app&#34;&gt;Status der Android-App&lt;/h2&gt;
-&lt;p&gt;Selbstverständlich wird die Android-App in Version 1.5.0 ebenfalls das neue Tresorformat 7 unterstützen. Darüber hinaus haben wir neben den üblichen Bugfixes einige neue Features vorbereitet:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Bereits geladene Dateien werden auf dem Smartphone gecached. Wenn man eine Datei erneut öffnet (und sie nicht zwischenzeitlich auf einem anderen Gerät geändert wurde), wird sie vom lokalen Dateisystem geladen, was nicht nur Zeit sondern auch Datenvolumen spart.&lt;/li&gt;
-&lt;li&gt;Der Auto-Upload für Fotos wurde deutlich verbessert. Hier wurden unter anderem auch Probleme nach dem Reboot von Android 10 behoben.&lt;/li&gt;
-&lt;li&gt;Man hat jetzt die Möglichkeit, einen Tresor sofort beim Verlassen der App zu sperren.&lt;/li&gt;
-&lt;li&gt;Last but not least: Viel unserer Nutzer vermeiden Google-Anwendungen und wünschen sich eine Möglichkeit die Android-App ohne den Google Play Store zu installieren. Wir haben viel Arbeit in einen alternativen Lizenz-Store gesteckt und hoffen die App bald auch direkt vertreiben zu können.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;status-der-ios-app&#34;&gt;Status der iOS-App&lt;/h2&gt;
-&lt;p&gt;Die iOS-App erhält natürlich ebenfalls ein Update, um das neue Tresor-Format zu unterstützen. Darüber hinaus gibt es viele kleinere Verbesserungen unter der Haube, allerdings keine großen neuen Features. Caching gibt es allerdings hier schon und auch um den Google Play Store kommt man herum. 😉&lt;/p&gt;
-&lt;h2 id=&#34;was-muss-vor-dem-finalen-150-release-noch-getan-werden&#34;&gt;Was muss vor dem finalen 1.5.0-Release noch getan werden?&lt;/h2&gt;
-&lt;p&gt;Stand heute fehlen nur noch wenige Features (etwa die Nutzung des Wiederherstellungs-Schlüsses) und der letzte Feinschliff. Aber wir wollen sicher gehen, dass alle Mobil-Apps und auch Drittanbieter-Tools wie Cyberduck mit dem neuen Tresorformat kompatibel sind und befinden uns daher derzeit in einer etwas gedehnte Testphase mit bereits sehr ausgereiften Beta-Versionen. Für einige Bugfixes (etwa &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/986&#34;&gt;diesen&lt;/a&gt;), warten wir derzeit noch auf einen Upstream-Fix.&lt;/p&gt;
-&lt;p&gt;Gleichzeitig bereiten wir unsere Dokumentation für 1.5.0 vor, gestalten eine neue FAQ-Sektion für unsere Website und integrieren die &lt;a href=&#34;https://community.cryptomator.org/t/localization-of-cryptomator-1-5-0/4269?u=overheadhunter&#34;&gt;neuen Übersetzungen&lt;/a&gt;, die von unserer phantastischen Community regelmäßig beigetragen werden.&lt;/p&gt;
-&lt;h2 id=&#34;was-steht-danach-an&#34;&gt;Was steht danach an?&lt;/h2&gt;
-&lt;p&gt;Direkt nach 1.5.0 wird der Wechsel von Java 11 auf Java 14 höchste Priorität haben. Letzteres bringt ein Packaging-Tool mit, auf das wir schon lange gewartet haben und für das wir derzeit ein Workaround nutzen, welches ein Upgrade der gebundelten JRE verhindert. Da dies hoffentlich nur eine sehr kleine Änderung ist, wird sie vermutlich schon mit 1.5.1 nachgeschoben. Dennoch wagen wir es nicht, kurz vor 1.5.0 noch neue Fässer aufzumachen und entschieden diesen Technologiewechsel auf 1.5.1 zu verschieben.&lt;/p&gt;
-&lt;p&gt;Anschließend wollen wir uns auf Flatpak konzentrieren. Der Distribution von &lt;code&gt;.deb&lt;/code&gt; und &lt;code&gt;.rpm&lt;/code&gt;-Dateien haben wir schon lange abgeschworen und sie durch die universellen AppImages ersetzt. Gleichzeitig finden wir es toll, wie viel Momentum das Flatpak-Ökosystem derzeit gewinnt und wie dieses Format von einer stetig zunehmenden Anzahl an Distributionen nativ unterstützt wird. Bisher haben wir Cryptoamtor aufgrund der Komplexität beim Einbinden von Laufwerken &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/729&#34;&gt;zwar noch nicht zum Laufen bekommen&lt;/a&gt;, aber sobald wir 1.5.0 über die Bühne gebracht haben, hoffen wir diesem Problem mehr Aufmerksamkeit widmen und Cryptomator bald auch als Flatpak anbieten zu können.&lt;/p&gt;
-&lt;p&gt;Bei der Android-App steht als nächstes großes Feature an, anderen Apps Dateien per DocumentProvider bereistellen zu können. Zum Beispiel würde ein Dateibrowser dadurch in die Lage versetzt, auf Tresorinhalte zuzugreifen. Darüber hinaus sind auch kleinere Features wie rekursive Uploads von Ordnern geplant.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-        <link>https://cryptomator.org/de/blog/2020/02/12/roadmap/</link>
-        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/02/12/roadmap/</guid>
-        
-        <category>cryptomator</category>
-        
-        <category>desktop</category>
         
         <category>android</category>
         

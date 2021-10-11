@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptomator Blog</title>
+    <description>Recent Blog Posts on cryptomator.org</description>
+    <link>https://cryptomator.org/de/tags/linux/</link>
+    <language>de</language>
+    <atom:link href="https://cryptomator.org/de/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://cryptomator.org/img/logo.png</url>
+      <title>Cryptomator Blog</title>
+      <link>https://cryptomator.org/de/tags/linux/</link>
+    </image>
+    <lastBuildDate>Mon, 11 Oct 2021 15:23:08 +0000</lastBuildDate>
+    <generator>Hugo</generator>
+    
+      <item>
+        <title>Vault Format 8</title>
+        <description>&lt;p&gt;Hallo Community!&lt;/p&gt;
+&lt;p&gt;im Zuge des anstehenden Releases von Cryptomator 1.6.0 möchten wir euch einen Einblick über die Motivation und Umsetzung eine der wichtigen Änderungen geben: Das neue Tresorformat in Version 8.&lt;/p&gt;
+&lt;p&gt;Ja, ein neues Tresorformat.
+Diejenigen, die sich an das letzte Upgrade erinnern, werden vielleicht etwas schlucken, denn beim letzten Mal war der Migrationsprozess von Tresorformat 6 zu 7 in einigen Fällen nicht ohne Hindernisse und Probleme zu bewältigen.
+Aber keine Sorge, dieses Mal sind die Änderungen minimal invasiv!&lt;/p&gt;
+&lt;p&gt;Dieser Artikel wird die Motivation für die Gestaltung des neuen Formats dargelegen, die Änderungen erläutern und skizziert, wie der Migrationsprozess abläuft.&lt;/p&gt;
+&lt;h2 id=&#34;die-motivation&#34;&gt;Die Motivation&lt;/h2&gt;
+&lt;p&gt;Der Speicherort des Masterkey eines Tresors ist ein Thema, das schon in den Anfangstagen von Cryptomator viele Fragen aufgeworfen und zu mehreren Feature Requests geführt hat. (vergleiche die Klickzahlen im Forumsartikel &lt;a href=&#34;https://community.cryptomator.org/t/why-is-the-masterkey-stored-in-the-cloud/&#34;&gt;&amp;ldquo;Why is the masterkey stored in the cloud&amp;rdquo;&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Woher kommt das?
+Der Masterkey eines Tresors wird innerhalb der Tresor-Ordnerstruktur in einer Datei namens &lt;code&gt;masterkey.cryptomator&lt;/code&gt; gespeichert und mit nach heutigem Kenntnisstand modernen und sicheren Algorithmen verschlüsselt.
+Sein Speicherort stellt kein Sicherheitsrisiko dar und gewährleistet zudem, dass dieser integrale Bestandteil eines Tresors immer mit dem Tresor verschoben wird.
+Zugegeben, über den Namen der Datei lässt sich streiten, aber es ist eindeutig, dass die Datei wichtig ist.&lt;/p&gt;
+&lt;p&gt;Doch hier geht es nicht um den Namen.
+Wenn man festlegt, wo der Hauptschlüssel gespeichert wird, verliert man die Flexibilität, ihn von einem anderen Ort zu laden. (Ein entsprechender &lt;a href=&#34;https://github.com/cryptomator/cryptomator/issues/96&#34;&gt;Feature Request&lt;/a&gt; ist unter den ersten 100 Tickets von Cryptomator!)
+Was ist, wenn ein Benutzer einen Hardware-Token hat, der ihn speichern könnte?
+Oder was ist, wenn ein Unternehmen eine zentralisierte Schlüsselverwaltung mit [Single Sign-On] (&lt;a href=&#34;https://en.wikipedia.org/wiki/Single_sign-on&#34;&gt;https://en.wikipedia.org/wiki/Single_sign-on&lt;/a&gt;) hat und diese mit Cryptomator nutzen möchte?
+Und selbst wenn Lösungen für die oben genannten Fragen gefunden werden, wie passt man diese an, wenn sich die Struktur/das Format des Tresors ändert?&lt;/p&gt;
+&lt;p&gt;Diese Fragen führten zu der Idee, das Laden des Masterkeys von der Tresorstruktur zu entkoppeln, und schließlich zum Entwurf des Tresorformats 8.&lt;/p&gt;
+&lt;h2 id=&#34;die-änderungen&#34;&gt;Die Änderungen&lt;/h2&gt;
+&lt;p&gt;Mit Tresorformat 8 führen wir eine neue Datei namens &lt;code&gt;vault.cryptomator&lt;/code&gt; für jeden Tresor ein, die sich im Stammverzeichnis des Tresors befindet.
+Dies ist die neue, zentrale Konfigurationsdatei des Tresors.
+Zusammen mit dem Datenverzeichnis namens &amp;ldquo;d&amp;rdquo; bilden sie das erforderliche Minimum für einen gültigen Tresor.&lt;/p&gt;
+&lt;p&gt;Die Tresorkonfigurationsdatei ist ein &lt;a href=&#34;https://en.wikipedia.org/wiki/JSON_Web_Token&#34;&gt;JWT&lt;/a&gt;, welche die grundlegenden Informationen über den Tresor (wie einen eindeutige Id) und insbesondere den Ort enthält, woher der Hauptschlüssel geladen werden soll.
+Alle anderen Parameter, die für das Laden des Masterkeys erforderlich sind, werden nicht mehr in der Tresorkonfiguration gespeichert, was zur gewünschten Entkopplung des Masterkeys von Tresorformat zur Folge hat und die Möglichkeit eröffnet, den Masterkey aus anderen Quellen als nur der Datei &amp;ldquo;masterkey.cryptomator&amp;rdquo; im Tresor zu beziehen.
+In zukünftigen Versionen kann beispielsweise der Masterkey aus einem &lt;a href=&#34;https://www.yubico.com&#34;&gt;Yubikey&lt;/a&gt; oder dem Microsoft Certification Store geladen werden.
+Da es sich bei der Tresorkonfiguration um ein JWT handelt, kann durch Signieren der Datei mit dem Masterkey sichergestellt werden, dass diese nicht manipuliert wurde.&lt;/p&gt;
+&lt;p&gt;Wie bereits erwähnt, kann die Tresorkonfigurationsdatei auch zusätzliche Informationen speichern.
+Eine davon ist die tresorspezifische Schwelle für die Verkürzung von &lt;em&gt;verschlüsselten&lt;/em&gt; Dateinamen.
+Vor Format 8 war dieser Wert im Verschlüsselungsschema von Cryptomator fest verankert.
+Durch die Angabe in der Tresorkonfiguration kann sie in Zukunft konfiguriert werden, so dass die vollen Funktionen eines Tresors auch an restriktiveren Speicherorten verfügbar sind.&lt;/p&gt;
+&lt;p&gt;Das Verschlüsselungsschema, die Verzeichnisstruktur und die verschlüsselten Dateien bleiben unverändert.&lt;/p&gt;
+&lt;h2 id=&#34;die-migration&#34;&gt;Die Migration&lt;/h2&gt;
+&lt;p&gt;Was bedeuten diese Änderungen für eine Migration von Tresorformat 7 auf 8?
+So gut wie nichts!&lt;/p&gt;
+&lt;p&gt;Die einzige Datei, die bearbeitet wird, ist &lt;code&gt;masterkey.cryptomator&lt;/code&gt;.
+Für alle &amp;ldquo;Nur-Online&amp;rdquo;-Nutzer wäre es daher ausreichend, nur diese Datei herunterzuladen.&lt;/p&gt;
+&lt;p&gt;Im eigentlichen Migrationsprozess wird zuerst die Tresorkonfigurationsdatei &lt;code&gt;vault.cryptomator&lt;/code&gt; erstellt und mit den korrekten Werten wie dem bereits erwähnten eindeutigen Tresorkennzeichen gefüllt.
+Zweitens wird die bereits vorhandene Masterkey-Datei aktualisiert.
+Und drittens&amp;hellip; das war&amp;rsquo;s auch schon 😄 Keine anderen Dateien müssen geändert werden!&lt;/p&gt;
+&lt;p&gt;Wie Ihr seht, bringt das Tresorformat 8 nur eine kleine und leicht zu bewerkstelligende Änderung mit sich und macht gleichzeitig Platz für interessante und spannende neue Funktionen.
+Mit dem Update auf Cryptomator 1.6.0, werden neu erstelle Tresore das Format 8 direkt besitzten, Tresore einer früheren Version müssen migriert werden.
+Beachtet, dass die Masterkey-Datei weiterhin benötigt wird, da sie den eigentlichen Schlüssel zu eurem Tresor enthält.&lt;/p&gt;
+&lt;p&gt;Wir hoffen, dass Ihr nach dem Lesen des Artikels ohne Sorge auf ein Tresor-Upgrade blickt!
+Wenn Ihr mehr über die kommende Version 1.6.0 von Cryptomator erfahren wollt, lest &lt;a href=&#34;https://cryptomator.org/blog/2021/10/11/1-6-0-what-you-need-to-know/&#34;&gt;Cryptomator 1.6.0: Was hat sich geändert?&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/10/11/vault-format-8/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/10/11/vault-format-8/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>vault-format</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator 1.6.0: Was hat sich geändert?</title>
+        <description>&lt;p&gt;Hallo Community!&lt;/p&gt;
+&lt;p&gt;In diesem Blog-Beitrag möchten wir euch einige Neuigkeiten über das bevorstehende Update von Cryptomator auf Version 1.6.0 mitteilen.
+Wir präsentieren euch die wichtigsten Änderungen und neuen Funktionen und wollen sicherstellen, dass ihr auf das Update vorbereite seid.&lt;/p&gt;
+&lt;h2 id=&#34;änderungen-und-features&#34;&gt;Änderungen und Features&lt;/h2&gt;
+&lt;p&gt;Die beiden wichtigsten Änderungen sind die Verwendung eines neuen Tresorformats (Version 8) und die lang versprochene Integration des &lt;a href=&#34;https://community.cryptomator.org/t/sanitizer-how-to-use/43&#34;&gt;Sanitizer&lt;/a&gt; (jetzt Vault Health Check).
+Eine vollständigere Liste finden Sie auf der &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2&#34;&gt;Release-Seite&lt;/a&gt; von Cryptomator.&lt;/p&gt;
+&lt;h3 id=&#34;auto-lock&#34;&gt;Auto Lock&lt;/h3&gt;
+&lt;p&gt;Eine Funktion, die bereits in den ersten Tagen von Cryptomator gewünscht wurde, ist nun implementiert: Auto Lock - das automatische Sperren eines Tresors.
+Für jeden Tresor kann nun ein Timer konfiguriert werden, nach dessen Ablauf der Tresor automatisch gesperrt wird.
+Wenn während dieser Zeitspanne ein Schreib- oder Lesevorgang stattfindet, wird der Timer zurückgesetzt und beginnt von vorn.&lt;/p&gt;
+&lt;h3 id=&#34;überarbeiteter-fehlerdialog&#34;&gt;Überarbeiteter Fehlerdialog&lt;/h3&gt;
+&lt;p&gt;Nach viel indirekten Feedback von euch über den Dialog von unerwarteten Fehlern in der GUI haben wir uns zu einem Redesign des selbigen entschlossen, damit dieser mehr den Erwartungen entspricht.
+Die offensichtlichste und wichtigste Änderung ist das Anzeigen eines Fehlercodes.
+Er mag genauso kryptisch sein wie der bereits vorhandene Stack-Trace, aber er beschleunigt die Suche nach Lösungen oder Workarounds für das spezifisches Problem in unserer Fehlercode-Datenbank.
+Neben dem Fehlercode bietet der Dialog auch Links zur schnellen Abfrage der Datenbank.
+Und wenn der Fehlercode noch nicht existiert, unterstützt der Dialog euch dabei, den Fehler in einem Format zu melden, das uns hilft, das Problem zu verstehen.&lt;/p&gt;
+&lt;h3 id=&#34;tresor-format-8&#34;&gt;Tresor Format 8&lt;/h3&gt;
+&lt;p&gt;Die große Änderung hinter den Kulissen ist ein neues Tresorformat.
+Beginnend mit 1.6.0 wird es standardmäßig verwendet und &lt;em&gt;erzwungen&lt;/em&gt;.
+Das neue Format bereitet Cryptomator auf künftige Funktionen vor und behebt Unstimmigkeiten in früheren Versionen.
+Weitere Einzelheiten findet ihr im &lt;a href=&#34;https://cryptomator.org/blog/2021/10/11/vault-format-8/&#34;&gt;Artikel zum Tresorformat 8&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;vault-health-check&#34;&gt;Vault Health Check&lt;/h3&gt;
+&lt;p&gt;Mit Version 1.6.0 kommt auch ein integriertes Werkzeug, um strukturelle Probleme eines Tresors (z. B. verschwundene Verzeichnisse) zu erkennen und zu beheben.
+Bis Cryptomator 1.5.0 wurde diese Aufgabe durch den so genannten &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt; übernommen.
+Das Tool war jedoch schwer zu warten und schwer zu benutzen, so dass es mit dem Ziel aufgegeben wurde, ähnliche Funktionen direkt in Cryptomator zu integrieren.&lt;/p&gt;
+&lt;p&gt;Dieser Plan führte schließlich zu einem Arbeitsablauf, mit dem verschiedene Prüfungen eines Tresors durchgeführt werden können, um häufige Probleme zu erkennen.
+Die Ergebnisse werden sofort angezeigt, und sobald die Prüfung abgeschlossen ist, können das Ergenis exportiert werden.
+Für 1.6.0 wird es nur drei Checks geben, aber wir planen, weitere hinzuzufügen.
+Bitte denkt daran, dass der Health Check nicht als magisches Tool zur Behebung aller Probleme gedacht ist.
+Bei Problemen mit einem Tresor solltet ihr euch zuerst vergewissern, dass die Tresordateien vollständig synchronisiert sind, bevor ihr den Health Check verwendet.
+Trotzdem freuen wir uns natürlich über Feedback zur Benutzerfreundlichkeit und Funktionalität. (Link zur github Diskussion?)&lt;/p&gt;
+&lt;h3 id=&#34;plugin-api&#34;&gt;Plugin API&lt;/h3&gt;
+&lt;p&gt;Cryptomator ist nun in der Lage, Plugins aus einem eigenen Plugin-Verzeichnis zu laden.
+Langfristig ermöglicht dies die Integration von Diensten Dritter, z. B. die Eingabe von Passwörtern über einen Passwortmanager.
+Die Funktion ist zwar noch experimentell und kann sich im Laufe der Zeit ändern, aber ein erstes Plugin ist bereits verfügbar: Eine KeePassXC-Integration, entwickelt von PureJava.
+Ihr könnt es &lt;a href=&#34;https://plugin.purejava.org&#34;&gt;hier&lt;/a&gt; herunterladen.&lt;/p&gt;
+&lt;h2 id=&#34;migration-leitfaden&#34;&gt;Migration Leitfaden&lt;/h2&gt;
+&lt;p&gt;Grundsätzlich solltet Ihr immer sobald wie möglich auf die neueste Version aktualisieren, um nicht nur von neuen Features, sondern auch von Bugfixes zu profitieren.
+Dennoch gibt es Gründe das 1.6.0 Update hinauszuzögern: Das neue Tresorformat ist verplfichtend, d.h. alte Tresore müssen migriert werden, um sie zu entsperren, und sobald ein Tresor migriert ist, können ältere Desktop-Versionen ihn nicht mehr öffnen.&lt;/p&gt;
+&lt;p&gt;Natürlich bietet Cryptomator wie immer eine in-App Migration von älteren Formaten auf Version 8 an.
+Dazu benötigt die Anwendung jedoch Schreibzugriff auf die Tresordateien (Konfigurationsdateien und verschlüsselte Daten).
+Einzelheiten über die Migration findet ihr im Artikel Tresorformat 8.&lt;/p&gt;
+&lt;p&gt;Deshalb solltet Ihr mit dem Update warten, wenn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nicht alle verwendeten Cryptomator-Anwendungen (für Desktop und Smartphone) aktualisiert werden können oder&lt;/li&gt;
+&lt;li&gt;Ihr keinen Schreibzugriff auf alle verwendeten Tresore habt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wenn Ihr euch für eine Aktualisierung entscheidet, gibt es noch eine letzte Sache zu prüfen.
+Falls jemals die Einstellung &lt;code&gt;filenameLengthLimit&lt;/code&gt; für einen Tresor in der Datei &lt;code&gt;settings.json&lt;/code&gt; manuell geändert wurde, gehen diese Änderungen nach der Aktualisierung verloren und werden ignoriert, wenn sie einfach zurückkopiert werden.
+Eine Anleitung zur Migration dieses Randfalls wird bald veröffentlicht.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Oct 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/10/11/1-6-0-what-you-need-to-know/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/10/11/1-6-0-what-you-need-to-know/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>windows</category>
+        
+        <category>mac</category>
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Update on the Document Provider Development</title>
+        <description>&lt;p&gt;Hey Community,&lt;/p&gt;
+&lt;p&gt;From time to time, we need to adjust our schedule for certain features. We are well aware that the Document Provider is the most-requested feature of the Android app, but despite this fact, we need to temporarily shift our attention to other tasks within this project. This blog post you&amp;rsquo;re reading right now is to keep you, our community, updated and inform you that we are unable to stick to our original plan. Unfortunately, this means that any further development of the Document Provider feature needs to be postponed to the end of this year.&lt;/p&gt;
+&lt;h2 id=&#34;the-document-provider-feature&#34;&gt;The Document Provider Feature&lt;/h2&gt;
+&lt;p&gt;As users of our Android app, you know how cumbersome sometimes the work with it is: You open your favourite notes app to quickly jot something down, then notice that you cannot open your to-do list from the app because you store it encrypted with Cryptomator. So you sigh, open the Cryptomator app, unlock your vault, navigate to the to-do list file and open it with the aforementioned notes app. Definitely not the optimal workflow.&lt;/p&gt;
+&lt;p&gt;We always strive to provide the same features across all our supported platforms. One of these is a user-friendly integration of the vault into the running OS to easily access content of unlocked vaults. For the desktop systems, this feature was always present and recently we added it in our new iOS app. The last OS, where it is missing is Android. And the way to resolve this, is implementing a Document Provider for our Android app.&lt;/p&gt;
+&lt;p&gt;The Document Provider feature creates a virtual access point to an unlocked vault, with the consequence that you can conveniently browse and access a vault’s content via the standard file browser. Also, any app which supports browsing through Document Providers can directly load files from your unlocked vault without the need to go via Cryptomator’s app GUI.&lt;/p&gt;
+&lt;h2 id=&#34;development-status&#34;&gt;Development Status&lt;/h2&gt;
+&lt;p&gt;The development is tracked in the following ticket of our issue tracker: &lt;a href=&#34;https://github.com/cryptomator/android/issues/35&#34;&gt;https://github.com/cryptomator/android/issues/35&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, the issue is already quite old and got over the time a countable amount of comments. After &lt;a href=&#34;https://cryptomator.org/blog/2020/12/23/android-open-source/&#34;&gt;publishing the source code&lt;/a&gt; of the app at the end of 2020, our plan was to work on this important feature.&lt;/p&gt;
+&lt;p&gt;From the technical side, we already determined the parts of code needed to be edited, developed a concept and built a proof of concept (see the linked ticket). The next step would be to actually implement it including rigorous testing.&lt;/p&gt;
+&lt;p&gt;Unfortunately, we determined that integrating Document Provider into the existing app would require major architectural changes, therefore requiring a lot of time and resources. We have exciting plans with Cryptomator after our next major release with version 1.6.0 so that we have to delay the development of the Document Provider integration to the end of 2021.&lt;/p&gt;
+&lt;p&gt;Meanwhile, maybe you, our community can help us out.&lt;/p&gt;
+&lt;h2 id=&#34;call-for-contributions&#34;&gt;Call for Contributions&lt;/h2&gt;
+&lt;p&gt;Cryptomator for Desktop was always open source. Cryptomator for iOS and Android are now open source as well. And as such, we also rely on our community to receive feedback, distribute the app and improve its functionality.&lt;/p&gt;
+&lt;p&gt;So, we are always very excited about contributions and are happy to assist, especially when it comes to the Document Provider. 😉&lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/07/22/android-document-provider/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/07/22/android-document-provider/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator 2.0 für iOS: Open Source und Beta-Release</title>
+        <description>&lt;p&gt;Endlich ist es soweit! 🎉 Die brandneue iOS-App von Cryptomator kann nun in einer Beta-Version per TestFlight ausprobiert werden und das Projekt ist jetzt wie angekündigt vollständig quelloffen! Damit ist nun die gesamte Cryptomator-Familie open-source, bestehend aus der Desktop-, Android- und iOS-Version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cryptomator 2.0 für iOS auf TestFlight: &lt;a href=&#34;https://testflight.apple.com/join/WMtYSrzD&#34;&gt;https://testflight.apple.com/join/WMtYSrzD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Open-Source-Repository auf GitHub: &lt;a href=&#34;https://github.com/cryptomator/ios&#34;&gt;https://github.com/cryptomator/ios&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png&#34; srcset=&#34;https://cryptomator.org/img/blog/ios-2.0-beta.png 1x, https://cryptomator.org/img/blog/ios-2.0-beta@2x.png 2x&#34; alt=&#34;Cryptomator 2.0 für iOS: Open Source und Beta-Release&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Die neue Cryptomator-App mit der vollständigen Integration in die Dateien-App von iOS erfüllt einen der größten Nutzerwünsche. Beispielsweise ist es nun möglich, Dateien innerhalb von Word direkt in einen Cryptomator-Tresor verschlüsselt zu speichern. Auf dem iPad wird Drag &amp;amp; Drop mit der neuen App ermöglicht. Generell werden alle Features der Dateien-App automatisch von Cryptomator mitunterstützt.&lt;/p&gt;
+&lt;p&gt;Die Entwicklung an der neuen iOS-App hat vor gut einem Jahr begonnen und wurde von Grund auf in der Programmiersprache Swift neu geschrieben. D.h. wir nutzen nun die aktuellsten Tools zur Entwicklung der App und können somit schneller neue Features von iOS unterstützen. Das Projekt ist dadurch zukunftssicherer und leichter zu warten. Nachdem wir die Android-App vor einem halben Jahr open-sourcen konnten und seitdem zahlreiche Updates mit tollen Beiträgen aus der Community veröffentlicht haben, konnten wir es kaum erwarten, auch den Quellcode der neuen iOS-App zu veröffentlichen. Durch Open-Source ist die neue App nun, wie von unseren anderen Projekten gewohnt, zugänglich für alle interessierten Entwickler:innen und die ganze Community.&lt;/p&gt;
+&lt;p&gt;Wir sind schon sehr gespannt auf euer Feedback und eure Beiträge und sind dir sowie der gesamten Community, die diesen Schritt ermöglicht hat, sehr dankbar. Um die fortlaufende Open-Source-Entwicklung von Cryptomator zu unterstützen, freuen wir uns über eine &lt;a href=&#34;https://cryptomator.org/de/donate/&#34;&gt;Spende&lt;/a&gt; oder ein &lt;a href=&#34;https://cryptomator.org/de/sponsors/&#34;&gt;Sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+</description>
+        <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/06/30/ios-2.0-beta/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/06/30/ios-2.0-beta/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>Strategische Autonomie in Gefahr: Europäische Tech-Unternehmen warnen vor sinkendem Datenschutzniveau in der EU</title>
+        <description>&lt;p class=&#34;lead&#34;&gt;Eine gemeinsame Stellungnahme der IT-Unternehmen Boxcryptor, Cryptomator, Mailbox.org, Mail.de, Mailfence, Praxonomy, Tresorit und Tutanota.&lt;/p&gt;
+&lt;p&gt;Im Zuge der Initiative „Fighting child sexual abuse: detection, removal, and reporting of illegal content“ plant die EU die Abschaffung des digitalen Briefgeheimnisses durch die Hintertür. Um illegale Inhalte automatisiert zu erkennen, sollen künftig alle privaten Chat-Nachrichten durchleuchtet werden. Dies soll auch für Inhalte gelten, die bislang mittels Ende-zu-Ende-Verschlüsselung geschützt werden. Das würde einen enormen Schaden für die europäischen Ideale und die indiskutablen Grundfesten unserer Demokratie, nämlich die freie Meinungsäußerung und den Schutz der Privatsphäre bedeuten. Außerdem würde das Absenken des Datenschutzniveaus die strategische Autonomie und damit auch in der EU ansässige Unternehmen schädigen. Der Grund ist, dass der Standort Europa auch wegen der Vorbildwirkung der DSGVO international für das hohe Datenschutzniveau geachtet wird. In einem international hoch kompetitiven Markt stehen europäische Unternehmen in Sachen Datenschutz an vorderster Position. Die EU-Initiative könnte nun dieses Alleinstellungsmerkmal europäischer IT-Unternehmen gefährden.&lt;/p&gt;
+&lt;p&gt;Deshalb fordern wir:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Das hohe Datenschutzniveau der Europäischen Union muss beibehalten werden.&lt;/li&gt;
+&lt;li&gt;Grundrechte müssen gewahrt werden, insbesondere das Recht auf Privatsphäre und das digitale Briefgeheimnis.&lt;/li&gt;
+&lt;li&gt;Ruf nach Massenüberwachung ist zu einfach und zu kurz gedacht.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;hohes-datenschutzniveau-der-eu-muss-beibehalten-werden&#34;&gt;Hohes Datenschutzniveau der EU muss beibehalten werden&lt;/h2&gt;
+&lt;p&gt;Die Datenschutz-Grundverordnung hat weltweite Vorbildfunktion für den Schutz personenbezogener Daten. Einige Länder haben bereits eigene Versionen der DSGVO auf den Weg gebracht oder in Kraft gesetzt. Dass die Europäische Union nun genau gegenteilige Schritte plant, ist ein falsches Signal mit fataler Wirkung für den IT-Standort EU. Die hohen Datenschutzstandards führen zu einem großen Vertrauen in europäische und auch deutsche IT-Produkte. Das Siegel „Made in Europe“ wiegt schwer bei den Kaufentscheidungen unserer Kunden - und das weltweit. Der Zwang, den hohen Schutz aufzubrechen und Hintertüren in Ende-zu-Ende-verschlüsselte Kommunikation einzubauen, gefährdet das Geschäft zahlreicher IT-Unternehmen in der gesamten EU sowie ein wichtiges Alleinstellungsmerkmal für europäische IT-Unternehmen auf dem globalen Markt.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wir betonen ausdrücklich, dass Zugriffsmöglichkeiten auf verschlüsselte Kommunikation durch private Organisationen und Behörden mit einem starken Technologie-Standort EU unvereinbar sind.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;recht-auf-privatsphäre-und-das-digitale-briefgeheimnis&#34;&gt;Recht auf Privatsphäre und das digitale Briefgeheimnis&lt;/h2&gt;
+&lt;p&gt;Eine geschützte Kommunikation ist für das Zusammenleben innerhalb unserer Gesellschaft sehr wichtig. Ganz natürlich kommen uns die Schweigepflicht des Arztes und das Anwaltsgeheimnis vor. Doch wie sollen diese Berufsgruppen ihre Berufsgeheimnisse wahren, wenn eine geschützte Kommunikation mit Patienten und Klienten nicht möglich ist? Die Überwachung jeglicher Kommunikation innerhalb von Nummern-unabhängigen Diensten versetzt diese Berufsgruppen technologisch zurück ins 20. Jahrhundert. Es kann dann nur noch postalisch oder persönlich kommuniziert werden kann.&lt;/p&gt;
+&lt;p&gt;Dennoch verhindert die EU-Initiative keine Verbrechen. Personen mit kriminellen Energien können mit geringem Aufwand zweckbezogen einen privaten, Ende-zu-Ende-verschlüsselten Chat-Dienst aufsetzen und sich dadurch den Strafverfolgungsbehörden weiterhin entziehen. Privatpersonen, die auf möglichst große Netzwerke mit vielen Teilnehmern angewiesen sind, haben diese Möglichkeit nicht.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Der Schutz des digitalen Briefgeheimnisses darf nicht abgeschwächt werden. Im Gegenteil, mit der stetigen Verlagerung der sensiblen Kommunikation in allen Bereichen unserer Gesellschaft ins Digitale ist eine starke Ende-zu-Ende-Verschlüsselung zwingend notwendig.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ruf-nach-massenüberwachung-ist-zu-einfach-und-zu-kurz-gedacht&#34;&gt;Ruf nach Massenüberwachung ist zu einfach und zu kurz gedacht&lt;/h2&gt;
+&lt;p&gt;Zuletzt möchten wir die Europäische Kommission dazu aufrufen, auf populistische, aktionistische Politik zu verzichten und Probleme auf der Sachebene zu lösen. Sichere Kommunikation für alle EU-Bürgerinnen und Bürger faktisch zu verbieten, macht das Leben für alle unsicher.&lt;/p&gt;
+&lt;p&gt;Besonders problematisch ist die Abschaffung der Privatsphäre in Bezug auf die private Kommunikation: So können beispielsweise Strandfotos der eigenen Kinder oder private Nacktbilder beim Verschicken durch die automatisierte Prüfung durch künstliche Intelligenz einen Alarm auslösen. So ein Alarm hat zur Folge, dass Mitarbeiter internationaler Konzerne, sowie Polizeibehörden diese intimen Bilder sichten. Sprich unbekannte Menschen bekommen Zugang zu sehr persönlichen Bildern und könnten diese wiederum weiterverbreiten. Hier entsteht ein neues Risiko.&lt;/p&gt;
+&lt;p&gt;Der Ruf nach Massenüberwachung ist zu einfach und kommt vor allem mit dem Argument des Kinderschutzes bei Vielen gut an. Wie auch beim Kinderschutz wird auch beim Schutz vor Terroranschlägen häufig der Ruf nach mehr Überwachung laut. Sascha Lobo hat im Spiegel dargelegt, warum mehr Überwachung nicht zwangsläufig zu mehr Sicherheit führt: „Seit 2014 verübten insgesamt 24 identifizierte Täter 13 islamistische Mordanschläge in der EU - und alle, ja wirklich: 100 Prozent der Attentäter waren zuvor den Behörden bekannt und gewaltaffin.“&lt;/p&gt;
+&lt;p&gt;Ob das Einführen von Massenüberwachung für die Aufklärung von Straftaten zielführend ist, ist nicht bewiesen. Fest steht jedoch, dass drei Dinge dabei helfen, Kinder effektiv vor sexualisierter Gewalt zu schützen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Gezielte Strafverfolgung statt Überhäufung der Behörden durch harmloses Bildmaterial.&lt;/li&gt;
+&lt;li&gt;Präventions- und Interventionsarbeit in Familien und Institutionen, regelmäßige öffentliche Diskussionen mit Fachleuten in den Medien sowie verpflichtende Fortbildungen für alle, die mit Menschen arbeiten.&lt;/li&gt;
+&lt;li&gt;Anerkennung der Tatsache, dass Missbrauch meist innerhalb der Familie passiert.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Zusammenfassend stellen wir fest: Wir können die Maßstäbe unserer Gesellschaft nicht am Verhalten Krimineller ausrichten. Straftaten verhindert man nicht, indem man jeden Bürger zum potenziellen Verdächtigen macht.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wir sehen bei der EU-Initiative „Fighting child sexual abuse: detection, removal, and reporting of illegal content“ die eindeutige Gefahr, dass sichere Kommunikation für Bürger und Unternehmen mit der Begründung des Kinderschutzes aufgegeben werden soll. Dies darf in einer offenen, demokratischen Gesellschaft nicht geschehen.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Als Expertinnen und Experten im Bereich der sicheren Kommunikation stehen wir der EU-Kommission sehr gern als Ansprechpartner zum technisch Machbaren bereit.&lt;/p&gt;
+&lt;p&gt;Erstellt unter der Mitwirkung von Tanja Bullert, Sozialarbeiterin mit dem Schwerpunkt Prävention von und Intervention bei sexualisierter Gewalt.&lt;/p&gt;
+&lt;p&gt;Unterzeichner:&lt;/p&gt;
+&lt;div class=&#34;flex flex-wrap justify-center&#34;&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/boxcryptor-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/boxcryptor-logo.png 1x, https://cryptomator.org/img/blog/boxcryptor-logo@2x.png 2x&#34; alt=&#34;Boxcryptor Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-logo.png 1x, https://cryptomator.org/img/blog/cryptomator-logo@2x.png 2x&#34; alt=&#34;Cryptomator Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailboxorg-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailboxorg-logo.png 1x, https://cryptomator.org/img/blog/mailboxorg-logo@2x.png 2x&#34; alt=&#34;Mailbox.org Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailde-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailde-logo.png 1x, https://cryptomator.org/img/blog/mailde-logo@2x.png 2x&#34; alt=&#34;Mail.de Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/mailfence-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/mailfence-logo.png 1x, https://cryptomator.org/img/blog/mailfence-logo@2x.png 2x&#34; alt=&#34;Mailfence Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/praxonomy-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/praxonomy-logo.png 1x, https://cryptomator.org/img/blog/praxonomy-logo@2x.png 2x&#34; alt=&#34;Praxonomy Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/tresorit-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/tresorit-logo.png 1x, https://cryptomator.org/img/blog/tresorit-logo@2x.png 2x&#34; alt=&#34;Tresorit Logo&#34;/&gt;
+  &lt;img class=&#34;px-8 py-4&#34; src=&#34;https://cryptomator.org/img/blog/tutanota-logo.png&#34; srcset=&#34;https://cryptomator.org/img/blog/tutanota-logo.png 1x, https://cryptomator.org/img/blog/tutanota-logo@2x.png 2x&#34; alt=&#34;Tutanota Logo&#34;/&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/04/15/eu-e2ee-strategic-autonomy-in-danger/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/04/15/eu-e2ee-strategic-autonomy-in-danger/</guid>
+        
+        <category>data protection</category>
+        
+        <category>encryption</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Early 2021</title>
+        <description>&lt;p&gt;Die Arbeiten an Cryptomator 1.5.x neigen sich allmählich dem Ende zu und wir widmen uns nun der nächsten größeren Version 1.6.x. Mehr dazu gibt&amp;rsquo;s in dieser Roadmap!&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-desktop-app&#34;&gt;Stand der Desktop-App&lt;/h2&gt;
+&lt;p&gt;Das Update auf die Version 1.6.0 steht vor der Tür! Das Release wird vor allem einige unsichtbare Änderungen enthalten, die es uns ermöglichen, zeitnah neue Features einzubauen. Einer der Hauptpunkte hierbei ist, ein neues Tresorformat zu implementieren (Vault Format 8). Besonders am neuen Tresorformat ist, dass zukünftig &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/8&#34;&gt;andere Authentifizierungsmethoden&lt;/a&gt; integriert werden können, um bspw. 2FA zu ermöglichen.&lt;/p&gt;
+&lt;p&gt;Ein weiteres Feature ist die &lt;a href=&#34;https://github.com/cryptomator/cryptomator/projects/7&#34;&gt;Integration von einem Sanitizer&lt;/a&gt;. Bisher wurde ein separates Programm benötigt, um den Zustand eures Tresors zu prüfen sowie Bereinigungs- und Wiederherstellungsbefehle auszuführen. Das wird künftig direkt in der Cryptomator Benutzeroberfläche möglich sein.&lt;/p&gt;
+&lt;p&gt;Außerdem gibt es nun einen Prototyp für die Auslieferung von Cryptomator als Microsoft Software Installation (.msi), die Umsetzung hat allerdings noch Alpha-Charakter. Des Weiteren haben wir Cryptomator mit dem letzten &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.5.14&#34;&gt;Update 1.5.14&lt;/a&gt; auf JDK 16 angehoben, was einige Upstream-Fixes mit sich bringt. Im Bezug auf Flatpak konnten wir leider keine Fortschritte erzielen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-android-app&#34;&gt;Stand der Android-App&lt;/h2&gt;
+&lt;p&gt;Wie ihr vielleicht schon in unserem Blog mitbekommen habt, haben wir nun endlich den Quellcode der App veröffentlicht! Ansonsten ist auch hier das Vault Format 8 ein großes Thema in unserer Entwicklung.&lt;/p&gt;
+&lt;p&gt;Seit dem Update 1.5.14 (aktuell noch in einer Beta-Version) wird pCloud von Cryptomator nativ unterstützt. Vielen Dank an Manu für &lt;a href=&#34;https://github.com/cryptomator/android/pull/283&#34;&gt;seine Open-Source-Contribution&lt;/a&gt;! Eine weitere kleine Änderung ist, dass es seit dem &lt;a href=&#34;https://github.com/cryptomator/android/releases/tag/1.5.13&#34;&gt;Update 1.5.13&lt;/a&gt; möglich ist, die Tresorliste selbst zu sortieren und somit einen besseren Überblick über die Tresore zu bekommen.&lt;/p&gt;
+&lt;p&gt;Das ist aber nicht alles, was wir mit der Android-App vorhaben! Wir freuen uns, Cryptomator bald auch bei F-Droid veröffentlichen zu können. Außerdem hoffen wir, bald noch weitere Clouds einzubinden zu können und den Zugriff auf Inhalte des Tresors über Drittanbieter-Apps mit einem „Document Provider“ zu ermöglichen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-ios-app&#34;&gt;Stand der iOS-App&lt;/h2&gt;
+&lt;p&gt;Mit der Einführung von Vault Format 8, bekommt auch die „alte“ iOS-App voraussichtlich ihr letztes großes Update auf die Version 1.6.0.&lt;/p&gt;
+&lt;p&gt;Die Arbeiten an der „neuen“ iOS-App gehen derweil weiter. Wie bereits in der letzten Roadmap angekündigt, soll die iOS-App vollständig in die Dateien-App integriert sein. Dabei sind wir mittlerweile schon sehr weit. Trotzdem gibt es für uns noch einiges zu tun, da wir einige Features wie den Dunkelmodus oder die Unterstützung mehrerer Accounts desselben Cloud-Anbieters bereits von Anfang an anbieten wollen.&lt;/p&gt;
+&lt;p&gt;Einen genauen Release-Termin können wir euch noch nicht versprechen, wir hoffen aber, im Sommer eine erste Beta-Version über TestFlight zur Verfügung stellen zu können.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/04/08/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/04/08/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>World Backup Day: So geht ihr auf Nummer sicher</title>
+        <description>&lt;p&gt;Grundsätzlich gibt es zwei Arten von Menschen: Diejenigen, die regelmäßig Backups erstellen und die, die noch nie Daten verloren haben. Anlässlich des „World Backup Days“ wollen wir euch erklären, wieso ihr drüber nachdenken solltet, regelmäßig ein Backup zu erstellen, auch wenn ihr selbst bisher noch Glück gehabt habt.&lt;/p&gt;
+&lt;h2 id=&#34;was-macht-ein-backup-eigentlich&#34;&gt;Was macht ein Backup eigentlich?&lt;/h2&gt;
+&lt;p&gt;Ganz generell ist ein Backup eine Sicherheitskopie eurer Daten. Das können euer Handy, euer Laptop, eure Festplatte, Familienfotos etc. sein. Sollte euer Gerät aus etwaigen Gründen mal nicht mehr funktionieren, sind eure Daten also nicht verloren, sofern ihr ein Backup erstellt habt. Daher ist es empfehlenswert, die Daten im regelmäßigen Abstand zu sichern, um größere Verluste zu verhindern.&lt;/p&gt;
+&lt;h2 id=&#34;wie-erstelle-ich-ein-backup&#34;&gt;Wie erstelle ich ein Backup?&lt;/h2&gt;
+&lt;p&gt;Wichtig bei einem Backup ist, dass eure Daten an einem externen Ort gespeichert werden. Im klassischen Sinne verstehen viele noch das Backup auf einem externen Datenträger, wie einer Festplatte. Diese unterliegt der moderneren Cloud-Variante allerdings in zwei elementaren Punkten.&lt;/p&gt;
+&lt;p&gt;Generell hat jedes Gerät eine gewisse prozentuale Ausfallwahrscheinlichkeit. Bei einer Festplatte kann diese &lt;a href=&#34;https://en.wikipedia.org/wiki/Hard_disk_drive_failure#Metrics_of_failures&#34;&gt;Ausfallwahrscheinlichkeit&lt;/a&gt; auf ein Jahr gerechnet bspw. zwischen 1,7% (im ersten Jahr) und 8,6% (im dritten Jahr) liegen, mögliche äußerliche Umstände wie Feuer- oder Wasserschaden sind darauf noch nicht eingerechnet. Natürlich kann man auch ein Backup auf mehreren Festplatten erstellen, je mehr man verwendet, desto niedriger die Ausfallwahrscheinlichkeit.&lt;/p&gt;
+&lt;p&gt;Ein weiterer Risikofaktor bei externen Festplatten ist die fehlende geografische Redundanz, kurz die Ortsunabhängigkeit. Sprich, wenn dein Haus Feuer fängt, sind in diesem Fall sowohl dein Computer als auch das Backup auf der Festplatte hinüber. Das ist natürlich relativ drastisch ausgedrückt, aber das Prinzip wird klar. Die geografische Redundanz ist durch die Speicherungen der Daten auf den Servern der Cloud-Anbieter stets gegeben, sie befinden sich auf Servern, die nicht selten geografisch auf der ganzen Welt verteilt sind.&lt;/p&gt;
+&lt;p&gt;Das Problem der Ausfallwahrscheinlichkeit wird durch &lt;a href=&#34;https://de.wikipedia.org/wiki/Mean_Time_Between_Failures#Parallelschaltung&#34;&gt;Parallelschaltungen&lt;/a&gt; minimiert. Kurzum bedeutet das, dass mehrere funktionsgleiche, redundante Kopien des Backups gleichzeitig existieren, jedoch von diesen nur eine funktionieren muss, um die Backup-Daten verfügbar zu machen. Man kann sich das etwa wie eine Spiegelung der Daten vorstellen, mit jeder Spiegelung sinkt das Risiko des Datenverlusts.&lt;/p&gt;
+&lt;h2 id=&#34;wie-schütze-ich-mein-backup-in-der-cloud&#34;&gt;Wie schütze ich mein Backup in der Cloud?&lt;/h2&gt;
+&lt;p&gt;Generell sind eure Daten in der Cloud hinter einem Account geschützt. Jedoch werden sie natürlich immer noch auf Servern gespeichert und sind damit nie zu 100% sicher vor fremdem Zugriff. Mithilfe von Cloud-Verschlüsselung könnt ihr die Sicherheit der Daten jedoch selbst in die Hand nehmen. Mit Cryptomator erstellt ihr eine Art „magischen“ Tresor, auf den nur zugegriffen werden kann, wer auch das entsprechende Passwort zum Öffnen des Tresors hat. So können Angreifer theoretisch zwar immer noch auf die Cloud zugreifen, können mit den verschlüsselten Daten aber nichts anfangen.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cryptomator.org/de/downloads/&#34;&gt;Hier&lt;/a&gt; könnt ihr Cryptomator kostenfrei herunterladen.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2021/03/31/world-backup-day/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2021/03/31/world-backup-day/</guid>
+        
+        <category>event</category>
+        
+      </item>
+    
+      <item>
+        <title>Open Source: Cryptomator für Android</title>
+        <description>&lt;p&gt;Wir haben es letzten Monat angekündigt und nun ist es soweit… unser Geschenk an die Community rechtzeitig zu den Feiertagen: Cryptomator für Android ist jetzt vollständig Open-Source! Das Repository befindet sich hier: &lt;a href=&#34;https://github.com/cryptomator/android&#34;&gt;https://github.com/cryptomator/android&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-open-source.png&#34; srcset=&#34;https://cryptomator.org/img/blog/android-open-source.png 1x, https://cryptomator.org/img/blog/android-open-source@2x.png 2x&#34; alt=&#34;Cryptomator für Android is nun Open-Source&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Es wird definitiv eine Übergangsphase und Lernkurve für uns geben, um das Repository feinzutunen und Open-Source-Beiträge zu koordinieren, aber es sollte nicht allzu weit vom &amp;ldquo;Haupt&amp;rdquo;-Repository Cryptomator für Windows, macOS und Linux entfernt sein, das von Anfang an Open-Source war.&lt;/p&gt;
+&lt;p&gt;Wir freuen uns auf eure Beiträge und sind dir sowie der gesamten Community, die diesen Schritt ermöglicht hat, sehr dankbar. Um die fortlaufende Open-Source-Entwicklung von Cryptomator zu unterstützen, freuen wir uns über eine &lt;a href=&#34;https://cryptomator.org/donate/&#34;&gt;Spende&lt;/a&gt; oder ein &lt;a href=&#34;https://cryptomator.org/sponsors/&#34;&gt;Sponsoring&lt;/a&gt;. ❤️&lt;/p&gt;
+&lt;p&gt;Und was ist mit Cryptomator für iOS? Um aus unserer &amp;ldquo;Roadmap Late 2020&amp;rdquo; zu zitieren:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Wir werden die aktuelle App nicht mehr open-sourcen, weil wir nach vorne schauen möchten. Die neue App haben wir bereits darauf ausgelegt, dass sie ohne Weiteres open-sourcen können, aber es wird noch einige Zeit dauern, bis wir etwas veröffentlichen können.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Frohe Feiertage und einen guten Rutsch in das neue Jahr! 🎁&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/12/23/android-open-source/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/12/23/android-open-source/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Roadmap Late 2020</title>
+        <description>&lt;p&gt;Wir haben kürzlich Cryptomator 1.5.10 für Windows, macOS und Linux mit vielen neuen Features und Fehlerbehebungen veröffentlicht. Nun, eigentlich waren die Änderungen für 1.5.9 vorgesehen, aber wir haben daraufhin einen Hotfix-Release veröffentlicht. 😁 Da sich das (verrückte) Jahr dem Ende zuneigt, möchten wir euch einen Einblick in unsere plattformübergreifende Roadmap für die kommenden Monate geben!&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-desktop-app&#34;&gt;Stand der Desktop-App&lt;/h2&gt;
+&lt;p&gt;Mit dem Redesign und vollständigen Überarbeitung der Benutzeroberfläche in 1.5.0 haben wir eine gute Grundlage für das Hinzufügen weiterer Features geschaffen. Es gab allerdings ein älteres Feature, das nicht in die engere Wahl geschafft hat, aber jetzt mit der neuesten Version wieder verfügbar ist: Tresor-Statistik. 🎉&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/vault-statistics.png&#34; srcset=&#34;https://cryptomator.org/img/blog/vault-statistics.png 1x, https://cryptomator.org/img/blog/vault-statistics@2x.png 2x&#34; alt=&#34;Tresor-Statistik in Cryptomator&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Aber es geht noch weiter! Tresor-Passwörter können jetzt auch unter Linux in &lt;a href=&#34;https://de.wikipedia.org/wiki/KWallet&#34;&gt;KWallet&lt;/a&gt; gespeichert werden. Herzlichen Dank an Ralph Plawetzki (purejava auf GitHub) für seine Open-Source-Beitrag! Außerdem ist es jetzt unter Windows möglich, den Tresor über FUSE zu mounten. Dies ist allerdings ein Beta-Feature! Um es auszuprobieren, muss &lt;a href=&#34;http://www.secfs.net/winfsp/&#34;&gt;WinFSP&lt;/a&gt; installiert sein. Wir würden uns über euer Feedback dazu freuen!&lt;/p&gt;
+&lt;p&gt;Was die Distribution betrifft, so haben wir unsere Erwartungen nicht ganz erfüllt. Flatpak bereitet uns weiterhin Probleme, da wir seine Sandbox nicht davon überzeugen konnten, FUSE-Laufwerke richtig zu unterstützen. Aber wir werden das Vorhaben nicht aufgeben!&lt;/p&gt;
+&lt;p&gt;Unter der Haube haben wir die &lt;a href=&#34;https://github.com/cryptomator/integrations-api&#34;&gt;integrations-api&lt;/a&gt; nebst Implementierungen für jedes Betriebssystem eingeführt. Es ist ein neuer Weg für Cryptomator, native (auch OS-spezifische) Funktionalitäten einzubinden. Jetzt ist es einfacher denn je, native Funktionen zu implementieren. Schnappt euch also eure Tastatur und fangt an zu hacken! 😁 Mit dieser Änderung haben wir das alte Repository &lt;a href=&#34;https://github.com/cryptomator/native-functions&#34;&gt;native-functions&lt;/a&gt; archiviert. 👋&lt;/p&gt;
+&lt;p&gt;Wie geht es weiter? Unser Plan ist es, zur Version 1.6.x überzugehen. Zuerst wollen wir &lt;a href=&#34;https://github.com/cryptomator/sanitizer&#34;&gt;Sanitizer&lt;/a&gt; integrieren, damit ihr den Zustand eures Tresors überprüfen und Bereinigungs- und Wiederherstellungsbefehle direkt in der Cryptomator-Benutzeroberfläche ausführen könnt. Darüber hinaus planen wir, die Schlüsselherleitung von der Tresorverschlüsselung zu entkoppeln, um mehr Optionen für die Authentifizierung anbieten zu können, einschließlich der Speicherung von Passwörtern durch Dritte, 2FA und Mehrbenutzerzugang mit individuellen Passwörtern.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-android-app&#34;&gt;Stand der Android-App&lt;/h2&gt;
+&lt;p&gt;In den letzten Monaten haben wir neue Features wie &lt;a href=&#34;https://community.cryptomator.org/t/biometric-authentication-e-g-face-unlock-coming-soon/6089&#34;&gt;Face Unlock&lt;/a&gt;, &lt;a href=&#34;https://community.cryptomator.org/t/sort-directory-listings/5958&#34;&gt;Sort Directory Listings&lt;/a&gt; und &lt;a href=&#34;https://community.cryptomator.org/t/search-in-current-folder-using-glob-pattern-matching/5928&#34;&gt;Search Using Glob Pattern Matching&lt;/a&gt; hinzugefügt. Einige Communitymitglieder haben die App auch in &lt;a href=&#34;https://community.cryptomator.org/t/translated-into-french/5962&#34;&gt;Französisch&lt;/a&gt; und &lt;a href=&#34;https://community.cryptomator.org/t/cryptomator-is-soon-available-in-turkish/6560&#34;&gt;Türkisch&lt;/a&gt; übersetzt. Vielen Dank für eure Beiträge!&lt;/p&gt;
+&lt;p&gt;Mit Blick nach vorne haben wir aufregende Neuigkeiten zu unserer Android-App zu berichten! Das Projekt ist in der perfekten Lage, die beiden größten Wünsche der Community zu erfüllen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Source: Veröffentlichung des Quellcodes der App.&lt;/li&gt;
+&lt;li&gt;Document Provider: Zugriff auf den Inhalt des Tresors über Drittanbieter-Apps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ihr habt richtig gehört, wir werden Cryptomator für Android open-sourcen! Die Tatsache, dass die App bisher open-core war, hatte seine legitimen Gründe, aber wir sind jetzt voll und ganz davon überzeugt, dass wir die App ohne Kompromisse open-sourcen können. Wir arbeiten hart daran, den vollständigen Quellcode innerhalb weniger Wochen zu veröffentlichen.&lt;/p&gt;
+&lt;p&gt;Danach wird die Integration des Document Providers auf unserer Roadmap stehen.&lt;/p&gt;
+&lt;h2 id=&#34;stand-der-ios-app&#34;&gt;Stand der iOS-App&lt;/h2&gt;
+&lt;p&gt;Was passiert zurzeit mit Cryptomator für iOS? In den letzten 6-7 Monaten haben wir hart an einer &lt;em&gt;vollständig&lt;/em&gt; neuen, in Swift geschriebenen App gearbeitet. Unsere ersten Ergebnisse sind bereits in unseren neuen Open-Source-Bibliotheken für Swift zu sehen: &lt;a href=&#34;https://github.com/cryptomator/cryptolib-swift&#34;&gt;cryptolib-swift&lt;/a&gt; und &lt;a href=&#34;https://github.com/cryptomator/cloud-access-swift&#34;&gt;cloud-access-swift&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Was wird an der Überarbeitung so besonders sein? Cryptomator wird vollständig in die Dateien-App integriert sein. Dies bringt viele Vorteile mit sich, wie z.B. Thumbnails, Unterstützung für Drittanbieter-Apps, die Dateien direkt im Tresor bearbeiten können, und vieles mehr! Das bedeutet aber auch, dass es keinen &amp;ldquo;eigenen&amp;rdquo; Dateibrowser mehr in der App geben wird. Die Integration in die Dateien-App ist eine der am meisten nachgefragten Features der Community.&lt;/p&gt;
+&lt;p&gt;Wie steht es mit Open-Source? Wir werden die aktuelle App nicht mehr open-sourcen, weil wir nach vorne schauen möchten. Die neue App haben wir bereits darauf ausgelegt, dass sie ohne Weiteres open-sourcen können, aber es wird noch einige Zeit dauern, bis wir etwas veröffentlichen können.&lt;/p&gt;
+&lt;p&gt;Wir werden auf jeden Fall im nächsten Jahr umfangreiche Tests über TestFlight durchführen. Stay tuned!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/11/20/roadmap/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/11/20/roadmap/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>desktop</category>
+        
+        <category>android</category>
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>Cryptomator Android-App für uns Paranoide</title>
+        <description>&lt;p&gt;Dieser Blogeintrag richtet sich an die Cryptomator-&amp;ldquo;Power-User&amp;rdquo; unter uns und beschreibt, wie man das Vertrauensverhältnis zur Cryptomator Android-App vollständig herstellen kann.&lt;/p&gt;
+&lt;p&gt;Wenn es um unsere Desktop-Anwendung geht, fordern wir, dass Sie uns nicht vertrauen müssen, aber Sie (oder zumindest viele Entwickler) stattdessen überprüfen können, was Cryptomator tut. Für unsere mobilen Anwendungen ist dies, offen gesagt, nur die halbe Wahrheit. Während der Verschlüsselungscode vollständig open-source ist, ist der UI- und Cloud-Zugriffscode (noch 😉) nicht.&lt;br&gt;
+Wenn Sie sich zu den paranoideren Benutzern zählen, die es vorziehen, alles selbst zu kompilieren, könnten Sie die berechtigte Frage stellen: Wie können Sie die aktuelle, offene App auf Hintertüren überprüfen?&lt;/p&gt;
+&lt;p&gt;Eine Backdoor erfordert Kommunikation mit einem externen Server. Wenn Tresore nur aus dem Dateisystem des Gerätes geöffnet werden, benötigt die Cryptomator-App keine Internetverbindung. Alternativ kann der Tresor auch auf das Dateisystem des Smartphones mit einer Dritt-Applikation wie zum Beispiel &lt;a href=&#34;https://syncthing.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Syncthing&lt;/a&gt; bidirektional synchronisiert werden.&lt;/p&gt;
+&lt;p&gt;Verwendet man dieses Setup, kann die Internet-Berechtigung der Cryptomator-App entzogen werden, wodurch die App anschließend keine Daten aus dem Internet empfangen oder senden kann.&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/android-for-paranoids-permission.png&#34; alt=&#34;Internet-Berechtigung für Cryptomator auf Android entziehen&#34; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Selbst wenn es also jemals eine Hintertür in der Cryptomator Android-App gäbe, wäre es nicht möglich, dass die abgefangenen Daten das Smartphone verlassen. Dies wird durch das Betriebssystem sichergestellt.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 May 2020 00:00:00 +0000</pubDate>
+        <link>https://cryptomator.org/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/</link>
+        <guid isPermaLink="true">https://cryptomator.org/de/blog/2020/05/07/cryptomator-for-android-for-paranoids/</guid>
+        
+        <category>cryptomator</category>
+        
+        <category>android</category>
+        
+      </item>
+    
+  </channel>
+</rss>
