@@ -11,7 +11,7 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/tags/mac/</link>
     </image>
-    <lastBuildDate>Mon, 11 Oct 2021 15:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Oct 2021 14:20:40 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
@@ -74,13 +74,16 @@ If you want to know more about the upcoming 1.6.0 version of Cryptomator, contin
       </item>
     
       <item>
-        <title>Cryptomator 1.6.0: What you need to know</title>
+        <title>Cryptomator 1.6.0: What You Need to Know</title>
         <description>&lt;p&gt;Hello Community!&lt;/p&gt;
 &lt;p&gt;In this blog post, we&amp;rsquo;d like to give you some news about the upcoming major update of Cryptomator to version 1.6.0.
 We&amp;rsquo;ll be highlighting the most significant changes and new features and make sure that you are ready for the update.&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-6-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-6-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-6-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.6.0 Release&#34; /&gt;
+&lt;/figure&gt;
 &lt;h2 id=&#34;changes-and-features&#34;&gt;Changes and Features&lt;/h2&gt;
 &lt;p&gt;The two most important changes are the usage of a new vault format (version 8) and a long promised integration of the &lt;a href=&#34;https://community.cryptomator.org/t/sanitizer-how-to-use/43&#34;&gt;Sanitizer&lt;/a&gt; (now called Vault Health Check).
-For a more complete list, read the &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2&#34;&gt;release page&lt;/a&gt; of Cryptomator.&lt;/p&gt;
+For a more complete list, read the &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0&#34;&gt;release page&lt;/a&gt; of Cryptomator.&lt;/p&gt;
 &lt;h3 id=&#34;auto-lock&#34;&gt;Auto Lock&lt;/h3&gt;
 &lt;p&gt;A feature already wished in its earliest days will be present: Auto Lock – the automatic locking of a vault.
 For every vault you can set up an idle timer after which the vault is automatically locked.

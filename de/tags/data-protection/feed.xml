@@ -11,7 +11,7 @@
       <title>Cryptomator Blog</title>
       <link>https://cryptomator.org/de/tags/data-protection/</link>
     </image>
-    <lastBuildDate>Mon, 11 Oct 2021 15:42:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Oct 2021 14:20:40 +0000</lastBuildDate>
     <generator>Hugo</generator>
     
       <item>
@@ -76,9 +76,12 @@ Wenn Ihr mehr über die kommende Version 1.6.0 von Cryptomator erfahren wollt, l
         <description>&lt;p&gt;Hallo Community!&lt;/p&gt;
 &lt;p&gt;In diesem Blog-Beitrag möchten wir euch einige Neuigkeiten über das bevorstehende Update von Cryptomator auf Version 1.6.0 mitteilen.
 Wir präsentieren euch die wichtigsten Änderungen und neuen Funktionen und wollen sicherstellen, dass ihr auf das Update vorbereite seid.&lt;/p&gt;
+&lt;figure class=&#34;text-center&#34;&gt;
+  &lt;img class=&#34;inline-block rounded&#34; src=&#34;https://cryptomator.org/img/blog/cryptomator-1-6-0.png&#34; srcset=&#34;https://cryptomator.org/img/blog/cryptomator-1-6-0.png 1x, https://cryptomator.org/img/blog/cryptomator-1-6-0@2x.png 2x&#34; alt=&#34;Cryptomator 1.6.0 Release&#34; /&gt;
+&lt;/figure&gt;
 &lt;h2 id=&#34;änderungen-und-features&#34;&gt;Änderungen und Features&lt;/h2&gt;
 &lt;p&gt;Die beiden wichtigsten Änderungen sind die Verwendung eines neuen Tresorformats (Version 8) und die lang versprochene Integration des &lt;a href=&#34;https://community.cryptomator.org/t/sanitizer-how-to-use/43&#34;&gt;Sanitizer&lt;/a&gt; (jetzt Vault Health Check).
-Eine vollständigere Liste finden Sie auf der &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0-rc2&#34;&gt;Release-Seite&lt;/a&gt; von Cryptomator.&lt;/p&gt;
+Eine vollständigere Liste finden Sie auf der &lt;a href=&#34;https://github.com/cryptomator/cryptomator/releases/tag/1.6.0&#34;&gt;Release-Seite&lt;/a&gt; von Cryptomator.&lt;/p&gt;
 &lt;h3 id=&#34;auto-lock&#34;&gt;Auto Lock&lt;/h3&gt;
 &lt;p&gt;Eine Funktion, die bereits in den ersten Tagen von Cryptomator gewünscht wurde, ist nun implementiert: Auto Lock - das automatische Sperren eines Tresors.
 Für jeden Tresor kann nun ein Timer konfiguriert werden, nach dessen Ablauf der Tresor automatisch gesperrt wird.
